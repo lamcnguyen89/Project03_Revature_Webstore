@@ -1,48 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Brand" representedClassName="Brand" syncable="YES" codeGenerationType="class"/>
-    <entity name="Chipset" representedClassName="Chipset" syncable="YES" codeGenerationType="class">
+    <entity name="Brand" representedClassName="Brand" syncable="YES" codeGenerationType="category">
+        <relationship name="graphicsCards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GraphicsCard" inverseName="brand" inverseEntity="GraphicsCard"/>
+    </entity>
+    <entity name="Chipset" representedClassName="Chipset" syncable="YES" codeGenerationType="category">
+        <attribute name="sku" optional="YES" attributeType="String"/>
         <relationship name="chipsetMaker" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ChipsetMaker" inverseName="chipsets" inverseEntity="ChipsetMaker"/>
+        <relationship name="graphicsCards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GraphicsCard" inverseName="chipset" inverseEntity="GraphicsCard"/>
     </entity>
-    <entity name="ChipsetMaker" representedClassName="ChipsetMaker" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES"/>
-        <relationship name="chipsets" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chipset" inverseName="chipsetMaker" inverseEntity="Chipset"/>
+    <entity name="ChipsetMaker" representedClassName="ChipsetMaker" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="chipsets" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Chipset" inverseName="chipsetMaker" inverseEntity="Chipset"/>
     </entity>
-    <entity name="GraphicsCard" representedClassName="GraphicsCard" syncable="YES" codeGenerationType="class">
+    <entity name="GraphicsCard" representedClassName="GraphicsCard" syncable="YES" codeGenerationType="category">
+        <relationship name="brand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brand" inverseName="graphicsCards" inverseEntity="Brand"/>
+        <relationship name="chipset" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Chipset" inverseName="graphicsCards" inverseEntity="Chipset"/>
         <relationship name="store" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Store" inverseName="graphicsCards" inverseEntity="Store"/>
     </entity>
-    <entity name="OrderHistory" representedClassName="OrderHistory" syncable="YES" codeGenerationType="class">
+    <entity name="History" representedClassName="History" isAbstract="YES" syncable="YES" codeGenerationType="category">
+        <relationship name="historyItems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="HistoryItem" inverseName="history" inverseEntity="HistoryItem"/>
+    </entity>
+    <entity name="HistoryItem" representedClassName="HistoryItem" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="History" inverseName="historyItems" inverseEntity="History"/>
+    </entity>
+    <entity name="OrderHistory" representedClassName="OrderHistory" parentEntity="History" syncable="YES" codeGenerationType="category">
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="orderHistory" inverseEntity="User"/>
     </entity>
-    <entity name="PaymentOptions" representedClassName="PaymentOptions" syncable="YES" codeGenerationType="class">
+    <entity name="PaymentOptions" representedClassName="PaymentOptions" syncable="YES" codeGenerationType="category">
         <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="paymentOptions" inverseEntity="User"/>
     </entity>
-    <entity name="SearchHisotry" representedClassName="SearchHisotry" syncable="YES" codeGenerationType="class">
+    <entity name="SearchHistory" representedClassName="SearchHistory" parentEntity="History" syncable="YES" codeGenerationType="category">
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="searchHistory" inverseEntity="User"/>
     </entity>
-    <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="class">
+    <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="category">
         <relationship name="graphicsCards" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GraphicsCard" inverseName="store" inverseEntity="GraphicsCard"/>
         <fetchedProperty name="fetchedProperty" optional="YES">
             <fetchRequest name="fetchedPropertyFetchRequest" entity="Store"/>
         </fetchedProperty>
     </entity>
-    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="category">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <relationship name="orderHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrderHistory" inverseName="user" inverseEntity="OrderHistory"/>
         <relationship name="paymentOptions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PaymentOptions" inverseName="user" inverseEntity="PaymentOptions"/>
-        <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHisotry" inverseName="user" inverseEntity="SearchHisotry"/>
+        <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHistory" inverseName="user" inverseEntity="SearchHistory"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="119"/>
-        <element name="GraphicsCard" positionX="-54" positionY="-9" width="128" height="44"/>
-        <element name="OrderHistory" positionX="-27" positionY="18" width="128" height="44"/>
-        <element name="SearchHisotry" positionX="-9" positionY="36" width="128" height="44"/>
-        <element name="PaymentOptions" positionX="9" positionY="54" width="128" height="44"/>
-        <element name="Store" positionX="27" positionY="90" width="128" height="65"/>
-        <element name="Brand" positionX="-18" positionY="54" width="128" height="29"/>
-        <element name="Chipset" positionX="-9" positionY="63" width="128" height="44"/>
-        <element name="ChipsetMaker" positionX="0" positionY="72" width="128" height="59"/>
+        <element name="Brand" positionX="-18" positionY="54" width="128" height="58"/>
+        <element name="Chipset" positionX="-9" positionY="63" width="128" height="88"/>
+        <element name="ChipsetMaker" positionX="0" positionY="72" width="128" height="73"/>
+        <element name="GraphicsCard" positionX="-62.843994140625" positionY="-150.929443359375" width="128" height="88"/>
+        <element name="OrderHistory" positionX="-278.77880859375" positionY="-124.4793090820312" width="128" height="58"/>
+        <element name="PaymentOptions" positionX="9" positionY="54" width="128" height="58"/>
+        <element name="SearchHistory" positionX="-315.2978515625" positionY="331.3657836914062" width="128" height="58"/>
+        <element name="Store" positionX="-169.83544921875" positionY="-7.59161376953125" width="128" height="86"/>
+        <element name="User" positionX="-448.52001953125" positionY="42.4130859375" width="128" height="133"/>
+        <element name="History" positionX="-189" positionY="135" width="128" height="44"/>
+        <element name="HistoryItem" positionX="-180" positionY="153" width="128" height="59"/>
     </elements>
 </model>
