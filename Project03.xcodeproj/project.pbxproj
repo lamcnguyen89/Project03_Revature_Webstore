@@ -16,6 +16,8 @@
 		DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE363E43265803D80096D950 /* LaunchScreen.storyboard */; };
 		DE363E50265803D80096D950 /* Project03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E4F265803D80096D950 /* Project03Tests.swift */; };
 		DE363E5B265803D80096D950 /* Project03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E5A265803D80096D950 /* Project03UITests.swift */; };
+		DE363E6D26581B930096D950 /* Project-3-Requirements.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DE363E6C26581B930096D950 /* Project-3-Requirements.pdf */; };
+		DE363E7226581BD20096D950 /* Project03-Flowchart.ai in Resources */ = {isa = PBXBuildFile; fileRef = DE363E7126581BD20096D950 /* Project03-Flowchart.ai */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DE363E56265803D80096D950 /* Project03UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project03UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E5A265803D80096D950 /* Project03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project03UITests.swift; sourceTree = "<group>"; };
 		DE363E5C265803D80096D950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE363E6C26581B930096D950 /* Project-3-Requirements.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project-3-Requirements.pdf"; path = "../../../Downloads/Project-3-Requirements.pdf"; sourceTree = "<group>"; };
+		DE363E7126581BD20096D950 /* Project03-Flowchart.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Project03-Flowchart.ai"; path = "../../../Downloads/Project03-Flowchart.ai"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		DE363E29265803D70096D950 = {
 			isa = PBXGroup;
 			children = (
+				DE363E6B26581B560096D950 /* Design Documents */,
 				DE363E34265803D70096D950 /* Project03 */,
 				DE363E4E265803D80096D950 /* Project03Tests */,
 				DE363E59265803D80096D950 /* Project03UITests */,
@@ -129,6 +134,15 @@
 				DE363E5C265803D80096D950 /* Info.plist */,
 			);
 			path = Project03UITests;
+			sourceTree = "<group>";
+		};
+		DE363E6B26581B560096D950 /* Design Documents */ = {
+			isa = PBXGroup;
+			children = (
+				DE363E7126581BD20096D950 /* Project03-Flowchart.ai */,
+				DE363E6C26581B930096D950 /* Project-3-Requirements.pdf */,
+			);
+			path = "Design Documents";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +250,9 @@
 			files = (
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
+				DE363E6D26581B930096D950 /* Project-3-Requirements.pdf in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
+				DE363E7226581BD20096D950 /* Project03-Flowchart.ai in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
