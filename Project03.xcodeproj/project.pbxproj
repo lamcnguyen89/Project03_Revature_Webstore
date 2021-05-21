@@ -16,9 +16,9 @@
 		DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE363E43265803D80096D950 /* LaunchScreen.storyboard */; };
 		DE363E50265803D80096D950 /* Project03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E4F265803D80096D950 /* Project03Tests.swift */; };
 		DE363E5B265803D80096D950 /* Project03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E5A265803D80096D950 /* Project03UITests.swift */; };
-		DE363ECF265827B00096D950 /* Project03-Flowchart .ai in Resources */ = {isa = PBXBuildFile; fileRef = DE363ECE265827B00096D950 /* Project03-Flowchart .ai */; };
-		DE363ED4265827BD0096D950 /* Project-3-Requirements .pdf in Resources */ = {isa = PBXBuildFile; fileRef = DE363ED3265827BD0096D950 /* Project-3-Requirements .pdf */; };
 		DE363ED9265827C90096D950 /* design_docs.md in Resources */ = {isa = PBXBuildFile; fileRef = DE363ED8265827C90096D950 /* design_docs.md */; };
+		DE3B633F26584C7A00005EBD /* Project03-Flowchart.ai in Resources */ = {isa = PBXBuildFile; fileRef = DE3B633E26584C7A00005EBD /* Project03-Flowchart.ai */; };
+		DE3B634426584C8600005EBD /* Project-3-Requirements-Revised.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DE3B634326584C8600005EBD /* Project-3-Requirements-Revised.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		DE363E56265803D80096D950 /* Project03UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project03UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E5A265803D80096D950 /* Project03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project03UITests.swift; sourceTree = "<group>"; };
 		DE363E5C265803D80096D950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE363ECE265827B00096D950 /* Project03-Flowchart .ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Project03-Flowchart .ai"; path = "Design_Documents/Project03-Flowchart .ai"; sourceTree = "<group>"; };
-		DE363ED3265827BD0096D950 /* Project-3-Requirements .pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project-3-Requirements .pdf"; path = "Design_Documents/Project-3-Requirements .pdf"; sourceTree = "<group>"; };
 		DE363ED8265827C90096D950 /* design_docs.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = design_docs.md; path = Design_Documents/design_docs.md; sourceTree = "<group>"; };
+		DE3B633E26584C7A00005EBD /* Project03-Flowchart.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Project03-Flowchart.ai"; path = "Design_Documents/Project03-Flowchart.ai"; sourceTree = "<group>"; };
+		DE3B634326584C8600005EBD /* Project-3-Requirements-Revised.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project-3-Requirements-Revised.pdf"; path = "Design_Documents/Project-3-Requirements-Revised.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +141,9 @@
 		DE363ECD2658279C0096D950 /* DesignDocuments */ = {
 			isa = PBXGroup;
 			children = (
+				DE3B634326584C8600005EBD /* Project-3-Requirements-Revised.pdf */,
+				DE3B633E26584C7A00005EBD /* Project03-Flowchart.ai */,
 				DE363ED8265827C90096D950 /* design_docs.md */,
-				DE363ED3265827BD0096D950 /* Project-3-Requirements .pdf */,
-				DE363ECE265827B00096D950 /* Project03-Flowchart .ai */,
 			);
 			name = DesignDocuments;
 			sourceTree = "<group>";
@@ -251,12 +251,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE363ED4265827BD0096D950 /* Project-3-Requirements .pdf in Resources */,
 				DE363ED9265827C90096D950 /* design_docs.md in Resources */,
-				DE363ECF265827B00096D950 /* Project03-Flowchart .ai in Resources */,
+				DE3B634426584C8600005EBD /* Project-3-Requirements-Revised.pdf in Resources */,
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
+				DE3B633F26584C7A00005EBD /* Project03-Flowchart.ai in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
