@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCD65CAF265861FE009C4E5B /* ItemRating+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65C95265861FE009C4E5B /* ItemRating+CoreDataClass.swift */; };
+		BCD65CB1265861FE009C4E5B /* CreditCard+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65C97265861FE009C4E5B /* CreditCard+CoreDataClass.swift */; };
+		BCD65CB3265861FE009C4E5B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65C99265861FE009C4E5B /* User+CoreDataClass.swift */; };
+		BCD65CB5265861FE009C4E5B /* HistoryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65C9B265861FE009C4E5B /* HistoryItem+CoreDataClass.swift */; };
+		BCD65CB7265861FE009C4E5B /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65C9D265861FE009C4E5B /* History+CoreDataClass.swift */; };
+		BCD65CB9265861FE009C4E5B /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65C9F265861FE009C4E5B /* Category+CoreDataClass.swift */; };
+		BCD65CBB265861FE009C4E5B /* Brand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CA1265861FE009C4E5B /* Brand+CoreDataClass.swift */; };
+		BCD65CBD265861FE009C4E5B /* SearchHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CA3265861FE009C4E5B /* SearchHistory+CoreDataClass.swift */; };
+		BCD65CBF265861FE009C4E5B /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CA5265861FE009C4E5B /* Item+CoreDataClass.swift */; };
+		BCD65CC1265861FE009C4E5B /* OrderHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CA7265861FE009C4E5B /* OrderHistory+CoreDataClass.swift */; };
+		BCD65CC3265861FE009C4E5B /* PaymentOptions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CA9265861FE009C4E5B /* PaymentOptions+CoreDataClass.swift */; };
+		BCD65CC5265861FE009C4E5B /* Review+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CAB265861FE009C4E5B /* Review+CoreDataClass.swift */; };
+		BCD65CC7265861FE009C4E5B /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD65CAD265861FE009C4E5B /* Store+CoreDataClass.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
 		DE363E3A265803D70096D950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E39265803D70096D950 /* ViewController.swift */; };
@@ -39,6 +52,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BCD65C95265861FE009C4E5B /* ItemRating+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemRating+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65C97265861FE009C4E5B /* CreditCard+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreditCard+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65C99265861FE009C4E5B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65C9B265861FE009C4E5B /* HistoryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItem+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65C9D265861FE009C4E5B /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65C9F265861FE009C4E5B /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CA1265861FE009C4E5B /* Brand+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Brand+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CA3265861FE009C4E5B /* SearchHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchHistory+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CA5265861FE009C4E5B /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CA7265861FE009C4E5B /* OrderHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OrderHistory+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CA9265861FE009C4E5B /* PaymentOptions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentOptions+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CAB265861FE009C4E5B /* Review+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BCD65CAD265861FE009C4E5B /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE363E37265803D70096D950 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +110,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCD65C94265861DF009C4E5B /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCD65C95265861FE009C4E5B /* ItemRating+CoreDataClass.swift */,
+				BCD65C97265861FE009C4E5B /* CreditCard+CoreDataClass.swift */,
+				BCD65C99265861FE009C4E5B /* User+CoreDataClass.swift */,
+				BCD65C9B265861FE009C4E5B /* HistoryItem+CoreDataClass.swift */,
+				BCD65C9D265861FE009C4E5B /* History+CoreDataClass.swift */,
+				BCD65C9F265861FE009C4E5B /* Category+CoreDataClass.swift */,
+				BCD65CA1265861FE009C4E5B /* Brand+CoreDataClass.swift */,
+				BCD65CA3265861FE009C4E5B /* SearchHistory+CoreDataClass.swift */,
+				BCD65CA5265861FE009C4E5B /* Item+CoreDataClass.swift */,
+				BCD65CA7265861FE009C4E5B /* OrderHistory+CoreDataClass.swift */,
+				BCD65CA9265861FE009C4E5B /* PaymentOptions+CoreDataClass.swift */,
+				BCD65CAB265861FE009C4E5B /* Review+CoreDataClass.swift */,
+				BCD65CAD265861FE009C4E5B /* Store+CoreDataClass.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		DE363E29265803D70096D950 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +154,7 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				BCD65C94265861DF009C4E5B /* DataModel */,
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E37265803D70096D950 /* SceneDelegate.swift */,
 				DE363E39265803D70096D950 /* ViewController.swift */,
@@ -281,10 +328,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD65CBB265861FE009C4E5B /* Brand+CoreDataClass.swift in Sources */,
+				BCD65CC1265861FE009C4E5B /* OrderHistory+CoreDataClass.swift in Sources */,
+				BCD65CB1265861FE009C4E5B /* CreditCard+CoreDataClass.swift in Sources */,
+				BCD65CB5265861FE009C4E5B /* HistoryItem+CoreDataClass.swift in Sources */,
+				BCD65CC3265861FE009C4E5B /* PaymentOptions+CoreDataClass.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
 				DE363E3A265803D70096D950 /* ViewController.swift in Sources */,
+				BCD65CC5265861FE009C4E5B /* Review+CoreDataClass.swift in Sources */,
+				BCD65CBF265861FE009C4E5B /* Item+CoreDataClass.swift in Sources */,
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
 				DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */,
+				BCD65CB3265861FE009C4E5B /* User+CoreDataClass.swift in Sources */,
+				BCD65CBD265861FE009C4E5B /* SearchHistory+CoreDataClass.swift in Sources */,
+				BCD65CB7265861FE009C4E5B /* History+CoreDataClass.swift in Sources */,
+				BCD65CAF265861FE009C4E5B /* ItemRating+CoreDataClass.swift in Sources */,
+				BCD65CB9265861FE009C4E5B /* Category+CoreDataClass.swift in Sources */,
+				BCD65CC7265861FE009C4E5B /* Store+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

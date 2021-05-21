@@ -74,16 +74,16 @@
     <elements>
         <element name="Brand" positionX="-63.821044921875" positionY="-489.0199890136719" width="128" height="73"/>
         <element name="Category" positionX="-235.4169921875" positionY="-187.3153076171875" width="128" height="88"/>
-        <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
-        <element name="PaymentOptions" positionX="-447.3984375" positionY="304.941162109375" width="128" height="73"/>
-        <element name="SearchHistory" positionX="-217.7998046875" positionY="469.4144287109375" width="128" height="58"/>
-        <element name="Store" positionX="-457.0205078125" positionY="-158.6404113769531" width="128" height="58"/>
-        <element name="User" positionX="-374.451171875" positionY="30.27978515625" width="128" height="163"/>
+        <element name="CreditCard" positionX="-410.866455078125" positionY="451.693359375" width="128" height="118"/>
         <element name="History" positionX="79.102783203125" positionY="477.2980346679688" width="128" height="73"/>
         <element name="HistoryItem" positionX="150.49462890625" positionY="191.0951538085938" width="128" height="88"/>
         <element name="Item" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="178"/>
-        <element name="Review" positionX="-68.796630859375" positionY="143.7644958496094" width="128" height="118"/>
-        <element name="CreditCard" positionX="-410.866455078125" positionY="451.693359375" width="128" height="118"/>
         <element name="ItemRating" positionX="-103.090087890625" positionY="-13.86199951171875" width="128" height="88"/>
+        <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
+        <element name="PaymentOptions" positionX="-447.3984375" positionY="304.941162109375" width="128" height="73"/>
+        <element name="Review" positionX="-68.796630859375" positionY="143.7644958496094" width="128" height="118"/>
+        <element name="SearchHistory" positionX="-217.7998046875" positionY="469.4144287109375" width="128" height="58"/>
+        <element name="Store" positionX="-457.0205078125" positionY="-158.6404113769531" width="128" height="58"/>
+        <element name="User" positionX="-374.451171875" positionY="30.27978515625" width="128" height="163"/>
     </elements>
 </model>
