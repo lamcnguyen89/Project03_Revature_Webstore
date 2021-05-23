@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CAA3420126585EB80031C849 /* StoreBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA3420026585EB80031C849 /* StoreBoard.storyboard */; };
+		CA318BE82659D5EF00EF6853 /* ProductListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA318BE72659D5EF00EF6853 /* ProductListTableViewController.swift */; };
+		CA4246C72659809000B92A81 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246C62659809000B92A81 /* StoreViewController.swift */; };
+		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
+		CA430906265B083C0000D989 /* ProductCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA430905265B083C0000D989 /* ProductCellTableViewCell.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
 		DE363E3A265803D70096D950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E39265803D70096D950 /* ViewController.swift */; };
@@ -40,7 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CAA3420026585EB80031C849 /* StoreBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreBoard.storyboard; sourceTree = "<group>"; };
+		CA318BE72659D5EF00EF6853 /* ProductListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewController.swift; sourceTree = "<group>"; };
+		CA4246C62659809000B92A81 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
+		CA430905265B083C0000D989 /* ProductCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTableViewCell.swift; sourceTree = "<group>"; };
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE363E37265803D70096D950 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +95,9 @@
 		CAC1638E2658550C0015AC77 /* StoreFront */ = {
 			isa = PBXGroup;
 			children = (
-				CAA3420026585EB80031C849 /* StoreBoard.storyboard */,
+				CA4246C62659809000B92A81 /* StoreViewController.swift */,
+				CA318BE72659D5EF00EF6853 /* ProductListTableViewController.swift */,
+				CA430905265B083C0000D989 /* ProductCellTableViewCell.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -121,8 +129,9 @@
 				CAC1638E2658550C0015AC77 /* StoreFront */,
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E37265803D70096D950 /* SceneDelegate.swift */,
-				DE363E39265803D70096D950 /* ViewController.swift */,
 				DE363E3B265803D70096D950 /* Main.storyboard */,
+				DE363E39265803D70096D950 /* ViewController.swift */,
+				CA4246DC2659942400B92A81 /* StoreMenu.swift */,
 				DE363E41265803D80096D950 /* Assets.xcassets */,
 				DE363E43265803D80096D950 /* LaunchScreen.storyboard */,
 				DE363E46265803D80096D950 /* Info.plist */,
@@ -263,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE363ED9265827C90096D950 /* design_docs.md in Resources */,
-				CAA3420126585EB80031C849 /* StoreBoard.storyboard in Resources */,
 				DE3B634426584C8600005EBD /* Project-3-Requirements-Revised.pdf in Resources */,
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
@@ -293,6 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
+				CA4246C72659809000B92A81 /* StoreViewController.swift in Sources */,
+				CA430906265B083C0000D989 /* ProductCellTableViewCell.swift in Sources */,
+				CA318BE82659D5EF00EF6853 /* ProductListTableViewController.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
 				DE363E3A265803D70096D950 /* ViewController.swift in Sources */,
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
