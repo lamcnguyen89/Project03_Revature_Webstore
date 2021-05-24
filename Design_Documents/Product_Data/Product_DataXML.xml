@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Lam Nguyen</Author>
+  <LastAuthor>Lam Nguyen</LastAuthor>
+  <Created>2021-05-24T19:34:45Z</Created>
+  <LastSaved>2021-05-24T21:21:21Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>12480</WindowHeight>
+  <WindowWidth>28770</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s74">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FCE4D6" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s77">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#C6E0B4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s81">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#DDEBF7" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s84">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#D6DCE4" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s86">
+   <Alignment ss:Vertical="Bottom" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Interior ss:Color="#FFE699" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="6" ss:ExpandedRowCount="45" x:FullColumns="1"
+   x:FullRows="1" ss:StyleID="s63" ss:DefaultRowHeight="15">
+   <Column ss:Index="2" ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="210.75"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="196.5"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="171"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="139.5"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="170.25"/>
+   <Row>
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">Products to Sell</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:Index="3">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">Item</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Brand</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Category</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Price/Unit</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Description</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="75">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Oven Scrub Cleaner: 100% Natural - Eco-Friendly Cleaner | Natural Products</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">CleaningStudio</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">18</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">100% Natural Oven Scrub, made in small batches, approved by Professional Cleaners &amp; Safe for your family, pets and your home.</Data></Cell>
+   </Row>
+   <Row ss:Height="60">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Toilet Teas- Lemongrass_Orange</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">TerraViam</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">12</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Free Shipping. Refills. Toilet Teas. These nifty tablets help to keep your bathroom smelling fresh as a daisy while it is &quot;occupied&quot;.</Data></Cell>
+   </Row>
+   <Row ss:Height="75">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Natural Cleaner and Degreaser 16 oz</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Citra Solv</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">General purpose cleaner.&#10;For your toughest stains, grease and everyday cleaning.&#10;Crueltyfree and vegan.&#10;Country of origin is United State.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="39.75">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Pure Castile Soap 32 oz.</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Dr. Bronners</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">19</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Our most popular scent, with a peppermint burst so pure it tingles! Scented with organic peppermint oil to cool skin, clear sinuses and sharpen mind. Our Peppermint Pure-Castile Liquid Soap is concentrated, biodegradable, versatile and effective. Made with organic and certified fair trade ingredients. Organic hemp oil is now sourced in the U.S. following hemp legalization! Packaged in a 100% post-consumer recycled bottle. All-One</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="55.5">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Sal Sud All-Purpose Cleaner 32 oz</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Dr. Bronners</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">14</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">VERSATILE ALL-PURPOSE CLEANER: Dr. Bronner’s Sal Suds Biodegradable Cleaner is powerful &amp; concentrated enough to clean floors, laundry, dishes, furniture, &amp; cars—but gently formulated so it won’t irritate skin! The very best for home &amp; Earth!</Data></Cell>
+   </Row>
+   <Row ss:Height="105">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Earth Friendly Products ECOS Oxo-Brite, Color-Safe Whitener &amp; Brightener, 57.6-Ounces (3.6 LB.) (Pack of 2)</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Ecos</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">25</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Fragrance-free. Removes mold and mildew stains. Works on a variety of materials, stains and odors (do not use on wool, silk or leather). Made of replenishable/sustainable ingredients</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="42.75">
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Mrs. Meyer’s Clean Day Liquid Dish Soap, Lemon Verbena, 16 ounce bottle</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Mrs. Meyers</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Cleaning</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s74"><Data ss:Type="String">Dishwasher detergent that cuts through grease while keeping dishes clean and bright. Contains plant-derived cleaning ingredients to make grease disappear. Biodegradable dish soap designed for hand washing dishes, pots, and pans. Garden-fresh Lemon Verbena has a light, refreshingly mild citrus scent. Mrs. Meyer's produces cruelty free dish soaps. None of our products are tested on animals.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24">
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Platinum (1 oz)</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Heavy Metal Magic</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Precious Metals</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">1181</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Platinum&#160;is a&#160;chemical element&#160;with the&#160;symbol&#160;Pt&#160;and&#160;atomic number&#160;78. It is a&#160;dense, malleable,&#160;ductile, highly unreactive,&#160;precious, silverish-white&#160;transition metal. Its name is derived from the&#160;Spanish&#160;term&#160;platino, meaning &quot;little silver&quot;.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.75">
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Gold(1 oz)</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Heavy Metal Magic</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Precious Metals</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">1883</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Gold&#160;is a&#160;chemical element&#160;with the&#160;symbol&#160;Au&#160;(from&#160;Latin:&#160;aurum) and&#160;atomic number&#160;79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a&#160;bright, slightly reddish yellow, dense, soft,&#160;malleable, and&#160;ductile&#160;metal. Chemically, gold is a&#160;transition metal&#160;and a&#160;group 11 element. It is one of the least reactive chemical elements and is solid under&#160;standard conditions. Gold often occurs in free elemental (native) form, as&#160;nuggets&#160;or grains, in&#160;rocks, in&#160;veins, and in&#160;alluvial deposits. It occurs in a&#160;solid solution&#160;series with the native element&#160;silver&#160;(as&#160;electrum), naturally&#160;alloyed&#160;with other metals like&#160;copper&#160;and&#160;palladium&#160;and also as&#160;mineral inclusions&#160;such as within&#160;pyrite. Less commonly, it occurs in minerals as gold compounds, often with&#160;tellurium&#160;(gold tellurides)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="17.25">
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Silver</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Heavy Metal Magic</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Precious Metals</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">28</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Silver&#160;is a&#160;chemical element&#160;with the&#160;symbol&#160;Ag&#160;(from the&#160;Latin&#160;argentum, derived from the&#160;Proto-Indo-European&#160;h₂erǵ: &quot;shiny&quot; or &quot;white&quot;) and&#160;atomic number&#160;47. A soft, white, lustrous&#160;transition metal, it exhibits the highest&#160;electrical conductivity,&#160;thermal conductivity, and&#160;reflectivity&#160;of any&#160;metal.[citation needed]&#160;The metal is found in the Earth's crust in the pure, free elemental form (&quot;native silver&quot;), as an&#160;alloy&#160;with&#160;gold&#160;and other metals, and in minerals such as&#160;argentite&#160;and&#160;chlorargyrite. Most silver is produced as a byproduct of&#160;copper, gold,&#160;lead, and&#160;zinc&#160;refining.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="22.5">
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Palladium</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Heavy Metal Magic</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Precious Metals</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">2842</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Palladium&#160;is a&#160;chemical element&#160;with the&#160;symbol&#160;Pd&#160;and&#160;atomic number&#160;46. It is a rare and lustrous silvery-white metal discovered in 1803 by the English chemist&#160;William Hyde Wollaston. He named it after the&#160;asteroid Pallas, which was itself named after the&#160;epithet&#160;of the Greek goddess&#160;Athena, acquired by her when she slew&#160;Pallas. Palladium,&#160;platinum,&#160;rhodium,&#160;ruthenium,&#160;iridium&#160;and&#160;osmium&#160;form a group of elements referred to as the&#160;platinum group&#160;metals (PGMs). They have similar chemical properties, but palladium has the lowest melting point and is the least dense of them.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="27">
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Rhodium</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Heavy Metal Magic</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Precious Metals</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">25100</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Rhodium&#160;is a&#160;chemical element&#160;with the&#160;symbol&#160;Rh&#160;and&#160;atomic number&#160;45. It is an extraordinarily rare, silvery-white, hard,&#160;corrosion-resistant, and&#160;chemically inert&#160;transition metal. It is a&#160;noble metal&#160;and a member of the&#160;platinum group. It has only one naturally occurring&#160;isotope,&#160;103Rh. Naturally occurring rhodium is usually found as a free metal, as an alloy with similar metals, and rarely as a chemical compound in minerals such as&#160;bowieite&#160;and&#160;rhodplumsite. It is one of the rarest and most valuable&#160;precious metals.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.75">
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Iridium</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Heavy Metal Magic</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Precious Metals</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="Number">6200</Data></Cell>
+    <Cell ss:StyleID="s77"><Data ss:Type="String">Iridium&#160;is a&#160;chemical element&#160;with the&#160;symbol&#160;Ir&#160;and&#160;atomic number&#160;77. A very hard, brittle, silvery-white&#160;transition metal&#160;of the&#160;platinum group, iridium is considered to be the second-densest metal (after&#160;osmium) with a density of&#160;22.56&#160;g/cm3&#160;as defined by experimental&#160;X-ray crystallography. However, at room temperature and standard atmospheric pressure, iridium has been calculated to have a density of&#160;22.65&#160;g/cm3,&#160;0.04&#160;g/cm3&#160;higher than osmium measured the same way.[5]&#160;Still, the experimental X-ray crystallography value is considered to be the most accurate, and as such iridium is considered to be the second densest element.[6]&#160;It is the most&#160;corrosion-resistant metal, even at temperatures as high as 2000&#160;°C. Although only certain molten salts and&#160;halogens&#160;are corrosive to solid iridium, finely divided iridium dust is much more reactive and can be flammable.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">AMD Radeon RX 6700 XT</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">AMD</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">950</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Introducing the AMD Radeon™ RX 6000 Series graphics cards, featuring the breakthrough AMD RDNA™ 2 architecture, engineered to deliver powerhouse performance for all gamers. The AMD Radeon™ RX 6700 Series graphics cards power a new generation of competitive and 4K gaming with vivid visuals, and elevated experiences in every game and every frame.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="27">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">AMD Radeon RX 6800 XT</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">AMD</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Introducing the AMD Radeon™ RX 6000 Series graphics cards, featuring the breakthrough AMD RDNA™ 2 architecture, engineered to deliver powerhouse performance for all gamers. The AMD Radeon™ RX 6800 Series graphics cards power a new generation of competitive and 4K gaming with vivid visuals, and elevated experiences in every game and every frame.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="39">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">AMD Radeon 6900 XT</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">AMD</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">2700</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Introducing the AMD Radeon™ RX 6000 Series graphics cards, featuring the breakthrough AMD RDNA™ 2 architecture, engineered to deliver powerhouse performance for all gamers. The AMD Radeon™ RX 6900 XT Series graphics cards power a new generation of competitive and 4K gaming with vivid visuals, and elevated experiences in every game and every frame.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21.75">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Gigabyte RTX 3060 Ti Eagle</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Gigabyte</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">1100</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Get the ultimate gaming performance with GIGABYTE RTX 3060 Ti Graphics Cards. Powered by NVIDIA's 2nd gen RTX architecture and refined with WINDFORCE cooling technology, the GeForce RTX 3060 Ti GAMING OC 8G brings stunning visuals, amazingly fast frame rates, and AI acceleration to games and creative applications with its enhanced RT Cores and Tensor Cores.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Nvidia RTX 3070 Founders Edition</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Nvidia</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">1700</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">The GeForce RTX 3070 is powered by Ampere—NVIDIA’s 2nd gen RTX architecture. Built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and high-speed G6 memory, it gives you the power you need to rip through the most demanding games.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="31.5">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">MSI RTX 3070 Ventus 3x OC</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">MSI</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">1800</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">VENTUS brings a performance-focused design that maintains the essentials to accomplish any task at hand. A capable triple fan arrangement laid into a rigid industrial design lets this sharp looking graphics card fit into any build. A lightweight composite Graphene backplate reinforces the length of the graphics card while providing passive thermal conduction properties. Precision-crafted heat pipes ensure max contact to the GPU and spread heat along the full length of the heatsink. TORX Fan 3.0: The award-winning MSI TORX Fan 3.0 design creates high static pressure and pushes the limits of thermal performance. Thermal Padding: An abundance of thermal pads use any chance for additional heat transfer directly from the component</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="53.25">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Gigabyte  RTX 3070 Gaming OC</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Gigabyte</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">1500</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Get the ultimate gaming performance with GIGABYTE RTX 3070 Graphics Cards. Powered by NVIDIA's 2nd gen RTX architecture and refined with WINDFORCE cooling technology, the GIGABYTE GeForce RTX 3070 GAMING OC 8G brings stunning visuals, amazingly fast frame rates, and AI acceleration to games and creative applications with its enhanced RT Cores and Tensor Cores.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="63">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">EVGA RTX 3080 FTW 3</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">EVGA</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">2000</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">The EVGA GeForce RTX 3080 delivers the unprecedented performance that gamers crave for 4K resolution gaming, powered by the NVIDIA Ampere architecture. It's built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and superfast G6X memory for an amazing gaming experience. Combined with the next generation of design, cooling, and overclocking with EVGA Precision X1, the EVGA GeForce RTX 3080 Series presents a new definition in ultimate performance.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="38.25">
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Nvidia RTX 3090 Founders Edition</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Nvidia</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">Graphics Cards</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="Number">2500</Data></Cell>
+    <Cell ss:StyleID="s81"><Data ss:Type="String">The GeForce RTX 3090 is colossally powerful in every way, giving you a whole new tier of performance. It’s powered by Ampere—NVIDIA’s 2nd gen RTX architecture—doubling down on ray tracing and AI performance with enhanced RT Cores, Tensor Cores, and new streaming multiprocessors. Plus, it features a staggering 24 GB of G6X memory, all to deliver the ultimate gaming experience.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Cap Bumper Plate 10lb pair</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Cap</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">70</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Take your weight lifting and power lifting to the next level with these CAP Barbell Olympic Rubber Bumper plates. The durable, rubber design reduces weight room noise and is designed to withstand drops. Perfectly suited for lifting platforms, gyms, and garage floors, these plates can be used for a variety of exercises in functional fitness and cross training. Each size plate is a uniform 17.72 in diameter and rated at a hardness of 85 making for a safer Dead bounce with very little to no bounce when dropped from height. The 50 mm ID stainless steel insert makes adding and taking plate off bars easy while maintaining a snug fit making for a quieter lift.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="40.5">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Cap Bumper Plate 25lb pair</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Cap</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">143</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Take your weight lifting and power lifting to the next level with these CAP Barbell Olympic Rubber Bumper plates. The durable, rubber design reduces weight room noise and is designed to withstand drops. Perfectly suited for lifting platforms, gyms, and garage floors, these plates can be used for a variety of exercises in functional fitness and cross training. Each size plate is a uniform 17.72 in diameter and rated at a hardness of 85 making for a safer Dead bounce with very little to no bounce when dropped from height. The 50 mm ID stainless steel insert makes adding and taking plate off bars easy while maintaining a snug fit making for a quieter lift.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="26.25">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Cap Bumper Plate 45lb pair</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Cap</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">45</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Take your weight lifting and power lifting to the next level with these CAP Barbell Olympic Rubber Bumper plates. The durable, rubber design reduces weight room noise and is designed to withstand drops. Perfectly suited for lifting platforms, gyms, and garage floors, these plates can be used for a variety of exercises in functional fitness and cross training. Each size plate is a uniform 17.72 in diameter and rated at a hardness of 85 making for a safer Dead bounce with very little to no bounce when dropped from height. The 50 mm ID stainless steel insert makes adding and taking plate off bars easy while maintaining a snug fit making for a quieter lift.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="27">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Spirit Medicine Ball 12lb</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Spri</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">The SPRI Medicine Ball is a unique, multi-use total-body training tool, helping you develop muscular strength, endurance, power, stability, and joint integrity. Designed with a textured surface for enhanced grip, this medicine ball is perfect for lifting, tossing or slamming to work the entire body from arms to core to lower body. Made from high-quality rubber for improved bounce and thick-walled construction to ensure durability and shape retention. Comes in color-coded weights from 8-12lbs. Exercise guide included. Thick wall of Rubber Ensures that it will maintain its shape and provide ultimate durability from basic ab work to the most demanding exercises. Designed with comfort in mind and with a firm-grip design Perfect for the traditional handheld, throwing, bouncing, and light rebounding training practices. Ideal for toning and strength training exercises Great for rows, squat presses, lunge twists and so much more. Lift, toss or bounce To work the entire body from arms to core to lower body</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="24.75">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Portable Squat Rack</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">400</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">The Rogue S-4 2.0 sets a new standard for independent squat stands, combining the strength and stability of two 7-gauge steel H-bases with the efficiency of a new bolt-together, triangle-plate design. Each unit includes a pair of 72&quot; Infinity uprights with hole spacing in the Westside pattern through the bench zone—so users can specifically set up the included J-cups at 1” increments.</Data></Cell>
+   </Row>
+   <Row ss:Height="105">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Power Rack with Pullup</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Inspire</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">800</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Introducing the most versatile cage under 7' that comes with all the attachments! Residential / Light commercial Inspire Fitness Full Cage – 7′ with 11 gauge frame. Includes Dip, landmine, Battle Rope Loop, Band Pegs, Pullup Bar</Data></Cell>
+   </Row>
+   <Row ss:Height="120">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue Bella 2.0 Barbell</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">225</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">The Bella Bar is Rogue's go-to multipurpose 15KG barbell for female athletes. Fully machined and assembled in Columbus, Ohio, this versatile ladies bar is uniquely optimized for Olympic weightlifting, powerlifting, and/or a CrossFit WOD.</Data></Cell>
+   </Row>
+   <Row ss:Height="105">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue Echo Barbell</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">255</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Machined and assembled at our Columbus manufacturing facility, the newly redesigned Rogue Echo Bar 2.0 is an economically priced 28.5MM bushing bar equipped with many of the same features as our flagship&#160;Rogue Ohio Bar.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="34.5">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue Loadable Dumbell</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">175</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue’s Loadable Dumbbells condense the key design and manufacturing elements of our full-size&#160;Ohio Bar&#160;into a compact, versatile new format. As an alternative to storing a complete set of traditional dumbbells in your gym, the DB-10 and DB-15 Dumbbell offer loadable sleeve lengths of 3.625” and 6.75” respectively—enabling athletes to make precision, custom weight adjustments in their dumbbell training using any standard Olympic plates as the increments.</Data></Cell>
+   </Row>
+   <Row ss:Height="165">
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue Ohio Barbell Cerakot</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Rogue</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Exercise Equipment</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="Number">340</Data></Cell>
+    <Cell ss:StyleID="s84"><Data ss:Type="String">Our 29MM Ohio Power Bar is now available in a Cerakote finish, with a range of exclusive colorways to choose from. This unique polymer-ceramic composite coating was originally popularized in the gun industry for its durability in thin applications, and it offers up to 100x the corrosion resistance of standard black zinc.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="33">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Bird Air Electric Scooter</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Bird</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">500</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Explore the neighborhood on this Bird ES4-800 electric scooter. Top speeds of 15.5mph get you where you're going quickly, while electric and mechanical brakes help you stop quickly once you get there. With a maximum weight capacity of 220 lbs., this Bird ES4-800 electric scooter offers a versatile transportation option for ages 18 and up. (Renewed).</Data></Cell>
+   </Row>
+   <Row ss:Height="30">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Chevy Silverado 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Chevrolet</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">30000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Chevy Truck Barely used, 4.3 L engine. 40,0000 miles</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="22.5">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Ford F150 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Ford</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">43000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">This 2019 Ford F-150 XL in Oxford White features: 4WD, ** 4X4, 20&quot; Machined-Aluminum Wheels, 3.55 Axle Ratio, Body-Color Front &amp; Rear Bumpers, Body-Color Surround w/Black Mesh Insert Grille, Box Side Decals, Driver/Passenger Seat Back Pocket, Fog Lamps, Integrated Trailer Brake Controller, Manual Driver/Passenger Lumbar, Pro Trailer Backup Assist, Rear Window Defroster, Rear Window Fixed Privacy Glass, STX Appearance Package, SYNC 3, Trailer Tow Package w/101A, Unique Sport Cloth 40/20/40 Front-Seats. 24,000 miles</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="21">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">GMC Sierra 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">GMC</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">38000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Only 14,579 Miles! Boasts 21 Highway MPG and 16 City MPG! This GMC Sierra 1500 delivers a Gas V6 4.3L engine powering this Automatic transmission. WORK TRUCK PREFERRED EQUIPMENT GROUP includes standard equipment, WHEELS, 17 X 8 (43.2 CM X 20.3 CM) PAINTED STEEL, SILVER (STD), TRANSMISSION, 6-SPEED AUTOMATIC, ELECTRONICALLY CONTROLLED with overdrive and tow/haul mode. Includes Cruise Grade Braking and Powertrain Grade Braking (STD).*This GMC Sierra 1500 Comes Equipped with These Options *TRAILERING PACKAGE includes trailer hitch, 7-pin and 4-pin connectors and (CTT) Hitch Guidance, CONVENIENCE PACKAGE includes (AQQ) Remote Keyless Entry, (QT5) EZ Lift power lock and release tailgate, (AKO) tinted glass, (UF2) LED cargo box lighting, (C49) rear-window defogger, (K34) cruise control and (DLF) outside power mirrors , TRAILER BRAKE CONTROLLER, INTEGRATED, TIRES, 255/70R17 ALL-SEASON, BLACKWALL (STD), TAILGATE, GATE FUNCTION MANUAL WITH EZ LIFT includes power lock and release, includes hitch area light, SEATS, FRONT 40/20/40 SPLIT-BENCH. (STD), REMOTE KEYLESS ENTRY, REAR AXLE, 3.42 RATIO, QUICKSILVER METALLIC, OnStar Equipped (subscription required).* Stop By Today *A short visit to Cronic Chevrolet Buick GMC located at 2676 North Expressway, Griffin, GA 30223 can get you a trustworthy Sierra 1500 today!</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">5</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda Accord 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">27000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Only 8000 miles.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="39">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">6</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda adv150 Moped</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">4300</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">The 2022 Honda ADV150 continues to prove that the adventure category isn’t defined by engine displacement or seat height. It’s about the indomitable spirit, a sense of exploration, and a build quality that will stand the test of time. The ADV150 gets there with a rock-solid 149cc four-stroke OHC engine and rugged steel chassis. The long-travel suspension and spacious under-seat storage promise a comfortable ride for you and your gear. And features like the two-position windscreen, Honda SMART Key, and standard ABS make this one sophisticated scooter. It’s versatility, with a heavy dose of fun, and an opportunity to add some adventure to your every day.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">7</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda Civic 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">20000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">27,000 miles</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="46.5">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">8</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda Metropolitan Moped</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Honda</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">2500</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Looking to add a little extra style into your every day? Then look no further than the 2022 Honda Metropolitan. It’s the European-style scooter engineered to embody American practicality. The nifty and thrifty design starts with a reliable four-stroke engine, with a no-shift automatic transmission. Complete with an electric starter and underseat storage to help you on the go. Turn short rides into a metropolis of fun, and save on gas, while you learn all the ways life is better on a Honda.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="33">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Jeep Grand Cherokee 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Jeep</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">35000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">17,000 miles. The 2019 Jeep Grand Cherokee is an automotive moment in time: a family hauler that can crawl through a blizzard, blitz a racetrack, tow a boat—or all three.&#10;</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="34.5">
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">10</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Toyota Corolla 2019</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Toyota</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">Car</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="Number">19000</Data></Cell>
+    <Cell ss:StyleID="s86"><Data ss:Type="String">33,000 miles. Save Big; Original Price was $20,090. Head out in sensible style in our Clean Carfax 2019 Toyota Corolla LE Sedan! Driven by a 1.8 Liter 4 Cylinder that offers 132hp while connected to a seamless CVT with intelligence and shift mode delivers a smooth ride that is comfortable and confident. Our Front Wheel Drive is sleeker and refined, helping it slide through the air with ease and turns heads with its looks while rewarding with near 36mpg on the highway. Check out the bold front fascia with a piano black grille, LED daytime running lights, and Bi-LED headlights!</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Print>
+    <ValidPrinterInfo/>
+    <HorizontalResolution>1200</HorizontalResolution>
+    <VerticalResolution>1200</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>44</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+     <RangeSelection>R36C1:R45C6</RangeSelection>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
