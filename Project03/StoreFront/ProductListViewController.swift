@@ -10,8 +10,9 @@ import UIKit
 class ProductListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     var sample = ["First Product", "Second Product", "Third Product", "Fourth Product"]
+
     @IBOutlet weak var tblGallery: UITableView!
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sample.count
     }
