@@ -36,6 +36,9 @@
 		DE363ED9265827C90096D950 /* design_docs.md in Resources */ = {isa = PBXBuildFile; fileRef = DE363ED8265827C90096D950 /* design_docs.md */; };
 		DE3B633F26584C7A00005EBD /* Project03-Flowchart.ai in Resources */ = {isa = PBXBuildFile; fileRef = DE3B633E26584C7A00005EBD /* Project03-Flowchart.ai */; };
 		DE3B634426584C8600005EBD /* Project-3-Requirements-Revised.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DE3B634326584C8600005EBD /* Project-3-Requirements-Revised.pdf */; };
+		DEEA3C64265C290000CCFB6D /* Design_Documents in Resources */ = {isa = PBXBuildFile; fileRef = DEEA3C63265C290000CCFB6D /* Design_Documents */; };
+		DEEA3C69265C291000CCFB6D /* datamodel.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEA3C68265C291000CCFB6D /* datamodel.png */; };
+		DEEA3C6E265C295800CCFB6D /* StoreFrontUI.png in Resources */ = {isa = PBXBuildFile; fileRef = DEEA3C6D265C295800CCFB6D /* StoreFrontUI.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +94,9 @@
 		DE363ED8265827C90096D950 /* design_docs.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = design_docs.md; path = Design_Documents/design_docs.md; sourceTree = "<group>"; };
 		DE3B633E26584C7A00005EBD /* Project03-Flowchart.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Project03-Flowchart.ai"; path = "Design_Documents/Project03-Flowchart.ai"; sourceTree = "<group>"; };
 		DE3B634326584C8600005EBD /* Project-3-Requirements-Revised.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project-3-Requirements-Revised.pdf"; path = "Design_Documents/Project-3-Requirements-Revised.pdf"; sourceTree = "<group>"; };
+		DEEA3C63265C290000CCFB6D /* Design_Documents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Design_Documents; sourceTree = "<group>"; };
+		DEEA3C68265C291000CCFB6D /* datamodel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = datamodel.png; path = Design_Documents/datamodel.png; sourceTree = "<group>"; };
+		DEEA3C6D265C295800CCFB6D /* StoreFrontUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreFrontUI.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,9 @@
 		DE363ECD2658279C0096D950 /* DesignDocuments */ = {
 			isa = PBXGroup;
 			children = (
+				DEEA3C6D265C295800CCFB6D /* StoreFrontUI.png */,
+				DEEA3C68265C291000CCFB6D /* datamodel.png */,
+				DEEA3C63265C290000CCFB6D /* Design_Documents */,
 				DE3B634326584C8600005EBD /* Project-3-Requirements-Revised.pdf */,
 				DE3B633E26584C7A00005EBD /* Project03-Flowchart.ai */,
 				DE363ED8265827C90096D950 /* design_docs.md */,
@@ -319,7 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE363ED9265827C90096D950 /* design_docs.md in Resources */,
+				DEEA3C6E265C295800CCFB6D /* StoreFrontUI.png in Resources */,
 				DE3B634426584C8600005EBD /* Project-3-Requirements-Revised.pdf in Resources */,
+				DEEA3C64265C290000CCFB6D /* Design_Documents in Resources */,
+				DEEA3C69265C291000CCFB6D /* datamodel.png in Resources */,
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
