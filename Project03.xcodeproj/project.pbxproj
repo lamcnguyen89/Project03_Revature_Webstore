@@ -33,7 +33,6 @@
 		DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE363E43265803D80096D950 /* LaunchScreen.storyboard */; };
 		DE363E50265803D80096D950 /* Project03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E4F265803D80096D950 /* Project03Tests.swift */; };
 		DE363E5B265803D80096D950 /* Project03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E5A265803D80096D950 /* Project03UITests.swift */; };
-		DE3B648B265C5F9C00005EBD /* StoreFrontUI.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B648A265C5F9C00005EBD /* StoreFrontUI.png */; };
 		DE3B6493265C5FC000005EBD /* Project03-Flowchart.ai in Resources */ = {isa = PBXBuildFile; fileRef = DE3B648F265C5FC000005EBD /* Project03-Flowchart.ai */; };
 		DE3B6494265C5FC000005EBD /* Project-3-Flowchart-png.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6490265C5FC000005EBD /* Project-3-Flowchart-png.png */; };
 		DE3B6495265C5FC000005EBD /* Project-3-Requirements-Revised.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */; };
@@ -54,6 +53,7 @@
 		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
+		DE3B6527265C7F2100005EBD /* StoreFrontUI.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6526265C7F2100005EBD /* StoreFrontUI.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,7 +111,6 @@
 		DE363E56265803D80096D950 /* Project03UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project03UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E5A265803D80096D950 /* Project03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project03UITests.swift; sourceTree = "<group>"; };
 		DE363E5C265803D80096D950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE3B648A265C5F9C00005EBD /* StoreFrontUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreFrontUI.png; sourceTree = "<group>"; };
 		DE3B648F265C5FC000005EBD /* Project03-Flowchart.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Project03-Flowchart.ai"; path = "Design_Documents/Project03-Flowchart.ai"; sourceTree = "<group>"; };
 		DE3B6490265C5FC000005EBD /* Project-3-Flowchart-png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Project-3-Flowchart-png.png"; path = "Design_Documents/Project-3-Flowchart-png.png"; sourceTree = "<group>"; };
 		DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project-3-Requirements-Revised.pdf"; path = "Design_Documents/Project-3-Requirements-Revised.pdf"; sourceTree = "<group>"; };
@@ -132,6 +131,7 @@
 		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		DE3B6526265C7F2100005EBD /* StoreFrontUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StoreFrontUI.png; path = Design_Documents/StoreFrontUI.png; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -279,6 +279,7 @@
 		DE3B6489265C5F6E00005EBD /* DesignDocuments */ = {
 			isa = PBXGroup;
 			children = (
+				DE3B6526265C7F2100005EBD /* StoreFrontUI.png */,
 				DE3B64A1265C5FDD00005EBD /* ProductData */,
 				DE3B649A265C5FD500005EBD /* datamodel.png */,
 				DE3B649B265C5FD500005EBD /* design_docs.md */,
@@ -286,7 +287,6 @@
 				DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */,
 				DE3B648F265C5FC000005EBD /* Project03-Flowchart.ai */,
 				DE3B6492265C5FC000005EBD /* UML.png */,
-				DE3B648A265C5F9C00005EBD /* StoreFrontUI.png */,
 			);
 			name = DesignDocuments;
 			sourceTree = "<group>";
@@ -427,11 +427,11 @@
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
 				DE3B64B1265C602900005EBD /* Product_Data.xlsx in Resources */,
 				DE3B6495265C5FC000005EBD /* Project-3-Requirements-Revised.pdf in Resources */,
-				DE3B648B265C5F9C00005EBD /* StoreFrontUI.png in Resources */,
 				DE3B64B2265C602900005EBD /* Product_DataCSV.csv in Resources */,
 				DE3B64AC265C602900005EBD /* 01-Cleaning_Supplies in Resources */,
 				DE3B649C265C5FD500005EBD /* datamodel.png in Resources */,
 				DE3B6493265C5FC000005EBD /* Project03-Flowchart.ai in Resources */,
+				DE3B6527265C7F2100005EBD /* StoreFrontUI.png in Resources */,
 				DE3B64B3265C602900005EBD /* Product_DataXML.xml in Resources */,
 				DE3B64AE265C602900005EBD /* 05-Cars in Resources */,
 				DE3B649D265C5FD500005EBD /* design_docs.md in Resources */,
