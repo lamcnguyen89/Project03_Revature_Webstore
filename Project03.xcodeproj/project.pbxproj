@@ -54,6 +54,7 @@
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
 		DE3B6527265C7F2100005EBD /* StoreFrontUI.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6526265C7F2100005EBD /* StoreFrontUI.png */; };
+		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		DE3B6526265C7F2100005EBD /* StoreFrontUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StoreFrontUI.png; path = Design_Documents/StoreFrontUI.png; sourceTree = "<group>"; };
+		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +215,7 @@
 				DE3B6505265C6F7300005EBD /* StoreViewController.swift */,
 				DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */,
 				DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */,
+				DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -279,9 +282,9 @@
 		DE3B6489265C5F6E00005EBD /* DesignDocuments */ = {
 			isa = PBXGroup;
 			children = (
-				DE3B6526265C7F2100005EBD /* StoreFrontUI.png */,
 				DE3B64A1265C5FDD00005EBD /* ProductData */,
 				DE3B649A265C5FD500005EBD /* datamodel.png */,
+				DE3B6526265C7F2100005EBD /* StoreFrontUI.png */,
 				DE3B649B265C5FD500005EBD /* design_docs.md */,
 				DE3B6490265C5FC000005EBD /* Project-3-Flowchart-png.png */,
 				DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */,
@@ -571,6 +574,7 @@
 				BC415861265BFC640051F99B /* ItemRating+CoreDataClass.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
+				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,
 				BC415857265BFC640051F99B /* Item+CoreDataClass.swift in Sources */,
 				BC415867265BFC640051F99B /* PaymentOptions+CoreDataClass.swift in Sources */,
