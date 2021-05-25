@@ -81,15 +81,15 @@
         <element name="CreditCard" positionX="-410.866455078125" positionY="451.693359375" width="128" height="118"/>
         <element name="History" positionX="79.102783203125" positionY="477.2980346679688" width="128" height="58"/>
         <element name="HistoryItem" positionX="150.49462890625" positionY="191.0951538085938" width="128" height="88"/>
-        <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="163"/>
-        <element name="ProductRating" positionX="-103.090087890625" positionY="-13.86199951171875" width="128" height="88"/>
+        <element name="Order" positionX="326.90478515625" positionY="256.2314453125" width="128" height="59"/>
         <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
         <element name="PaymentOptions" positionX="-447.3984375" positionY="304.941162109375" width="128" height="73"/>
+        <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="163"/>
+        <element name="ProductRating" positionX="-103.090087890625" positionY="-13.86199951171875" width="128" height="88"/>
         <element name="Review" positionX="-28.071533203125" positionY="107.9990539550782" width="128" height="118"/>
+        <element name="Search" positionX="203.54833984375" positionY="75.115478515625" width="128" height="29"/>
         <element name="SearchHistory" positionX="-217.7998046875" positionY="469.4144287109375" width="128" height="58"/>
         <element name="Store" positionX="-453.494140625" positionY="-170.9736938476562" width="128" height="58"/>
         <element name="User" positionX="-374.451171875" positionY="30.27978515625" width="128" height="178"/>
-        <element name="Order" positionX="326.90478515625" positionY="256.2314453125" width="128" height="59"/>
-        <element name="Search" positionX="203.54833984375" positionY="75.115478515625" width="128" height="29"/>
     </elements>
 </model>

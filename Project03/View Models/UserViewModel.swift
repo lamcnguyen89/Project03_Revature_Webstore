@@ -34,27 +34,34 @@ class UserViewModel{
     public var email : String{
         return user.email!
     }
-    public var orderHistory : OrderHistory?{
-        return user.orderHistory
-    }
-    public var paymentOptions : PaymentOptions?{
-        return user.paymentOptions
-    }
-    public func reviewsthrows() throws -> [Review]? {
-        var reviews : [Review]?
-        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Review")
-        fetchReq.predicate = NSPredicate(format: "name == %@", name)
-        fetchReq.fetchLimit = 1
-        do{
-            let req = try context.fetch(fetchReq) as! [Review]
-            reviews = req
+
+    public func getReviews() throws -> [Review] {
+        if let reviews = user.reviews?.allObjects as? [Review]{
+            return reviews
         }
-        catch{
-            throw NilError.nilErr
-        }
-        return reviews
+        else {throw NilError.nilErr}
     }
 
+    public func getOrderHistory() throws -> OrderHistory {
+        if let orderHistory = user.orderHistory{
+            return orderHistory
+        }
+        else {throw NilError.nilErr}
+    }
+
+    public func getSearchHistory() throws -> SearchHistory{
+        if let searchHistory = user.searchHistory{
+            return searchHistory
+        }
+        else {throw NilError.nilErr}
+    }
+
+    public func getPaymentOptions() throws -> PaymentOptions{
+        if let payOptions = user.paymentOptions{
+            return payOptions
+        }
+        else {throw NilError.nilErr}
+    }
 
     enum NilError : Error{
         case nilErr
