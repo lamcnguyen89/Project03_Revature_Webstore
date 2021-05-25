@@ -2,7 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G5023d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Brand" representedClassName="Brand" syncable="YES" codeGenerationType="category">
         <attribute name="name" attributeType="String"/>
-        <relationship name="products" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="brand" inverseEntity="Product"/>
+        <relationship name="products" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product" inverseName="brand" inverseEntity="Product"/>
     </entity>
     <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="category">
         <attribute name="name" attributeType="String"/>
@@ -43,11 +43,11 @@
         <attribute name="productDescription" attributeType="String"/>
         <relationship name="brand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Brand" inverseName="products" inverseEntity="Brand"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="products" inverseEntity="Category"/>
-        <relationship name="ratings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProductRating" inverseName="product" inverseEntity="ProductRating"/>
+        <relationship name="rating" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ProductRating" inverseName="product" inverseEntity="ProductRating"/>
     </entity>
     <entity name="ProductRating" representedClassName="ProductRating" syncable="YES" codeGenerationType="category">
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="ratings" inverseEntity="Product"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" inverseName="rating" inverseEntity="Product"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="productRating" inverseEntity="Review"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES" codeGenerationType="category">
@@ -72,7 +72,7 @@
         <attribute name="password" optional="YES" attributeType="String"/>
         <relationship name="orderHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrderHistory" inverseName="user" inverseEntity="OrderHistory"/>
         <relationship name="paymentOptions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PaymentOptions" inverseName="user" inverseEntity="PaymentOptions"/>
-        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
         <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHistory" inverseName="user" inverseEntity="SearchHistory"/>
     </entity>
     <elements>

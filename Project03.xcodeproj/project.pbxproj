@@ -24,6 +24,7 @@
 		BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC415851265BFC640051F99B /* Category+CoreDataClass.swift */; };
 		BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC415853265BFC640051F99B /* HistoryItem+CoreDataClass.swift */; };
 		BC9C00E0265D82FD0029C1EA /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C00DF265D82FD0029C1EA /* ProductViewModel.swift */; };
+		BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C00E1265D932D0029C1EA /* BrandViewModel.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataDelegate.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
@@ -36,27 +37,10 @@
 		DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE363E43265803D80096D950 /* LaunchScreen.storyboard */; };
 		DE363E50265803D80096D950 /* Project03Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E4F265803D80096D950 /* Project03Tests.swift */; };
 		DE363E5B265803D80096D950 /* Project03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E5A265803D80096D950 /* Project03UITests.swift */; };
-		DE3B6493265C5FC000005EBD /* Project03-Flowchart.ai in Resources */ = {isa = PBXBuildFile; fileRef = DE3B648F265C5FC000005EBD /* Project03-Flowchart.ai */; };
-		DE3B6494265C5FC000005EBD /* Project-3-Flowchart-png.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6490265C5FC000005EBD /* Project-3-Flowchart-png.png */; };
-		DE3B6495265C5FC000005EBD /* Project-3-Requirements-Revised.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */; };
-		DE3B6496265C5FC000005EBD /* UML.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6492265C5FC000005EBD /* UML.png */; };
-		DE3B649C265C5FD500005EBD /* datamodel.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B649A265C5FD500005EBD /* datamodel.png */; };
-		DE3B649D265C5FD500005EBD /* design_docs.md in Resources */ = {isa = PBXBuildFile; fileRef = DE3B649B265C5FD500005EBD /* design_docs.md */; };
-		DE3B64AC265C602900005EBD /* 01-Cleaning_Supplies in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A2265C602800005EBD /* 01-Cleaning_Supplies */; };
-		DE3B64AD265C602900005EBD /* 04-Exercise_Equipment in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A3265C602800005EBD /* 04-Exercise_Equipment */; };
-		DE3B64AE265C602900005EBD /* 05-Cars in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A4265C602800005EBD /* 05-Cars */; };
-		DE3B64AF265C602900005EBD /* Product_Data2003.xls in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A5265C602900005EBD /* Product_Data2003.xls */; };
-		DE3B64B0265C602900005EBD /* Products.md in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A6265C602900005EBD /* Products.md */; };
-		DE3B64B1265C602900005EBD /* Product_Data.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A7265C602900005EBD /* Product_Data.xlsx */; };
-		DE3B64B2265C602900005EBD /* Product_DataCSV.csv in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A8265C602900005EBD /* Product_DataCSV.csv */; };
-		DE3B64B3265C602900005EBD /* Product_DataXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A9265C602900005EBD /* Product_DataXML.xml */; };
-		DE3B64B4265C602900005EBD /* 03-Graphics_Cards in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64AA265C602900005EBD /* 03-Graphics_Cards */; };
-		DE3B64B5265C602900005EBD /* 02-Precious_Metals in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64AB265C602900005EBD /* 02-Precious_Metals */; };
 		DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */; };
 		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
-		DE3B6527265C7F2100005EBD /* StoreFrontUI.png in Resources */ = {isa = PBXBuildFile; fileRef = DE3B6526265C7F2100005EBD /* StoreFrontUI.png */; };
 		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +82,7 @@
 		BC415851265BFC640051F99B /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC415853265BFC640051F99B /* HistoryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC9C00DF265D82FD0029C1EA /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		BC9C00E1265D932D0029C1EA /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
 		BCCCA366265C485200CCBEF9 /* DataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegate.swift; sourceTree = "<group>"; };
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03Tests.release.xcconfig"; path = "Target Support Files/Pods-Project03Tests/Pods-Project03Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,27 +103,10 @@
 		DE363E56265803D80096D950 /* Project03UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Project03UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E5A265803D80096D950 /* Project03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project03UITests.swift; sourceTree = "<group>"; };
 		DE363E5C265803D80096D950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE3B648F265C5FC000005EBD /* Project03-Flowchart.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Project03-Flowchart.ai"; path = "Design_Documents/Project03-Flowchart.ai"; sourceTree = "<group>"; };
-		DE3B6490265C5FC000005EBD /* Project-3-Flowchart-png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Project-3-Flowchart-png.png"; path = "Design_Documents/Project-3-Flowchart-png.png"; sourceTree = "<group>"; };
-		DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Project-3-Requirements-Revised.pdf"; path = "Design_Documents/Project-3-Requirements-Revised.pdf"; sourceTree = "<group>"; };
-		DE3B6492265C5FC000005EBD /* UML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UML.png; path = Design_Documents/UML.png; sourceTree = "<group>"; };
-		DE3B649A265C5FD500005EBD /* datamodel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = datamodel.png; path = Design_Documents/datamodel.png; sourceTree = "<group>"; };
-		DE3B649B265C5FD500005EBD /* design_docs.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = design_docs.md; path = Design_Documents/design_docs.md; sourceTree = "<group>"; };
-		DE3B64A2265C602800005EBD /* 01-Cleaning_Supplies */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "01-Cleaning_Supplies"; path = "Design_Documents/Product_Data/01-Cleaning_Supplies"; sourceTree = "<group>"; };
-		DE3B64A3265C602800005EBD /* 04-Exercise_Equipment */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "04-Exercise_Equipment"; path = "Design_Documents/Product_Data/04-Exercise_Equipment"; sourceTree = "<group>"; };
-		DE3B64A4265C602800005EBD /* 05-Cars */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "05-Cars"; path = "Design_Documents/Product_Data/05-Cars"; sourceTree = "<group>"; };
-		DE3B64A5265C602900005EBD /* Product_Data2003.xls */ = {isa = PBXFileReference; lastKnownFileType = file; name = Product_Data2003.xls; path = Design_Documents/Product_Data/Product_Data2003.xls; sourceTree = "<group>"; };
-		DE3B64A6265C602900005EBD /* Products.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = Products.md; path = Design_Documents/Product_Data/Products.md; sourceTree = "<group>"; };
-		DE3B64A7265C602900005EBD /* Product_Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; name = Product_Data.xlsx; path = Design_Documents/Product_Data/Product_Data.xlsx; sourceTree = "<group>"; };
-		DE3B64A8265C602900005EBD /* Product_DataCSV.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Product_DataCSV.csv; path = Design_Documents/Product_Data/Product_DataCSV.csv; sourceTree = "<group>"; };
-		DE3B64A9265C602900005EBD /* Product_DataXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Product_DataXML.xml; path = Design_Documents/Product_Data/Product_DataXML.xml; sourceTree = "<group>"; };
-		DE3B64AA265C602900005EBD /* 03-Graphics_Cards */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "03-Graphics_Cards"; path = "Design_Documents/Product_Data/03-Graphics_Cards"; sourceTree = "<group>"; };
-		DE3B64AB265C602900005EBD /* 02-Precious_Metals */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "02-Precious_Metals"; path = "Design_Documents/Product_Data/02-Precious_Metals"; sourceTree = "<group>"; };
 		DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
-		DE3B6526265C7F2100005EBD /* StoreFrontUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = StoreFrontUI.png; path = Design_Documents/StoreFrontUI.png; sourceTree = "<group>"; };
 		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -220,6 +188,7 @@
 				BCCCA366265C485200CCBEF9 /* DataDelegate.swift */,
 				BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */,
 				BC9C00DF265D82FD0029C1EA /* ProductViewModel.swift */,
+				BC9C00E1265D932D0029C1EA /* BrandViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -239,7 +208,6 @@
 		DE363E29265803D70096D950 = {
 			isa = PBXGroup;
 			children = (
-				DE3B6489265C5F6E00005EBD /* DesignDocuments */,
 				DE363E34265803D70096D950 /* Project03 */,
 				DE363E4E265803D80096D950 /* Project03Tests */,
 				DE363E59265803D80096D950 /* Project03UITests */,
@@ -294,38 +262,6 @@
 				DE363E5C265803D80096D950 /* Info.plist */,
 			);
 			path = Project03UITests;
-			sourceTree = "<group>";
-		};
-		DE3B6489265C5F6E00005EBD /* DesignDocuments */ = {
-			isa = PBXGroup;
-			children = (
-				DE3B64A1265C5FDD00005EBD /* ProductData */,
-				DE3B649A265C5FD500005EBD /* datamodel.png */,
-				DE3B6526265C7F2100005EBD /* StoreFrontUI.png */,
-				DE3B649B265C5FD500005EBD /* design_docs.md */,
-				DE3B6490265C5FC000005EBD /* Project-3-Flowchart-png.png */,
-				DE3B6491265C5FC000005EBD /* Project-3-Requirements-Revised.pdf */,
-				DE3B648F265C5FC000005EBD /* Project03-Flowchart.ai */,
-				DE3B6492265C5FC000005EBD /* UML.png */,
-			);
-			name = DesignDocuments;
-			sourceTree = "<group>";
-		};
-		DE3B64A1265C5FDD00005EBD /* ProductData */ = {
-			isa = PBXGroup;
-			children = (
-				DE3B64A2265C602800005EBD /* 01-Cleaning_Supplies */,
-				DE3B64AB265C602900005EBD /* 02-Precious_Metals */,
-				DE3B64AA265C602900005EBD /* 03-Graphics_Cards */,
-				DE3B64A3265C602800005EBD /* 04-Exercise_Equipment */,
-				DE3B64A4265C602800005EBD /* 05-Cars */,
-				DE3B64A7265C602900005EBD /* Product_Data.xlsx */,
-				DE3B64A5265C602900005EBD /* Product_Data2003.xls */,
-				DE3B64A8265C602900005EBD /* Product_DataCSV.csv */,
-				DE3B64A9265C602900005EBD /* Product_DataXML.xml */,
-				DE3B64A6265C602900005EBD /* Products.md */,
-			);
-			name = ProductData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,26 +372,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3B64B5265C602900005EBD /* 02-Precious_Metals in Resources */,
-				DE3B64AF265C602900005EBD /* Product_Data2003.xls in Resources */,
-				DE3B64B0265C602900005EBD /* Products.md in Resources */,
-				DE3B6496265C5FC000005EBD /* UML.png in Resources */,
-				DE3B64AD265C602900005EBD /* 04-Exercise_Equipment in Resources */,
-				DE3B6494265C5FC000005EBD /* Project-3-Flowchart-png.png in Resources */,
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
-				DE3B64B1265C602900005EBD /* Product_Data.xlsx in Resources */,
-				DE3B6495265C5FC000005EBD /* Project-3-Requirements-Revised.pdf in Resources */,
-				DE3B64B2265C602900005EBD /* Product_DataCSV.csv in Resources */,
-				DE3B64AC265C602900005EBD /* 01-Cleaning_Supplies in Resources */,
-				DE3B649C265C5FD500005EBD /* datamodel.png in Resources */,
-				DE3B6493265C5FC000005EBD /* Project03-Flowchart.ai in Resources */,
-				DE3B6527265C7F2100005EBD /* StoreFrontUI.png in Resources */,
-				DE3B64B3265C602900005EBD /* Product_DataXML.xml in Resources */,
-				DE3B64AE265C602900005EBD /* 05-Cars in Resources */,
-				DE3B649D265C5FD500005EBD /* design_docs.md in Resources */,
-				DE3B64B4265C602900005EBD /* 03-Graphics_Cards in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +509,7 @@
 				BC415865265BFC640051F99B /* CreditCard+CoreDataClass.swift in Sources */,
 				BC415861265BFC640051F99B /* ItemRating+CoreDataClass.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
+				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,

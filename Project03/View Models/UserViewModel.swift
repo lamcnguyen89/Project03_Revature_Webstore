@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreData
-import UIKit
 
 class UserViewModel{
     private let user : User
@@ -36,7 +35,7 @@ class UserViewModel{
     }
 
     public func getReviews() throws -> [Review] {
-        if let reviews = user.reviews?.allObjects as? [Review]{
+        if let reviews = user.reviews?.array as? [Review]{
             return reviews
         }
         else {throw NilError.nilErr}
