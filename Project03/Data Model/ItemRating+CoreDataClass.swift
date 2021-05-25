@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 @objc(ItemRating)
-public class ItemRating: NSManagedObject {
+public class ProductRating: NSManagedObject {
 
 }
