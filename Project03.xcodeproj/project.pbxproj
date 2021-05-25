@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,10 +23,7 @@
 		BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41584F265BFC640051F99B /* Brand+CoreDataClass.swift */; };
 		BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC415851265BFC640051F99B /* Category+CoreDataClass.swift */; };
 		BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC415853265BFC640051F99B /* HistoryItem+CoreDataClass.swift */; };
-		CA318BE82659D5EF00EF6853 /* ProductListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA318BE72659D5EF00EF6853 /* ProductListTableViewController.swift */; };
-		CA4246C72659809000B92A81 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246C62659809000B92A81 /* StoreViewController.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
-		CA430906265B083C0000D989 /* ProductCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA430905265B083C0000D989 /* ProductCellTableViewCell.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
 		DE363E3A265803D70096D950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E39265803D70096D950 /* ViewController.swift */; };
@@ -53,6 +50,10 @@
 		DE3B64B3265C602900005EBD /* Product_DataXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64A9265C602900005EBD /* Product_DataXML.xml */; };
 		DE3B64B4265C602900005EBD /* 03-Graphics_Cards in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64AA265C602900005EBD /* 03-Graphics_Cards */; };
 		DE3B64B5265C602900005EBD /* 02-Precious_Metals in Resources */ = {isa = PBXBuildFile; fileRef = DE3B64AB265C602900005EBD /* 02-Precious_Metals */; };
+		DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */; };
+		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
+		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
+		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,10 +94,7 @@
 		BC415851265BFC640051F99B /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC415853265BFC640051F99B /* HistoryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03Tests.release.xcconfig"; path = "Target Support Files/Pods-Project03Tests/Pods-Project03Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CA318BE72659D5EF00EF6853 /* ProductListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTableViewController.swift; sourceTree = "<group>"; };
-		CA4246C62659809000B92A81 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
-		CA430905265B083C0000D989 /* ProductCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellTableViewCell.swift; sourceTree = "<group>"; };
 		DC44CB081B75B02F10C83C31 /* Pods-Project03-Project03UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03-Project03UITests.debug.xcconfig"; path = "Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +128,10 @@
 		DE3B64A9265C602900005EBD /* Product_DataXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Product_DataXML.xml; path = Design_Documents/Product_Data/Product_DataXML.xml; sourceTree = "<group>"; };
 		DE3B64AA265C602900005EBD /* 03-Graphics_Cards */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "03-Graphics_Cards"; path = "Design_Documents/Product_Data/03-Graphics_Cards"; sourceTree = "<group>"; };
 		DE3B64AB265C602900005EBD /* 02-Precious_Metals */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "02-Precious_Metals"; path = "Design_Documents/Product_Data/02-Precious_Metals"; sourceTree = "<group>"; };
+		DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
+		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -171,7 +173,6 @@
 				1BE78D704997607046046333 /* Pods-Project03Tests.debug.xcconfig */,
 				C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,9 +209,10 @@
 		CAC1638E2658550C0015AC77 /* StoreFront */ = {
 			isa = PBXGroup;
 			children = (
-				CA4246C62659809000B92A81 /* StoreViewController.swift */,
-				CA318BE72659D5EF00EF6853 /* ProductListTableViewController.swift */,
-				CA430905265B083C0000D989 /* ProductCellTableViewCell.swift */,
+				DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */,
+				DE3B6505265C6F7300005EBD /* StoreViewController.swift */,
+				DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */,
+				DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -561,20 +563,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */,
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
+				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,
-				CA4246C72659809000B92A81 /* StoreViewController.swift in Sources */,
-				CA430906265B083C0000D989 /* ProductCellTableViewCell.swift in Sources */,
 				BC415865265BFC640051F99B /* CreditCard+CoreDataClass.swift in Sources */,
-				CA318BE82659D5EF00EF6853 /* ProductListTableViewController.swift in Sources */,
 				BC415861265BFC640051F99B /* ItemRating+CoreDataClass.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
+				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,
 				BC415857265BFC640051F99B /* Item+CoreDataClass.swift in Sources */,
 				BC415867265BFC640051F99B /* PaymentOptions+CoreDataClass.swift in Sources */,
 				BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
+				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
 				BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */,
 				BC415863265BFC640051F99B /* SearchHistory+CoreDataClass.swift in Sources */,
 				DE363E3A265803D70096D950 /* ViewController.swift in Sources */,
