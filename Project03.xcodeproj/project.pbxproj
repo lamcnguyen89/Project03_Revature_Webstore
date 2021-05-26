@@ -205,6 +205,13 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		CA66171C265D5E9C002F0E70 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkout;
+            sourceTree = "<group>";
+        };
 		BCCCA365265C47BD00CCBEF9 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9C00E3265D9DC90029C1EA /* SwiftUI */,
+				CA66171C265D5E9C002F0E70 /* Checkout */,
 				BCCCA365265C47BD00CCBEF9 /* View Models */,
 				BC41586F265BFCAD0051F99B /* Data Model */,
 				CAC1638E2658550C0015AC77 /* StoreFront */,
