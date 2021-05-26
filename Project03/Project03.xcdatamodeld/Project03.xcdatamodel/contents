@@ -61,6 +61,10 @@
     <entity name="SearchHistory" representedClassName="SearchHistory" parentEntity="History" syncable="YES" codeGenerationType="category">
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="searchHistory" inverseEntity="User"/>
     </entity>
+    <entity name="ShoppingCart" representedClassName="ShoppingCart" syncable="YES" codeGenerationType="class">
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="shoppingCart" inverseEntity="User"/>
+    </entity>
     <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="category">
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="store" inverseEntity="Category"/>
     </entity>
@@ -74,10 +78,11 @@
         <relationship name="paymentOptions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PaymentOptions" inverseName="user" inverseEntity="PaymentOptions"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
         <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHistory" inverseName="user" inverseEntity="SearchHistory"/>
+        <relationship name="shoppingCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCart" inverseName="user" inverseEntity="ShoppingCart"/>
     </entity>
     <elements>
         <element name="Brand" positionX="-63.821044921875" positionY="-489.0199890136719" width="128" height="73"/>
-        <element name="Category" positionX="-235.4169921875" positionY="-187.3153076171875" width="128" height="88"/>
+        <element name="Category" positionX="-245.382568359375" positionY="-122.4273681640625" width="128" height="88"/>
         <element name="CreditCard" positionX="-410.866455078125" positionY="451.693359375" width="128" height="118"/>
         <element name="History" positionX="79.102783203125" positionY="477.2980346679688" width="128" height="58"/>
         <element name="HistoryItem" positionX="150.49462890625" positionY="191.0951538085938" width="128" height="88"/>
@@ -85,11 +90,12 @@
         <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
         <element name="PaymentOptions" positionX="-447.3984375" positionY="304.941162109375" width="128" height="73"/>
         <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="163"/>
-        <element name="ProductRating" positionX="-103.090087890625" positionY="-13.86199951171875" width="128" height="88"/>
+        <element name="ProductRating" positionX="-111.66357421875" positionY="-12.59024047851562" width="128" height="88"/>
         <element name="Review" positionX="-28.071533203125" positionY="107.9990539550782" width="128" height="118"/>
         <element name="Search" positionX="203.54833984375" positionY="75.115478515625" width="128" height="29"/>
         <element name="SearchHistory" positionX="-217.7998046875" positionY="469.4144287109375" width="128" height="58"/>
-        <element name="Store" positionX="-453.494140625" positionY="-170.9736938476562" width="128" height="58"/>
-        <element name="User" positionX="-374.451171875" positionY="30.27978515625" width="128" height="178"/>
+        <element name="Store" positionX="-438.289306640625" positionY="-159.861343383789" width="128" height="58"/>
+        <element name="User" positionX="-371.461669921875" positionY="15.27865600585938" width="128" height="179"/>
+        <element name="ShoppingCart" positionX="-706.47021484375" positionY="-351.7955169677734" width="128" height="73"/>
     </elements>
 </model>
