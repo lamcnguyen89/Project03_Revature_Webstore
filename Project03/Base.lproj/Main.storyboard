@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rj-J5-UDA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220.28985507246378" y="-484.15178571428567"/>
+            <point key="canvasLocation" x="-871" y="-490"/>
         </scene>
         <!--Product List View Controller-->
         <scene sceneID="ft1-5f-XYQ">
@@ -249,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duz-c9-dEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492.75362318840581" y="-388.05803571428572"/>
+            <point key="canvasLocation" x="532" y="-251"/>
         </scene>
         <!--Cart-->
         <scene sceneID="vBO-bg-mTn">
@@ -328,7 +328,7 @@
                                 <rect key="frame" x="-9" y="180" width="433" height="587"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="zkb-J3-76l" kind="embed" id="vKD-LA-6AX"/>
+                                    <segue destination="zkb-J3-76l" kind="embed" id="s9d-9q-Ocj"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -340,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJg-MD-j5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697.10144927536237" y="472.76785714285711"/>
+            <point key="canvasLocation" x="-871" y="448"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kab-sy-AC2">
@@ -572,7 +572,7 @@
                 <hostingController id="zkb-J3-76l" customClass="ShoppingCartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWm-gI-iF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-696" y="1208"/>
+            <point key="canvasLocation" x="-885" y="1139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QtX-Rh-gwc">
@@ -633,12 +633,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vay-pr-p14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445" y="1619"/>
+            <point key="canvasLocation" x="270" y="1635"/>
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">
             <objects>
-                <viewController title="ProductDetail" id="75z-n6-Tp5" customClass="ProductDetailViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetail" title="ProductDetail" id="75z-n6-Tp5" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8X8-MK-BIl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="993"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -808,7 +808,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGg-LN-fw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205.7971014492755" y="-282.25446428571428"/>
+            <point key="canvasLocation" x="1594" y="-229"/>
         </scene>
     </scenes>
     <resources>

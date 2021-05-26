@@ -9,30 +9,18 @@ import SwiftUI
 import CoreData
 
 struct ShoppingCartScrollView: View {
-    
+    @State private var showProduct = false
     
     var body: some View {
         Form{
-            ForEach(0..<5){ _ in
-                Button(action: {checkout()}) {
+            ForEach(0..<10){ i in
+                Button(action: {showProduct=true}) {
                     HStack{
                         Image("test")
                             .resizable()
                             .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        Text("Hello, World!")
+                        Text("Test: " + String(i))
                     }
-                }
-                HStack{
-                    Image("test")
-                        .resizable()
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Text("2")
-                }
-                HStack{
-                    Image("test")
-                        .resizable()
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Text("3")
                 }
             }
             Button(action: {checkout()}) {
@@ -40,10 +28,12 @@ struct ShoppingCartScrollView: View {
                     Spacer()
                     Text("Checkout").frame( height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     Spacer()
-
                 }
             }
         }
+        .sheet(isPresented: $showProduct, content: {
+            ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail")
+        })
     }
     func checkout(){
         
