@@ -38,31 +38,28 @@ class UserViewModel{
         if let reviews = user.reviews?.array as? [Review]{
             return reviews
         }
-        else {throw NilError.nilErr}
+        else {throw Err.nilErr}
     }
 
     public func getOrderHistory() throws -> OrderHistory {
         if let orderHistory = user.orderHistory{
             return orderHistory
         }
-        else {throw NilError.nilErr}
+        else {throw Err.nilErr}
     }
 
     public func getSearchHistory() throws -> SearchHistory{
         if let searchHistory = user.searchHistory{
             return searchHistory
         }
-        else {throw NilError.nilErr}
+        else {throw Err.nilErr}
     }
 
     public func getPaymentOptions() throws -> PaymentOptions{
         if let payOptions = user.paymentOptions{
             return payOptions
         }
-        else {throw NilError.nilErr}
+        else {throw Err.nilErr}
     }
 
-    enum NilError : Error{
-        case nilErr
-    }
 }

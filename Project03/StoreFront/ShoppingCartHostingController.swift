@@ -14,6 +14,5 @@ class ShoppingCartHostingController:  UIHostingController<ShoppingCartScrollView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

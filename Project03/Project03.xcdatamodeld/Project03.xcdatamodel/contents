@@ -22,7 +22,7 @@
     <entity name="HistoryItem" representedClassName="HistoryItem" isAbstract="YES" syncable="YES" codeGenerationType="category">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="History" inverseName="historyItems" inverseEntity="History"/>
-        <relationship name="product" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product"/>
+        <relationship name="product" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
     </entity>
     <entity name="Order" representedClassName="Order" parentEntity="HistoryItem" syncable="YES" codeGenerationType="class">
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
@@ -61,9 +61,14 @@
     <entity name="SearchHistory" representedClassName="SearchHistory" parentEntity="History" syncable="YES" codeGenerationType="category">
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="searchHistory" inverseEntity="User"/>
     </entity>
-    <entity name="ShoppingCart" representedClassName="ShoppingCart" syncable="YES" codeGenerationType="class">
-        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
+    <entity name="ShoppingCart" representedClassName="ShoppingCart" syncable="YES" codeGenerationType="category">
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShoppingCartItem" inverseName="shoppingCart" inverseEntity="ShoppingCartItem"/>
         <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="shoppingCart" inverseEntity="User"/>
+    </entity>
+    <entity name="ShoppingCartItem" representedClassName="ShoppingCartItem" syncable="YES" codeGenerationType="category">
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product"/>
+        <relationship name="shoppingCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCart" inverseName="items" inverseEntity="ShoppingCart"/>
     </entity>
     <entity name="Store" representedClassName="Store" syncable="YES" codeGenerationType="category">
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Category" inverseName="store" inverseEntity="Category"/>
@@ -97,5 +102,6 @@
         <element name="Store" positionX="-438.289306640625" positionY="-159.861343383789" width="128" height="58"/>
         <element name="User" positionX="-371.461669921875" positionY="15.27865600585938" width="128" height="179"/>
         <element name="ShoppingCart" positionX="-706.47021484375" positionY="-351.7955169677734" width="128" height="73"/>
+        <element name="ShoppingCartItem" positionX="-495" positionY="-324" width="128" height="74"/>
     </elements>
 </model>
