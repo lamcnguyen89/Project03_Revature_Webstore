@@ -350,7 +350,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjJ-oA-yOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="1069"/>
+            <point key="canvasLocation" x="1200" y="1281"/>
         </scene>
         <!--Payment-->
         <scene sceneID="pjU-sc-w7q">
@@ -561,7 +561,7 @@
                 <hostingController id="zkb-J3-76l" customClass="ShoppingCartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWm-gI-iF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-697" y="1207"/>
+            <point key="canvasLocation" x="-696" y="1208"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QtX-Rh-gwc">
@@ -622,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vay-pr-p14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="1294"/>
+            <point key="canvasLocation" x="445" y="1619"/>
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">

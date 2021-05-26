@@ -14,11 +14,13 @@ struct ShoppingCartScrollView: View {
     var body: some View {
         Form{
             ForEach(0..<5){ _ in
-                HStack{
-                    Image("test")
-                        .resizable()
-                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Text("Hello, World!")
+                Button(action: {checkout()}) {
+                    HStack{
+                        Image("test")
+                            .resizable()
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        Text("Hello, World!")
+                    }
                 }
                 HStack{
                     Image("test")
@@ -38,6 +40,7 @@ struct ShoppingCartScrollView: View {
                     Spacer()
                     Text("Checkout").frame( height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     Spacer()
+
                 }
             }
         }
