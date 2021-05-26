@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j28-CW-FWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j28-CW-FWz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -98,7 +98,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
                                 <connections>
-                                    <segue destination="inA-Gv-GzG" kind="show" id="iDO-kU-vbt"/>
+                                    <segue destination="inA-Gv-GzG" kind="modal" modalPresentationStyle="fullScreen" id="iDO-kU-vbt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vq-gP-6pW" userLabel="Menu">
@@ -167,7 +167,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="product" rowHeight="367" id="2hT-xi-mLP" customClass="ProductDetailRowTableViewCell" customModule="Project03" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="367"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hT-xi-mLP" id="vKh-in-hfb">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="367"/>
@@ -256,7 +256,7 @@
             <objects>
                 <viewController title="Cart" id="inA-Gv-GzG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tr3-NT-TuT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cRU-Go-J2b">
@@ -298,26 +298,6 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9L-i9-0cM">
-                                <rect key="frame" x="0.0" y="-56" width="414" height="898"/>
-                                <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuJ-PG-hHi">
-                                        <rect key="frame" x="0.0" y="236" width="414" height="662"/>
-                                        <connections>
-                                            <segue destination="bgK-me-AjR" kind="embed" id="L2K-91-hBM"/>
-                                        </connections>
-                                    </containerView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="QuJ-PG-hHi" firstAttribute="top" secondItem="Ebj-3r-x33" secondAttribute="top" constant="236" id="3S7-mv-yng"/>
-                                    <constraint firstAttribute="bottom" secondItem="QuJ-PG-hHi" secondAttribute="bottom" id="QRB-3t-DFO"/>
-                                    <constraint firstItem="QuJ-PG-hHi" firstAttribute="width" secondItem="j9L-i9-0cM" secondAttribute="width" id="b3k-Aa-4ng"/>
-                                    <constraint firstItem="QuJ-PG-hHi" firstAttribute="leading" secondItem="Ebj-3r-x33" secondAttribute="leading" id="cmV-rB-Qgj"/>
-                                    <constraint firstItem="QuJ-PG-hHi" firstAttribute="trailing" secondItem="Ebj-3r-x33" secondAttribute="trailing" id="nKB-vs-Le4"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="BAl-ic-D34"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="Ebj-3r-x33"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjA-X9-XqX">
                                 <rect key="frame" x="202" y="764" width="212" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -344,22 +324,23 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QuJ-PG-hHi">
+                                <rect key="frame" x="-9" y="180" width="433" height="587"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="zkb-J3-76l" kind="embed" id="vKD-LA-6AX"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fkH-RI-BNM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="j9L-i9-0cM" firstAttribute="top" secondItem="Tr3-NT-TuT" secondAttribute="top" id="Gbl-Ta-nug"/>
-                            <constraint firstItem="j9L-i9-0cM" firstAttribute="trailing" secondItem="fkH-RI-BNM" secondAttribute="trailing" id="HJ1-hV-7pS"/>
-                            <constraint firstItem="j9L-i9-0cM" firstAttribute="leading" secondItem="fkH-RI-BNM" secondAttribute="leading" id="geN-LC-9p1"/>
-                            <constraint firstAttribute="bottom" secondItem="j9L-i9-0cM" secondAttribute="bottom" id="wj4-Sg-4au"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="9BT-gt-8X2"/>
                     <navigationItem key="navigationItem" id="Ps2-si-ohQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJg-MD-j5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-220" y="291"/>
+            <point key="canvasLocation" x="-697.10144927536237" y="472.76785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kab-sy-AC2">
@@ -380,7 +361,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjJ-oA-yOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="1069"/>
+            <point key="canvasLocation" x="1200" y="1281"/>
         </scene>
         <!--Payment-->
         <scene sceneID="pjU-sc-w7q">
@@ -585,12 +566,20 @@
             </objects>
             <point key="canvasLocation" x="1996" y="473"/>
         </scene>
+        <!--Shopping Cart Hosting Controller-->
+        <scene sceneID="4Oy-W2-T5e">
+            <objects>
+                <hostingController id="zkb-J3-76l" customClass="ShoppingCartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PWm-gI-iF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-696" y="1208"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="QtX-Rh-gwc">
             <objects>
                 <viewController id="bgK-me-AjR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0cx-IR-wbO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="662"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mQx-zX-RzT">
@@ -612,7 +601,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xAr-6g-und">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xAr-6g-und" id="tp6-4d-2TS">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -644,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vay-pr-p14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="1282"/>
+            <point key="canvasLocation" x="445" y="1619"/>
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">

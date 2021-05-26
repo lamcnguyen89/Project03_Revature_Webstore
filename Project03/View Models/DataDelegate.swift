@@ -66,6 +66,7 @@ class DataDelegate {
     }
     
 
-
-
+}
+enum Err : Error{
+    case nilErr 
 }
