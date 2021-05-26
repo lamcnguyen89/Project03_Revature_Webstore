@@ -208,6 +208,13 @@
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
+		CA66171C265D5E9C002F0E70 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
 		CAC1638E2658550C0015AC77 /* StoreFront */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +253,7 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				CA66171C265D5E9C002F0E70 /* Checkout */,
 				BC41586F265BFCAD0051F99B /* Data Model */,
 				CAC1638E2658550C0015AC77 /* StoreFront */,
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
