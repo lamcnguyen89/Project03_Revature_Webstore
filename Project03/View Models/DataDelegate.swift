@@ -31,6 +31,7 @@ class DataDelegate {
         }
     }
 
+    /*
     func getOneUser(name : String) -> User {
         var user = User()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
@@ -48,7 +49,33 @@ class DataDelegate {
         }
         return user
     }
+ */
 
+    
+    func getOneUser (name : String)-> User{
+        
+        var user = User()
+        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        fetchReq.predicate = NSPredicate(format: "name == %@", name)
+        fetchReq.fetchLimit = 1
+        do {
+            let req = try context?.fetch(fetchReq) as! [User]
+            if(req.count != 0 ){
+                user = req.first!
+            }
+            else{
+                print("No users found")
+            }
+        }
+        catch{
+            print("No users found")
+        }
+        
+        return user
+
+    }
+    
+    
     func updatePassword(_ object: [String: String]){
         var user = User()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
