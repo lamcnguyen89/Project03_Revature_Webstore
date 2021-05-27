@@ -34,6 +34,14 @@
 		BCCCA367265C485200CCBEF9 /* DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataDelegate.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
+		CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */; };
+		CAF6C7E9265EDA980040CC18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7E8265EDA980040CC18 /* LoginViewController.swift */; };
+		CAF6C7F1265EDC0C0040CC18 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7F0265EDC0C0040CC18 /* WishListViewController.swift */; };
+		CAF6C7F6265EE0920040CC18 /* SaveItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7F5265EE0920040CC18 /* SaveItemsViewController.swift */; };
+		CAF6C7FB265F08C50040CC18 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7FA265F08C50040CC18 /* OrdersViewController.swift */; };
+		CAF6C800265F09320040CC18 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7FF265F09320040CC18 /* MyAccountViewController.swift */; };
+		CAF6C805265F0A180040CC18 /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */; };
+		CAF6C80A265F0B8F0040CC18 /* UserTabNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C809265F0B8F0040CC18 /* UserTabNavViewController.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
 		DE363E3A265803D70096D950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E39265803D70096D950 /* ViewController.swift */; };
@@ -99,6 +107,14 @@
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03Tests.release.xcconfig"; path = "Target Support Files/Pods-Project03Tests/Pods-Project03Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
+		CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDashboard.storyboard; sourceTree = "<group>"; };
+		CAF6C7E8265EDA980040CC18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CAF6C7F0265EDC0C0040CC18 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		CAF6C7F5265EE0920040CC18 /* SaveItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveItemsViewController.swift; sourceTree = "<group>"; };
+		CAF6C7FA265F08C50040CC18 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		CAF6C7FF265F09320040CC18 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
+		CAF6C809265F0B8F0040CC18 /* UserTabNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabNavViewController.swift; sourceTree = "<group>"; };
 		DC44CB081B75B02F10C83C31 /* Pods-Project03-Project03UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03-Project03UITests.debug.xcconfig"; path = "Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -205,13 +221,6 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		CA66171C265D5E9C002F0E70 /* Checkout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Checkout;
-            sourceTree = "<group>";
-        };
 		BCCCA365265C47BD00CCBEF9 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +231,13 @@
 				BC7E34E6265E99BC006CE75A /* ShoppingCartViewModel.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		CA66171C265D5E9C002F0E70 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 		CAC1638E2658550C0015AC77 /* StoreFront */ = {
@@ -235,6 +251,20 @@
 				BC7E34DC265E92EC006CE75A /* ShoppingCartHostingController.swift */,
 			);
 			path = StoreFront;
+			sourceTree = "<group>";
+		};
+		CAF6C7DF265ED6CF0040CC18 /* UserDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				CAF6C7E8265EDA980040CC18 /* LoginViewController.swift */,
+				CAF6C7F0265EDC0C0040CC18 /* WishListViewController.swift */,
+				CAF6C7F5265EE0920040CC18 /* SaveItemsViewController.swift */,
+				CAF6C7FA265F08C50040CC18 /* OrdersViewController.swift */,
+				CAF6C7FF265F09320040CC18 /* MyAccountViewController.swift */,
+				CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */,
+				CAF6C809265F0B8F0040CC18 /* UserTabNavViewController.swift */,
+			);
+			path = UserDashboard;
 			sourceTree = "<group>";
 		};
 		DE363E29265803D70096D950 = {
@@ -262,6 +292,7 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				CAF6C7DF265ED6CF0040CC18 /* UserDashboard */,
 				BC9C00E3265D9DC90029C1EA /* SwiftUI */,
 				CA66171C265D5E9C002F0E70 /* Checkout */,
 				BCCCA365265C47BD00CCBEF9 /* View Models */,
@@ -270,6 +301,7 @@
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E37265803D70096D950 /* SceneDelegate.swift */,
 				DE363E3B265803D70096D950 /* Main.storyboard */,
+				CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */,
 				DE363E39265803D70096D950 /* ViewController.swift */,
 				CA4246DC2659942400B92A81 /* StoreMenu.swift */,
 				DE363E41265803D80096D950 /* Assets.xcassets */,
@@ -408,6 +440,7 @@
 			files = (
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
+				CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +570,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */,
+				CAF6C7F1265EDC0C0040CC18 /* WishListViewController.swift in Sources */,
+				CAF6C800265F09320040CC18 /* MyAccountViewController.swift in Sources */,
+				CAF6C80A265F0B8F0040CC18 /* UserTabNavViewController.swift in Sources */,
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,
@@ -551,11 +587,14 @@
 				BC7E34E0265E9788006CE75A /* ShoppingCart+CoreDataClass.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,
 				BC415857265BFC640051F99B /* Item+CoreDataClass.swift in Sources */,
+				CAF6C7F6265EE0920040CC18 /* SaveItemsViewController.swift in Sources */,
 				BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */,
 				BC415867265BFC640051F99B /* PaymentOptions+CoreDataClass.swift in Sources */,
+				CAF6C7FB265F08C50040CC18 /* OrdersViewController.swift in Sources */,
 				BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */,
 				BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
+				CAF6C805265F0A180040CC18 /* UserDashboardViewController.swift in Sources */,
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
 				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
 				BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */,
@@ -566,6 +605,7 @@
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
 				DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */,
 				BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */,
+				CAF6C7E9265EDA980040CC18 /* LoginViewController.swift in Sources */,
 				BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */,
 				BC7E34E7265E99BC006CE75A /* ShoppingCartViewModel.swift in Sources */,
 				BC9C00E5265D9DE60029C1EA /* ShoppingCartScrollView.swift in Sources */,

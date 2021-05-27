@@ -27,4 +27,13 @@ class CategoryViewController: UIViewController {
         
     }
 
+    @IBAction func getUserDashboard(_ sender: UIButton) {
+        print("go to user dash")
+        let getSB = UIStoryboard(name: "UserDashboard", bundle: nil)
+        let show = getSB.instantiateViewController(withIdentifier: "userTabNav") as! UserTabNavViewController
+        
+        self.present(show, animated: true, completion: nil)
+        
+        
+    }
 }
