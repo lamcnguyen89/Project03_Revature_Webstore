@@ -14,6 +14,9 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
+    
+    var answer: Int!
+
 
     @IBOutlet weak var galleryView: UIView!
     @IBOutlet weak var productDetailView: UIView!
@@ -26,5 +29,21 @@ class CategoryViewController: UIViewController {
         productDetailView.isHidden = true
         
     }
+    
+    func subtractor(input1: Int, input2: Int)-> Int {
+        let val1 = input1 ?? 0
+        let val2 = input2 ?? 0
+        
+        let answer = val1 - val2
+        return answer
+    }
 
+    @IBAction func getUserDashboard(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+    }
+    
 }
+
