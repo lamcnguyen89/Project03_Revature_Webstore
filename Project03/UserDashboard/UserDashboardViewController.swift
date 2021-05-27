@@ -8,17 +8,11 @@
 import UIKit
 
 class UserDashboardViewController: UIViewController {
-   
-    let tabs = UserTabNavViewController()
-    let vcWish = WishListViewController()
-    let vcOrders = OrdersViewController()
-    @IBOutlet weak var btnWish: UIButton!
-    @IBOutlet weak var btnOrder: UIButton!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tabs.viewControllers = [vcWish, vcOrders]
-
+        
     }
     
    
@@ -30,6 +24,13 @@ class UserDashboardViewController: UIViewController {
     @IBAction func btnWishList(_ sender: UIButton) {
         //tabs.tabBarController(tabs, didSelect: vcWish)
         
+    }
+    
+    @IBAction func getCategoryLIst(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name:"Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
+        self.present(show,animated: true, completion: nil)
     }
     
 }
