@@ -12,8 +12,20 @@ import CoreData
 @objc(Product)
 public class Product: NSManagedObject {
 
-    func update(dictionary: [String:String]){
-       
+    func update(dictionary: [[String:String]]){
+        for item in dictionary{
+            let cat = Brand(context: self.managedObjectContext!)
+            let bran = Brand(context: self.managedObjectContext!)
+            let rat = ProductRating(context: self.managedObjectContext!)
+            
+            name = item["Item"]
+            price = Double(item["Price/Unit"]!)!
+            productDescription = item["Description"]
+
+            cat.name = item["Brand"]
+
+
+        }
 
 
     }
