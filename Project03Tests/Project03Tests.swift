@@ -8,10 +8,12 @@
 import XCTest
 @testable import Project03
 
+
+
 class Project03Tests: XCTestCase {
     
     // SUT stands for System under Test. It is the class that we are perofrming tests upon.
-    var sut: ViewController!
+    var sut: LoginViewController!
     var sut2: CategoryViewController!
 
     override func setUpWithError() throws {
