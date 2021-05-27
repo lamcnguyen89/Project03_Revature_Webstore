@@ -10,11 +10,23 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
+        do{
+            let fetch = try context?.fetch(fetchReq)
+            if fetch == nil{
+                DataDelegate().generateInitialProducts()
+            }
+        }
+        catch{
+            print("AppDelegate.application fetchReq failed")
+        }
+
+
         return true
     }
 

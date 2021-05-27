@@ -8,6 +8,7 @@
 import Foundation
 import CoreData
 import UIKit
+import SwiftCSV
 
 class DataDelegate {
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
@@ -63,6 +64,24 @@ class DataDelegate {
         catch{
 
         }
+    }
+    func generateInitialProducts(){
+        let parseError : NSError
+        var prodArray = [Product]()
+        var csv : CSV?
+        for _ in 0...24{
+            let prod = Product(context: context!)
+            prodArray.append(prod)
+        }
+
+            let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
+            let resource = try! CSV(url: url)
+            csv = resource
+
+
+        var arr = csv!.namedRows
+        print(arr)
+
     }
     
 
