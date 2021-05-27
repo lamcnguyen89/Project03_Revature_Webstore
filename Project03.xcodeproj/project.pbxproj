@@ -70,7 +70,7 @@
 		BC2A9999265FF2C800870173 /* 06-Iridium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995D265FF2C700870173 /* 06-Iridium.jpg */; };
 		BC2A999A265FF2C800870173 /* Product_Data.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995E265FF2C700870173 /* Product_Data.xlsx */; };
 		BC2A999D265FFB4C00870173 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2A999B265FFB4C00870173 /* Product+CoreDataClass.swift */; };
-		BC2A99A42660079900870173 /* ProductDataCSV.csv in Resources */ = {isa = PBXBuildFile; fileRef = BC2A99A32660079900870173 /* ProductDataCSV.csv */; };
+		BC2A99A626601BC200870173 /* ProductDataCSV.csv in Resources */ = {isa = PBXBuildFile; fileRef = BC2A99A526601BC200870173 /* ProductDataCSV.csv */; };
 		BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41583B265BFC640051F99B /* Store+CoreDataClass.swift */; };
 		BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41583F265BFC640051F99B /* Review+CoreDataClass.swift */; };
 		BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC415841265BFC640051F99B /* User+CoreDataClass.swift */; };
@@ -195,7 +195,7 @@
 		BC2A995D265FF2C700870173 /* 06-Iridium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-Iridium.jpg"; sourceTree = "<group>"; };
 		BC2A995E265FF2C700870173 /* Product_Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Product_Data.xlsx; sourceTree = "<group>"; };
 		BC2A999B265FFB4C00870173 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		BC2A99A32660079900870173 /* ProductDataCSV.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ProductDataCSV.csv; path = ../../../../Documents/ProductDataCSV.csv; sourceTree = "<group>"; };
+		BC2A99A526601BC200870173 /* ProductDataCSV.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductDataCSV.csv; sourceTree = "<group>"; };
 		BC41583B265BFC640051F99B /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC41583F265BFC640051F99B /* Review+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC415841265BFC640051F99B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -314,7 +314,7 @@
 		BC2A9924265FF2C700870173 /* Product_Data */ = {
 			isa = PBXGroup;
 			children = (
-				BC2A99A32660079900870173 /* ProductDataCSV.csv */,
+				BC2A99A526601BC200870173 /* ProductDataCSV.csv */,
 				BC2A9925265FF2C700870173 /* Product_DataXML.xml */,
 				BC2A9926265FF2C700870173 /* 03-Graphics_Cards */,
 				BC2A9931265FF2C700870173 /* 04-Exercise_Equipment */,
@@ -664,7 +664,6 @@
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				BC2A996E265FF2C700870173 /* 09-RTX_3090_Founders.PNG in Resources */,
 				BC2A9973265FF2C700870173 /* 02-Cap_Bumper_Plate_25.jpg in Resources */,
-				BC2A99A42660079900870173 /* ProductDataCSV.csv in Resources */,
 				BC2A9975265FF2C700870173 /* Exercise.md in Resources */,
 				BC2A9980265FF2C800870173 /* 07-Honda_Civic_2019.png in Resources */,
 				BC2A9968265FF2C700870173 /* 06- RTX_3070_MSI.png in Resources */,
@@ -690,6 +689,7 @@
 				BC2A997C265FF2C700870173 /* Product_Data2003.xls in Resources */,
 				BC2A9999265FF2C800870173 /* 06-Iridium.jpg in Resources */,
 				BC2A996B265FF2C700870173 /* graphics.md in Resources */,
+				BC2A99A626601BC200870173 /* ProductDataCSV.csv in Resources */,
 				BC2A9974265FF2C700870173 /* 06-Power_Rack.jpg in Resources */,
 				BC2A9998265FF2C800870173 /* 02-Gold.jpeg in Resources */,
 				BC2A9997265FF2C800870173 /* 01- Platinum.png in Resources */,
