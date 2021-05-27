@@ -33,6 +33,7 @@
 		BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataDelegate.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
+		CA04A050265FE2BD00E75D2B /* UserDashTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA04A04F265FE2BD00E75D2B /* UserDashTabBarController.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
 		CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */; };
 		CAF6C7E9265EDA980040CC18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7E8265EDA980040CC18 /* LoginViewController.swift */; };
@@ -41,7 +42,6 @@
 		CAF6C7FB265F08C50040CC18 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7FA265F08C50040CC18 /* OrdersViewController.swift */; };
 		CAF6C800265F09320040CC18 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C7FF265F09320040CC18 /* MyAccountViewController.swift */; };
 		CAF6C805265F0A180040CC18 /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */; };
-		CAF6C80A265F0B8F0040CC18 /* UserTabNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C809265F0B8F0040CC18 /* UserTabNavViewController.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
 		DE363E3A265803D70096D950 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E39265803D70096D950 /* ViewController.swift */; };
@@ -106,6 +106,7 @@
 		BCCCA366265C485200CCBEF9 /* DataDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDelegate.swift; sourceTree = "<group>"; };
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03Tests.release.xcconfig"; path = "Target Support Files/Pods-Project03Tests/Pods-Project03Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CA04A04F265FE2BD00E75D2B /* UserDashTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashTabBarController.swift; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
 		CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDashboard.storyboard; sourceTree = "<group>"; };
 		CAF6C7E8265EDA980040CC18 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +115,6 @@
 		CAF6C7FA265F08C50040CC18 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
 		CAF6C7FF265F09320040CC18 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
-		CAF6C809265F0B8F0040CC18 /* UserTabNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTabNavViewController.swift; sourceTree = "<group>"; };
 		DC44CB081B75B02F10C83C31 /* Pods-Project03-Project03UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03-Project03UITests.debug.xcconfig"; path = "Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -229,6 +229,7 @@
 				BC9C00DF265D82FD0029C1EA /* ProductViewModel.swift */,
 				BC9C00E1265D932D0029C1EA /* BrandViewModel.swift */,
 				BC7E34E6265E99BC006CE75A /* ShoppingCartViewModel.swift */,
+				CA04A04F265FE2BD00E75D2B /* UserDashTabBarController.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -262,7 +263,6 @@
 				CAF6C7FA265F08C50040CC18 /* OrdersViewController.swift */,
 				CAF6C7FF265F09320040CC18 /* MyAccountViewController.swift */,
 				CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */,
-				CAF6C809265F0B8F0040CC18 /* UserTabNavViewController.swift */,
 			);
 			path = UserDashboard;
 			sourceTree = "<group>";
@@ -569,10 +569,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA04A050265FE2BD00E75D2B /* UserDashTabBarController.swift in Sources */,
 				DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */,
 				CAF6C7F1265EDC0C0040CC18 /* WishListViewController.swift in Sources */,
 				CAF6C800265F09320040CC18 /* MyAccountViewController.swift in Sources */,
-				CAF6C80A265F0B8F0040CC18 /* UserTabNavViewController.swift in Sources */,
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,

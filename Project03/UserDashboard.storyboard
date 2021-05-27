@@ -248,7 +248,7 @@
         <!--userTabNav-->
         <scene sceneID="Mzb-VO-9bL">
             <objects>
-                <tabBarController storyboardIdentifier="userTabNav" title="userTabNav" automaticallyAdjustsScrollViewInsets="NO" id="ozV-i1-bqH" customClass="UserTabNavViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="userTabNav" title="userTabNav" automaticallyAdjustsScrollViewInsets="NO" id="ozV-i1-bqH" customClass="UserDashTabBarController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kBU-EP-LPV">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -364,7 +364,7 @@
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="power" catalog="system" width="128" height="124"/>
         <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="32" height="32"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="wand.and.stars" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
