@@ -36,7 +36,6 @@
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
-		DE363E3A265803D70096D950 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E39265803D70096D950 /* LoginViewController.swift */; };
 		DE363E3D265803D70096D950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE363E3B265803D70096D950 /* Main.storyboard */; };
 		DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DE363E3E265803D70096D950 /* Project03.xcdatamodeld */; };
 		DE363E42265803D80096D950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE363E41265803D80096D950 /* Assets.xcassets */; };
@@ -45,6 +44,7 @@
 		DE385E8A265F624E00F7EE96 /* Project03UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E5A265803D80096D950 /* Project03UITests.swift */; };
 		DE385EAE265F6F0200F7EE96 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE385EAD265F6F0200F7EE96 /* SignUpViewController.swift */; };
 		DE385EB6265F6F2500F7EE96 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE385EB5265F6F2500F7EE96 /* ResetPasswordViewController.swift */; };
+		DE385EBE265F768200F7EE96 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE385EBD265F768200F7EE96 /* LoginViewController.swift */; };
 		DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */; };
 		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
@@ -105,7 +105,6 @@
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE363E37265803D70096D950 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE363E39265803D70096D950 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE363E3C265803D70096D950 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE363E3F265803D70096D950 /* Project03.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project03.xcdatamodel; sourceTree = "<group>"; };
 		DE363E41265803D80096D950 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +117,7 @@
 		DE363E5A265803D80096D950 /* Project03UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project03UITests.swift; sourceTree = "<group>"; };
 		DE385EAD265F6F0200F7EE96 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DE385EB5265F6F2500F7EE96 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		DE385EBD265F768200F7EE96 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
@@ -269,9 +269,9 @@
 				BCCCA365265C47BD00CCBEF9 /* View Models */,
 				BC41586F265BFCAD0051F99B /* Data Model */,
 				CAC1638E2658550C0015AC77 /* StoreFront */,
-				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE385EAC265F6EB300F7EE96 /* UserLogin */,
 				DE363E37265803D70096D950 /* SceneDelegate.swift */,
+				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E3B265803D70096D950 /* Main.storyboard */,
 				CA4246DC2659942400B92A81 /* StoreMenu.swift */,
 				DE363E41265803D80096D950 /* Assets.xcassets */,
@@ -295,9 +295,9 @@
 		DE385EAC265F6EB300F7EE96 /* UserLogin */ = {
 			isa = PBXGroup;
 			children = (
-				DE363E39265803D70096D950 /* LoginViewController.swift */,
 				DE385EAD265F6F0200F7EE96 /* SignUpViewController.swift */,
 				DE385EB5265F6F2500F7EE96 /* ResetPasswordViewController.swift */,
+				DE385EBD265F768200F7EE96 /* LoginViewController.swift */,
 			);
 			path = UserLogin;
 			sourceTree = "<group>";
@@ -568,7 +568,7 @@
 				BC415863265BFC640051F99B /* SearchHistory+CoreDataClass.swift in Sources */,
 				BCCCA367265C485200CCBEF9 /* DataDelegate.swift in Sources */,
 				DE385EB6265F6F2500F7EE96 /* ResetPasswordViewController.swift in Sources */,
-				DE363E3A265803D70096D950 /* LoginViewController.swift in Sources */,
+				DE385EBE265F768200F7EE96 /* LoginViewController.swift in Sources */,
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
 				DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */,
 				BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */,
