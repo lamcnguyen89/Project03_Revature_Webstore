@@ -7,47 +7,22 @@
 
 import UIKit
 
-class UserDashboardViewController: UIViewController, UITabBarControllerDelegate {
+class UserDashboardViewController: UIViewController {
+  
     
-    
-    @IBOutlet weak var btnSaveItems: UIButton!
-    @IBOutlet weak var btnWishList: UIButton!
-    @IBOutlet weak var btnOrders: UIButton!
-    @IBOutlet weak var btnAccount: UIButton!
-    
-    let vcSaveItems = SaveItemsViewController()
-    let vcWishList = WishListViewController()
-    
-    //let _item00 = UITabBarItem()
-    //let _item01 = UITabBarItem()
-       
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         
-        //vcSaveItems.tabBarItem = _item00
-        //vcWishList.tabBarItem = _item01
-              
-           
     }
     
-    // tabBarController delegate
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Select a custom tab bar item")
-    }
-    
-          
+   
+       
     @IBAction func btnSaveIItems(_ sender: UIButton) {
         
     }
     
     @IBAction func btnWishList(_ sender: UIButton) {
-        print("going to start show tabs")
-        //UserDashTabBarController.tc.showTabs()
+        //tabs.tabBarController(tabs, didSelect: vcWish)
         
     }
     

@@ -10,18 +10,17 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         let queue = OperationQueue()
         let group = DispatchGroup()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
         do{
             let fetch = try context?.fetch(fetchReq)
-            if fetch == nil || fetch?.count == 0{
-                let getCSV = AsyncCSV(context: context!)
+            if fetch == nil{
+                let getCSV = AsyncCSV()
                 group.enter()
                 DispatchQueue.main.async {
                     queue.addOperations([getCSV], waitUntilFinished: true)

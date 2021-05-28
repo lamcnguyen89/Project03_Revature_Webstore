@@ -11,15 +11,9 @@ import UIKit
 import SwiftCSV
 
 class DataDelegate {
-    let context : NSManagedObjectContext?
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     static var inst = DataDelegate()
 
-    init (context: NSManagedObjectContext) {
-        self.context = context
-    }
-    init(){
-        context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
-    }
     //MARK: -- User Related
     func createUser(_ object: [String:String]){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
