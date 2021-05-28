@@ -95,12 +95,13 @@ class DataDelegate {
         let resource = try! CSV(url: url)
         csv = resource
 
-        for _ in csv!.namedRows{
+        for item in csv!.namedRows{
             let prod = Product(context: context!)
-            prod.update(dictionary: csv!.namedRows, store: getStore())
+            prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
-            print(prod)
+
         }
+        print(prodArray)
         try! context?.save()
     }
 }
