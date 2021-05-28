@@ -7,7 +7,8 @@ target 'Project03' do
 
   # Pods for Project03
 	pod 'SideMenu'
-        pod 'FBSDKLoginKit'
+  pod 'FBSDKLoginKit'
+  pod "SwiftCSV"
 
   target 'Project03Tests' do
     inherit! :search_paths
@@ -17,5 +18,6 @@ target 'Project03' do
   target 'Project03UITests' do
     # Pods for testing
   end
+
 
 end

@@ -1,15 +1,15 @@
 //
-//  ItemRating+CoreDataClass.swift
+//  ProductRating+CoreDataClass.swift
 //  Project03
 //
-//  Created by Kirtland Ross on 5/24/21.
+//  Created by Kirtland Ross on 5/27/21.
 //
 //
 
 import Foundation
 import CoreData
 
-@objc(ItemRating)
+@objc(ProductRating)
 public class ProductRating: NSManagedObject {
 
 }
