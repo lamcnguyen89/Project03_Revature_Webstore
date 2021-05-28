@@ -56,17 +56,10 @@ class CreditCardViewController: UIViewController {
             phone.text != nil
         ) {
            print("Card information submitted")
-            DBHelper.inst.updateDataSub(object: DBHelper.inst.getCurrentUser())
-           let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-           let wel = sb.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
-           self.present(wel, animated: true, completion: nil)
+
             
         } else {
-            let alert = UIAlertController(title: "Payment Error", message: "You need to enter the required payment info.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            NSLog("The \"OK\" alert occured.")
-            }))
-            self.present(alert, animated: true, completion: nil)
+
         }
         
         
