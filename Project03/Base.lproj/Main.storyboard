@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j28-CW-FWz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cHQ-gs-GU4">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
-    <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -156,7 +148,7 @@
             <objects>
                 <viewController id="5Iy-eb-SFd" customClass="ProductListViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q7Q-NA-Qva">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="711"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tR-hp-MNC">
@@ -356,11 +348,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJg-MD-j5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="rLM-lo-1ot" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-
             <point key="canvasLocation" x="-199" y="270"/>
-
-            <point key="canvasLocation" x="-871" y="448"/>
-
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kab-sy-AC2">
@@ -480,11 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-kG-9vr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="1354" y="1142"/>
-
-            <point key="canvasLocation" x="200" y="473"/>
-
         </scene>
         <!--Shipment-->
         <scene sceneID="lxk-PB-4gI">
@@ -565,11 +549,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymt-Qh-xZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="542" y="1142"/>
-
-            <point key="canvasLocation" x="1266.6666666666667" y="472.76785714285711"/>
-
         </scene>
         <!--Review-->
         <scene sceneID="Oj5-Ge-VDL">
@@ -635,11 +615,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekl-Z6-RmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="2157" y="1142"/>
-
-            <point key="canvasLocation" x="2207" y="479"/>
-
         </scene>
         <!--Shopping Cart Hosting Controller-->
         <scene sceneID="4Oy-W2-T5e">
@@ -647,11 +623,7 @@
                 <hostingController id="zkb-J3-76l" customClass="ShoppingCartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWm-gI-iF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="530" y="289"/>
-
-            <point key="canvasLocation" x="-885" y="1139"/>
-
         </scene>
         <!--Login View Controller-->
         <scene sceneID="YJg-WJ-xva">
@@ -1114,7 +1086,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xAr-6g-und">
-                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xAr-6g-und" id="tp6-4d-2TS">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -1146,11 +1118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vay-pr-p14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="1445" y="408"/>
-
-            <point key="canvasLocation" x="270" y="1635"/>
-
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">
