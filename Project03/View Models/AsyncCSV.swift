@@ -6,15 +6,11 @@
 //
 
 import Foundation
-import CoreData
+
 class AsyncCSV : Operation{
-    let context : NSManagedObjectContext?
+
     private let lockQueue = DispatchQueue(label: "LamNguyen.Project03.AsyncCSV", attributes: .concurrent)
 
-    init(context: NSManagedObjectContext){
-        self.context = context
-        super.init()
-    }
     override var isAsynchronous: Bool {
         return true
     }
@@ -61,7 +57,7 @@ class AsyncCSV : Operation{
     override func main() {
 
         DispatchQueue.global().async(execute: {
-            DataDelegate(context: self.context!).generateInitialProducts()
+            DataDelegate().generateInitialProducts()
             print("Executing")
             self.finish()
         })
