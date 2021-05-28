@@ -8,14 +8,28 @@
 import UIKit
 
 class UserDashTabBarController: UITabBarController {
+   
+    static var tc = UserDashTabBarController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    func showTabs(){
+        print("Show tabs")
+             
+        /*
+        let sb = UIStoryboard(name:"UserDashboard", bundle: nil)
+        let vc =  sb.instantiateViewController(withIdentifier:"wishList") as! WishListViewController
+        let tabVC = tabs.selectedViewController as! WishListViewController
+        
+        tabVC.pushViewController(vc, animated: true)
+     */
+        
+    }
+    
+}
     /*
     // MARK: - Navigation
 
@@ -26,4 +40,4 @@ class UserDashTabBarController: UITabBarController {
     }
     */
 
-}
+
