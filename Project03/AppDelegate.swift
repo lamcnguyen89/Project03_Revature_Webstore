@@ -14,12 +14,14 @@ let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContain
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        let queue = OperationQueue()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
         do{
             let fetch = try context?.fetch(fetchReq)
             if fetch == nil{
-                DataDelegate().generateInitialProducts()
+                let getCSV = AsyncCSV()
+                queue.addOperations([getCSV], waitUntilFinished: true)
+//                DataDelegate().generateInitialProducts()
             }
         }
         catch{
