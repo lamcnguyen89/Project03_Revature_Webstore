@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework
 ${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework

@@ -8,6 +8,7 @@ target 'Project03' do
   # Pods for Project03
 	pod 'SideMenu'
         pod 'FBSDKLoginKit'
+	pod 'DLRadioButton', '~> 1.4'
 
   target 'Project03Tests' do
     inherit! :search_paths

@@ -56,6 +56,10 @@
 		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
+		DE42F3A8266044EA00527FB8 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42F3A7266044EA00527FB8 /* PaymentViewController.swift */; };
+		DE42F3AD2660451100527FB8 /* ShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42F3AC2660451100527FB8 /* ShippingViewController.swift */; };
+		DE42F3B22660453400527FB8 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42F3B12660453400527FB8 /* ReviewViewController.swift */; };
+		DE42F3B7266045A200527FB8 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE42F3B6266045A200527FB8 /* ConfirmationViewController.swift */; };
 		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +140,10 @@
 		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		DE42F3A7266044EA00527FB8 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		DE42F3AC2660451100527FB8 /* ShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingViewController.swift; sourceTree = "<group>"; };
+		DE42F3B12660453400527FB8 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		DE42F3B6266045A200527FB8 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -234,13 +242,6 @@
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		CA66171C265D5E9C002F0E70 /* Checkout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Checkout;
-			sourceTree = "<group>";
-		};
 		CAC1638E2658550C0015AC77 /* StoreFront */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,9 +292,9 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				DE42F3A6266044C700527FB8 /* FinalizeOrder */,
 				CAF6C7DF265ED6CF0040CC18 /* UserDashboard */,
 				BC9C00E3265D9DC90029C1EA /* SwiftUI */,
-				CA66171C265D5E9C002F0E70 /* Checkout */,
 				BCCCA365265C47BD00CCBEF9 /* View Models */,
 				BC41586F265BFCAD0051F99B /* Data Model */,
 				CAC1638E2658550C0015AC77 /* StoreFront */,
@@ -329,6 +330,17 @@
 				DE385EBD265F768200F7EE96 /* LoginViewController.swift */,
 			);
 			path = UserLogin;
+			sourceTree = "<group>";
+		};
+		DE42F3A6266044C700527FB8 /* FinalizeOrder */ = {
+			isa = PBXGroup;
+			children = (
+				DE42F3A7266044EA00527FB8 /* PaymentViewController.swift */,
+				DE42F3AC2660451100527FB8 /* ShippingViewController.swift */,
+				DE42F3B12660453400527FB8 /* ReviewViewController.swift */,
+				DE42F3B6266045A200527FB8 /* ConfirmationViewController.swift */,
+			);
+			path = FinalizeOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,15 +589,18 @@
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,
+				DE42F3A8266044EA00527FB8 /* PaymentViewController.swift in Sources */,
 				BC7E34E4265E9903006CE75A /* ShoppingCartItem+CoreDataClass.swift in Sources */,
 				BC415865265BFC640051F99B /* CreditCard+CoreDataClass.swift in Sources */,
 				BC415861265BFC640051F99B /* ItemRating+CoreDataClass.swift in Sources */,
 				BC7E34DD265E92EC006CE75A /* ShoppingCartHostingController.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
+				DE42F3AD2660451100527FB8 /* ShippingViewController.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC7E34E0265E9788006CE75A /* ShoppingCart+CoreDataClass.swift in Sources */,
+				DE42F3B22660453400527FB8 /* ReviewViewController.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,
 				BC415857265BFC640051F99B /* Item+CoreDataClass.swift in Sources */,
 				CAF6C7F6265EE0920040CC18 /* SaveItemsViewController.swift in Sources */,
@@ -606,6 +621,7 @@
 				DE385EB6265F6F2500F7EE96 /* ResetPasswordViewController.swift in Sources */,
 				DE385EBE265F768200F7EE96 /* LoginViewController.swift in Sources */,
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
+				DE42F3B7266045A200527FB8 /* ConfirmationViewController.swift in Sources */,
 				DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */,
 				BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */,
 				BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */,

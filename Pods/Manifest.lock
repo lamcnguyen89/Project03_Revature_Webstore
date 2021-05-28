@@ -1,4 +1,5 @@
 PODS:
+  - DLRadioButton (1.4.12)
   - FBSDKCoreKit (9.3.0):
     - FBSDKCoreKit/Basics (= 9.3.0)
     - FBSDKCoreKit/Core (= 9.3.0)
@@ -12,20 +13,23 @@ PODS:
   - SideMenu (6.5.0)
 
 DEPENDENCIES:
+  - DLRadioButton (~> 1.4)
   - FBSDKLoginKit
   - SideMenu
 
 SPEC REPOS:
   trunk:
+    - DLRadioButton
     - FBSDKCoreKit
     - FBSDKLoginKit
     - SideMenu
 
 SPEC CHECKSUMS:
+  DLRadioButton: d7c4e225ed0e8013cef7be61455230c7557ad7c1
   FBSDKCoreKit: 0d1ae58388a458b8222f72025804cdc84eb5d0c3
   FBSDKLoginKit: aea68df6121c5e165ccae2fabfdc83c4644ee40f
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 0e4e18a8d598f9937fd6b05b58fb372f13781eb5
+PODFILE CHECKSUM: 44edfad8c5143d868a58a964ac0ec6f784ad6d86
 
 COCOAPODS: 1.10.1
