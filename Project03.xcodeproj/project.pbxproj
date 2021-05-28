@@ -113,6 +113,11 @@
 		DE385EAE265F6F0200F7EE96 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE385EAD265F6F0200F7EE96 /* SignUpViewController.swift */; };
 		DE385EB6265F6F2500F7EE96 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE385EB5265F6F2500F7EE96 /* ResetPasswordViewController.swift */; };
 		DE385EBE265F768200F7EE96 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE385EBD265F768200F7EE96 /* LoginViewController.swift */; };
+		DE39BD1B2660A20000B06800 /* ChoosePaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD1A2660A20000B06800 /* ChoosePaymentViewController.swift */; };
+		DE39BD202660A21C00B06800 /* ChooseShippingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD1F2660A21C00B06800 /* ChooseShippingViewController.swift */; };
+		DE39BD252660A25000B06800 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD242660A25000B06800 /* ReviewOrderViewController.swift */; };
+		DE39BD2A2660A26D00B06800 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD292660A26D00B06800 /* OrderConfirmationViewController.swift */; };
+		DE39BD2F2660A3AE00B06800 /* ShippingAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD2E2660A3AE00B06800 /* ShippingAddressViewController.swift */; };
 		DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */; };
 		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
@@ -254,6 +259,11 @@
 		DE385EAD265F6F0200F7EE96 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DE385EB5265F6F2500F7EE96 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		DE385EBD265F768200F7EE96 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DE39BD1A2660A20000B06800 /* ChoosePaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePaymentViewController.swift; sourceTree = "<group>"; };
+		DE39BD1F2660A21C00B06800 /* ChooseShippingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseShippingViewController.swift; sourceTree = "<group>"; };
+		DE39BD242660A25000B06800 /* ReviewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderViewController.swift; sourceTree = "<group>"; };
+		DE39BD292660A26D00B06800 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		DE39BD2E2660A3AE00B06800 /* ShippingAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingAddressViewController.swift; sourceTree = "<group>"; };
 		DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
@@ -523,6 +533,7 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				DE39BD162660A18600B06800 /* FinalizeOrder */,
 				CAF6C7DF265ED6CF0040CC18 /* UserDashboard */,
 				BC9C00E3265D9DC90029C1EA /* SwiftUI */,
 				BCCCA365265C47BD00CCBEF9 /* View Models */,
@@ -560,6 +571,18 @@
 				DE385EBD265F768200F7EE96 /* LoginViewController.swift */,
 			);
 			path = UserLogin;
+			sourceTree = "<group>";
+		};
+		DE39BD162660A18600B06800 /* FinalizeOrder */ = {
+			isa = PBXGroup;
+			children = (
+				DE39BD1A2660A20000B06800 /* ChoosePaymentViewController.swift */,
+				DE39BD1F2660A21C00B06800 /* ChooseShippingViewController.swift */,
+				DE39BD242660A25000B06800 /* ReviewOrderViewController.swift */,
+				DE39BD292660A26D00B06800 /* OrderConfirmationViewController.swift */,
+				DE39BD2E2660A3AE00B06800 /* ShippingAddressViewController.swift */,
+			);
+			path = FinalizeOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -868,9 +891,12 @@
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
 				BC66C8CB265EDC16008C9C08 /* ViewControllerAsUIView.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
+				DE39BD202660A21C00B06800 /* ChooseShippingViewController.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,
+				DE39BD252660A25000B06800 /* ReviewOrderViewController.swift in Sources */,
 				BC7E34E4265E9903006CE75A /* ShoppingCartItem+CoreDataClass.swift in Sources */,
 				BC415865265BFC640051F99B /* CreditCard+CoreDataClass.swift in Sources */,
+				DE39BD2F2660A3AE00B06800 /* ShippingAddressViewController.swift in Sources */,
 				BC415861265BFC640051F99B /* ItemRating+CoreDataClass.swift in Sources */,
 				BC7E34DD265E92EC006CE75A /* ShoppingCartHostingController.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
@@ -879,6 +905,7 @@
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC7E34E0265E9788006CE75A /* ShoppingCart+CoreDataClass.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,
+				DE39BD2A2660A26D00B06800 /* OrderConfirmationViewController.swift in Sources */,
 				CAF6C7F6265EE0920040CC18 /* SaveItemsViewController.swift in Sources */,
 				BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */,
 				BC415867265BFC640051F99B /* PaymentOptions+CoreDataClass.swift in Sources */,
@@ -892,6 +919,7 @@
 				DE385EAE265F6F0200F7EE96 /* SignUpViewController.swift in Sources */,
 				BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */,
 				BC9C00E0265D82FD0029C1EA /* ProductViewModel.swift in Sources */,
+				DE39BD1B2660A20000B06800 /* ChoosePaymentViewController.swift in Sources */,
 				BC415863265BFC640051F99B /* SearchHistory+CoreDataClass.swift in Sources */,
 				BCCCA367265C485200CCBEF9 /* DataDelegate.swift in Sources */,
 				DE385EB6265F6F2500F7EE96 /* ResetPasswordViewController.swift in Sources */,
