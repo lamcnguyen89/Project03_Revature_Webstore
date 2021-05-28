@@ -10,18 +10,25 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let queue = OperationQueue()
+        let group = DispatchGroup()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
         do{
             let fetch = try context?.fetch(fetchReq)
             if fetch == nil{
                 let getCSV = AsyncCSV()
-                queue.addOperations([getCSV], waitUntilFinished: true)
-//                DataDelegate().generateInitialProducts()
+                group.enter()
+                DispatchQueue.main.async {
+                    queue.addOperations([getCSV], waitUntilFinished: true)
+                    group.leave()
+                }
+                group.notify(queue: .main) {
+                    print("CSV loading complete")
+                }
             }
         }
         catch{
@@ -54,13 +61,13 @@ let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContain
          creates and returns a container, having loaded the store for the
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
-        */
+         */
         let container = NSPersistentContainer(name: "Project03")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
                 // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
+
                 /*
                  Typical reasons for an error here include:
                  * The parent directory does not exist, cannot be created, or disallows writing.
