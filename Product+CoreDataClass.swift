@@ -21,6 +21,7 @@ public class Product: NSManagedObject {
             name = item["Item"]
             price = Double(item["Price/Unit"]!)!
             productDescription = item["Description"]
+            image = item["Image"]
             cat.name = item["Category"]
             cat.addToProducts(self)
             cat.store = store

@@ -31,27 +31,6 @@ class DataDelegate {
         }
     }
 
-    /*
-     func getOneUser(name : String) -> User {
-     var user = User()
-     let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
-     fetchReq.predicate = NSPredicate(format: "name == %@", name)
-     fetchReq.fetchLimit = 1
-     do{
-     let req = try context?.fetch(fetchReq) as! [User]
-     if (req.count != 0 ){
-     user = req.first! as User
-     }
-     return user
-     }
-     catch{
-     print("no data returned")
-     }
-     return user
-     }
-     */
-
-    
     func getOneUser (name : String)-> User{
         
         var user = User()
@@ -74,8 +53,7 @@ class DataDelegate {
         return user
 
     }
-    
-    
+
     func updatePassword(_ object: [String: String]){
         var user = User()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
@@ -117,7 +95,7 @@ class DataDelegate {
         let resource = try! CSV(url: url)
         csv = resource
 
-        for _ in 0...24{
+        for _ in csv!.namedRows{
             let prod = Product(context: context!)
             prod.update(dictionary: csv!.namedRows, store: getStore())
             prodArray.append(prod)
@@ -125,9 +103,8 @@ class DataDelegate {
         }
         try! context?.save()
     }
-    
-
 }
+
 enum Err : Error{
     case nilErr 
 }
