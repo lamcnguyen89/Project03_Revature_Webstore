@@ -96,7 +96,7 @@
         <relationship name="shoppingCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCart" inverseName="user" inverseEntity="ShoppingCart"/>
         <relationship name="wishlist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wishlist" inverseName="user" inverseEntity="Wishlist"/>
     </entity>
-    <entity name="Wishlist" representedClassName="Wishlist" syncable="YES" codeGenerationType="class">
+    <entity name="Wishlist" representedClassName="Wishlist" syncable="YES" codeGenerationType="category">
         <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="wishlist" inverseEntity="User"/>
     </entity>
