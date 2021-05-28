@@ -20,17 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
         do{
             let fetch = try context?.fetch(fetchReq)
-            if fetch == nil || fetch?.count == 0{
+            if fetch == nil || fetch!.count < 36{
                 let getCSV = AsyncCSV(context: context!)
                 group.enter()
-                DispatchQueue.main.async {
+                DispatchQueue.global().async{
+                    print("starting CSV import")
                     queue.addOperations([getCSV], waitUntilFinished: true)
                     group.leave()
                 }
-                group.notify(queue: .main) {
+                }
+                group.notify(queue: .global()) {
                     print("CSV loading complete")
                 }
-            }
         }
         catch{
             print("AppDelegate.application fetchReq failed")

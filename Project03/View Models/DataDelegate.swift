@@ -36,9 +36,10 @@ class DataDelegate {
             print("data not saved")
         }
     }
-
-    func getOneUser (name : String)-> User{
+    func updateUserName(_ name: String){
         
+    }
+    func getOneUser (name : String)-> User{
         var user = User()
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         fetchReq.predicate = NSPredicate(format: "name == %@", name)
@@ -105,7 +106,7 @@ class DataDelegate {
             let prod = Product(context: context!)
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
-
+            print(item)
         }
         print(prodArray)
         try! context?.save()

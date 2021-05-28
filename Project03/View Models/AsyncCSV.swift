@@ -52,7 +52,7 @@ class AsyncCSV : Operation{
     }
 
     override func start() {
-        print("Starting")
+        print("AsyncCSV Starting")
         isFinished = false
         isExecuting = true
         main()
@@ -61,13 +61,14 @@ class AsyncCSV : Operation{
     override func main() {
 
         DispatchQueue.global().async(execute: {
+            print("AsyncCSV Executing")
             DataDelegate(context: self.context!).generateInitialProducts()
-            print("Executing")
             self.finish()
         })
     }
 
     func finish() {
+        print("AsyncCSV Finished")
         isExecuting = false
         isFinished = true
     }
