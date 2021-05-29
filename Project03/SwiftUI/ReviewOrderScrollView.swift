@@ -9,32 +9,41 @@ import SwiftUI
 
 struct ReviewOrderScrollView: View {
     @State var showProduct = false
-    @State var isOn = false
     var body: some View {
-        NavigationView{
-            if #available(iOS 14.0, *) {
-                VStack{
-                    Form {
-                        Toggle(isOn: $isOn, label: {
-                            Text("Is Subscriber")
-                        })
-                        ForEach(0..<10){ i in
-                            Button(action: {showProduct=true}) {
-                                HStack{
-                                    Image("test")
-                                        .resizable()
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    Text("Test: " + String(i))
-                                }
-                            }
-                        }                    }
-                    Spacer()
-                    }.navigationTitle("Review Items")
-            } else {
-                // Fallback on earlier versions
-            }
+        NavigationView {
+            Form{
+                ForEach(0..<10){ i in
+                    Button(action: {showProduct=true}) {
+                        HStack{
+                            Image("3060Ti")
+                                .resizable()
+                                .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            VStack(alignment: .leading){
+                                Text("Item \(i)")
+                                Divider()
+                                Text("Price \(i)")
+                                Divider()
+                                Text("Quantity \(i)")
+                            }.padding()
+                            
+                        }
+                    }
+                }
+                Button(action: {checkout()}) {
+                    HStack{
+                        Spacer()
+                        Text("Checkout").frame( height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        Spacer()
+                    }
+                }
+            }.navigationBarTitle("Review Order")
         }
     }
+    
+    func checkout(){
+        
+    }
+    
 }
 
 struct ReviewOrderScrollView_Previews: PreviewProvider {
@@ -42,3 +51,8 @@ struct ReviewOrderScrollView_Previews: PreviewProvider {
         ReviewOrderScrollView()
     }
 }
+
+/*
+
+ 
+ */
