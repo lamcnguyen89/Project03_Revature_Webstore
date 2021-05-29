@@ -10,65 +10,7 @@
 		3836679E2C1F4E4E325E1F43 /* Pods_Project03.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C04E1F93727F2FA468D389 /* Pods_Project03.framework */; };
 		3F6422E62259B9A0544CE493 /* Pods_Project03_Project03UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */; };
 		8C56264ADF35EDC753F21251 /* Pods_Project03Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6087D05E8839ECB8934F57EB /* Pods_Project03Tests.framework */; };
-		BC2A995F265FF2C700870173 /* datamodel.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A991D265FF2C700870173 /* datamodel.png */; };
-		BC2A9960265FF2C700870173 /* Project-3-Flowchart-png.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A991E265FF2C700870173 /* Project-3-Flowchart-png.png */; };
-		BC2A9961265FF2C700870173 /* Project03-Flowchart.ai in Resources */ = {isa = PBXBuildFile; fileRef = BC2A991F265FF2C700870173 /* Project03-Flowchart.ai */; };
-		BC2A9962265FF2C700870173 /* design_docs.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9920265FF2C700870173 /* design_docs.md */; };
-		BC2A9963265FF2C700870173 /* UML.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9921265FF2C700870173 /* UML.png */; };
-		BC2A9964265FF2C700870173 /* StoreFrontUI.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9922265FF2C700870173 /* StoreFrontUI.png */; };
-		BC2A9965265FF2C700870173 /* Project-3-Requirements-Revised.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9923265FF2C700870173 /* Project-3-Requirements-Revised.pdf */; };
 		BC2A9966265FF2C700870173 /* Product_DataXML.xml in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9925265FF2C700870173 /* Product_DataXML.xml */; };
-		BC2A9967265FF2C700870173 /* 08-RTX3080_EVGA_FTW3.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9927265FF2C700870173 /* 08-RTX3080_EVGA_FTW3.png */; };
-		BC2A9968265FF2C700870173 /* 06- RTX_3070_MSI.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9928265FF2C700870173 /* 06- RTX_3070_MSI.png */; };
-		BC2A9969265FF2C700870173 /* 02-AMD_Radeon_RX_6800_XT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9929265FF2C700870173 /* 02-AMD_Radeon_RX_6800_XT.jpg */; };
-		BC2A996A265FF2C700870173 /* 04-RTX_3060_Ti_Eagle_Gigabyte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A992A265FF2C700870173 /* 04-RTX_3060_Ti_Eagle_Gigabyte.jpg */; };
-		BC2A996B265FF2C700870173 /* graphics.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2A992B265FF2C700870173 /* graphics.md */; };
-		BC2A996C265FF2C700870173 /* 03-AMD-Radeon-RX6900XT.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BC2A992C265FF2C700870173 /* 03-AMD-Radeon-RX6900XT.PNG */; };
-		BC2A996D265FF2C700870173 /* 05-RTX3060_Founders.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A992D265FF2C700870173 /* 05-RTX3060_Founders.jpg */; };
-		BC2A996E265FF2C700870173 /* 09-RTX_3090_Founders.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BC2A992E265FF2C700870173 /* 09-RTX_3090_Founders.PNG */; };
-		BC2A996F265FF2C700870173 /* 07-RTX-3070-Gigabyte.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A992F265FF2C700870173 /* 07-RTX-3070-Gigabyte.jpg */; };
-		BC2A9970265FF2C700870173 /* 01-AMD_Radeon_RX_6700_XT.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9930265FF2C700870173 /* 01-AMD_Radeon_RX_6700_XT.jpg */; };
-		BC2A9971265FF2C700870173 /* 05-Portable_Squat_Rack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9932265FF2C700870173 /* 05-Portable_Squat_Rack.jpg */; };
-		BC2A9972265FF2C700870173 /* 04-Medicine_Ball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9933265FF2C700870173 /* 04-Medicine_Ball.jpg */; };
-		BC2A9973265FF2C700870173 /* 02-Cap_Bumper_Plate_25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9934265FF2C700870173 /* 02-Cap_Bumper_Plate_25.jpg */; };
-		BC2A9974265FF2C700870173 /* 06-Power_Rack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9935265FF2C700870173 /* 06-Power_Rack.jpg */; };
-		BC2A9975265FF2C700870173 /* Exercise.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9936265FF2C700870173 /* Exercise.md */; };
-		BC2A9976265FF2C700870173 /* 07-Rogue_Bella2.0_Barbell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9937265FF2C700870173 /* 07-Rogue_Bella2.0_Barbell.jpg */; };
-		BC2A9977265FF2C700870173 /* 10-Rogue_Ohio_Barbell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9938265FF2C700870173 /* 10-Rogue_Ohio_Barbell.jpg */; };
-		BC2A9978265FF2C700870173 /* 08-Rogue_Echo_Barbell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9939265FF2C700870173 /* 08-Rogue_Echo_Barbell.jpg */; };
-		BC2A9979265FF2C700870173 /* 03-Cap_Bumper_Plates_45.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A993A265FF2C700870173 /* 03-Cap_Bumper_Plates_45.jpg */; };
-		BC2A997A265FF2C700870173 /* 01-Cap_Bumper_Plate_10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A993B265FF2C700870173 /* 01-Cap_Bumper_Plate_10.jpg */; };
-		BC2A997B265FF2C700870173 /* 09-Rogue_Loadable_Dumbbell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A993C265FF2C700870173 /* 09-Rogue_Loadable_Dumbbell.jpg */; };
-		BC2A997C265FF2C700870173 /* Product_Data2003.xls in Resources */ = {isa = PBXBuildFile; fileRef = BC2A993D265FF2C700870173 /* Product_Data2003.xls */; };
-		BC2A997D265FF2C700870173 /* Project03_Product_Data.zip in Resources */ = {isa = PBXBuildFile; fileRef = BC2A993E265FF2C700870173 /* Project03_Product_Data.zip */; };
-		BC2A997F265FF2C800870173 /* 08-Honda_Metropolitan_Moped.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9941265FF2C700870173 /* 08-Honda_Metropolitan_Moped.jpg */; };
-		BC2A9980265FF2C800870173 /* 07-Honda_Civic_2019.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9942265FF2C700870173 /* 07-Honda_Civic_2019.png */; };
-		BC2A9981265FF2C800870173 /* 04-GMC-Sierra-2019.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9943265FF2C700870173 /* 04-GMC-Sierra-2019.jpg */; };
-		BC2A9982265FF2C800870173 /* 10-Toyota-Corolla-2019.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9944265FF2C700870173 /* 10-Toyota-Corolla-2019.png */; };
-		BC2A9983265FF2C800870173 /* 01-Bird_Air_Electric_Scooter.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9945265FF2C700870173 /* 01-Bird_Air_Electric_Scooter.PNG */; };
-		BC2A9984265FF2C800870173 /* 03- Ford_F150_2019.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9946265FF2C700870173 /* 03- Ford_F150_2019.jpg */; };
-		BC2A9985265FF2C800870173 /* Cars in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9947265FF2C700870173 /* Cars */; };
-		BC2A9986265FF2C800870173 /* 09-Jeep_Grand_Cherokee-2019.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9948265FF2C700870173 /* 09-Jeep_Grand_Cherokee-2019.png */; };
-		BC2A9987265FF2C800870173 /* 05-Honda_Accord_2019.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9949265FF2C700870173 /* 05-Honda_Accord_2019.png */; };
-		BC2A9988265FF2C800870173 /* 02- Chevrolet_Silverado_2019.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A994A265FF2C700870173 /* 02- Chevrolet_Silverado_2019.jpg */; };
-		BC2A9989265FF2C800870173 /* 06-Honda_adv150_Moped.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BC2A994B265FF2C700870173 /* 06-Honda_adv150_Moped.PNG */; };
-		BC2A998A265FF2C800870173 /* 05-DrBronners-Sal-Suds-AllPurpose-Cleaner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A994D265FF2C700870173 /* 05-DrBronners-Sal-Suds-AllPurpose-Cleaner.jpg */; };
-		BC2A998B265FF2C800870173 /* 02-TerraViam-Toilet_Teas.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A994E265FF2C700870173 /* 02-TerraViam-Toilet_Teas.jpg */; };
-		BC2A998C265FF2C800870173 /* cleaning.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2A994F265FF2C700870173 /* cleaning.md */; };
-		BC2A998D265FF2C800870173 /* 06-Ecos-OxoBriteCleaner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9950265FF2C700870173 /* 06-Ecos-OxoBriteCleaner.jpg */; };
-		BC2A998E265FF2C800870173 /* 03-Citra_Solv_Cleaner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9951265FF2C700870173 /* 03-Citra_Solv_Cleaner.jpg */; };
-		BC2A998F265FF2C800870173 /* 01-CleaningStudio-Oven_Scrub.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9952265FF2C700870173 /* 01-CleaningStudio-Oven_Scrub.jpg */; };
-		BC2A9990265FF2C800870173 /* 04-DrBronners-Castile-Soap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9953265FF2C700870173 /* 04-DrBronners-Castile-Soap.jpg */; };
-		BC2A9991265FF2C800870173 /* 07-MrsMeyers-DishSoap.PNG in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9954265FF2C700870173 /* 07-MrsMeyers-DishSoap.PNG */; };
-		BC2A9992265FF2C800870173 /* Products.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9955265FF2C700870173 /* Products.md */; };
-		BC2A9993265FF2C800870173 /* 03-Silver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9957265FF2C700870173 /* 03-Silver.jpg */; };
-		BC2A9994265FF2C800870173 /* 04-Palladium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9958265FF2C700870173 /* 04-Palladium.jpg */; };
-		BC2A9995265FF2C800870173 /* 05-rhodium.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A9959265FF2C700870173 /* 05-rhodium.png */; };
-		BC2A9996265FF2C800870173 /* precious.md in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995A265FF2C700870173 /* precious.md */; };
-		BC2A9997265FF2C800870173 /* 01- Platinum.png in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995B265FF2C700870173 /* 01- Platinum.png */; };
-		BC2A9998265FF2C800870173 /* 02-Gold.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995C265FF2C700870173 /* 02-Gold.jpeg */; };
-		BC2A9999265FF2C800870173 /* 06-Iridium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995D265FF2C700870173 /* 06-Iridium.jpg */; };
-		BC2A999A265FF2C800870173 /* Product_Data.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = BC2A995E265FF2C700870173 /* Product_Data.xlsx */; };
 		BC2A999D265FFB4C00870173 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2A999B265FFB4C00870173 /* Product+CoreDataClass.swift */; };
 		BC2A99A626601BC200870173 /* ProductDataCSV.csv in Resources */ = {isa = PBXBuildFile; fileRef = BC2A99A526601BC200870173 /* ProductDataCSV.csv */; };
 		BC2D9FB4266194960097FCFB /* Wishlist+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC2D9FB2266194960097FCFB /* Wishlist+CoreDataClass.swift */; };
@@ -157,65 +99,7 @@
 		77C04E1F93727F2FA468D389 /* Pods_Project03.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B8EC2612CC8B097811C4B3 /* Pods-Project03-Project03UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03-Project03UITests.release.xcconfig"; path = "Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A8676C11621B6F918F24F136 /* Pods-Project03.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03.release.xcconfig"; path = "Target Support Files/Pods-Project03/Pods-Project03.release.xcconfig"; sourceTree = "<group>"; };
-		BC2A991D265FF2C700870173 /* datamodel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = datamodel.png; sourceTree = "<group>"; };
-		BC2A991E265FF2C700870173 /* Project-3-Flowchart-png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Project-3-Flowchart-png.png"; sourceTree = "<group>"; };
-		BC2A991F265FF2C700870173 /* Project03-Flowchart.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Project03-Flowchart.ai"; sourceTree = "<group>"; };
-		BC2A9920265FF2C700870173 /* design_docs.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = design_docs.md; sourceTree = "<group>"; };
-		BC2A9921265FF2C700870173 /* UML.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UML.png; sourceTree = "<group>"; };
-		BC2A9922265FF2C700870173 /* StoreFrontUI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StoreFrontUI.png; sourceTree = "<group>"; };
-		BC2A9923265FF2C700870173 /* Project-3-Requirements-Revised.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Project-3-Requirements-Revised.pdf"; sourceTree = "<group>"; };
 		BC2A9925265FF2C700870173 /* Product_DataXML.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Product_DataXML.xml; sourceTree = "<group>"; };
-		BC2A9927265FF2C700870173 /* 08-RTX3080_EVGA_FTW3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "08-RTX3080_EVGA_FTW3.png"; sourceTree = "<group>"; };
-		BC2A9928265FF2C700870173 /* 06- RTX_3070_MSI.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06- RTX_3070_MSI.png"; sourceTree = "<group>"; };
-		BC2A9929265FF2C700870173 /* 02-AMD_Radeon_RX_6800_XT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-AMD_Radeon_RX_6800_XT.jpg"; sourceTree = "<group>"; };
-		BC2A992A265FF2C700870173 /* 04-RTX_3060_Ti_Eagle_Gigabyte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-RTX_3060_Ti_Eagle_Gigabyte.jpg"; sourceTree = "<group>"; };
-		BC2A992B265FF2C700870173 /* graphics.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = graphics.md; sourceTree = "<group>"; };
-		BC2A992C265FF2C700870173 /* 03-AMD-Radeon-RX6900XT.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "03-AMD-Radeon-RX6900XT.PNG"; sourceTree = "<group>"; };
-		BC2A992D265FF2C700870173 /* 05-RTX3060_Founders.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-RTX3060_Founders.jpg"; sourceTree = "<group>"; };
-		BC2A992E265FF2C700870173 /* 09-RTX_3090_Founders.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-RTX_3090_Founders.PNG"; sourceTree = "<group>"; };
-		BC2A992F265FF2C700870173 /* 07-RTX-3070-Gigabyte.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "07-RTX-3070-Gigabyte.jpg"; sourceTree = "<group>"; };
-		BC2A9930265FF2C700870173 /* 01-AMD_Radeon_RX_6700_XT.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-AMD_Radeon_RX_6700_XT.jpg"; sourceTree = "<group>"; };
-		BC2A9932265FF2C700870173 /* 05-Portable_Squat_Rack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-Portable_Squat_Rack.jpg"; sourceTree = "<group>"; };
-		BC2A9933265FF2C700870173 /* 04-Medicine_Ball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-Medicine_Ball.jpg"; sourceTree = "<group>"; };
-		BC2A9934265FF2C700870173 /* 02-Cap_Bumper_Plate_25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-Cap_Bumper_Plate_25.jpg"; sourceTree = "<group>"; };
-		BC2A9935265FF2C700870173 /* 06-Power_Rack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-Power_Rack.jpg"; sourceTree = "<group>"; };
-		BC2A9936265FF2C700870173 /* Exercise.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Exercise.md; sourceTree = "<group>"; };
-		BC2A9937265FF2C700870173 /* 07-Rogue_Bella2.0_Barbell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "07-Rogue_Bella2.0_Barbell.jpg"; sourceTree = "<group>"; };
-		BC2A9938265FF2C700870173 /* 10-Rogue_Ohio_Barbell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10-Rogue_Ohio_Barbell.jpg"; sourceTree = "<group>"; };
-		BC2A9939265FF2C700870173 /* 08-Rogue_Echo_Barbell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08-Rogue_Echo_Barbell.jpg"; sourceTree = "<group>"; };
-		BC2A993A265FF2C700870173 /* 03-Cap_Bumper_Plates_45.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-Cap_Bumper_Plates_45.jpg"; sourceTree = "<group>"; };
-		BC2A993B265FF2C700870173 /* 01-Cap_Bumper_Plate_10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-Cap_Bumper_Plate_10.jpg"; sourceTree = "<group>"; };
-		BC2A993C265FF2C700870173 /* 09-Rogue_Loadable_Dumbbell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "09-Rogue_Loadable_Dumbbell.jpg"; sourceTree = "<group>"; };
-		BC2A993D265FF2C700870173 /* Product_Data2003.xls */ = {isa = PBXFileReference; lastKnownFileType = file; path = Product_Data2003.xls; sourceTree = "<group>"; };
-		BC2A993E265FF2C700870173 /* Project03_Product_Data.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Project03_Product_Data.zip; sourceTree = "<group>"; };
-		BC2A9941265FF2C700870173 /* 08-Honda_Metropolitan_Moped.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08-Honda_Metropolitan_Moped.jpg"; sourceTree = "<group>"; };
-		BC2A9942265FF2C700870173 /* 07-Honda_Civic_2019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-Honda_Civic_2019.png"; sourceTree = "<group>"; };
-		BC2A9943265FF2C700870173 /* 04-GMC-Sierra-2019.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-GMC-Sierra-2019.jpg"; sourceTree = "<group>"; };
-		BC2A9944265FF2C700870173 /* 10-Toyota-Corolla-2019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "10-Toyota-Corolla-2019.png"; sourceTree = "<group>"; };
-		BC2A9945265FF2C700870173 /* 01-Bird_Air_Electric_Scooter.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-Bird_Air_Electric_Scooter.PNG"; sourceTree = "<group>"; };
-		BC2A9946265FF2C700870173 /* 03- Ford_F150_2019.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03- Ford_F150_2019.jpg"; sourceTree = "<group>"; };
-		BC2A9947265FF2C700870173 /* Cars */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cars; sourceTree = "<group>"; };
-		BC2A9948265FF2C700870173 /* 09-Jeep_Grand_Cherokee-2019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "09-Jeep_Grand_Cherokee-2019.png"; sourceTree = "<group>"; };
-		BC2A9949265FF2C700870173 /* 05-Honda_Accord_2019.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-Honda_Accord_2019.png"; sourceTree = "<group>"; };
-		BC2A994A265FF2C700870173 /* 02- Chevrolet_Silverado_2019.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02- Chevrolet_Silverado_2019.jpg"; sourceTree = "<group>"; };
-		BC2A994B265FF2C700870173 /* 06-Honda_adv150_Moped.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "06-Honda_adv150_Moped.PNG"; sourceTree = "<group>"; };
-		BC2A994D265FF2C700870173 /* 05-DrBronners-Sal-Suds-AllPurpose-Cleaner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05-DrBronners-Sal-Suds-AllPurpose-Cleaner.jpg"; sourceTree = "<group>"; };
-		BC2A994E265FF2C700870173 /* 02-TerraViam-Toilet_Teas.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-TerraViam-Toilet_Teas.jpg"; sourceTree = "<group>"; };
-		BC2A994F265FF2C700870173 /* cleaning.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = cleaning.md; sourceTree = "<group>"; };
-		BC2A9950265FF2C700870173 /* 06-Ecos-OxoBriteCleaner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-Ecos-OxoBriteCleaner.jpg"; sourceTree = "<group>"; };
-		BC2A9951265FF2C700870173 /* 03-Citra_Solv_Cleaner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-Citra_Solv_Cleaner.jpg"; sourceTree = "<group>"; };
-		BC2A9952265FF2C700870173 /* 01-CleaningStudio-Oven_Scrub.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "01-CleaningStudio-Oven_Scrub.jpg"; sourceTree = "<group>"; };
-		BC2A9953265FF2C700870173 /* 04-DrBronners-Castile-Soap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-DrBronners-Castile-Soap.jpg"; sourceTree = "<group>"; };
-		BC2A9954265FF2C700870173 /* 07-MrsMeyers-DishSoap.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "07-MrsMeyers-DishSoap.PNG"; sourceTree = "<group>"; };
-		BC2A9955265FF2C700870173 /* Products.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Products.md; sourceTree = "<group>"; };
-		BC2A9957265FF2C700870173 /* 03-Silver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "03-Silver.jpg"; sourceTree = "<group>"; };
-		BC2A9958265FF2C700870173 /* 04-Palladium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04-Palladium.jpg"; sourceTree = "<group>"; };
-		BC2A9959265FF2C700870173 /* 05-rhodium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "05-rhodium.png"; sourceTree = "<group>"; };
-		BC2A995A265FF2C700870173 /* precious.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = precious.md; sourceTree = "<group>"; };
-		BC2A995B265FF2C700870173 /* 01- Platinum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01- Platinum.png"; sourceTree = "<group>"; };
-		BC2A995C265FF2C700870173 /* 02-Gold.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "02-Gold.jpeg"; sourceTree = "<group>"; };
-		BC2A995D265FF2C700870173 /* 06-Iridium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06-Iridium.jpg"; sourceTree = "<group>"; };
-		BC2A995E265FF2C700870173 /* Product_Data.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = Product_Data.xlsx; sourceTree = "<group>"; };
 		BC2A999B265FFB4C00870173 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BC2A99A526601BC200870173 /* ProductDataCSV.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ProductDataCSV.csv; sourceTree = "<group>"; };
 		BC2D9FB2266194960097FCFB /* Wishlist+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Wishlist+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -342,13 +226,6 @@
 		BC2A991C265FF2C700870173 /* Design_Documents */ = {
 			isa = PBXGroup;
 			children = (
-				BC2A991D265FF2C700870173 /* datamodel.png */,
-				BC2A991E265FF2C700870173 /* Project-3-Flowchart-png.png */,
-				BC2A991F265FF2C700870173 /* Project03-Flowchart.ai */,
-				BC2A9920265FF2C700870173 /* design_docs.md */,
-				BC2A9921265FF2C700870173 /* UML.png */,
-				BC2A9922265FF2C700870173 /* StoreFrontUI.png */,
-				BC2A9923265FF2C700870173 /* Project-3-Requirements-Revised.pdf */,
 				BC2A9924265FF2C700870173 /* Product_Data */,
 			);
 			path = Design_Documents;
@@ -359,99 +236,8 @@
 			children = (
 				BC2A99A526601BC200870173 /* ProductDataCSV.csv */,
 				BC2A9925265FF2C700870173 /* Product_DataXML.xml */,
-				BC2A9926265FF2C700870173 /* 03-Graphics_Cards */,
-				BC2A9931265FF2C700870173 /* 04-Exercise_Equipment */,
-				BC2A993D265FF2C700870173 /* Product_Data2003.xls */,
-				BC2A993E265FF2C700870173 /* Project03_Product_Data.zip */,
-				BC2A9940265FF2C700870173 /* 05-Cars */,
-				BC2A994C265FF2C700870173 /* 01-Cleaning_Supplies */,
-				BC2A9955265FF2C700870173 /* Products.md */,
-				BC2A9956265FF2C700870173 /* 02-Precious_Metals */,
-				BC2A995E265FF2C700870173 /* Product_Data.xlsx */,
 			);
 			path = Product_Data;
-			sourceTree = "<group>";
-		};
-		BC2A9926265FF2C700870173 /* 03-Graphics_Cards */ = {
-			isa = PBXGroup;
-			children = (
-				BC2A9927265FF2C700870173 /* 08-RTX3080_EVGA_FTW3.png */,
-				BC2A9928265FF2C700870173 /* 06- RTX_3070_MSI.png */,
-				BC2A9929265FF2C700870173 /* 02-AMD_Radeon_RX_6800_XT.jpg */,
-				BC2A992A265FF2C700870173 /* 04-RTX_3060_Ti_Eagle_Gigabyte.jpg */,
-				BC2A992B265FF2C700870173 /* graphics.md */,
-				BC2A992C265FF2C700870173 /* 03-AMD-Radeon-RX6900XT.PNG */,
-				BC2A992D265FF2C700870173 /* 05-RTX3060_Founders.jpg */,
-				BC2A992E265FF2C700870173 /* 09-RTX_3090_Founders.PNG */,
-				BC2A992F265FF2C700870173 /* 07-RTX-3070-Gigabyte.jpg */,
-				BC2A9930265FF2C700870173 /* 01-AMD_Radeon_RX_6700_XT.jpg */,
-			);
-			path = "03-Graphics_Cards";
-			sourceTree = "<group>";
-		};
-		BC2A9931265FF2C700870173 /* 04-Exercise_Equipment */ = {
-			isa = PBXGroup;
-			children = (
-				BC2A9932265FF2C700870173 /* 05-Portable_Squat_Rack.jpg */,
-				BC2A9933265FF2C700870173 /* 04-Medicine_Ball.jpg */,
-				BC2A9934265FF2C700870173 /* 02-Cap_Bumper_Plate_25.jpg */,
-				BC2A9935265FF2C700870173 /* 06-Power_Rack.jpg */,
-				BC2A9936265FF2C700870173 /* Exercise.md */,
-				BC2A9937265FF2C700870173 /* 07-Rogue_Bella2.0_Barbell.jpg */,
-				BC2A9938265FF2C700870173 /* 10-Rogue_Ohio_Barbell.jpg */,
-				BC2A9939265FF2C700870173 /* 08-Rogue_Echo_Barbell.jpg */,
-				BC2A993A265FF2C700870173 /* 03-Cap_Bumper_Plates_45.jpg */,
-				BC2A993B265FF2C700870173 /* 01-Cap_Bumper_Plate_10.jpg */,
-				BC2A993C265FF2C700870173 /* 09-Rogue_Loadable_Dumbbell.jpg */,
-			);
-			path = "04-Exercise_Equipment";
-			sourceTree = "<group>";
-		};
-		BC2A9940265FF2C700870173 /* 05-Cars */ = {
-			isa = PBXGroup;
-			children = (
-				BC2A9941265FF2C700870173 /* 08-Honda_Metropolitan_Moped.jpg */,
-				BC2A9942265FF2C700870173 /* 07-Honda_Civic_2019.png */,
-				BC2A9943265FF2C700870173 /* 04-GMC-Sierra-2019.jpg */,
-				BC2A9944265FF2C700870173 /* 10-Toyota-Corolla-2019.png */,
-				BC2A9945265FF2C700870173 /* 01-Bird_Air_Electric_Scooter.PNG */,
-				BC2A9946265FF2C700870173 /* 03- Ford_F150_2019.jpg */,
-				BC2A9947265FF2C700870173 /* Cars */,
-				BC2A9948265FF2C700870173 /* 09-Jeep_Grand_Cherokee-2019.png */,
-				BC2A9949265FF2C700870173 /* 05-Honda_Accord_2019.png */,
-				BC2A994A265FF2C700870173 /* 02- Chevrolet_Silverado_2019.jpg */,
-				BC2A994B265FF2C700870173 /* 06-Honda_adv150_Moped.PNG */,
-			);
-			path = "05-Cars";
-			sourceTree = "<group>";
-		};
-		BC2A994C265FF2C700870173 /* 01-Cleaning_Supplies */ = {
-			isa = PBXGroup;
-			children = (
-				BC2A994D265FF2C700870173 /* 05-DrBronners-Sal-Suds-AllPurpose-Cleaner.jpg */,
-				BC2A994E265FF2C700870173 /* 02-TerraViam-Toilet_Teas.jpg */,
-				BC2A994F265FF2C700870173 /* cleaning.md */,
-				BC2A9950265FF2C700870173 /* 06-Ecos-OxoBriteCleaner.jpg */,
-				BC2A9951265FF2C700870173 /* 03-Citra_Solv_Cleaner.jpg */,
-				BC2A9952265FF2C700870173 /* 01-CleaningStudio-Oven_Scrub.jpg */,
-				BC2A9953265FF2C700870173 /* 04-DrBronners-Castile-Soap.jpg */,
-				BC2A9954265FF2C700870173 /* 07-MrsMeyers-DishSoap.PNG */,
-			);
-			path = "01-Cleaning_Supplies";
-			sourceTree = "<group>";
-		};
-		BC2A9956265FF2C700870173 /* 02-Precious_Metals */ = {
-			isa = PBXGroup;
-			children = (
-				BC2A9957265FF2C700870173 /* 03-Silver.jpg */,
-				BC2A9958265FF2C700870173 /* 04-Palladium.jpg */,
-				BC2A9959265FF2C700870173 /* 05-rhodium.png */,
-				BC2A995A265FF2C700870173 /* precious.md */,
-				BC2A995B265FF2C700870173 /* 01- Platinum.png */,
-				BC2A995C265FF2C700870173 /* 02-Gold.jpeg */,
-				BC2A995D265FF2C700870173 /* 06-Iridium.jpg */,
-			);
-			path = "02-Precious_Metals";
 			sourceTree = "<group>";
 		};
 		BC41586F265BFCAD0051F99B /* Data Model */ = {
@@ -717,70 +503,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC2A9963265FF2C700870173 /* UML.png in Resources */,
-				BC2A9970265FF2C700870173 /* 01-AMD_Radeon_RX_6700_XT.jpg in Resources */,
-				BC2A9983265FF2C800870173 /* 01-Bird_Air_Electric_Scooter.PNG in Resources */,
-				BC2A9965265FF2C700870173 /* Project-3-Requirements-Revised.pdf in Resources */,
-				BC2A996C265FF2C700870173 /* 03-AMD-Radeon-RX6900XT.PNG in Resources */,
-				BC2A9985265FF2C800870173 /* Cars in Resources */,
-				BC2A9967265FF2C700870173 /* 08-RTX3080_EVGA_FTW3.png in Resources */,
-				BC2A996D265FF2C700870173 /* 05-RTX3060_Founders.jpg in Resources */,
-				BC2A9964265FF2C700870173 /* StoreFrontUI.png in Resources */,
-				BC2A9986265FF2C800870173 /* 09-Jeep_Grand_Cherokee-2019.png in Resources */,
-				BC2A998F265FF2C800870173 /* 01-CleaningStudio-Oven_Scrub.jpg in Resources */,
-				BC2A9992265FF2C800870173 /* Products.md in Resources */,
-				BC2A997A265FF2C700870173 /* 01-Cap_Bumper_Plate_10.jpg in Resources */,
-				BC2A998A265FF2C800870173 /* 05-DrBronners-Sal-Suds-AllPurpose-Cleaner.jpg in Resources */,
-				BC2A9989265FF2C800870173 /* 06-Honda_adv150_Moped.PNG in Resources */,
-				BC2A999A265FF2C800870173 /* Product_Data.xlsx in Resources */,
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
-				BC2A996E265FF2C700870173 /* 09-RTX_3090_Founders.PNG in Resources */,
-				BC2A9973265FF2C700870173 /* 02-Cap_Bumper_Plate_25.jpg in Resources */,
-				BC2A9975265FF2C700870173 /* Exercise.md in Resources */,
-				BC2A9980265FF2C800870173 /* 07-Honda_Civic_2019.png in Resources */,
-				BC2A9968265FF2C700870173 /* 06- RTX_3070_MSI.png in Resources */,
-				BC2A996F265FF2C700870173 /* 07-RTX-3070-Gigabyte.jpg in Resources */,
-				BC2A9981265FF2C800870173 /* 04-GMC-Sierra-2019.jpg in Resources */,
-				BC2A997F265FF2C800870173 /* 08-Honda_Metropolitan_Moped.jpg in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
 				CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
-				BC2A9971265FF2C700870173 /* 05-Portable_Squat_Rack.jpg in Resources */,
-				BC2A9961265FF2C700870173 /* Project03-Flowchart.ai in Resources */,
-				BC2A9988265FF2C800870173 /* 02- Chevrolet_Silverado_2019.jpg in Resources */,
-				BC2A9976265FF2C700870173 /* 07-Rogue_Bella2.0_Barbell.jpg in Resources */,
-				BC2A9991265FF2C800870173 /* 07-MrsMeyers-DishSoap.PNG in Resources */,
-				BC2A9979265FF2C700870173 /* 03-Cap_Bumper_Plates_45.jpg in Resources */,
-				BC2A997D265FF2C700870173 /* Project03_Product_Data.zip in Resources */,
-				BC2A9993265FF2C800870173 /* 03-Silver.jpg in Resources */,
-				BC2A9969265FF2C700870173 /* 02-AMD_Radeon_RX_6800_XT.jpg in Resources */,
-				BC2A9995265FF2C800870173 /* 05-rhodium.png in Resources */,
-				BC2A9972265FF2C700870173 /* 04-Medicine_Ball.jpg in Resources */,
-				BC2A995F265FF2C700870173 /* datamodel.png in Resources */,
-				BC2A9977265FF2C700870173 /* 10-Rogue_Ohio_Barbell.jpg in Resources */,
-				BC2A9978265FF2C700870173 /* 08-Rogue_Echo_Barbell.jpg in Resources */,
-				BC2A997C265FF2C700870173 /* Product_Data2003.xls in Resources */,
-				BC2A9999265FF2C800870173 /* 06-Iridium.jpg in Resources */,
-				BC2A996B265FF2C700870173 /* graphics.md in Resources */,
 				BC2A99A626601BC200870173 /* ProductDataCSV.csv in Resources */,
-				BC2A9974265FF2C700870173 /* 06-Power_Rack.jpg in Resources */,
-				BC2A9998265FF2C800870173 /* 02-Gold.jpeg in Resources */,
-				BC2A9997265FF2C800870173 /* 01- Platinum.png in Resources */,
-				BC2A9982265FF2C800870173 /* 10-Toyota-Corolla-2019.png in Resources */,
-				BC2A9984265FF2C800870173 /* 03- Ford_F150_2019.jpg in Resources */,
-				BC2A9987265FF2C800870173 /* 05-Honda_Accord_2019.png in Resources */,
-				BC2A996A265FF2C700870173 /* 04-RTX_3060_Ti_Eagle_Gigabyte.jpg in Resources */,
-				BC2A998D265FF2C800870173 /* 06-Ecos-OxoBriteCleaner.jpg in Resources */,
-				BC2A9996265FF2C800870173 /* precious.md in Resources */,
-				BC2A9990265FF2C800870173 /* 04-DrBronners-Castile-Soap.jpg in Resources */,
-				BC2A9962265FF2C700870173 /* design_docs.md in Resources */,
-				BC2A998C265FF2C800870173 /* cleaning.md in Resources */,
-				BC2A9994265FF2C800870173 /* 04-Palladium.jpg in Resources */,
-				BC2A9960265FF2C700870173 /* Project-3-Flowchart-png.png in Resources */,
-				BC2A997B265FF2C700870173 /* 09-Rogue_Loadable_Dumbbell.jpg in Resources */,
-				BC2A998E265FF2C800870173 /* 03-Citra_Solv_Cleaner.jpg in Resources */,
 				BC2A9966265FF2C700870173 /* Product_DataXML.xml in Resources */,
-				BC2A998B265FF2C800870173 /* 02-TerraViam-Toilet_Teas.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
