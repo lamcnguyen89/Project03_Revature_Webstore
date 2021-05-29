@@ -17,7 +17,8 @@ struct ReviewOrderScrollView: View {
                         HStack{
                             Image("3060Ti")
                                 .resizable()
-                                .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             VStack(alignment: .leading){
                                 Text("Item \(i)")
                                 Divider()
@@ -29,21 +30,10 @@ struct ReviewOrderScrollView: View {
                         }
                     }
                 }
-                Button(action: {checkout()}) {
-                    HStack{
-                        Spacer()
-                        Text("Checkout").frame( height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        Spacer()
-                    }
-                }
             }.navigationBarTitle("Review Order")
         }
     }
-    
-    func checkout(){
         
-    }
-    
 }
 
 struct ReviewOrderScrollView_Previews: PreviewProvider {
