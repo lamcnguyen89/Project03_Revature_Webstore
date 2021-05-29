@@ -20,6 +20,7 @@ class DataDelegate {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+
     //MARK: -- User Related
     func createUser(_ object: [String:String]){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User

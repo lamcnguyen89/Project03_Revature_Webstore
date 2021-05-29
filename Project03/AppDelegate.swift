@@ -10,11 +10,10 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         let queue = OperationQueue()
         let group = DispatchGroup()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")

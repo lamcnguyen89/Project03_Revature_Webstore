@@ -122,10 +122,14 @@
 		DE39BD252660A25000B06800 /* ReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD242660A25000B06800 /* ReviewOrderViewController.swift */; };
 		DE39BD2A2660A26D00B06800 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD292660A26D00B06800 /* OrderConfirmationViewController.swift */; };
 		DE39BD2F2660A3AE00B06800 /* ShippingAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD2E2660A3AE00B06800 /* ShippingAddressViewController.swift */; };
+		DE39BD582661444B00B06800 /* InnerViewReviewOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD572661444B00B06800 /* InnerViewReviewOrderViewController.swift */; };
+		DE39BD5D266150AF00B06800 /* CreditCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39BD5C266150AF00B06800 /* CreditCardViewController.swift */; };
 		DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */; };
 		DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6505265C6F7300005EBD /* StoreViewController.swift */; };
 		DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */; };
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
+		DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */; };
+		DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */; };
 		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -272,10 +276,14 @@
 		DE39BD242660A25000B06800 /* ReviewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderViewController.swift; sourceTree = "<group>"; };
 		DE39BD292660A26D00B06800 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		DE39BD2E2660A3AE00B06800 /* ShippingAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingAddressViewController.swift; sourceTree = "<group>"; };
+		DE39BD572661444B00B06800 /* InnerViewReviewOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InnerViewReviewOrderViewController.swift; sourceTree = "<group>"; };
+		DE39BD5C266150AF00B06800 /* CreditCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardViewController.swift; sourceTree = "<group>"; };
 		DE3B6500265C6F3B00005EBD /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		DE3B6505265C6F7300005EBD /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRowTableViewCell.swift; sourceTree = "<group>"; };
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderScrollView.swift; sourceTree = "<group>"; };
+		DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderHostingController.swift; sourceTree = "<group>"; };
 		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -477,6 +485,7 @@
 				BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */,
 				BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */,
 				BC66C8CA265EDC16008C9C08 /* ViewControllerAsUIView.swift */,
+				DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -593,6 +602,9 @@
 				DE39BD242660A25000B06800 /* ReviewOrderViewController.swift */,
 				DE39BD292660A26D00B06800 /* OrderConfirmationViewController.swift */,
 				DE39BD2E2660A3AE00B06800 /* ShippingAddressViewController.swift */,
+				DE39BD572661444B00B06800 /* InnerViewReviewOrderViewController.swift */,
+				DE39BD5C266150AF00B06800 /* CreditCardViewController.swift */,
+				DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */,
 			);
 			path = FinalizeOrder;
 			sourceTree = "<group>";
@@ -897,6 +909,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA04A050265FE2BD00E75D2B /* UserDashTabBarController.swift in Sources */,
+				DE39BD5D266150AF00B06800 /* CreditCardViewController.swift in Sources */,
 				DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */,
 				CAF6C7F1265EDC0C0040CC18 /* WishListViewController.swift in Sources */,
 				CAF6C800265F09320040CC18 /* MyAccountViewController.swift in Sources */,
@@ -905,12 +918,14 @@
 				BC66C8CB265EDC16008C9C08 /* ViewControllerAsUIView.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				DE39BD202660A21C00B06800 /* ChooseShippingViewController.swift in Sources */,
+				DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,
 				DE39BD252660A25000B06800 /* ReviewOrderViewController.swift in Sources */,
 				BC7E34E4265E9903006CE75A /* ShoppingCartItem+CoreDataClass.swift in Sources */,
 				BC415865265BFC640051F99B /* CreditCard+CoreDataClass.swift in Sources */,
 				DE39BD2F2660A3AE00B06800 /* ShippingAddressViewController.swift in Sources */,
 				BC7E34DD265E92EC006CE75A /* ShoppingCartHostingController.swift in Sources */,
+				DE39BD582661444B00B06800 /* InnerViewReviewOrderViewController.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				BC3E723E266133A700775C8F /* COD+CoreDataClass.swift in Sources */,
@@ -925,6 +940,7 @@
 				CAF6C7FB265F08C50040CC18 /* OrdersViewController.swift in Sources */,
 				BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */,
 				BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */,
+				DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
 				CAF6C805265F0A180040CC18 /* UserDashboardViewController.swift in Sources */,
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
@@ -1126,6 +1142,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RB4NL6J4U2;
 				INFOPLIST_FILE = Project03/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1146,6 +1163,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RB4NL6J4U2;
 				INFOPLIST_FILE = Project03/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
