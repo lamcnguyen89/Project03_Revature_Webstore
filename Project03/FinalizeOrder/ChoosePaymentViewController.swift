@@ -15,15 +15,20 @@ class ChoosePaymentViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func chooseCashOnDelivery(_ sender: Any) {
+        // Update the database to show Cash on Delivery Method
     }
-    */
+    
+    @IBAction func chooseNetBanking(_ sender: Any) {
+        // Update the database to show Net Banking
+    }
+    
+    @IBAction func chooseCreditCard(_ sender: Any) {
+        let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let wel = sb.instantiateViewController(withIdentifier: "CreditCard") as! CreditCardViewController
+        self.present(wel, animated: true, completion: nil)
+    }
+    
+    
 
 }

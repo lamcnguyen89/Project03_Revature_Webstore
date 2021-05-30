@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ReviewOrderScrollView: View {
-    @State var showProduct = false
+    @State var quantity = 1
+    @State var isEditing = false
+    // The shoppingCartItems variable will have a call to the database that stores the user's selected items that returns an object that can be iterated through and items in the UI can be generated.
+    @State var shoppingCartItems = ""
     var body: some View {
-        
         ZStack {
  
             NavigationView {
                 Form{
  
-                    ForEach(0..<10){ i in
+                    ForEach(1..<11){ i in
                         VStack{
                             HStack{
                                 Image("3060Ti")
@@ -29,10 +31,24 @@ struct ReviewOrderScrollView: View {
                                     Spacer()
                                     Text("Price: \(i)")
                                     Spacer()
-                                    Text("Quantity: \(i)")
+                                    Text("Quantity: \(quantity)")
                                 }.padding()
                                 Spacer()
-                                Button("Edit", action: {removeItem()})
+                                VStack{
+                                    Button("Quantity +", action: {
+                                        quantity += 1
+                                        // I need to add a function to update the data in the CoreData
+                                    })
+                                    .buttonStyle(BorderlessButtonStyle())
+                                    Button("Quantity -", action: {
+                                        if quantity > 0 {
+                                            quantity -= 1
+                                        }
+                                        // I need to add a function to update the data in the CoreData
+                                    })
+                                    .buttonStyle(BorderlessButtonStyle())
+                                }
+
                     
 
                             }
@@ -42,18 +58,6 @@ struct ReviewOrderScrollView: View {
                 .navigationBarTitle("Review Order")
             }
         }
-    }
-    
-    func removeItem() {
-        print("Your Item has been removed")
-    }
-     
-    func getUserOrders() {
-        
-        print("midnight moonlight")
-        // Use the function to pull all the items that a user has stored in the Entity that contains all the items that a user has added to his/her cart.
-        // I'm going to have to study the Class Diagram and the stuff that Kirtland has done.
-        // If I can figure this out.... That's most of the project solved on my end.
     }
     
 }
