@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cHQ-gs-GU4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cHQ-gs-GU4">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -428,6 +429,10 @@
                                     <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseCashOnDelivery:" destination="i0a-dH-4MY" eventType="touchUpInside" id="Lbq-ZN-JHO"/>
+                                    <action selector="chooseCashOnDelivery:" destination="IXw-OH-uT6" eventType="touchUpInside" id="SIu-Ye-w67"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPZ-68-5d4">
                                 <rect key="frame" x="57" y="448" width="300" height="55"/>
@@ -440,6 +445,9 @@
                                     <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseNetBanking:" destination="IXw-OH-uT6" eventType="touchUpInside" id="sgK-z6-taP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bba-zW-h41">
                                 <rect key="frame" x="57" y="593" width="300" height="55"/>
@@ -452,6 +460,9 @@
                                     <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <action selector="chooseCreditCard:" destination="IXw-OH-uT6" eventType="touchUpInside" id="mpQ-iU-tCP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="50b-4V-eCr"/>
@@ -463,13 +474,14 @@
                     <navigationItem key="navigationItem" id="Nv8-vI-2Vq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-kG-9vr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="i0a-dH-4MY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="386" y="473"/>
         </scene>
         <!--Credit Card View Controller-->
         <scene sceneID="BcV-j9-dME">
             <objects>
-                <viewController id="DPl-Mz-zQY" customClass="CreditCardViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreditCard" id="DPl-Mz-zQY" customClass="CreditCardViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7ys-cU-bXj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -601,12 +613,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKc-sA-rju" customClass="MyButtons" customModule="Project03" customModuleProvider="target">
-                                <rect key="frame" x="97" y="790" width="212" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Submit Payment"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Credit Card Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9D-jF-XJV" customClass="MyHeadingLabels" customModule="Project03" customModuleProvider="target">
                                 <rect key="frame" x="65" y="71" width="250" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -614,10 +620,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh0-Rn-DZU">
+                                <rect key="frame" x="148" y="804" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit Payment"/>
+                                <connections>
+                                    <action selector="submitPayment:" destination="DPl-Mz-zQY" eventType="touchUpInside" id="ICc-tz-cU3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="76A-Sd-Drd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="address" destination="kMH-OH-6Z1" id="Fh1-0S-dFn"/>
+                        <outlet property="address2" destination="UFf-tG-ds7" id="Ffg-8T-MGs"/>
+                        <outlet property="city" destination="cjz-bJ-Ko9" id="0bs-ti-1DY"/>
+                        <outlet property="creditNumber" destination="WW7-51-2Ib" id="fOH-RJ-rO0"/>
+                        <outlet property="expMonth" destination="RGH-oK-YbC" id="WT0-aS-ugP"/>
+                        <outlet property="expYear" destination="Nic-vM-euy" id="7d9-Of-r7k"/>
+                        <outlet property="name" destination="Ier-Cy-40d" id="t5D-Tb-JvS"/>
+                        <outlet property="phone" destination="QDt-RD-JdI" id="siO-pg-5a5"/>
+                        <outlet property="state" destination="P8A-mR-rk9" id="sSJ-0L-YwA"/>
+                        <outlet property="zip" destination="dXv-es-JoP" id="Kbr-v9-n3A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-OY-RYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -626,7 +652,7 @@
         <!--Shipment-->
         <scene sceneID="lxk-PB-4gI">
             <objects>
-                <viewController id="ueu-bg-6Tc" customClass="ChooseShippingViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChooseShipping" id="ueu-bg-6Tc" customClass="ChooseShippingViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q4L-7g-uUu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -707,7 +733,7 @@
         <!--Review-->
         <scene sceneID="Oj5-Ge-VDL">
             <objects>
-                <viewController id="Bmb-Vo-dRB" customClass="InnerViewReviewOrderViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReviewOrder" id="Bmb-Vo-dRB" customClass="ReviewOrderViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gnp-rz-nVR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1592,6 +1618,9 @@
                                                     <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="large"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="addAddress:" destination="jI8-xn-Fq2" eventType="touchUpInside" id="r2d-sX-sU4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1619,6 +1648,17 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="900"/>
+                    <connections>
+                        <outlet property="address" destination="iEd-sf-taY" id="mko-Oa-lP9"/>
+                        <outlet property="address2" destination="fdl-ZJ-HqC" id="cdg-gd-QEg"/>
+                        <outlet property="city" destination="tim-Va-5EA" id="xkb-PG-v74"/>
+                        <outlet property="country" destination="995-mc-rNu" id="R5o-i4-c4H"/>
+                        <outlet property="firstName" destination="s8w-Vh-fQV" id="12h-Bi-e8I"/>
+                        <outlet property="lastName" destination="3jt-Y6-gQs" id="4b2-EI-P65"/>
+                        <outlet property="phone" destination="ZWl-9y-Sfd" id="SXB-fI-lCo"/>
+                        <outlet property="state" destination="hnA-3f-ukt" id="yGa-mh-y3j"/>
+                        <outlet property="zipCode" destination="7jt-iN-BAO" id="uW2-Co-ZrC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3v-E6-qXc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

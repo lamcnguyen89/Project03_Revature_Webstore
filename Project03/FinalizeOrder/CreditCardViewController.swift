@@ -38,11 +38,7 @@ class CreditCardViewController: UIViewController {
         return .portrait
     }
     
-
-    
-    
-    @IBAction func submitInfo(_ sender: Any) {
-        
+    @IBAction func submitPayment(_ sender: Any) {
         if(
             name.text != nil &&
             creditNumber.text != nil &&
@@ -56,13 +52,15 @@ class CreditCardViewController: UIViewController {
             phone.text != nil
         ) {
            print("Card information submitted")
-
+           // Update Database information to show Credit Card was selected out of the 3 choices: NetBanking, COD, Credit Card
+            
+            let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let wel = sb.instantiateViewController(withIdentifier: "ChooseShipping") as! ChooseShippingViewController
+            self.present(wel, animated: true, completion: nil)
             
         } else {
-
+            print("Fill out all Information")
         }
         
-        
     }
-    
 }
