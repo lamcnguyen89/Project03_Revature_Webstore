@@ -1784,6 +1784,8 @@
                     <size key="freeformSize" width="414" height="900"/>
                     <connections>
                         <outlet property="calculatedTotal" destination="NcW-Gd-anI" id="LZD-kd-xhQ"/>
+                        <outlet property="shippingLabel" destination="rg2-ls-Kda" id="OQE-a0-Nbx"/>
+                        <outlet property="taxesLabel" destination="umW-qE-Ufv" id="zDU-S8-KCf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg1-Tb-Jl2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

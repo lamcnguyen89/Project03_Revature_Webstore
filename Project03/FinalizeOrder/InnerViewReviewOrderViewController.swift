@@ -9,6 +9,9 @@ import UIKit
 
 class InnerViewReviewOrderViewController: UIViewController {
 
+ 
+    @IBOutlet weak var taxesLabel: UILabel!
+    @IBOutlet weak var shippingLabel: UILabel!
     @IBOutlet weak var calculatedTotal: UILabel!
     var totalPrice: Double = 0
     var taxes: Double = 0
@@ -19,6 +22,8 @@ class InnerViewReviewOrderViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        taxesLabel.text = "Taxes: $\(String(format: "%.2f", taxes))"
+        shippingLabel.text = "Flate Rate Shipping: $\(String(format: "%.2f", shipping))"
         calculateOrder()
     }
     
