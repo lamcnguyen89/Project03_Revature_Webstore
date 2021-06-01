@@ -20,7 +20,12 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
-
+    //MARK: - Product Related
+    func fetchAllProducts() -> [Product]{
+        let fetchReq = NSFetchRequest<Product>(entityName: "Product")
+        var products = try! context?.fetch(fetchReq)
+        return products!
+    }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
         var products = [Product]()
