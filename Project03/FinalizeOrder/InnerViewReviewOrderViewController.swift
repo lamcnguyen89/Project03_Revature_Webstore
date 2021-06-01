@@ -16,21 +16,13 @@ class InnerViewReviewOrderViewController: UIViewController {
     let tax: Double = 0
     let ship: Double = 20
     
-    let orderData1 = [
+    let orderData = [
         0 : ["price" : 25.25, "quantity" : 2],
         1 : ["price" : 100.36, "quantity" : 5],
         2 : ["price" : 300.44, "quantity" : 13],
         3 : ["price" : 200.2345, "quantity" : 8]
     ]
-    
-    let orderData2 = [
-        0 : ["price" : 425.50, "quantity" : 4],
-        1 : ["price" : 200.50, "quantity" : 5],
-        2 : ["price" : 300.50, "quantity" : 6],
-        3 : ["price" : 600.50, "quantity" : 7],
-        4 : ["price" : 500.50, "quantity" : 2]
-    ]
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,7 +30,7 @@ class InnerViewReviewOrderViewController: UIViewController {
         taxesLabel.text = "Taxes: $\(String(format: "%.2f", tax))"
         shippingLabel.text = "Flate Rate Shipping: $\(String(format: "%.2f", ship))"
         
-        let total = calculateOrder(orders: orderData2)
+        let total = calculateOrder(orders: orderData)
         let priceString : String = String(format: "%.2f", total)
         calculatedTotal.text = priceString
     }
@@ -57,14 +49,10 @@ class InnerViewReviewOrderViewController: UIViewController {
     func calculateOrder(orders: [Int : [String : Double]] )-> Double  {
         
         let orderData = orders
-       
-        
         var totalPrice: Double = 0
 
         // Call the object that shows the user's orders. Right now I'm just using a placeholder object to write and test this loop.
-        
         var perItemPriceArray = [Double]()
-        
         var i:Int = 0
         
         while i < orderData.count {
