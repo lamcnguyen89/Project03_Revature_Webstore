@@ -44,26 +44,26 @@ class DataHandler {
     }
 
     //MARK: - Address Related
-    func getAddresses(user : User) throws -> PaymentOptionsViewModel{
-        let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
-        var ccArr = [CreditCard]()
+    func getAddresses(user : User) throws -> AddressViewModel{
+        let fetchReq = NSFetchRequest<Address>(entityName: "Address")
+        var addArr = [Address]()
         do{
             let results = try context?.fetch(fetchReq)
             if  results!.count == 0{
-                print("no credit cards on record")
-                return PaymentOptionsViewModel(payment: results!)
+                print("no addresses on record")
+                return AddressViewModel(addresses: results!)
             }
             for item in results!{
                 if item.user?.name == user.name{
-                    ccArr.append(item)
+                    addArr.append(item)
                 }
             }
         }
         catch{
-            print("no credit cards found")
+            print("no addresses found")
             throw FetchError.BadFetchRequest
         }
-        return PaymentOptionsViewModel(payment: ccArr)
+        return AddressViewModel(addresses: addArr)
     }
 
 
