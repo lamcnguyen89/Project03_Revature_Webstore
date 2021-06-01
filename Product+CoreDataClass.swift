@@ -28,12 +28,8 @@ public class Product: NSManagedObject {
         bran.name = dictionary["Brand"]
         bran.addToProducts(self)
         rat.product = self
-
-        
-
+        self.id = Int64(dictionary["ID"]!)!
     }
-
-
 }
 
 

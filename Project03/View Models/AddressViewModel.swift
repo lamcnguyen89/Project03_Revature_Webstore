@@ -8,19 +8,19 @@
 import Foundation
 import CoreData
 class AddressViewModel{
-    private let addresses : [Address]
+    private let address : Address
     private let context : NSManagedObjectContext
 
-    init (addresses : [Address]){
-        self.addresses = addresses
-        context = addresses[0].managedObjectContext!
+    init (address : Address){
+        self.address = address
+        context = address.managedObjectContext!
     }
 
-    func    listAddresses() -> [String]{
-        var addArr = [String]()
-        for item in addresses{
-            addArr.append(item.street!)
-        }
-        return addArr
+    func listAddress() -> String{
+        return String("Address with street: " + address.street!)
+    }
+    func getObjs() -> Address{
+        return address
     }
 }
+
