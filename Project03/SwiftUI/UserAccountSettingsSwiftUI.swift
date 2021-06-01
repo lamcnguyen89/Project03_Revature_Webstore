@@ -8,24 +8,20 @@
 import SwiftUI
 
 struct UserAccountSettingsSwiftUI: View {
-    //@Environment(\.managedObjectContext)
-    //var context
-    @FetchRequest(entity:User.entity(), sortDescriptors:[
-        NSSortDescriptor(keyPath:\User.lastName, ascending: true),
-                    NSSortDescriptor(keyPath: \User.firstName, ascending: true)
-                  ]
-    )
-    var user: FetchedResults<User>
+  //  @Environment(\.managedObjectContext) var context;
+  //  @FetchRequest(entity:User.entity(), sortDescriptors:[])
+  //  var user: FetchedResults<User>
+    var sampleUser = ["00":["fName":"Jane", "lName": "Doe", "add": "123 elms st", "pwd": "1234"]],
+        ["01": [""]]
+    
     
     var body: some View {
         VStack{
             ScrollView {
-                List(user, id:\.self){
-                    u in
-                    Text(u.lastName ?? "-No lastname")
-                    Text(u.firstName ?? "-No firstname")
+                List(prods){ p in
+                    Text("\(p.name!)")
                     Spacer()
-                    Text(u.password ?? "-password invalid")
+                    Text("\(p.price)")
                 }
             }//scrollview
         }//vstack
