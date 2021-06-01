@@ -6,44 +6,50 @@
 //
 
 import UIKit
+import SwiftUI
 
 class UserDashboardViewController: UIViewController {
-  
     
-    override func viewDidLoad() {
+    
+   override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //self.delegate = self
     }
     
-   
-       
-    @IBAction func btnSaveIItems(_ sender: UIButton) {
+    @IBSegueAction func showUserSaveItemsSwiftUI(_ coder: NSCoder) -> UIViewController? {
         
+        let rootView = UserSaveItemsSwiftUIswift()
+        
+        return UIHostingController(coder: coder, rootView: rootView)
     }
     
-    @IBAction func btnWishList(_ sender: UIButton) {
-        //tabs.tabBarController(tabs, didSelect: vcWish)
-        
-    }
     
-    @IBAction func getCategoryLIst(_ sender: UIButton) {
+    @IBSegueAction func showUserWishlistSwiftUI(_ coder: NSCoder) -> UIViewController? {
         
-        let sb = UIStoryboard(name:"Main", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
-        self.present(show,animated: true, completion: nil)
+        let rootView = UserWishlistSwiftUI()
+        
+        return  UIHostingController(coder: coder, rootView: rootView)
+    }
+     
+    
+    
+    @IBSegueAction func showUserOrdersSwiftUI(_ coder: NSCoder) -> UIViewController? {
+        let rootView = UserOrdersSwiftUI()
+        
+        return UIHostingController(coder: coder, rootView: rootView)
+    }
+     
+     
+    @IBSegueAction func showUserAccountSettings(_ coder: NSCoder) -> UIViewController? {
+        
+        let rootView = UserAccountSettingsSwiftUI()
+        
+        return UIHostingController(coder: coder, rootView: rootView)
     }
     
 }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you wll often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 
 

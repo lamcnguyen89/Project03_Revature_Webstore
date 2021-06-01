@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G5023d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ACH" representedClassName="ACH" parentEntity="PaymentType" syncable="YES" codeGenerationType="category">
         <attribute name="acctNumber" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nameOnAccount" optional="YES" attributeType="String"/>
