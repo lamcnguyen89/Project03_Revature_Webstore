@@ -8,10 +8,18 @@
 import Foundation
 import CoreData
 import UIKit
+import SwiftCSV
 
 class DataDelegate {
-    let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+    let context : NSManagedObjectContext?
     static var inst = DataDelegate()
+
+    init (context: NSManagedObjectContext) {
+        self.context = context
+    }
+    init(){
+        context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
+    }
 
     //MARK: -- User Related
     func createUser(_ object: [String:String]){
@@ -29,23 +37,29 @@ class DataDelegate {
             print("data not saved")
         }
     }
-
-    func getOneUser(name : String) -> User {
+    func updateUserName(_ name: String){
+        
+    }
+    func getOneUser (name : String)-> User{
         var user = User()
-        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "User")
+        let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         fetchReq.predicate = NSPredicate(format: "name == %@", name)
         fetchReq.fetchLimit = 1
-        do{
+        do {
             let req = try context?.fetch(fetchReq) as! [User]
-            if (req.count != 0 ){
-                user = req.first! as User
+            if(req.count != 0 ){
+                user = req.first!
             }
-            return user
+            else{
+                print("No users found")
+            }
         }
         catch{
-            print("no data returned")
+            print("No users found")
         }
+        
         return user
+
     }
 
     func updatePassword(_ object: [String: String]){
@@ -64,8 +78,42 @@ class DataDelegate {
 
         }
     }
-    
+    func getStore() -> Store{
+        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Store")
+        var store : Store?
+        do{
+            let req = try context?.fetch(fetchReq)
+            if (req?.first != nil ){
+                store = req!.first as? Store
+            }
+            else{
+                store = Store(context: context!)
+            }
+        }
+        catch{
+            print("DataDelegate.createStore fetch error")
+        }
+        return store!
+    }
 
+    func generateInitialProducts(){
+        var prodArray = [Product]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
 
+        for item in csv!.namedRows{
+            let prod = Product(context: context!)
+            prod.update(dictionary: item, store: getStore())
+            prodArray.append(prod)
+            print(item)
+        }
+        print(prodArray)
+        try! context?.save()
+    }
+}
 
+enum Err : Error{
+    case nilErr 
 }

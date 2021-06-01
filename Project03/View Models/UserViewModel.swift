@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreData
-import UIKit
 
 class UserViewModel{
     private let user : User
@@ -34,29 +33,33 @@ class UserViewModel{
     public var email : String{
         return user.email!
     }
-    public var orderHistory : OrderHistory?{
-        return user.orderHistory
-    }
-    public var paymentOptions : PaymentOptions?{
-        return user.paymentOptions
-    }
-    public func reviewsthrows() throws -> [Review]? {
-        var reviews : [Review]?
-        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Review")
-        fetchReq.predicate = NSPredicate(format: "name == %@", name)
-        fetchReq.fetchLimit = 1
-        do{
-            let req = try context.fetch(fetchReq) as! [Review]
-            reviews = req
+
+    public func getReviews() throws -> [Review] {
+        if let reviews = user.reviews?.array as? [Review]{
+            return reviews
         }
-        catch{
-            throw NilError.nilErr
-        }
-        return reviews
+        else {throw Err.nilErr}
     }
 
-
-    enum NilError : Error{
-        case nilErr
+    public func getOrderHistory() throws -> OrderHistory {
+        if let orderHistory = user.orderHistory{
+            return orderHistory
+        }
+        else {throw Err.nilErr}
     }
+
+    public func getSearchHistory() throws -> SearchHistory{
+        if let searchHistory = user.searchHistory{
+            return searchHistory
+        }
+        else {throw Err.nilErr}
+    }
+
+    public func getPaymentOptions() throws -> PaymentOptions{
+        if let payOptions = user.paymentOptions{
+            return payOptions
+        }
+        else {throw Err.nilErr}
+    }
+
 }
