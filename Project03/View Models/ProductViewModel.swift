@@ -29,21 +29,24 @@ class ProductViewModel{
     public var description : String{
         return product.productDescription!
     }
+    public func getObj() -> Product{
+        return product
+    }
 
     public func getBrand() throws -> Brand {
         if let brand = product.brand{
             return brand
         }
-        else {throw NilError.nilErr}
+        else {throw ProductErr.nilErr}
     }
 
     public func getRating() throws -> ProductRating {
         if let rating = product.rating{
             return rating
         }
-        else {throw NilError.nilErr}
+        else {throw ProductErr.nilErr}
     }
-    enum NilError : Error{
+    enum ProductErr : Error{
         case nilErr
     }
 

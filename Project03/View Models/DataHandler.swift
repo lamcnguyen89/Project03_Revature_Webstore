@@ -22,17 +22,28 @@ class DataHandler {
     }
 
     //MARK: - Order Related
+    func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
+        var products = [Product]()
+        for item in items{
+            products.append(item.getObj())
+        }
+        let user = address.user
+        let order = Order(context: user!.managedObjectContext!)
+        order.addToProduct(NSOrderedSet(array: products))
+        order.address = address
+        order.payment = paymentOption
 
+    }
 
     //MARK: - Payment Related
-    func getCreditCards(user : User) throws -> PaymentOptionsViewModel{
+    func getCreditCards(user : User) throws -> PaymentTypeViewModel{
         let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
         var ccArr = [CreditCard]()
         do{
             let results = try context?.fetch(fetchReq)
             if  results!.count == 0{
                 print("no credit cards on record")
-                return PaymentOptionsViewModel(payment: results!)
+                return PaymentTypeViewModel(payment: results!)
             }
             for item in results!{
                 if item.user?.name == user.name{
@@ -44,22 +55,22 @@ class DataHandler {
             print("no credit cards found")
             throw FetchError.BadFetchRequest
         }
-        return PaymentOptionsViewModel(payment: ccArr)
+        return PaymentTypeViewModel(payment: ccArr)
     }
 
     //MARK: - Address Related
-    func getAddresses(user : User) throws -> AddressViewModel{
+    func getAddresses(user : User) throws -> [AddressViewModel]{
         let fetchReq = NSFetchRequest<Address>(entityName: "Address")
-        var addArr = [Address]()
+        var addArr = [AddressViewModel]()
         do{
             let results = try context?.fetch(fetchReq)
             if  results!.count == 0{
                 print("no addresses on record")
-                return AddressViewModel(addresses: results!)
+                return addArr
             }
             for item in results!{
                 if item.user?.name == user.name{
-                    addArr.append(item)
+                    addArr.append(AddressViewModel(address: item))
                 }
             }
         }
@@ -67,7 +78,7 @@ class DataHandler {
             print("no addresses found")
             throw FetchError.BadFetchRequest
         }
-        return AddressViewModel(addresses: addArr)
+        return addArr
     }
 
 
