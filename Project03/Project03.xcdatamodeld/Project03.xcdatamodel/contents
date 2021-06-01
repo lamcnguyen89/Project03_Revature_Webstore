@@ -113,6 +113,7 @@
     </entity>
     <elements>
         <element name="ACH" positionX="-409.7900390625" positionY="426.7140197753906" width="128" height="88"/>
+        <element name="Address" positionX="-189" positionY="171" width="128" height="14"/>
         <element name="Brand" positionX="-63.821044921875" positionY="-489.0199890136719" width="128" height="73"/>
         <element name="Category" positionX="-245.382568359375" positionY="-122.4273681640625" width="128" height="88"/>
         <element name="COD" positionX="-653.13427734375" positionY="569.2061920166016" width="128" height="58"/>
@@ -133,6 +134,5 @@
         <element name="Store" positionX="-438.289306640625" positionY="-159.861343383789" width="128" height="58"/>
         <element name="User" positionX="-340.360595703125" positionY="43.18682861328126" width="128" height="223"/>
         <element name="Wishlist" positionX="-279.685302734375" positionY="-471.5655822753906" width="128" height="59"/>
-        <element name="Address" positionX="-189" positionY="171" width="128" height="14"/>
     </elements>
 </model>
