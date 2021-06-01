@@ -12,7 +12,7 @@ import XCTest
 
 class Project03Tests: XCTestCase {
     
-    // SUT stands for System under Test. It is the class that we are perofrming tests upon.
+    // SUT stands for System under Test. It is the class that we are performing tests upon.
     var sut: InnerViewReviewOrderViewController!
 
 
@@ -31,8 +31,6 @@ class Project03Tests: XCTestCase {
         
     }
 
-    
-
     func testCalculateOrderFunction() throws {
         // given
            
@@ -43,11 +41,12 @@ class Project03Tests: XCTestCase {
             3 : ["price" : 600.50, "quantity" : 7],
             4 : ["price" : 500.50, "quantity" : 2]
         ]
+
         // when
         
 
         // then
-        XCTAssertEqual(sut.calculateOrder(orderData), 5.00, "Calculate Order function works correctly")
+        XCTAssertEqual(sut.calculateOrder(orders: orderData), 9732.00, "Calculate Order function works correctly")
         
     }
     
