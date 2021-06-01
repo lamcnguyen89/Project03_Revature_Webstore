@@ -62,7 +62,7 @@ class AsyncCSV : Operation{
 
         DispatchQueue.global().async(execute: {
             print("AsyncCSV Executing")
-            DataDelegate(context: self.context!).generateInitialProducts()
+            DataHandler(context: self.context!).generateInitialProducts()
             self.finish()
         })
     }

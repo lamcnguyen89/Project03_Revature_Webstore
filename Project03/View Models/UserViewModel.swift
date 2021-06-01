@@ -33,33 +33,35 @@ class UserViewModel{
     public var email : String{
         return user.email!
     }
+    
+
 
     public func getReviews() throws -> [Review] {
         if let reviews = user.reviews?.array as? [Review]{
             return reviews
         }
-        else {throw Err.nilErr}
+        else {throw FetchError.BadFetchRequest}
     }
 
     public func getOrderHistory() throws -> OrderHistory {
         if let orderHistory = user.orderHistory{
             return orderHistory
         }
-        else {throw Err.nilErr}
+        else {throw FetchError.BadFetchRequest}
     }
 
     public func getSearchHistory() throws -> SearchHistory{
         if let searchHistory = user.searchHistory{
             return searchHistory
         }
-        else {throw Err.nilErr}
+        else {throw FetchError.BadFetchRequest}
     }
 
     public func getPaymentOptions() throws -> PaymentOptions{
         if let payOptions = user.paymentOptions{
             return payOptions
         }
-        else {throw Err.nilErr}
+        else {throw FetchError.BadFetchRequest}
     }
 
 }

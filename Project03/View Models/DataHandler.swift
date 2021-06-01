@@ -10,9 +10,9 @@ import CoreData
 import UIKit
 import SwiftCSV
 
-class DataDelegate {
+class DataHandler {
     let context : NSManagedObjectContext?
-    static var inst = DataDelegate()
+    static var inst = DataHandler()
 
     init (context: NSManagedObjectContext) {
         self.context = context
@@ -20,7 +20,28 @@ class DataDelegate {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
-
+    //MARK: -- Payment Related
+    func getCreditCards(user : User) throws -> PaymentOptionsViewModel{
+        let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
+        var ccArr = [CreditCard]()
+        do{
+            let results = try context?.fetch(fetchReq)
+            if  results!.count == 0{
+                print("no credit cards on record")
+                return PaymentOptionsViewModel(payment: results!)
+            }
+            for item in results!{
+                if item.user?.name == user.name{
+                    ccArr.append(item)
+                }
+            }
+        }
+        catch{
+            print("no credit cards found")
+            throw FetchError.BadFetchRequest
+        }
+        return PaymentOptionsViewModel(payment: ccArr)
+    }
     //MARK: -- User Related
     func createUser(_ object: [String:String]){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
@@ -37,9 +58,13 @@ class DataDelegate {
             print("data not saved")
         }
     }
+
+
+
     func updateUserName(_ name: String){
-        
+        //TODO
     }
+
     func getOneUser (name : String)-> User{
         var user = User()
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -114,6 +139,6 @@ class DataDelegate {
     }
 }
 
-enum Err : Error{
-    case nilErr 
+enum FetchError : Error{
+    case BadFetchRequest 
 }

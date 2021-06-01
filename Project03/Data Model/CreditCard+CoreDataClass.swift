@@ -10,6 +10,6 @@ import Foundation
 import CoreData
 
 @objc(CreditCard)
-public class CreditCard: NSManagedObject {
+public class CreditCard: PaymentType {
 
 }
