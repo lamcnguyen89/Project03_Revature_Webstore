@@ -2,7 +2,7 @@
 
 ## Project Description
 
-Pick and PAy is a webstore application
+Pick and Pay is a webstore application
 
 ## Technologies Used
 
