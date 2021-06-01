@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct UserAccountSettingsSwiftUI: View {
+    //@Environment(\.managedObjectContext)
+    //var context
+    @FetchRequest(entity:User.entity(), sortDescriptors:[
+        NSSortDescriptor(keyPath:\User.lastName, ascending: true),
+                    NSSortDescriptor(keyPath: \User.firstName, ascending: true)
+                  ]
+    )
+    var user: FetchedResults<User>
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            ScrollView {
+                List(user, id:\.self){
+                    u in
+                    Text(u.lastName ?? "-No lastname")
+                    Text(u.firstName ?? "-No firstname")
+                    Spacer()
+                    Text(u.password ?? "-password invalid")
+                }
+            }//scrollview
+        }//vstack
     }
 }
 
