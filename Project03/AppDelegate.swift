@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
         do{
             let fetch = try context?.fetch(fetchReq)
-            if fetch == nil || fetch!.count < 36{
+            if fetch == nil || fetch!.count < 42{
                 let getCSV = AsyncCSV(context: context!)
                 group.enter()
                 DispatchQueue.global().async{

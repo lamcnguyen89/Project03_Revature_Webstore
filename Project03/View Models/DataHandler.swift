@@ -20,6 +20,10 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+
+    //MARK: - Order Related
+
+
     //MARK: - Payment Related
     func getCreditCards(user : User) throws -> PaymentOptionsViewModel{
         let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
