@@ -94,6 +94,11 @@
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
         <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHistory" inverseName="user" inverseEntity="SearchHistory"/>
         <relationship name="shoppingCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCart" inverseName="user" inverseEntity="ShoppingCart"/>
+        <relationship name="wishlist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Wishlist" inverseName="user" inverseEntity="Wishlist"/>
+    </entity>
+    <entity name="Wishlist" representedClassName="Wishlist" syncable="YES" codeGenerationType="category">
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="wishlist" inverseEntity="User"/>
     </entity>
     <elements>
         <element name="ACH" positionX="-403.038330078125" positionY="403.0368347167969" width="128" height="59"/>
@@ -115,6 +120,7 @@
         <element name="ShoppingCart" positionX="-706.47021484375" positionY="-351.7955169677734" width="128" height="73"/>
         <element name="ShoppingCartItem" positionX="-495" positionY="-324" width="128" height="74"/>
         <element name="Store" positionX="-438.289306640625" positionY="-159.861343383789" width="128" height="58"/>
-        <element name="User" positionX="-338.765625" positionY="-10.50151062011718" width="128" height="179"/>
+        <element name="User" positionX="-338.765625" positionY="-10.50151062011718" width="128" height="14"/>
+        <element name="Wishlist" positionX="-504" positionY="-333" width="128" height="59"/>
     </elements>
 </model>
