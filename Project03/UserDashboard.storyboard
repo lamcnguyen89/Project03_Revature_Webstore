@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jea-bA-Eq1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -43,7 +43,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnSaveIItems:" destination="jea-bA-Eq1" eventType="touchUpInside" id="bFG-1Q-iiO"/>
+                                            <segue destination="NMd-wy-Wq8" kind="presentation" destinationCreationSelector="showUserSaveItemsSwiftUI:" id="DLn-qh-B9V"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-7N-uaO">
@@ -69,9 +69,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnSaveIItems:" destination="jea-bA-Eq1" eventType="touchUpInside" id="xEg-mF-nnR"/>
-                                            <action selector="btnWishList:" destination="jea-bA-Eq1" eventType="touchUpInside" id="xI5-Ok-5SQ"/>
-                                            <segue destination="ozV-i1-bqH" kind="showDetail" id="adZ-p1-zdb"/>
+                                            <segue destination="baT-3V-plC" kind="showDetail" destinationCreationSelector="showUserWishlistSwiftUI:" id="cyS-p9-2nw"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wand.and.stars" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tEI-nf-24Z">
@@ -93,6 +91,9 @@
                                         <state key="normal" title="My Orders">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="ysU-4q-gFU" kind="show" destinationCreationSelector="showUserOrdersSwiftUI:" id="H2n-Z4-xgR"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shippingbox.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-HH-qzu">
                                         <rect key="frame" x="30" y="6" width="44" height="56"/>
@@ -113,6 +114,9 @@
                                         <state key="normal" title="My Account Settings">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="4Sc-7P-OZh" kind="show" destinationCreationSelector="showUserAccountSettings:" id="OhT-9c-3Ly"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2hv-Hb-gL0">
                                         <rect key="frame" x="18" y="15" width="59" height="44"/>
@@ -138,223 +142,55 @@
                                 <state key="normal" title="Continue Shopping">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="getCategoryLIst:" destination="jea-bA-Eq1" eventType="touchUpInside" id="3ee-WM-Met"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jdf-aM-qfH"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nYB-Wx-Ufe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXk-8s-yXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.91304347826087" y="170.75892857142856"/>
+            <point key="canvasLocation" x="2420" y="153"/>
         </scene>
-        <!--Save Items-->
-        <scene sceneID="zyN-tK-rfs">
+        <!--Hosting Controller-->
+        <scene sceneID="LM0-ba-gA8">
             <objects>
-                <viewController storyboardIdentifier="saveItems" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uv1-dB-riv" customClass="SaveItemsViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hla-Ej-rNe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSs-ca-Ydg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Save Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA8-82-64C">
-                                        <rect key="frame" x="26" y="37" width="359" height="49"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A3g-ae-yJm">
-                                <rect key="frame" x="20" y="130" width="374" height="683"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List of items removed from shopping cart" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-CM-Ydh">
-                                        <rect key="frame" x="30" y="30" width="336" height="61"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZWk-e4-f5G"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Save Items" id="2zM-iz-8Wo"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gPU-6j-83F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="NMd-wy-Wq8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkY-W3-KDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="235" y="905"/>
+            <point key="canvasLocation" x="1054" y="933"/>
         </scene>
-        <!--Wishlist-->
-        <scene sceneID="uIP-w1-tWl">
+        <!--Hosting Controller-->
+        <scene sceneID="o60-Un-Fe1">
             <objects>
-                <viewController storyboardIdentifier="wishList" id="bei-ke-XrN" customClass="WishListViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="pKa-6F-jFN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqH-Vt-wL0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Wishlist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul7-2T-cUs">
-                                        <rect key="frame" x="33" y="43" width="355" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aup-v1-eo5">
-                                <rect key="frame" x="20" y="132" width="374" height="681"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="List of items added to wishlist" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzt-Fr-JZ3">
-                                        <rect key="frame" x="41" y="20" width="303" height="75"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="9RG-YW-XXp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Wishlist" id="A2g-jP-u0M"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="icu-SY-Dw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1041" y="915"/>
-        </scene>
-        <!--userTabNav-->
-        <scene sceneID="Mzb-VO-9bL">
-            <objects>
-                <tabBarController storyboardIdentifier="userTabNav" title="userTabNav" automaticallyAdjustsScrollViewInsets="NO" id="ozV-i1-bqH" customClass="UserDashTabBarController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <hostingController id="baT-3V-plC" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kBU-EP-LPV">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="uv1-dB-riv" kind="relationship" relationship="viewControllers" id="vux-dt-VFX"/>
-                        <segue destination="bei-ke-XrN" kind="relationship" relationship="viewControllers" id="Tna-ML-XLQ"/>
-                        <segue destination="Cz0-vW-Jvh" kind="relationship" relationship="viewControllers" id="dy3-Wl-xyz"/>
-                        <segue destination="hLJ-xb-Qdx" kind="relationship" relationship="viewControllers" id="4n0-Db-vbk"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zZV-Ph-Jxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hw-Kn-v36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="171"/>
+            <point key="canvasLocation" x="1883" y="930"/>
         </scene>
-        <!--Orders-->
-        <scene sceneID="iRn-EM-lpO">
+        <!--Hosting Controller-->
+        <scene sceneID="1Ce-Zv-bKv">
             <objects>
-                <viewController storyboardIdentifier="orders" id="Cz0-vW-Jvh" customClass="OrdersViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="a7A-m0-ShD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6mw-4m-tJI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Recent Orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVF-FW-CBv">
-                                        <rect key="frame" x="33" y="41" width="347" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C67-Ae-XpC">
-                                <rect key="frame" x="20" y="124" width="374" height="689"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aif-QJ-WPX">
-                                        <rect key="frame" x="26" y="38" width="340" height="248"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Show list of orders/purchases....option btn where can view 1 lorder list or 1 item  in a subview to show track order, to sub view to return (a item)--cancel orders</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Zoj-oO-HDq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Orders" id="Nad-DT-oat"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mJ5-br-iaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="ysU-4q-gFU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rrc-RS-m84"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3js-W2-QMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1873.913043478261" y="914.73214285714278"/>
+            <point key="canvasLocation" x="2722" y="933"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="Mbd-Sv-Ql5">
+        <!--Hosting Controller-->
+        <scene sceneID="RuQ-22-p5f">
             <objects>
-                <viewController storyboardIdentifier="myAccount" id="hLJ-xb-Qdx" customClass="MyAccountViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dOd-Y9-3EY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-pv-eHz">
-                                <rect key="frame" x="0.0" y="-38" width="414" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Account Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-M9-kFB">
-                                        <rect key="frame" x="20" y="81" width="374" height="47"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCm-w6-JVs">
-                                <rect key="frame" x="20" y="122" width="374" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="change password - update mailing address - update any save payment info - Logout btn" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-KJ-Vny">
-                                        <rect key="frame" x="20" y="25" width="330" height="191"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="t5e-7w-rXf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Account" id="7Zj-cr-6iC"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vMl-Qd-fC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="4Sc-7P-OZh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zfb-Ts-8KK"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgI-2c-Bfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2669.5652173913045" y="914.73214285714278"/>
+            <point key="canvasLocation" x="3681" y="929"/>
         </scene>
     </scenes>
     <resources>
@@ -367,9 +203,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
