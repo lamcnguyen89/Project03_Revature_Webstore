@@ -22,6 +22,7 @@ class Project03UITests: XCTestCase {
     }
     
     // Test General UI Functionality
+    
     func testGeneralUIFunctionality() {
         
         app/*@START_MENU_TOKEN@*/.staticTexts["    Menu"]/*[[".buttons[\"    Menu\"].staticTexts[\"    Menu\"]",".staticTexts[\"    Menu\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
@@ -35,6 +36,7 @@ class Project03UITests: XCTestCase {
         app.buttons["    Menu"].tap()
         
     }
+ 
     
 
 
