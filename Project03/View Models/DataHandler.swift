@@ -23,7 +23,7 @@ class DataHandler {
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
         let fetchReq = NSFetchRequest<Product>(entityName: "Product")
-        var products = try! context?.fetch(fetchReq)
+        let products = try! context?.fetch(fetchReq)
         return products!
     }
     //MARK: - Order Related
@@ -37,7 +37,6 @@ class DataHandler {
         order.addToProduct(NSOrderedSet(array: products))
         order.address = address
         order.payment = paymentOption
-
     }
 
     //MARK: - Payment Related
@@ -103,8 +102,6 @@ class DataHandler {
             print("data not saved")
         }
     }
-
-
 
     func updateUserName(_ name: String){
         //TODO
