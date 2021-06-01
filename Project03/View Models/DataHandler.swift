@@ -20,7 +20,7 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
-    //MARK: -- Payment Related
+    //MARK: - Payment Related
     func getCreditCards(user : User) throws -> PaymentOptionsViewModel{
         let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
         var ccArr = [CreditCard]()
@@ -42,7 +42,32 @@ class DataHandler {
         }
         return PaymentOptionsViewModel(payment: ccArr)
     }
-    //MARK: -- User Related
+
+    //MARK: - Address Related
+    func getAddresses(user : User) throws -> PaymentOptionsViewModel{
+        let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
+        var ccArr = [CreditCard]()
+        do{
+            let results = try context?.fetch(fetchReq)
+            if  results!.count == 0{
+                print("no credit cards on record")
+                return PaymentOptionsViewModel(payment: results!)
+            }
+            for item in results!{
+                if item.user?.name == user.name{
+                    ccArr.append(item)
+                }
+            }
+        }
+        catch{
+            print("no credit cards found")
+            throw FetchError.BadFetchRequest
+        }
+        return PaymentOptionsViewModel(payment: ccArr)
+    }
+
+
+    //MARK: - User Related
     func createUser(_ object: [String:String]){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
         user.email = object["email"]

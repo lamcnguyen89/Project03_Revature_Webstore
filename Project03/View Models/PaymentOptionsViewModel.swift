@@ -10,8 +10,8 @@ import CoreData
 class PaymentOptionsViewModel{
     private let paymentOptions : [PaymentType]
     private let context : NSManagedObjectContext
-
-
+    
+    
     public init (payment : [PaymentType]){
         self.paymentOptions = payment
         context = payment[0].managedObjectContext!
@@ -19,8 +19,8 @@ class PaymentOptionsViewModel{
     func getAllOptions() -> [PaymentType]{
         return paymentOptions
     }
-
-    func getCreditCardsTitle() -> [String]{
+    
+    func listCreditCardsTitle() -> [String]{
         var ccNums = [String]()
         for item in paymentOptions{
             if item is CreditCard{
@@ -31,8 +31,8 @@ class PaymentOptionsViewModel{
         }
         return ccNums
     }
-
-    func getBankAccts(){
+    
+    func listBankAccts(){
         var ccNums = [String]()
         for item in paymentOptions{
             if item is ACH{
@@ -42,8 +42,5 @@ class PaymentOptionsViewModel{
             }
         }
     }
-
-
-
-
+    
 }

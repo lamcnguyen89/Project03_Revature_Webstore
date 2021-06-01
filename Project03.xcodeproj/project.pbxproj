@@ -19,6 +19,7 @@
 		BC3FBB202666805300F21C06 /* PaymentOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FBB1F2666805300F21C06 /* PaymentOptionsViewModel.swift */; };
 		BC3FBB23266697AA00F21C06 /* Address+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FBB21266697AA00F21C06 /* Address+CoreDataClass.swift */; };
 		BC3FBB272666982500F21C06 /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FBB252666982500F21C06 /* Order+CoreDataClass.swift */; };
+		BC3FBB2A26669D7200F21C06 /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3FBB2926669D7200F21C06 /* AddressViewModel.swift */; };
 		BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41583B265BFC640051F99B /* Store+CoreDataClass.swift */; };
 		BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC41583F265BFC640051F99B /* Review+CoreDataClass.swift */; };
 		BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC415841265BFC640051F99B /* User+CoreDataClass.swift */; };
@@ -111,6 +112,7 @@
 		BC3FBB1F2666805300F21C06 /* PaymentOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionsViewModel.swift; sourceTree = "<group>"; };
 		BC3FBB21266697AA00F21C06 /* Address+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Address+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BC3FBB252666982500F21C06 /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		BC3FBB2926669D7200F21C06 /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
 		BC41583B265BFC640051F99B /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC41583F265BFC640051F99B /* Review+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Review+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BC415841265BFC640051F99B /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				BC7E34E6265E99BC006CE75A /* ShoppingCartViewModel.swift */,
 				BCAA09CF266041E900F40284 /* AsyncCSV.swift */,
 				BC3FBB1F2666805300F21C06 /* PaymentOptionsViewModel.swift */,
+				BC3FBB2926669D7200F21C06 /* AddressViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -681,6 +684,7 @@
 				BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */,
 				DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
+				BC3FBB2A26669D7200F21C06 /* AddressViewModel.swift in Sources */,
 				CAF6C805265F0A180040CC18 /* UserDashboardViewController.swift in Sources */,
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
 				BC3E723C266133A700775C8F /* ACH+CoreDataClass.swift in Sources */,
