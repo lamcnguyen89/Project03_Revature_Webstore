@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jea-bA-Eq1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -43,7 +43,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnSaveIItems:" destination="jea-bA-Eq1" eventType="touchUpInside" id="bFG-1Q-iiO"/>
+                                            <segue destination="NMd-wy-Wq8" kind="presentation" destinationCreationSelector="showUserSaveItemsSwiftUI:" id="DLn-qh-B9V"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-7N-uaO">
@@ -69,8 +69,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="btnSaveIItems:" destination="jea-bA-Eq1" eventType="touchUpInside" id="xEg-mF-nnR"/>
-                                            <action selector="btnWishList:" destination="jea-bA-Eq1" eventType="touchUpInside" id="xI5-Ok-5SQ"/>
+                                            <segue destination="baT-3V-plC" kind="showDetail" destinationCreationSelector="showUserWishlistSwiftUI:" id="cyS-p9-2nw"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wand.and.stars" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tEI-nf-24Z">
@@ -93,7 +92,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ozV-i1-bqH" kind="showDetail" id="6bC-dP-rRv"/>
+                                            <segue destination="ysU-4q-gFU" kind="show" destinationCreationSelector="showUserOrdersSwiftUI:" id="H2n-Z4-xgR"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shippingbox.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-HH-qzu">
@@ -115,6 +114,9 @@
                                         <state key="normal" title="My Account Settings">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="4Sc-7P-OZh" kind="show" destinationCreationSelector="showUserAccountSettings:" id="OhT-9c-3Ly"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2hv-Hb-gL0">
                                         <rect key="frame" x="18" y="15" width="59" height="44"/>
@@ -140,31 +142,23 @@
                                 <state key="normal" title="Continue Shopping">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="getCategoryLIst:" destination="jea-bA-Eq1" eventType="touchUpInside" id="3ee-WM-Met"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jdf-aM-qfH"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
-                    <connections>
-                        <outlet property="btnAccount" destination="dpW-UA-gyT" id="TRk-Be-Fwc"/>
-                        <outlet property="btnOrders" destination="0mq-Kv-GND" id="62i-dg-uJe"/>
-                        <outlet property="btnSaveItems" destination="DJT-qC-vd9" id="F6h-Om-qj7"/>
-                        <outlet property="btnWishList" destination="8Fz-Nf-wp2" id="hHq-Td-bJM"/>
-                    </connections>
+                    <navigationItem key="navigationItem" id="nYB-Wx-Ufe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXk-8s-yXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="134"/>
+            <point key="canvasLocation" x="2420" y="153"/>
         </scene>
         <!--My Save Items-->
         <scene sceneID="zyN-tK-rfs">
             <objects>
                 <viewController storyboardIdentifier="saveItems" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uv1-dB-riv" customClass="SaveItemsViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hla-Ej-rNe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSs-ca-Ydg">
@@ -190,23 +184,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Save Items" largeTitleDisplayMode="always" id="0wc-jF-bxS">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="Yzu-13-t2n">
-                            <connections>
-                                <segue destination="jea-bA-Eq1" kind="showDetail" id="xC1-Yf-YKc"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" image="list.bullet" catalog="system" id="Yzu-13-t2n"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gPU-6j-83F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.0434782608696" y="914.73214285714278"/>
+            <point key="canvasLocation" x="1117" y="134"/>
         </scene>
         <!--Wishlist-->
         <scene sceneID="uIP-w1-tWl">
             <objects>
                 <viewController storyboardIdentifier="wishList" id="bei-ke-XrN" customClass="WishListViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pKa-6F-jFN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqH-Vt-wL0">
@@ -242,42 +232,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wishlist" id="A2g-jP-u0M"/>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="wTI-4d-U6w"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icu-SY-Dw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1926.0869565217392" y="914.73214285714278"/>
-        </scene>
-        <!--userTabNav-->
-        <scene sceneID="Mzb-VO-9bL">
-            <objects>
-                <tabBarController storyboardIdentifier="userTabNav" title="userTabNav" automaticallyAdjustsScrollViewInsets="NO" id="ozV-i1-bqH" customClass="UserDashTabBarController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kBU-EP-LPV">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Iwo-li-ihX" kind="relationship" relationship="viewControllers" id="vux-dt-VFX"/>
-                        <segue destination="bei-ke-XrN" kind="relationship" relationship="viewControllers" id="Tna-ML-XLQ"/>
-                        <segue destination="Cz0-vW-Jvh" kind="relationship" relationship="viewControllers" id="dy3-Wl-xyz"/>
-                        <segue destination="hLJ-xb-Qdx" kind="relationship" relationship="viewControllers" id="4n0-Db-vbk"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zZV-Ph-Jxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2294" y="134"/>
+            <point key="canvasLocation" x="3126" y="134"/>
         </scene>
         <!--Orders-->
         <scene sceneID="iRn-EM-lpO">
             <objects>
-                <viewController storyboardIdentifier="orders" id="Cz0-vW-Jvh" customClass="OrdersViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="orders" id="Cz0-vW-Jvh" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7A-m0-ShD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6mw-4m-tJI">
@@ -297,16 +264,6 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C67-Ae-XpC">
                                 <rect key="frame" x="20" y="124" width="374" height="689"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aif-QJ-WPX">
-                                        <rect key="frame" x="26" y="38" width="340" height="248"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Show list of orders/purchases....option btn where can view 1 lorder list or 1 item  in a subview to show track order, to sub view to return (a item)--cancel orders</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                             </view>
                         </subviews>
@@ -314,17 +271,61 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Orders" id="Nad-DT-oat"/>
+                    <navigationItem key="navigationItem" id="DAk-rt-BJ1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mJ5-br-iaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2784.057971014493" y="914.73214285714278"/>
+            <point key="canvasLocation" x="3893" y="134"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="LM0-ba-gA8">
+            <objects>
+                <hostingController id="NMd-wy-Wq8" sceneMemberID="viewController">
+                    <navigationBar key="view" contentMode="scaleToFill" id="aDc-EA-qyk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                        <items>
+                            <navigationItem title="Title" id="xcQ-Ty-j0k">
+                                <barButtonItem key="leftBarButtonItem" title="Msnu" id="Olo-KP-Ak9">
+                                    <connections>
+                                        <segue destination="jea-bA-Eq1" kind="showDetail" id="g6R-Dx-lXF"/>
+                                    </connections>
+                                </barButtonItem>
+                            </navigationItem>
+                        </items>
+                    </navigationBar>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkY-W3-KDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="933"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="o60-Un-Fe1">
+            <objects>
+                <hostingController id="baT-3V-plC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hw-Kn-v36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="930"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="1Ce-Zv-bKv">
+            <objects>
+                <hostingController id="ysU-4q-gFU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rrc-RS-m84"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3js-W2-QMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2722" y="933"/>
         </scene>
         <!--Account-->
         <scene sceneID="Mbd-Sv-Ql5">
             <objects>
                 <viewController storyboardIdentifier="myAccount" id="hLJ-xb-Qdx" customClass="MyAccountViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dOd-Y9-3EY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kc3-pv-eHz">
@@ -341,50 +342,36 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SCm-w6-JVs">
-                                <rect key="frame" x="20" y="122" width="374" height="680"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="change password - update mailing address - update any save payment info - Logout btn" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4R-KJ-Vny">
-                                        <rect key="frame" x="20" y="25" width="330" height="191"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gaZ-bB-Xqz">
+                                <rect key="frame" x="20" y="166" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t5e-7w-rXf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" id="7Zj-cr-6iC"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMl-Qd-fC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3579.7101449275365" y="914.73214285714278"/>
+            <point key="canvasLocation" x="4640.579710144928" y="152.67857142857142"/>
         </scene>
-        <!--Save Items-->
-        <scene sceneID="Oyk-bD-ugn">
+        <!--Hosting Controller-->
+        <scene sceneID="RuQ-22-p5f">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iwo-li-ihX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Save Items" id="2zM-iz-8Wo"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xHQ-e3-pbU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="uv1-dB-riv" kind="relationship" relationship="rootViewController" id="7No-tp-BVU"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sjw-kS-9eJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <hostingController id="4Sc-7P-OZh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zfb-Ts-8KK"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgI-2c-Bfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102.89855072463769" y="914.73214285714278"/>
+            <point key="canvasLocation" x="3681" y="929"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DLn-qh-B9V"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>

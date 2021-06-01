@@ -6,69 +6,50 @@
 //
 
 import UIKit
+import SwiftUI
 
-class UserDashboardViewController: UIViewController, UITabBarControllerDelegate {
+class UserDashboardViewController: UIViewController {
     
     
-    @IBOutlet weak var btnSaveItems: UIButton!
-    @IBOutlet weak var btnWishList: UIButton!
-    @IBOutlet weak var btnOrders: UIButton!
-    @IBOutlet weak var btnAccount: UIButton!
-    
-    let vcSaveItems = SaveItemsViewController()
-    let vcWishList = WishListViewController()
-    
-    //let _item00 = UITabBarItem()
-    //let _item01 = UITabBarItem()
-       
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
         //self.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    @IBSegueAction func showUserSaveItemsSwiftUI(_ coder: NSCoder) -> UIViewController? {
         
-        //vcSaveItems.tabBarItem = _item00
-        //vcWishList.tabBarItem = _item01
-              
-           
+        let rootView = UserSaveItemsSwiftUIswift()
+        
+        return UIHostingController(coder: coder, rootView: rootView)
     }
     
-    // tabBarController delegate
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Select a custom tab bar item")
-    }
     
-          
-    @IBAction func btnSaveIItems(_ sender: UIButton) {
+    @IBSegueAction func showUserWishlistSwiftUI(_ coder: NSCoder) -> UIViewController? {
         
+        let rootView = UserWishlistSwiftUI()
+        
+        return  UIHostingController(coder: coder, rootView: rootView)
     }
+     
     
-    @IBAction func btnWishList(_ sender: UIButton) {
-        print("going to start show tabs")
-        //UserDashTabBarController.tc.showTabs()
+    
+    @IBSegueAction func showUserOrdersSwiftUI(_ coder: NSCoder) -> UIViewController? {
+        let rootView = UserOrdersSwiftUI()
         
+        return UIHostingController(coder: coder, rootView: rootView)
     }
-    
-    @IBAction func getCategoryLIst(_ sender: UIButton) {
+     
+     
+    @IBSegueAction func showUserAccountSettings(_ coder: NSCoder) -> UIViewController? {
         
-        let sb = UIStoryboard(name:"Main", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
-        self.present(show,animated: true, completion: nil)
+        let rootView = UserAccountSettingsSwiftUI()
+        
+        return UIHostingController(coder: coder, rootView: rootView)
     }
     
 }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you wll often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 
 

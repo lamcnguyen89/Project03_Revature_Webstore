@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import SwiftUI
 
 class OrdersViewController: UIViewController {
-
+    
+    /*
+    required init?(coder aDecoder: NSCoder){
+        
+        super.init(coder: aDecoder, rootView: UserOrdersSwiftUI())
+    }
+ */
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
