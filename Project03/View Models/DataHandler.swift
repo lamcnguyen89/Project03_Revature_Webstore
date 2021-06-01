@@ -10,9 +10,9 @@ import CoreData
 import UIKit
 import SwiftCSV
 
-class DataDelegate {
+class DataHandler {
     let context : NSManagedObjectContext?
-    static var inst = DataDelegate()
+    static var inst = DataHandler()
 
     init (context: NSManagedObjectContext) {
         self.context = context
@@ -20,8 +20,74 @@ class DataDelegate {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+    //MARK: - Product Related
+    func fetchAllProducts() -> [Product]{
+        let fetchReq = NSFetchRequest<Product>(entityName: "Product")
+        var products = try! context?.fetch(fetchReq)
+        return products!
+    }
+    //MARK: - Order Related
+    func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
+        var products = [Product]()
+        for item in items{
+            products.append(item.getObj())
+        }
+        let user = address.user
+        let order = Order(context: user!.managedObjectContext!)
+        order.addToProduct(NSOrderedSet(array: products))
+        order.address = address
+        order.payment = paymentOption
 
-    //MARK: -- User Related
+    }
+
+    //MARK: - Payment Related
+    func getCreditCards(user : User) throws -> PaymentTypeViewModel{
+        let fetchReq = NSFetchRequest<CreditCard>(entityName: "CreditCard")
+        var ccArr = [CreditCard]()
+        do{
+            let results = try context?.fetch(fetchReq)
+            if  results!.count == 0{
+                print("no credit cards on record")
+                return PaymentTypeViewModel(payment: results!)
+            }
+            for item in results!{
+                if item.user?.name == user.name{
+                    ccArr.append(item)
+                }
+            }
+        }
+        catch{
+            print("no credit cards found")
+            throw FetchError.BadFetchRequest
+        }
+        return PaymentTypeViewModel(payment: ccArr)
+    }
+
+    //MARK: - Address Related
+    func getAddresses(user : User) throws -> [AddressViewModel]{
+        let fetchReq = NSFetchRequest<Address>(entityName: "Address")
+        var addArr = [AddressViewModel]()
+        do{
+            let results = try context?.fetch(fetchReq)
+            if  results!.count == 0{
+                print("no addresses on record")
+                return addArr
+            }
+            for item in results!{
+                if item.user?.name == user.name{
+                    addArr.append(AddressViewModel(address: item))
+                }
+            }
+        }
+        catch{
+            print("no addresses found")
+            throw FetchError.BadFetchRequest
+        }
+        return addArr
+    }
+
+
+    //MARK: - User Related
     func createUser(_ object: [String:String]){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
         user.email = object["email"]
@@ -37,9 +103,13 @@ class DataDelegate {
             print("data not saved")
         }
     }
+
+
+
     func updateUserName(_ name: String){
-        
+        //TODO
     }
+
     func getOneUser (name : String)-> User{
         var user = User()
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -114,6 +184,6 @@ class DataDelegate {
     }
 }
 
-enum Err : Error{
-    case nilErr 
+enum FetchError : Error{
+    case BadFetchRequest 
 }

@@ -41,7 +41,7 @@ class ResetPasswordViewController: UIViewController {
             
             if password.text == confirmPassword.text {
                 
-                let data = DataDelegate.inst.getOneUser(name: username.text!)
+                let data = DataHandler.inst.getOneUser(name: username.text!)
                 print(data.name!)
                 
                 if data.name != nil &&
@@ -51,7 +51,7 @@ class ResetPasswordViewController: UIViewController {
                     
                     let dic = ["name" : username.text, "password" : password.text]
                     
-                    DataDelegate.inst.updatePassword(dic as! [String:String])
+                    DataHandler.inst.updatePassword(dic as! [String:String])
                     
                     outputLabel.text = "Password updated successfully"
                     email.text = ""

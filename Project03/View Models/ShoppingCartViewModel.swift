@@ -21,7 +21,7 @@ class ShoppingCartViewModel{
             return items
         }
         else {
-            throw Err.nilErr
+            throw FetchError.BadFetchRequest
         }
     }
 

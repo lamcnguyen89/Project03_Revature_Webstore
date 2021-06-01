@@ -35,7 +35,7 @@ class SignUpViewController: UIViewController {
                 
                 let dic = ["email" : email.text , "pass" : password.text , "fname" : firstName.text, "lname" : lastName.text , "name" : username.text  ]
                 
-                DataDelegate.inst.createUser(dic as! [String:String])
+                DataHandler.inst.createUser(dic as! [String:String])
                 
                 let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 

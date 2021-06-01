@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
 
         if( username.text! != "" && password.text! != "" ) {
             
-            let data = DataDelegate.inst.getOneUser(name: username.text!)
+            let data = DataHandler.inst.getOneUser(name: username.text!)
             
             if data.password == password.text! {
                 displayOutput.text = "Login was successful"
