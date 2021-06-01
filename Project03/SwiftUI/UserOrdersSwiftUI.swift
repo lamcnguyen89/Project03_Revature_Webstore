@@ -7,39 +7,19 @@
 
 import SwiftUI
 
-struct showMenu:UIViewControllerRepresentable {
-    func updateUIViewController(_ uiViewController: UserDashboardViewController, context: Context) {        
-    }
-    
-    func makeUIViewController(context: Context) -> UserDashboardViewController {
-        let vc = UserDashboardViewController()
-        return vc
-    }
-}
-
-
 struct UserOrdersSwiftUI: View {
     @Environment(\.managedObjectContext)
     var context
-    @FetchRequest(entity: Product.entity(), sortDescriptors:[])
+    //@FetchRequest(entity: Product.entity(), sortDescriptors:[])
     
-    var prod: FetchedResults<Product>
+   // var prod: FetchedResults<Product>
    // @FetchRequest(entity:User.entity(), sortDescriptors: keyPath,: \User.HistoryItems.date, ascending:true)
     
     //var history: FetchRequest<OrderHistory>
-    @State var showVC = false
+    
     var body: some View {
         Text("Show Users History as List")
-        Text("Context exists \(context)")
-        NavigationView {
-            
-        }.navigationBarTitle(Text("Menu"), displayMode:  .inline)
-        .onTapGesture{
-            showVC = true
-        }
-        .sheet(isPresented: $showVC)  {
-            showMenu()
-        }
+        Text("Context exists \(context)")        
     }// end body:view
 }
 
