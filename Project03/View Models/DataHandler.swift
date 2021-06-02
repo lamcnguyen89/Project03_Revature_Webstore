@@ -20,7 +20,12 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
-
+    //MARK: - Product Related
+    func fetchAllProducts() -> [Product]{
+        let fetchReq = NSFetchRequest<Product>(entityName: "Product")
+        let products = try! context?.fetch(fetchReq)
+        return products!
+    }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
         var products = [Product]()
@@ -32,7 +37,6 @@ class DataHandler {
         order.addToProduct(NSOrderedSet(array: products))
         order.address = address
         order.payment = paymentOption
-
     }
 
     //MARK: - Payment Related
@@ -98,8 +102,6 @@ class DataHandler {
             print("data not saved")
         }
     }
-
-
 
     func updateUserName(_ name: String){
         //TODO
