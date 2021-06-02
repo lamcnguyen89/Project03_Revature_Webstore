@@ -7,10 +7,11 @@
 
 import Foundation
 import CoreData
-class AsyncCSV : Operation{
+class AsyncCSV : Operation, ObservableObject{
+
     let context : NSManagedObjectContext?
     private let lockQueue = DispatchQueue(label: "LamNguyen.Project03.AsyncCSV", attributes: .concurrent)
-
+    @Published var _isFinished: Bool = false
     init(context: NSManagedObjectContext){
         self.context = context
         super.init()
@@ -34,8 +35,6 @@ class AsyncCSV : Operation{
             didChangeValue(forKey: "isExecuting")
         }
     }
-
-    private var _isFinished: Bool = false
     override private(set) var isFinished: Bool {
         get {
             return lockQueue.sync { () -> Bool in

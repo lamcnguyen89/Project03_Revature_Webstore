@@ -9,9 +9,13 @@ import SwiftUI
 import UIKit
 struct CategoryScrollView: View {
     @State private var showProduct = false
+    @State private var csvLoaded = false
     private let products : [Product]
     init (products: [Product]){
         self.products = products
+    }
+    init (){
+        products = [Product]()
     }
     var body: some View {
         Form{
@@ -30,6 +34,7 @@ struct CategoryScrollView: View {
             ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail")
         })
     }
+
     func checkout(){
 
     }

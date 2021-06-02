@@ -32,6 +32,52 @@ class DataHandler {
         let products = try! context?.fetch(fetchReq)
         return products!
     }
+
+    func importCSV(){
+        let queue = OperationQueue()
+        let csvGroup = DispatchGroup()
+        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
+        do{
+            let fetch = try context?.fetch(fetchReq)
+            if fetch == nil || fetch!.count < 42{
+                //remove all artifacts before regenerating products
+                for item in fetch!{
+                    context?.delete(item)
+                }
+                let getCSV = AsyncCSV(context: context!)
+                csvGroup.enter()
+                DispatchQueue.global().async{
+                    print("starting CSV import")
+                    queue.addOperations([getCSV], waitUntilFinished: true)
+                    csvGroup.leave()
+                }
+                }
+                csvGroup.notify(queue: .global()) {
+                    print("CSV loading complete")
+                    NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
+                }
+        }
+        catch{
+            print("AppDelegate.application fetchReq failed")
+        }
+    }
+
+    func generateInitialProducts(){
+        var prodArray = [Product]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
+
+        for item in csv!.namedRows{
+            let prod = Product(context: context!)
+            prod.update(dictionary: item, store: getStore())
+            prodArray.append(prod)
+            print(item)
+        }
+        print(prodArray)
+        try! context?.save()
+    }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
         var products = [Product]()
@@ -167,23 +213,6 @@ class DataHandler {
             print("DataDelegate.createStore fetch error")
         }
         return store!
-    }
-
-    func generateInitialProducts(){
-        var prodArray = [Product]()
-        var csv : CSV?
-        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
-        let resource = try! CSV(url: url)
-        csv = resource
-
-        for item in csv!.namedRows{
-            let prod = Product(context: context!)
-            prod.update(dictionary: item, store: getStore())
-            prodArray.append(prod)
-            print(item)
-        }
-        print(prodArray)
-        try! context?.save()
     }
 }
 

@@ -1342,7 +1342,7 @@
                 <hostingController id="yRW-Vx-XsR" customClass="CategoryScrollHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egj-l5-h15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="87" y="-589"/>
+            <point key="canvasLocation" x="207" y="-636"/>
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">

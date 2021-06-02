@@ -10,14 +10,23 @@ import SwiftUI
 class CategoryScrollHostingController: UIHostingController<CategoryScrollView> {
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder, rootView: CategoryScrollView(products: DataHandler().fetchAllProducts()))
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteCSV, object: nil)
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
 
+    // CSV done loading, reload SwiftUI view
+    @objc func onDidCompleteCSV(_ notification: Notification)
+    {
+        //resync on main thread, otherwise it will crash
+        DispatchQueue.main.sync {
+            rootView = CategoryScrollView(products: DataHandler().fetchAllProducts())
+        }
+    }
  
 
 }

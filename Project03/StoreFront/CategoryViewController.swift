@@ -23,8 +23,8 @@ class CategoryViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
 //        galleryView.isHidden = false
 //        productDetailView.isHidden = true
         
