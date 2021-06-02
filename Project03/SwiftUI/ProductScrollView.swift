@@ -7,17 +7,20 @@
 
 import SwiftUI
 import UIKit
-struct CategoryScrollView: View {
+struct ProductScrollView: View {
     @State private var showProduct = false
-    @State private var csvLoaded = false
+    private var csvLoaded : Bool
     private let products : [Product]
-    init (products: [Product]){
+    init (products: [Product], csvLoaded: Bool){
         self.products = products
+        self.csvLoaded = csvLoaded
     }
-    init (){
+    init (csvLoaded: Bool){
         products = [Product]()
+        self.csvLoaded = csvLoaded
     }
     var body: some View {
+        if (csvLoaded){
         Form{
             ForEach(products){ item in
                 Button(action: {showProduct=true}) {
@@ -33,6 +36,10 @@ struct CategoryScrollView: View {
         .sheet(isPresented: $showProduct, content: {
             ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail")
         })
+        }
+        else {
+            Text("Loading")
+        }
     }
 
     func checkout(){
