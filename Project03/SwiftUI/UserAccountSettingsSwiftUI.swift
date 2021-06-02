@@ -13,8 +13,8 @@ struct UserAccountSettingsSwiftUI: View {
   //  var user: FetchedResults<User>
     var sampleUser = ["00":["fName":"Jane", "lName": "Doe", "add": "123 elms st", "pwd": "1234"]],
         ["01": [""]]
-    
-    
+
+
     var body: some View {
         VStack{
             ScrollView {

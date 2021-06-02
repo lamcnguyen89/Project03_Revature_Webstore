@@ -20,6 +20,12 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+    //MARK: - PaymentOption Related
+    func addACHOption(){
+
+    }
+
+
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
         let fetchReq = NSFetchRequest<Product>(entityName: "Product")
