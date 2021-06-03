@@ -23,10 +23,10 @@ class CategoryViewController: UIViewController {
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        galleryView.isHidden = false
-        productDetailView.isHidden = true
+        super.viewDidLoad()
+//        galleryView.isHidden = false
+//        productDetailView.isHidden = true
         
     }
     
@@ -41,8 +41,8 @@ class CategoryViewController: UIViewController {
     @IBAction func getUserDashboard(_ sender: UIButton) {
         
         let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
-        self.present(show,animated: true, completion: nil)
+//        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+//        self.present(show,animated: true, completion: nil)
     }
     
 }
