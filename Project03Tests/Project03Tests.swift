@@ -12,55 +12,44 @@ import XCTest
 
 class Project03Tests: XCTestCase {
     
-    // SUT stands for System under Test. It is the class that we are perofrming tests upon.
-    var sut: LoginViewController!
-    var sut2: CategoryViewController!
+    // SUT stands for System under Test. It is the class that we are performing tests upon.
+    var sut: InnerViewReviewOrderViewController!
+
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         try super.setUpWithError()
-        sut = ViewController()
-        sut2 = CategoryViewController()
+        sut = InnerViewReviewOrderViewController()
+
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         sut = nil
-        sut2 = nil
+
         try super.tearDownWithError()
         
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
-    func testViewController() throws {
+    func testCalculateOrderFunction() throws {
         // given
-            let input1 = 2
-            let input2 = 3
+           
+        let orderData = [
+            0 : ["price" : 425.50, "quantity" : 4],
+            1 : ["price" : 200.50, "quantity" : 5],
+            2 : ["price" : 300.50, "quantity" : 6],
+            3 : ["price" : 600.50, "quantity" : 7],
+            4 : ["price" : 500.50, "quantity" : 2]
+        ]
+
         // when
         
+
         // then
-        XCTAssertEqual(sut.adder(input1: input1, input2: input2), 5, "Adder function adds correctly")
+        XCTAssertEqual(sut.calculateOrder(orders: orderData), 9732.00, "Calculate Order function works correctly")
         
     }
     
-    func testCategoryViewController() throws {
-        // given
-        let input1 = 2
-        let input2 = 3
-        
-        // then
-        XCTAssertEqual(sut2.subtractor(input1: input1, input2: input2), -1, "Subtractor function subtracts correctly")
-    }
+
 
 }

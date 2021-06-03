@@ -12,32 +12,9 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-        let queue = OperationQueue()
-        let group = DispatchGroup()
-        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
-        do{
-            let fetch = try context?.fetch(fetchReq)
-            if fetch == nil || fetch!.count < 42{
-                let getCSV = AsyncCSV(context: context!)
-                group.enter()
-                DispatchQueue.global().async{
-                    print("starting CSV import")
-                    queue.addOperations([getCSV], waitUntilFinished: true)
-                    group.leave()
-                }
-                }
-                group.notify(queue: .global()) {
-                    print("CSV loading complete")
-                }
-        }
-        catch{
-            print("AppDelegate.application fetchReq failed")
-        }
-
-
+        DataHandler(context: context!).importCSV()
         return true
     }
 
@@ -102,3 +79,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Notification.Name {
+
+    static let didCompleteCSV = Notification.Name("didCompleteCSV")
+
+}

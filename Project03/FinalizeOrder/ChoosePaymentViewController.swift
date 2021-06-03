@@ -20,7 +20,9 @@ class ChoosePaymentViewController: UIViewController {
     }
     
     @IBAction func chooseNetBanking(_ sender: Any) {
-        // Update the database to show Net Banking
+        let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let wel = sb.instantiateViewController(withIdentifier: "NetBanking") as! NetBankingViewController
+        self.present(wel, animated: true, completion: nil)
     }
     
     @IBAction func chooseCreditCard(_ sender: Any) {

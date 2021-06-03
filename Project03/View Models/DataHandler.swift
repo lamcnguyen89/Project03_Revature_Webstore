@@ -20,11 +20,81 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+    //MARK: - PaymentOption Related
+    func addACHOption(){
+
+    }
+    //MARK: - Store Related
+    func fetchStore() -> Store{
+        let fetchReq = NSFetchRequest<Store>(entityName: "Store")
+        return try! (context?.fetch(fetchReq).first!)!
+    }
+    //MARK: - Category Related
+    func fetchAllCategories() -> [Category]{
+        let store = fetchStore()
+        return store.categories?.array as! [Category]
+    }
+
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
-        let fetchReq = NSFetchRequest<Product>(entityName: "Product")
-        var products = try! context?.fetch(fetchReq)
-        return products!
+        var products = [Product]()
+        let categories = fetchAllCategories()
+        for item in categories{
+            products.append(contentsOf: item.products?.array as! [Product])
+        }
+        return products
+    }
+
+
+    func importCSV(){
+        let queue = OperationQueue()
+        let csvGroup = DispatchGroup()
+        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
+
+            csvGroup.enter()
+            DispatchQueue.global().async{ [self] in
+                //create a new background MOC based on main MOC for async thread
+                let backgroundMOC: NSManagedObjectContext = {
+                let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+                moc.parent = context
+                return moc
+                }()
+                let fetch = try! backgroundMOC.fetch(fetchReq)
+                if fetch.count < 42{
+                    //remove all artifacts before regenerating products
+                    for item in fetch{
+                        self.context?.delete(item)
+                    }
+                    let getCSV = AsyncCSV(context: backgroundMOC)
+                    print("starting CSV import")
+                    queue.addOperations([getCSV], waitUntilFinished: true)
+                    csvGroup.leave()
+                }
+            }
+            csvGroup.notify(queue: .global()) {
+//                sleep(1)
+                print("CSV loading complete")
+                NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
+            }
+        }
+
+    func generateInitialProducts(){
+        var prodArray = [Product]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
+
+        for item in csv!.namedRows{
+            let prod = Product(context: context!)
+            prod.update(dictionary: item, store: getStore())
+            prodArray.append(prod)
+            print(item)
+//            let ms = 1000
+//            usleep(useconds_t(25 * ms))
+        }
+        print(prodArray)
+        try! context?.save()
     }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
@@ -37,7 +107,6 @@ class DataHandler {
         order.addToProduct(NSOrderedSet(array: products))
         order.address = address
         order.payment = paymentOption
-
     }
 
     //MARK: - Payment Related
@@ -104,8 +173,6 @@ class DataHandler {
         }
     }
 
-
-
     func updateUserName(_ name: String){
         //TODO
     }
@@ -164,23 +231,6 @@ class DataHandler {
             print("DataDelegate.createStore fetch error")
         }
         return store!
-    }
-
-    func generateInitialProducts(){
-        var prodArray = [Product]()
-        var csv : CSV?
-        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
-        let resource = try! CSV(url: url)
-        csv = resource
-
-        for item in csv!.namedRows{
-            let prod = Product(context: context!)
-            prod.update(dictionary: item, store: getStore())
-            prodArray.append(prod)
-            print(item)
-        }
-        print(prodArray)
-        try! context?.save()
     }
 }
 
