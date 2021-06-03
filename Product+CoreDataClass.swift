@@ -13,8 +13,11 @@ import CoreData
 public class Product: NSManagedObject {
 
     func update(dictionary: [String:String], store: Store){
+        let fetchReq = NSFetchRequest<Category>.init(entityName: "Category")
+        if let categories = try? self.managedObjectContext?.fetch(fetchReq){
+            setCategory(categories, name: dictionary["Category"]!, store: store)
+        }
 
-        let cat = Category(context: self.managedObjectContext!)
         let bran = Brand(context: self.managedObjectContext!)
         let rat = ProductRating(context: self.managedObjectContext!)
 
@@ -22,13 +25,27 @@ public class Product: NSManagedObject {
         price = Double(dictionary["Price/Unit"]!)!
         productDescription = dictionary["Description"]
         image = dictionary["Image"]
-        cat.name = dictionary["Category"]
-        cat.addToProducts(self)
-        cat.store = store
+
         bran.name = dictionary["Brand"]
         bran.addToProducts(self)
         rat.product = self
         self.id = Int64(dictionary["ID"]!)!
+    }
+    func setCategory(_ categories: [Category], name: String, store: Store){
+        //find category with matching name to the parameter and set self.category to it
+         if let category = categories.first(where: { category in
+            category.name == name
+         }){
+            self.category = category
+         }
+         //else create new category
+         else{
+            let cat = Category(context: self.managedObjectContext!)
+            cat.name = name
+            cat.addToProducts(self)
+            cat.store = store
+            self.category = cat
+         }
     }
 }
 

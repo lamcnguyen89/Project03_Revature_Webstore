@@ -24,14 +24,27 @@ class DataHandler {
     func addACHOption(){
 
     }
-
+    //MARK: - Store Related
+    func fetchStore() -> Store{
+        let fetchReq = NSFetchRequest<Store>(entityName: "Store")
+        return try! (context?.fetch(fetchReq).first!)!
+    }
+    //MARK: - Category Related
+    func fetchAllCategories() -> [Category]{
+        let store = fetchStore()
+        return store.categories?.array as! [Category]
+    }
 
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
-        let fetchReq = NSFetchRequest<Product>(entityName: "Product")
-        let products = try! context?.fetch(fetchReq)
-        return products!
+        var products = [Product]()
+        let categories = fetchAllCategories()
+        for item in categories{
+            products.append(contentsOf: item.products?.array as! [Product])
+        }
+        return products
     }
+
 
     func importCSV(){
         let queue = OperationQueue()
@@ -58,9 +71,8 @@ class DataHandler {
                     csvGroup.leave()
                 }
             }
-
             csvGroup.notify(queue: .global()) {
-                sleep(1)
+//                sleep(1)
                 print("CSV loading complete")
                 NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
             }
@@ -78,8 +90,8 @@ class DataHandler {
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
             print(item)
-            let ms = 1000
-            usleep(useconds_t(25 * ms))
+//            let ms = 1000
+//            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
         try! context?.save()
