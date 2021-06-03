@@ -28,14 +28,14 @@ struct ProductListView: View {
                         Image(item.image!)
                             .resizable()
                             .frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        Text("Name: " + String(item.name!))
+                        Text(String(item.name!))
                     }
-                }
+                }.sheet(isPresented: $showProduct, content: {
+                    ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item)
+                })
             }
         }
-        .sheet(isPresented: $showProduct, content: {
-            ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail")
-        })
+
         }
         else {
             if #available(iOS 14.0, *) {

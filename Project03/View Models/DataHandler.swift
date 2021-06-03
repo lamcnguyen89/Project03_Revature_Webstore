@@ -60,7 +60,7 @@ class DataHandler {
                 return moc
                 }()
                 let fetch = try! backgroundMOC.fetch(fetchReq)
-                if fetch.count < 42{
+                if fetch.count < 42 {
                     //remove all artifacts before regenerating products
                     for item in fetch{
                         self.context?.delete(item)
@@ -68,8 +68,8 @@ class DataHandler {
                     let getCSV = AsyncCSV(context: backgroundMOC)
                     print("starting CSV import")
                     queue.addOperations([getCSV], waitUntilFinished: true)
-                    csvGroup.leave()
                 }
+                csvGroup.leave()
             }
             csvGroup.notify(queue: .global()) {
 //                sleep(1)
