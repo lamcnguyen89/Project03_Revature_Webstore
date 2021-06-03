@@ -9,11 +9,22 @@ import UIKit
 
 class ProductDetailViewController: UIViewController {
 
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var desc: UILabel!
+    @IBOutlet weak var img: UIImageView!
+    var viewModel : ProductViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if viewModel != nil{
+            desc.text = viewModel!.description
+            productName.text = viewModel!.name
+            img.image = UIImage(named: viewModel!.image)
+        }
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

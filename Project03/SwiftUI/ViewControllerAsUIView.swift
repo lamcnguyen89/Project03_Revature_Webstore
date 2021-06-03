@@ -11,6 +11,7 @@ import UIKit
 struct ViewControllerAsUIView: UIViewControllerRepresentable {
     let storyboard: String
     let VC: String
+    let prodData: Product?
 
   func makeUIViewController(context: UIViewControllerRepresentableContext<ViewControllerAsUIView>) -> UIViewController {
 
@@ -18,8 +19,15 @@ struct ViewControllerAsUIView: UIViewControllerRepresentable {
     let loadedStoryboard = UIStoryboard(name: storyboard, bundle: nil)
 
     //Load the ViewController
-    return loadedStoryboard.instantiateViewController(withIdentifier: VC)
-    
+    let controller = loadedStoryboard.instantiateViewController(withIdentifier: VC)
+
+    //attempt downcast
+    if let controller = controller as? ProductDetailViewController{
+        let viewModel = ProductViewModel(product: prodData!)
+        controller.viewModel = viewModel
+    }
+    return controller
+
   }
 
   func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<ViewControllerAsUIView>) {
