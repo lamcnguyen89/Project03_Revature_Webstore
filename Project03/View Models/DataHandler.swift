@@ -37,30 +37,34 @@ class DataHandler {
         let queue = OperationQueue()
         let csvGroup = DispatchGroup()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
-        do{
-            let fetch = try context?.fetch(fetchReq)
-            if fetch == nil || fetch!.count < 42{
-                //remove all artifacts before regenerating products
-                for item in fetch!{
-                    context?.delete(item)
-                }
-                let getCSV = AsyncCSV(context: context!)
-                csvGroup.enter()
-                DispatchQueue.global().async{
+
+            csvGroup.enter()
+            DispatchQueue.global().async{ [self] in
+                //create a new background MOC based on main MOC for async thread
+                let backgroundMOC: NSManagedObjectContext = {
+                let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+                moc.parent = context
+                return moc
+                }()
+                let fetch = try! backgroundMOC.fetch(fetchReq)
+                if fetch.count < 42{
+                    //remove all artifacts before regenerating products
+                    for item in fetch{
+                        self.context?.delete(item)
+                    }
+                    let getCSV = AsyncCSV(context: backgroundMOC)
                     print("starting CSV import")
                     queue.addOperations([getCSV], waitUntilFinished: true)
                     csvGroup.leave()
                 }
-                }
-                csvGroup.notify(queue: .global()) {
-                    print("CSV loading complete")
-                    NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
-                }
+            }
+
+            csvGroup.notify(queue: .global()) {
+                sleep(1)
+                print("CSV loading complete")
+                NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
+            }
         }
-        catch{
-            print("AppDelegate.application fetchReq failed")
-        }
-    }
 
     func generateInitialProducts(){
         var prodArray = [Product]()
@@ -74,6 +78,8 @@ class DataHandler {
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
             print(item)
+            let ms = 1000
+            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
         try! context?.save()
