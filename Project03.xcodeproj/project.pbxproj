@@ -49,7 +49,7 @@
 		CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */; };
 		CA3E9283266628C000E5CB99 /* UserAccountSettingsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E9282266628C000E5CB99 /* UserAccountSettingsSwiftUI.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
-		CAF28A382665D4C600A263F0 /* UserOrdersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF28A372665D4C600A263F0 /* UserOrdersSwiftUI.swift */; };
+		CA4EEE722669706200903411 /* UserOrdersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4EEE712669706200903411 /* UserOrdersSwiftUI.swift */; };
 		CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */; };
 		CAF6C805265F0A180040CC18 /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
@@ -143,7 +143,7 @@
 		CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveItemsSwiftUIswift.swift; sourceTree = "<group>"; };
 		CA3E9282266628C000E5CB99 /* UserAccountSettingsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSettingsSwiftUI.swift; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
-		CAF28A372665D4C600A263F0 /* UserOrdersSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrdersSwiftUI.swift; sourceTree = "<group>"; };
+		CA4EEE712669706200903411 /* UserOrdersSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserOrdersSwiftUI.swift; path = ../../../../UserOrdersSwiftUI.swift; sourceTree = "<group>"; };
 		CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDashboard.storyboard; sourceTree = "<group>"; };
 		CAF6C804265F0A180040CC18 /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
 		DC44CB081B75B02F10C83C31 /* Pods-Project03-Project03UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03-Project03UITests.debug.xcconfig"; path = "Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -278,10 +278,10 @@
 		BC9C00E3265D9DC90029C1EA /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CA4EEE712669706200903411 /* UserOrdersSwiftUI.swift */,
 				BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */,
 				BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */,
 				BC66C8CA265EDC16008C9C08 /* ViewControllerAsUIView.swift */,
-				CAF28A372665D4C600A263F0 /* UserOrdersSwiftUI.swift */,
 				CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */,
 				CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */,
 				CA3E9282266628C000E5CB99 /* UserAccountSettingsSwiftUI.swift */,
@@ -669,7 +669,6 @@
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				BC3E723E266133A700775C8F /* COD+CoreDataClass.swift in Sources */,
-				CAF28A382665D4C600A263F0 /* UserOrdersSwiftUI.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC7E34E0265E9788006CE75A /* ShoppingCart+CoreDataClass.swift in Sources */,
@@ -687,6 +686,7 @@
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
 				CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */,
 				BC3E723C266133A700775C8F /* ACH+CoreDataClass.swift in Sources */,
+				CA4EEE722669706200903411 /* UserOrdersSwiftUI.swift in Sources */,
 				CA3E9283266628C000E5CB99 /* UserAccountSettingsSwiftUI.swift in Sources */,
 				BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */,
 				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
