@@ -7,7 +7,6 @@
 
 import Foundation
 import CoreData
-
 class ProductViewModel{
 
     private let product : Product
@@ -17,6 +16,9 @@ class ProductViewModel{
     public init (product : Product){
         self.product = product
         context = product.managedObjectContext!
+    }
+    public var image :String{
+        return product.image!
     }
 
     public var name : String{
