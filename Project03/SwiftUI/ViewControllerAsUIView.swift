@@ -24,7 +24,7 @@ struct ViewControllerAsUIView: UIViewControllerRepresentable {
     //attempt downcast
     if let controller = controller as? ProductDetailViewController{
         let viewModel = ProductViewModel(product: prodData!)
-        controller.viewModel = viewModel
+        controller.prodViewModel = viewModel
     }
     return controller
 

@@ -13,28 +13,29 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var img: UIImageView!
-    var viewModel : ProductViewModel?
+    @IBOutlet weak var numOfItems: UILabel!
+    var prodViewModel : ProductViewModel?
+    var cartViewModel : ShoppingCartViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if viewModel != nil{
-            desc.text = viewModel!.description
-            productName.text = viewModel!.name
-            img.image = UIImage(named: viewModel!.image)
+        if prodViewModel != nil{
+            desc.text = prodViewModel!.description
+            productName.text = prodViewModel!.name
+            img.image = UIImage(named: prodViewModel!.image)
         }
-        // Do any additional setup after loading the view.
+//        cartViewModel = ShoppingCartViewModel()
     }
-    
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func subItem(_ sender: Any) {
+        cartViewModel?.preSubItem()
+        numOfItems.text = String(cartViewModel!.itemNumTracker)
     }
-    */
+    @IBAction func addItem(_ sender: Any) {
+        cartViewModel?.preAddItem()
+    }
+    @IBAction func addToCart(_ sender: Any) {
+
+    }
 
 }

@@ -10,10 +10,10 @@ import Foundation
 class ShoppingCartViewModel{
 
     private let shoppingCart : ShoppingCart
+    var itemNumTracker = 0
 
     public init (_ object : ShoppingCart){
         self.shoppingCart = object
-
     }
 
     func getItems() throws -> [ShoppingCartItem]{
@@ -23,6 +23,12 @@ class ShoppingCartViewModel{
         else {
             throw FetchError.BadFetchRequest
         }
+    }
+    func preAddItem(){
+        itemNumTracker+=1
+    }
+    func preSubItem(){
+        itemNumTracker+=1
     }
 
 

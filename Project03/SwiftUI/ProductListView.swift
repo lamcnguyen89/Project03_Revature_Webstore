@@ -23,7 +23,7 @@ struct ProductListView: View {
         if (csvLoaded){
         Form{
             ForEach(products){ item in
-                Button(action: {showProduct=true}) {
+                Button(action: {showProduct.toggle()}) {
                     HStack{
                         Image(item.image!)
                             .resizable()
@@ -31,12 +31,11 @@ struct ProductListView: View {
                             .frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         Text(String(item.name!))
                     }
-                }.sheet(isPresented: $showProduct, content: {
+                }.sheet(isPresented: $showProduct) {
                     ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item)
-                })
+                }
             }
         }
-
         }
         else {
             if #available(iOS 14.0, *) {

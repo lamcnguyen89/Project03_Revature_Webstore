@@ -20,6 +20,12 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+
+    //MARK: - Shopping Cart Related
+    func getShoppingCart(){
+
+    }
+
     //MARK: - PaymentOption Related
     func addACHOption(){
 
@@ -90,8 +96,8 @@ class DataHandler {
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
             print(item)
-//            let ms = 1000
-//            usleep(useconds_t(25 * ms))
+            let ms = 1000
+            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
         try! context?.save()
