@@ -19,7 +19,7 @@ struct UserWishlistSwiftUI: View {
             }.foregroundColor(.white)
              .padding()
             .sheet(isPresented: $isMenu) {
-                showMenu()
+                
             }
             Spacer()
             Text("My Wishlist").font(.system(size: 20))
