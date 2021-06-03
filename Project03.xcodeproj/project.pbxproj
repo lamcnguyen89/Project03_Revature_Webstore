@@ -42,7 +42,7 @@
 		BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */; };
 		BCAA09CD266037EF00F40284 /* ProductRating+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA09CB266037EF00F40284 /* ProductRating+CoreDataClass.swift */; };
 		BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA09CF266041E900F40284 /* AsyncCSV.swift */; };
-		BCB248A62668103200D01EC0 /* ProductScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A52668103200D01EC0 /* ProductScrollView.swift */; };
+		BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A52668103200D01EC0 /* ProductListView.swift */; };
 		BCB248A82668173E00D01EC0 /* CategoryScrollHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataHandler.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
@@ -136,7 +136,7 @@
 		BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		BCAA09CB266037EF00F40284 /* ProductRating+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductRating+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BCAA09CF266041E900F40284 /* AsyncCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCSV.swift; sourceTree = "<group>"; };
-		BCB248A52668103200D01EC0 /* ProductScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductScrollView.swift; sourceTree = "<group>"; };
+		BCB248A52668103200D01EC0 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScrollHostingController.swift; sourceTree = "<group>"; };
 		BCCCA366265C485200CCBEF9 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 				CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */,
 				CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */,
 				DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */,
-				BCB248A52668103200D01EC0 /* ProductScrollView.swift */,
+				BCB248A52668103200D01EC0 /* ProductListView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -658,7 +658,7 @@
 				BC3FBB23266697AA00F21C06 /* Address+CoreDataClass.swift in Sources */,
 				BC3FBB272666982500F21C06 /* Order+CoreDataClass.swift in Sources */,
 				BC66C8CB265EDC16008C9C08 /* ViewControllerAsUIView.swift in Sources */,
-				BCB248A62668103200D01EC0 /* ProductScrollView.swift in Sources */,
+				BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				DE39BD202660A21C00B06800 /* ChooseShippingViewController.swift in Sources */,
 				DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */,

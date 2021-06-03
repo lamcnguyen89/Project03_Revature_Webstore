@@ -7,7 +7,7 @@
 
 import SwiftUI
 import UIKit
-struct ProductScrollView: View {
+struct ProductListView: View {
     @State private var showProduct = false
     private var csvLoaded : Bool
     private let products : [Product]
@@ -38,7 +38,12 @@ struct ProductScrollView: View {
         })
         }
         else {
-            Text("Loading")
+            if #available(iOS 14.0, *) {
+                ProgressView()
+                Text("Loading")
+            } else {
+                Text("Loading")
+            }
         }
     }
 

@@ -7,9 +7,9 @@
 
 import UIKit
 import SwiftUI
-class CategoryScrollHostingController: UIHostingController<ProductScrollView> {
+class CategoryScrollHostingController: UIHostingController<ProductListView> {
     required init?(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder, rootView: ProductScrollView(csvLoaded: false))
+        super.init(coder: aDecoder, rootView: ProductListView(csvLoaded: false))
         NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteCSV, object: nil)
 
     }
@@ -24,7 +24,7 @@ class CategoryScrollHostingController: UIHostingController<ProductScrollView> {
     {
         //resync on main thread, otherwise it will crash
         DispatchQueue.main.sync {
-            rootView = ProductScrollView(products: DataHandler().fetchAllProducts(), csvLoaded: true)
+            rootView = ProductListView(products: DataHandler().fetchAllProducts(), csvLoaded: true)
         }
     }
  
