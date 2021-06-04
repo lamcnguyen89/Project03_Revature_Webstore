@@ -46,8 +46,6 @@
 		BCB248A82668173E00D01EC0 /* CategoryScrollHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataHandler.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
-		CA2ECAD026692B9100DABB52 /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ECACF26692B9000DABB52 /* UserDashboardViewController.swift */; };
-		CA2ECAD526692C0200DABB52 /* UserAccountSettingsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2ECAD426692C0200DABB52 /* UserAccountSettingsSwiftUI.swift */; };
 		CA38571826669777008FE583 /* UserDashTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38571726669777008FE583 /* UserDashTabBarController.swift */; };
 		CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */; };
 		CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */; };
@@ -144,8 +142,6 @@
 		BCCCA366265C485200CCBEF9 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03Tests.release.xcconfig"; path = "Target Support Files/Pods-Project03Tests/Pods-Project03Tests.release.xcconfig"; sourceTree = "<group>"; };
-		CA2ECACF26692B9000DABB52 /* UserDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDashboardViewController.swift; path = ../../../../Project03_Revature_Webstore/Project03/UserDashboard/UserDashboardViewController.swift; sourceTree = "<group>"; };
-		CA2ECAD426692C0200DABB52 /* UserAccountSettingsSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserAccountSettingsSwiftUI.swift; path = ../../../../Project03_Revature_Webstore/Project03/SwiftUI/UserAccountSettingsSwiftUI.swift; sourceTree = "<group>"; };
 		CA38571726669777008FE583 /* UserDashTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashTabBarController.swift; sourceTree = "<group>"; };
 		CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWishlistSwiftUI.swift; sourceTree = "<group>"; };
 		CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveItemsSwiftUIswift.swift; sourceTree = "<group>"; };
@@ -287,7 +283,6 @@
 		BC9C00E3265D9DC90029C1EA /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				CA2ECAD426692C0200DABB52 /* UserAccountSettingsSwiftUI.swift */,
 				BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */,
 				BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */,
 				BC66C8CA265EDC16008C9C08 /* ViewControllerAsUIView.swift */,
@@ -332,7 +327,6 @@
 		CAF6C7DF265ED6CF0040CC18 /* UserDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				CA2ECACF26692B9000DABB52 /* UserDashboardViewController.swift */,
 				CA38571726669777008FE583 /* UserDashTabBarController.swift */,
 			);
 			path = UserDashboard;
@@ -677,14 +671,12 @@
 				BC7E34E4265E9903006CE75A /* ShoppingCartItem+CoreDataClass.swift in Sources */,
 				BC415865265BFC640051F99B /* CreditCard+CoreDataClass.swift in Sources */,
 				DE39BD2F2660A3AE00B06800 /* ShippingAddressViewController.swift in Sources */,
-				CA2ECAD526692C0200DABB52 /* UserAccountSettingsSwiftUI.swift in Sources */,
 				CA38571826669777008FE583 /* UserDashTabBarController.swift in Sources */,
 				BC7E34DD265E92EC006CE75A /* ShoppingCartHostingController.swift in Sources */,
 				DE39BD582661444B00B06800 /* InnerViewReviewOrderViewController.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				BC3E723E266133A700775C8F /* COD+CoreDataClass.swift in Sources */,
-				CA2ECAD026692B9100DABB52 /* UserDashboardViewController.swift in Sources */,
 				CAF28A382665D4C600A263F0 /* UserOrdersSwiftUI.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,

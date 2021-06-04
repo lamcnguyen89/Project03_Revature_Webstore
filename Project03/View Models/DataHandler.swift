@@ -40,18 +40,7 @@ class DataHandler {
         let store = fetchStore()
         return store.categories?.array as! [Category]
     }
-
-    //MARK: - Product Related
-    func fetchAllProducts() -> [Product]{
-        var products = [Product]()
-        let categories = fetchAllCategories()
-        for item in categories{
-            products.append(contentsOf: item.products?.array as! [Product])
-        }
-        return products
-    }
-
-
+    //MARK: - CSV Parse
     func importCSV(){
         let queue = OperationQueue()
         let csvGroup = DispatchGroup()
@@ -84,6 +73,16 @@ class DataHandler {
             }
         }
 
+    //MARK: - Product Related
+    func fetchAllProducts() -> [Product]{
+        var products = [Product]()
+        let categories = fetchAllCategories()
+        for item in categories{
+            products.append(contentsOf: item.products?.array as! [Product])
+        }
+        return products
+    }
+    
     func generateInitialProducts(){
         var prodArray = [Product]()
         var csv : CSV?
@@ -96,8 +95,8 @@ class DataHandler {
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
             print(item)
-            let ms = 1000
-            usleep(useconds_t(25 * ms))
+//            let ms = 1000
+//            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
         try! context?.save()
@@ -177,6 +176,22 @@ class DataHandler {
         catch{
             print("data not saved")
         }
+    }
+    func generateInitialUsers(){
+        var userArray = [User]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "User_Data", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
+
+        for item in csv!.namedRows{
+            let user = User(context: context!)
+            user.update(dictionary: item)
+            userArray.append(user)
+            print(item)
+        }
+        print(userArray)
+        try! context?.save()
     }
 
     func updateUserName(_ name: String){

@@ -38,12 +38,12 @@ class CategoryViewController: UIViewController {
         return answer
     }
 
-    @IBAction func getUserDashboard(_ sender: UIButton) {
-        
-        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
-        self.present(show,animated: true, completion: nil)
-    }
+//    @IBAction func getUserDashboard(_ sender: UIButton) {
+//        
+//        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+//        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+//        self.present(show,animated: true, completion: nil)
+//    }
     
 }
 
