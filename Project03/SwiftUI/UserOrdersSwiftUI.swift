@@ -7,6 +7,26 @@
 
 import SwiftUI
 
+struct OrderRowView: View {
+    var orderNum: String = "OR1234"
+    var body: some View {
+        VStack{
+               HStack{
+               Text("Order Date \(orderNum)")
+               Spacer()
+               Text("Total Price")
+               }.padding(3)
+               HStack{
+                   Text("[Delivered |On its Way]")
+                       .foregroundColor(Color.orange)
+                   Spacer()
+               }.padding()
+           }
+           .background(Color.white)
+           .padding(5)
+    }
+}
+
 struct OrderProductList: View{
     var body: some View {
         Text("View list of products in orders")
@@ -23,6 +43,7 @@ struct UserOrdersSwiftUI: View {
     
     //var history: FetchRequest<OrderHistory>
     @State var isMenu:Bool = false
+    @State private var isProductsInOrderPresented = false
     
     var body: some View {
         VStack{
@@ -56,26 +77,13 @@ struct UserOrdersSwiftUI: View {
             .frame(maxWidth: .infinity, maxHeight: 200)
                 .padding()
             List{
-             ForEach(0..<10){ n in
+             ForEach(0..<10){ order in
                 NavigationLink(destination: OrderProductList()) {
-                 VStack{
-                        HStack{
-                        Text("Order Date \(n)")
-                        Spacer()
-                        Text("Total Price")
-                        }.padding(3)
-                        HStack{
-                            Text("[Delivered |On its Way]")
-                                .foregroundColor(Color.orange)
-                            Spacer()
-                        }.padding()
-                    }
-                    .background(Color.white)
-                    .padding(5)
-                }
-             }// navigation link
-           }.frame(width: .infinity, height: 450, alignment: .leading)
-             Spacer()
+                    OrderRowView()
+                }// navigation link
+             }
+            }.navigationBarTitle("Recent Orders", displayMode: .inline)
+            Spacer()
             Button(action:{})
                 {
                 Text("Continue Shopping").foregroundColor(.white)
