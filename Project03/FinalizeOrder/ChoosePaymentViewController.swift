@@ -27,7 +27,7 @@ class ChoosePaymentViewController: UIViewController {
     
     @IBAction func chooseCreditCard(_ sender: Any) {
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let wel = sb.instantiateViewController(withIdentifier: "CreditCard") as! CreditCardViewController
+        let wel = sb.instantiateViewController(withIdentifier: "CreditCardFrame") as! CreditCardFrameViewController
         self.present(wel, animated: true, completion: nil)
     }
     

@@ -83,6 +83,7 @@
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
 		DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */; };
 		DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */; };
+		DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */; };
 		DEE466E02666EDEF006537B1 /* NetBankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */; };
 		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -191,6 +192,7 @@
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderScrollView.swift; sourceTree = "<group>"; };
 		DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderHostingController.swift; sourceTree = "<group>"; };
+		DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFrameViewController.swift; sourceTree = "<group>"; };
 		DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingViewController.swift; sourceTree = "<group>"; };
 		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -427,6 +429,7 @@
 				DE39BD5C266150AF00B06800 /* CreditCardViewController.swift */,
 				DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */,
 				DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */,
+				DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */,
 			);
 			path = FinalizeOrder;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				BC2A999D265FFB4C00870173 /* Product+CoreDataClass.swift in Sources */,
 				BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */,
 				BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */,
+				DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */,
 				BC7E34E7265E99BC006CE75A /* ShoppingCartViewModel.swift in Sources */,
 				BC3FBB202666805300F21C06 /* PaymentTypeViewModel.swift in Sources */,
 				BC9C00E5265D9DE60029C1EA /* ShoppingCartScrollView.swift in Sources */,
