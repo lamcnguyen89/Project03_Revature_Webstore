@@ -72,15 +72,4 @@ class LoginViewController: UIViewController {
         
     }
     
-    
-    func adder(input1: Int!, input2: Int!)-> Int {
-        
-        let val1 = input1 ?? 0
-        let val2 = input2 ?? 0
-        
-        let answer = val1 + val2
-        
-        return answer
-    }
-    
 }
