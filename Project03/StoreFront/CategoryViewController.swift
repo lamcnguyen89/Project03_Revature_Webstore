@@ -18,15 +18,19 @@ class CategoryViewController: UIViewController {
     var answer: Int!
 
 
-    @IBOutlet weak var galleryView: UIView!
-    @IBOutlet weak var productDetailView: UIView!
-    
+    @IBOutlet weak var userLabel: UILabel!
+  
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-//        galleryView.isHidden = false
-//        productDetailView.isHidden = true
+        let navController = self.tabBarController as! StoreTabViewController
+        if navController.user == nil{
+            userLabel.text = "Hello!"
+        }
+        else{
+            userLabel.text = "Hello " + (navController.user?.name)!
+        }
         
     }
     
@@ -39,7 +43,7 @@ class CategoryViewController: UIViewController {
     }
 
 //    @IBAction func getUserDashboard(_ sender: UIButton) {
-//        
+//
 //        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
 //        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
 //        self.present(show,animated: true, completion: nil)

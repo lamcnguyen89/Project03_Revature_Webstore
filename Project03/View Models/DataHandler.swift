@@ -45,7 +45,6 @@ class DataHandler {
         let queue = OperationQueue()
         let csvGroup = DispatchGroup()
         let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
-
             csvGroup.enter()
             DispatchQueue.global().async{ [self] in
                 //create a new background MOC based on main MOC for async thread
@@ -60,6 +59,8 @@ class DataHandler {
                     for item in fetch{
                         self.context?.delete(item)
                     }
+                    //using operations and operation queue allows for KVO compliant threads
+                    //in this current build KVO compliance isn't necessary, but does allow for expandibility in the future
                     let getCSV = AsyncCSV(context: backgroundMOC)
                     print("starting CSV import")
                     queue.addOperations([getCSV], waitUntilFinished: true)
@@ -82,7 +83,7 @@ class DataHandler {
         }
         return products
     }
-    
+
     func generateInitialProducts(){
         var prodArray = [Product]()
         var csv : CSV?
@@ -218,6 +219,12 @@ class DataHandler {
         
         return user
 
+    }
+    func getGuestUser() -> User{
+        let name = "guest"
+        let fetchReq = NSFetchRequest<User>(entityName: "User")
+        fetchReq.predicate = NSPredicate(format: "name == %@", name)
+        return try! (context?.fetch(fetchReq).first)!
     }
 
     func updatePassword(_ object: [String: String]){

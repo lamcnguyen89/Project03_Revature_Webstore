@@ -18,7 +18,7 @@ struct ViewControllerAsUIView: UIViewControllerRepresentable {
     //Load the storyboard
     let loadedStoryboard = UIStoryboard(name: storyboard, bundle: nil)
 
-    //Load the ViewController
+    //Load the ViewController based on passed in string
     let controller = loadedStoryboard.instantiateViewController(withIdentifier: VC)
 
     //attempt downcast
