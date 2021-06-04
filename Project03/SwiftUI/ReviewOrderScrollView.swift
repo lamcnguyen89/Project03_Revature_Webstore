@@ -11,25 +11,31 @@ struct ReviewOrderScrollView: View {
     @State var quantity = 1
     @State var isEditing = false
     // The shoppingCartItems variable will have a call to the database that stores the user's selected items that returns an object that can be iterated through and items in the UI can be generated.
-    @State var shoppingCartItems = ""
+    var shoppingCartItems = [
+        0 : ["name" : "Nvidia 3060Ti Eagle", "price" : "600" , "image" : "3060TiEagle"],
+        1 : ["name" : "Nvidia 3070 Founders" , "price" : "800" , "image" : "3070Founders"],
+        2 : ["name" : "Nvidia 3080FTW", "price" : "1200" , "image" : "3080FTW"],
+        3 : ["name" : "Nvidia 6700XT" , "price" : "700" , "image" : "6700XT"]
+    
+    ]
     var body: some View {
         ZStack {
  
             NavigationView {
                 Form{
  
-                    ForEach(1..<11){ i in
+                    ForEach(0..<shoppingCartItems.count){ i in
                         VStack{
                             HStack{
-                                Image("3060Ti")
+                                Image(shoppingCartItems[i]!["image"]!)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                 Spacer()
                                 VStack(alignment: .leading){
-                                    Text("Item: \(i)")
+                                    Text("Item: \(shoppingCartItems[i]!["name"]!)")
                                     Spacer()
-                                    Text("Price: \(i)")
+                                    Text("Price: \(shoppingCartItems[i]!["price"]!)")
                                     Spacer()
                                     Text("Quantity: \(quantity)")
                                 }.padding()
