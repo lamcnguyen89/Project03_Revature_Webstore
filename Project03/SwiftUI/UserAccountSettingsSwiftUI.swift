@@ -2,8 +2,10 @@
 //  UserAccountSettingsSwiftUI.swift
 //  Project03
 //
-//  Created by Lea W. Leonard on 6/1/21.
+//  Created by Lea W. Leonard on 6/3/21.
 //
+
+import SwiftUI
 
 import SwiftUI
 
@@ -121,7 +123,7 @@ struct UserAccountSettingsSwiftUI: View {
         Button(action:{})
             {
             Text("Continue Shopping").foregroundColor(.white)
-        }.frame(maxWidth: .infinity).padding().background(Color.blue)        
+        }.frame(maxWidth: .infinity).padding().background(Color.blue)
         }
        .frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.blue)
        .edgesIgnoringSafeArea(.bottom)
@@ -153,5 +155,3 @@ struct Data:Identifiable {
     var shipAdd: String
     var pwd: String
 }
-
-
