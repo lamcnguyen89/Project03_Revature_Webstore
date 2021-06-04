@@ -12,6 +12,7 @@ struct ViewControllerAsUIView: UIViewControllerRepresentable {
     let storyboard: String
     let VC: String
     let prodData: Product?
+    let userVM : UserViewModel?
 
   func makeUIViewController(context: UIViewControllerRepresentableContext<ViewControllerAsUIView>) -> UIViewController {
 
@@ -25,6 +26,7 @@ struct ViewControllerAsUIView: UIViewControllerRepresentable {
     if let controller = controller as? ProductDetailViewController{
         let viewModel = ProductViewModel(product: prodData!)
         controller.prodViewModel = viewModel
+        controller.cartViewModel = ShoppingCartViewModel(userVM!.getShoppingCart())
     }
     return controller
 

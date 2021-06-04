@@ -16,22 +16,19 @@ import UIKit
 class CategoryViewController: UIViewController {
     
     var answer: Int!
-
+    var user : UserViewModel?
 
     @IBOutlet weak var userLabel: UILabel!
-  
+
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        let navController = self.tabBarController as! StoreTabViewController
-        if navController.user == nil{
-            userLabel.text = "Hello!"
+        if user == nil{
+            userLabel.text = "Welcome!"
         }
         else{
-            userLabel.text = "Hello " + (navController.user?.name)!
+            userLabel.text = user?.greeting()
         }
-        
     }
     
     func subtractor(input1: Int, input2: Int)-> Int {

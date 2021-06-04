@@ -43,36 +43,63 @@ class DataHandler {
     //MARK: - CSV Parse
     func importCSV(){
         let queue = OperationQueue()
-        let csvGroup = DispatchGroup()
-        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
-            csvGroup.enter()
-            DispatchQueue.global().async{ [self] in
-                //create a new background MOC based on main MOC for async thread
-                let backgroundMOC: NSManagedObjectContext = {
+        let prodCSVGroup = DispatchGroup()
+        let userCSVGroup = DispatchGroup()
+        let prodFetchReq = NSFetchRequest<Product>.init(entityName: "Product")
+        let userFetchReq = NSFetchRequest<User>.init(entityName: "User")
+
+        userCSVGroup.enter()
+        DispatchQueue.global().async{ [self] in
+            let userBackgroundMOC: NSManagedObjectContext = {
                 let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
                 moc.parent = context
                 return moc
-                }()
-                let fetch = try! backgroundMOC.fetch(fetchReq)
-                if fetch.count < 42 {
-                    //remove all artifacts before regenerating products
-                    for item in fetch{
-                        self.context?.delete(item)
-                    }
-                    //using operations and operation queue allows for KVO compliant threads
-                    //in this current build KVO compliance isn't necessary, but does allow for expandibility in the future
-                    let getCSV = AsyncCSV(context: backgroundMOC)
-                    print("starting CSV import")
-                    queue.addOperations([getCSV], waitUntilFinished: true)
+            }()
+            let fetch = try! userBackgroundMOC.fetch(userFetchReq)
+            if fetch.count < 5 {
+                //remove all artifacts before regenerating products
+                for item in fetch{
+                    self.context?.delete(item)
                 }
-                csvGroup.leave()
+                print("starting user import")
+                generateInitialUsers()
             }
-            csvGroup.notify(queue: .global()) {
-//                sleep(1)
-                print("CSV loading complete")
-                NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
-            }
+            userCSVGroup.leave()
         }
+
+        prodCSVGroup.enter()
+        DispatchQueue.global().async{ [self] in
+            //create a new background MOC based on main MOC for async thread
+            let prodBackgroundMOC: NSManagedObjectContext = {
+                let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+                moc.parent = context
+                return moc
+            }()
+            let fetch = try! prodBackgroundMOC.fetch(prodFetchReq)
+            if fetch.count < 42 {
+                //remove all artifacts before regenerating products
+                for item in fetch{
+                    self.context?.delete(item)
+                }
+                //using operations and operation queue allows for KVO compliant threads
+                //in this current build KVO compliance isn't necessary, but does allow for expandibility in the future
+                let getCSV = AsyncCSV(context: prodBackgroundMOC)
+                print("starting CSV import")
+                queue.addOperations([getCSV], waitUntilFinished: true)
+            }
+            prodCSVGroup.leave()
+        }
+        prodCSVGroup.notify(queue: .global()) {
+            //                sleep(1)
+            print("CSV loading complete")
+            NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
+        }
+        userCSVGroup.notify(queue: .global()) {
+            print("user loading complete")
+            NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
+        }
+
+    }
 
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
@@ -96,8 +123,8 @@ class DataHandler {
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
             print(item)
-//            let ms = 1000
-//            usleep(useconds_t(25 * ms))
+            //            let ms = 1000
+            //            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
         try! context?.save()

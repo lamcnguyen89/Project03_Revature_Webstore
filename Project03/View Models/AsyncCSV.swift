@@ -62,7 +62,7 @@ class AsyncCSV : Operation, ObservableObject{
         DispatchQueue.global().async(execute: {
             print("AsyncCSV Executing")
             DataHandler(context: self.context!).generateInitialProducts()
-            DataHandler(context: self.context!).generateInitialUsers()
+//            DataHandler(context: self.context!).generateInitialUsers()
             self.finish()
         })
     }

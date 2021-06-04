@@ -8,15 +8,15 @@
 import UIKit
 import SwiftUI
 class CategoryScrollHostingController: UIHostingController<ProductListView> {
+    var user : UserViewModel?
+
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder, rootView: ProductListView(csvLoaded: false))
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteCSV, object: nil)
-
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteProductImport, object: nil)
+        user = nil
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     // CSV done loading, reload SwiftUI view
@@ -24,7 +24,8 @@ class CategoryScrollHostingController: UIHostingController<ProductListView> {
     {
         //resync on main thread, otherwise it will crash
         DispatchQueue.main.sync {
-            rootView = ProductListView(products: DataHandler().fetchAllProducts(), csvLoaded: true)
+            user = (parent as! CategoryViewController).user
+            rootView = ProductListView(products: DataHandler().fetchAllProducts(), user: user!, csvLoaded: true)
         }
     }
  

@@ -84,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension Notification.Name {
 
-    static let didCompleteCSV = Notification.Name("didCompleteCSV")
+    static let didCompleteProductImport = Notification.Name("didCompleteProductImport")
+    static let didCompleteUserImport = Notification.Name("didCompleteUserImport")
 
 }

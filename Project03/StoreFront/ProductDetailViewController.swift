@@ -17,6 +17,7 @@ class ProductDetailViewController: UIViewController {
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if prodViewModel != nil{
@@ -24,17 +25,16 @@ class ProductDetailViewController: UIViewController {
             productName.text = prodViewModel!.name
             img.image = UIImage(named: prodViewModel!.image)
         }
-//        cartViewModel = ShoppingCartViewModel()
     }
 
     @IBAction func subItem(_ sender: Any) {
-        cartViewModel?.preSubItem()
-        numOfItems.text = String(cartViewModel!.itemNumTracker)
+        numOfItems.text = cartViewModel?.preSubItem()
     }
     @IBAction func addItem(_ sender: Any) {
-        cartViewModel?.preAddItem()
+        numOfItems.text = cartViewModel?.preAddItem()
     }
     @IBAction func addToCart(_ sender: Any) {
+        cartViewModel?.addItemsToCart(product: prodViewModel!.getObj())
 
     }
 

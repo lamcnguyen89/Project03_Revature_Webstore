@@ -11,7 +11,7 @@ class StoreTabViewController: UITabBarController {
     var user : User?
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteCSV, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteProductImport, object: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,14 @@ class StoreTabViewController: UITabBarController {
         //resync on main thread, otherwise it will crash
         DispatchQueue.main.sync {
             user = DataHandler().getGuestUser()
+
             //get the CategoryViewControllers from the children view controllers
             let categoryView = children.first { viewController in
                 return viewController is CategoryViewController
             } as! CategoryViewController
-            //refresh ViewController
+
+            //set user and refresh categoryView controller
+            categoryView.user = UserViewModel(user: user!)
             categoryView.viewDidLoad()
         }
     }

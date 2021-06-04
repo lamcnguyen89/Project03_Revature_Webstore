@@ -32,7 +32,7 @@ struct ShoppingCartScrollView: View {
             }
         }
         .sheet(isPresented: $showProduct, content: {
-            ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: nil)
+            ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: nil, userVM: nil)
         })
     }
     func checkout(){

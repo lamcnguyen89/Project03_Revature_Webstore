@@ -10,13 +10,13 @@ import Foundation
 class ShoppingCartViewModel{
 
     private let shoppingCart : ShoppingCart
-    var itemNumTracker = 0
+    var itemNumTracker = 1
 
     public init (_ object : ShoppingCart){
         self.shoppingCart = object
     }
 
-    func getItems() throws -> [ShoppingCartItem]{
+    public func getItems() throws -> [ShoppingCartItem]{
         if let items = shoppingCart.items?.array as? [ShoppingCartItem]{
             return items
         }
@@ -24,12 +24,23 @@ class ShoppingCartViewModel{
             throw FetchError.BadFetchRequest
         }
     }
-    func preAddItem(){
+    public func preAddItem() -> String{
         itemNumTracker+=1
+        return String(itemNumTracker)
     }
-    func preSubItem(){
-        itemNumTracker+=1
+    public func preSubItem() -> String{
+        if itemNumTracker > 0{
+            itemNumTracker-=1
+        }
+        return String(itemNumTracker)
     }
-
+    public func addItemsToCart(product : Product){
+        let sci = ShoppingCartItem(context: shoppingCart.managedObjectContext!)
+        sci.product = product
+        sci.number = Int64(itemNumTracker)
+        shoppingCart.addToItems(sci)
+        try! shoppingCart.managedObjectContext?.save()
+        print(shoppingCart.items?.lastObject)
+    }
 
 }
