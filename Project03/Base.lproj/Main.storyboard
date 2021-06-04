@@ -61,6 +61,9 @@
                                     <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
+                                <connections>
+                                    <action selector="showStoreMenu:" destination="j28-CW-FWz" eventType="touchUpInside" id="Pe5-7C-6V2"/>
+                                </connections>
                             </button>
                             <view alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0QB-U0-Gky">
                                 <rect key="frame" x="0.0" y="127" width="414" height="58"/>

@@ -50,6 +50,9 @@
 		CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */; };
 		CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
+		CABB2857266A7897000FA979 /* StoreMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABB2856266A7897000FA979 /* StoreMenu.storyboard */; };
+		CABB285D266A9198000FA979 /* StoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB285B266A9198000FA979 /* StoreMenuViewController.swift */; };
+		CABB285E266A9198000FA979 /* StoreMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABB285C266A9198000FA979 /* StoreMenuViewController.xib */; };
 		CAE7755026697E6400A19D4D /* UserOrdersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */; };
 		CAE7755526697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */; };
 		CAE7756E266981BF00A19D4D /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */; };
@@ -149,6 +152,9 @@
 		CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWishlistSwiftUI.swift; sourceTree = "<group>"; };
 		CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveItemsSwiftUIswift.swift; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
+		CABB2856266A7897000FA979 /* StoreMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreMenu.storyboard; sourceTree = "<group>"; };
+		CABB285B266A9198000FA979 /* StoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuViewController.swift; sourceTree = "<group>"; };
+		CABB285C266A9198000FA979 /* StoreMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMenuViewController.xib; sourceTree = "<group>"; };
 		CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrdersSwiftUI.swift; sourceTree = "<group>"; };
 		CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSettingsSwiftUI.swift; sourceTree = "<group>"; };
 		CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +333,8 @@
 				DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */,
 				BC7E34DC265E92EC006CE75A /* ShoppingCartHostingController.swift */,
 				BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */,
+				CABB285B266A9198000FA979 /* StoreMenuViewController.swift */,
+				CABB285C266A9198000FA979 /* StoreMenuViewController.xib */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				DE363E37265803D70096D950 /* SceneDelegate.swift */,
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E3B265803D70096D950 /* Main.storyboard */,
+				CABB2856266A7897000FA979 /* StoreMenu.storyboard */,
 				CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */,
 				CA4246DC2659942400B92A81 /* StoreMenu.swift */,
 				DE363E41265803D80096D950 /* Assets.xcassets */,
@@ -531,11 +540,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
+				CABB2857266A7897000FA979 /* StoreMenu.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
 				CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */,
 				CAE7756F266981BF00A19D4D /* UserDashboardViewController.xib in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
 				BC2A99A626601BC200870173 /* ProductDataCSV.csv in Resources */,
+				CABB285E266A9198000FA979 /* StoreMenuViewController.xib in Resources */,
 				DE3B5D382669894500B0A250 /* User_Data.csv in Resources */,
 				BC2A9966265FF2C700870173 /* Product_DataXML.xml in Resources */,
 			);
@@ -675,6 +686,7 @@
 				BC66C8CB265EDC16008C9C08 /* ViewControllerAsUIView.swift in Sources */,
 				BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
+				CABB285D266A9198000FA979 /* StoreMenuViewController.swift in Sources */,
 				DE39BD202660A21C00B06800 /* ChooseShippingViewController.swift in Sources */,
 				DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */,
 				BC41586D265BFC640051F99B /* HistoryItem+CoreDataClass.swift in Sources */,
