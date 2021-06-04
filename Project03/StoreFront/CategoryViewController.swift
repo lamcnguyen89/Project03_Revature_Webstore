@@ -16,7 +16,7 @@ import UIKit
 class CategoryViewController: UIViewController {
     
     var answer: Int!
-
+    var category: String?
 
     @IBOutlet weak var galleryView: UIView!
     @IBOutlet weak var productDetailView: UIView!
@@ -27,6 +27,10 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
 //        galleryView.isHidden = false
 //        productDetailView.isHidden = true
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         
     }
     
@@ -43,6 +47,13 @@ class CategoryViewController: UIViewController {
         let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
         let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
+    }
+        
+    @IBAction func showStoreMenu(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "StoreMenu", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "storeMenu")
+        self.present(show, animated: true, completion: nil)
+        
     }
     
 }
