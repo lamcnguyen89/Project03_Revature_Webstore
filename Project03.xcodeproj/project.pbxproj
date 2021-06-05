@@ -41,6 +41,7 @@
 		BC9C00E5265D9DE60029C1EA /* ShoppingCartScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */; };
 		BCAA09CD266037EF00F40284 /* ProductRating+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA09CB266037EF00F40284 /* ProductRating+CoreDataClass.swift */; };
 		BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA09CF266041E900F40284 /* AsyncCSV.swift */; };
+		BCAA27BD266AD41100162A95 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA27BC266AD41100162A95 /* CartViewController.swift */; };
 		BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A52668103200D01EC0 /* ProductListView.swift */; };
 		BCB248A82668173E00D01EC0 /* CategoryScrollHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataHandler.swift */; };
@@ -136,6 +137,7 @@
 		BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartScrollView.swift; sourceTree = "<group>"; };
 		BCAA09CB266037EF00F40284 /* ProductRating+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductRating+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		BCAA09CF266041E900F40284 /* AsyncCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCSV.swift; sourceTree = "<group>"; };
+		BCAA27BC266AD41100162A95 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		BCB248A52668103200D01EC0 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScrollHostingController.swift; sourceTree = "<group>"; };
 		BCCCA366265C485200CCBEF9 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
@@ -283,7 +285,6 @@
 		BC9C00E3265D9DC90029C1EA /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */,
 				BC66C8CA265EDC16008C9C08 /* ViewControllerAsUIView.swift */,
 				CAF28A372665D4C600A263F0 /* UserOrdersSwiftUI.swift */,
 				CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */,
@@ -294,10 +295,27 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		BCAA27BA266AD16E00162A95 /* NavigationControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BCD8349D266A75FE00411243 /* StoreTabViewController.swift */,
+			);
+			path = NavigationControllers;
+			sourceTree = "<group>";
+		};
+		BCAA27BB266AD3DC00162A95 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				BC9C00E4265D9DE60029C1EA /* ShoppingCartScrollView.swift */,
+				BC7E34DC265E92EC006CE75A /* ShoppingCartHostingController.swift */,
+				BCAA27BC266AD41100162A95 /* CartViewController.swift */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		BCCCA365265C47BD00CCBEF9 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				BCCCA366265C485200CCBEF9 /* DataHandler.swift */,
 				BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */,
 				BC9C00DF265D82FD0029C1EA /* ProductViewModel.swift */,
 				BC9C00E1265D932D0029C1EA /* BrandViewModel.swift */,
@@ -317,9 +335,7 @@
 				DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */,
 				DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */,
 				DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */,
-				BC7E34DC265E92EC006CE75A /* ShoppingCartHostingController.swift */,
 				BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */,
-				BCD8349D266A75FE00411243 /* StoreTabViewController.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -357,6 +373,8 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				BCAA27BB266AD3DC00162A95 /* ShoppingCart */,
+				BCAA27BA266AD16E00162A95 /* NavigationControllers */,
 				DE39BD162660A18600B06800 /* FinalizeOrder */,
 				CAF6C7DF265ED6CF0040CC18 /* UserDashboard */,
 				BC9C00E3265D9DC90029C1EA /* SwiftUI */,
@@ -365,6 +383,7 @@
 				CAC1638E2658550C0015AC77 /* StoreFront */,
 				DE385EAC265F6EB300F7EE96 /* UserLogin */,
 				DE363E37265803D70096D950 /* SceneDelegate.swift */,
+				BCCCA366265C485200CCBEF9 /* DataHandler.swift */,
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E3B265803D70096D950 /* Main.storyboard */,
 				CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */,
@@ -710,6 +729,7 @@
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
 				DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */,
 				BC2A999D265FFB4C00870173 /* Product+CoreDataClass.swift in Sources */,
+				BCAA27BD266AD41100162A95 /* CartViewController.swift in Sources */,
 				BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */,
 				BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */,
 				BC7E34E7265E99BC006CE75A /* ShoppingCartViewModel.swift in Sources */,
