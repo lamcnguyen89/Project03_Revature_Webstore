@@ -85,6 +85,7 @@
 		DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */; };
 		DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */; };
 		DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */; };
+		DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */; };
 		DEE466E02666EDEF006537B1 /* NetBankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */; };
 		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -195,6 +196,7 @@
 		DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderScrollView.swift; sourceTree = "<group>"; };
 		DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderHostingController.swift; sourceTree = "<group>"; };
 		DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFrameViewController.swift; sourceTree = "<group>"; };
+		DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterShoppingCartViewController.swift; sourceTree = "<group>"; };
 		DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingViewController.swift; sourceTree = "<group>"; };
 		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,6 +342,7 @@
 				BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */,
 				CABB285B266A9198000FA979 /* StoreMenuViewController.swift */,
 				CABB285C266A9198000FA979 /* StoreMenuViewController.xib */,
+				DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				DE39BD582661444B00B06800 /* InnerViewReviewOrderViewController.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
+				DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */,
 				BC3E723E266133A700775C8F /* COD+CoreDataClass.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,

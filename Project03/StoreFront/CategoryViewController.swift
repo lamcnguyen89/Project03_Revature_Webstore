@@ -34,13 +34,6 @@ class CategoryViewController: UIViewController {
         
     }
     
-    func subtractor(input1: Int, input2: Int)-> Int {
-        let val1 = input1 ?? 0
-        let val2 = input2 ?? 0
-        
-        let answer = val1 - val2
-        return answer
-    }
 
     @IBAction func getUserDashboard(_ sender: UIButton) {
         
@@ -55,6 +48,14 @@ class CategoryViewController: UIViewController {
         self.present(show, animated: true, completion: nil)
         
     }
+    
+    @IBAction func goToShoppingCart(_ sender: Any) {
+        
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "shoppingCart")
+        self.present(show, animated: true, completion: nil)
+    }
+    
     
 }
 
