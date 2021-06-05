@@ -9,9 +9,33 @@ import UIKit
 import SwiftUI
 
 class UserDashboardViewController: UIViewController {
-
+    
+    var category:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func btnStoreMenu(_ sender: UIButton) {
+        let sb = UIStoryboard.init(name: "StoreMenu", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "storeMenu") as! StoreMenuViewController
+        self.present(vc, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func btnContinueShopping(_ sender: UIButton) {
+        
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "categoryList")
+        
+        self.present(vc, animated: true, completion: {self.category})
+    }
+    
+    @IBAction func btnLogin(_ sender: UIButton) {
+        
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        self.present(vc, animated: true, completion: nil)
     }
 
     @IBSegueAction func showUserSaveItemsSwiftUI(_ coder: NSCoder) -> UIViewController? {
@@ -26,7 +50,6 @@ class UserDashboardViewController: UIViewController {
         
         return  UIHostingController(coder: coder, rootView: rootView)
     }
-    
       
     @IBSegueAction func showUserOrdersSwiftUI(_ coder: NSCoder) -> UIViewController? {
         let rootView = UserOrdersSwiftUI()

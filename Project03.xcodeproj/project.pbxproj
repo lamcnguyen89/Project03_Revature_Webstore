@@ -53,6 +53,7 @@
 		CABB2857266A7897000FA979 /* StoreMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABB2856266A7897000FA979 /* StoreMenu.storyboard */; };
 		CABB285D266A9198000FA979 /* StoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB285B266A9198000FA979 /* StoreMenuViewController.swift */; };
 		CABB285E266A9198000FA979 /* StoreMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABB285C266A9198000FA979 /* StoreMenuViewController.xib */; };
+		CABB286E266AC61F000FA979 /* UserOneOrderReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB286D266AC61E000FA979 /* UserOneOrderReview.swift */; };
 		CAE7755026697E6400A19D4D /* UserOrdersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */; };
 		CAE7755526697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */; };
 		CAE7756E266981BF00A19D4D /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */; };
@@ -157,6 +158,7 @@
 		CABB2856266A7897000FA979 /* StoreMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreMenu.storyboard; sourceTree = "<group>"; };
 		CABB285B266A9198000FA979 /* StoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuViewController.swift; sourceTree = "<group>"; };
 		CABB285C266A9198000FA979 /* StoreMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMenuViewController.xib; sourceTree = "<group>"; };
+		CABB286D266AC61E000FA979 /* UserOneOrderReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOneOrderReview.swift; sourceTree = "<group>"; };
 		CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserOrdersSwiftUI.swift; sourceTree = "<group>"; };
 		CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSettingsSwiftUI.swift; sourceTree = "<group>"; };
 		CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				BCB248A52668103200D01EC0 /* ProductListView.swift */,
 				CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */,
 				CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */,
+				CABB286D266AC61E000FA979 /* UserOneOrderReview.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				BC415867265BFC640051F99B /* PaymentOptions+CoreDataClass.swift in Sources */,
 				BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */,
 				BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */,
+				CABB286E266AC61F000FA979 /* UserOneOrderReview.swift in Sources */,
 				DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
 				BC3FBB2A26669D7200F21C06 /* AddressViewModel.swift in Sources */,

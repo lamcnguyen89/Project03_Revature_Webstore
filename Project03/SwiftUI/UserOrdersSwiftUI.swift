@@ -27,12 +27,6 @@ struct OrderRowView: View {
     }
 }
 
-struct OrderProductList: View{
-    var body: some View {
-        Text("View list of products in orders")
-    }
-}
-
 struct UserOrdersSwiftUI: View {
     @Environment(\.managedObjectContext)
     var context
@@ -78,11 +72,17 @@ struct UserOrdersSwiftUI: View {
                 .padding()
             List{
              ForEach(0..<10){ order in
-                NavigationLink(destination: OrderProductList()) {
-                    OrderRowView()
-                }// navigation link
+               // NavigationLink(destination: OrderProductList()) {
+               //     OrderRowView()
+              //  }// navigation link
+                OrderRowView().onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
+                    print("made a tap on \(order)")
+                    isProductsInOrderPresented = true
+                }).sheet(isPresented: $isProductsInOrderPresented){
+                    UserOneOrderReview()
+                }
              }
-            }.navigationBarTitle("Recent Orders", displayMode: .inline)
+            }
             Spacer()
             Button(action:{})
                 {
@@ -97,5 +97,11 @@ struct UserOrdersSwiftUI: View {
 struct UserOrdersSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
         UserOrdersSwiftUI()
+    }
+}
+
+struct OrderProductList: View{
+    var body: some View {
+        Text("View list of products in orders")
     }
 }
