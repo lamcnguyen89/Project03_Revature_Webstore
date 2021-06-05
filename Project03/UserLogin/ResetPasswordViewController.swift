@@ -87,5 +87,10 @@ class ResetPasswordViewController: UIViewController {
         
     }
     
+    @IBAction func storeFront(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "categoryList")
+        self.present(show, animated: true, completion: nil)    }
+    
     
 }
