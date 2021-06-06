@@ -439,6 +439,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="list.bullet" catalog="system"/>
                                         <connections>
+                                            <action selector="getUserDashboard:" destination="IXw-OH-uT6" eventType="touchUpInside" id="2zL-wz-Clj"/>
                                             <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="BRF-Nl-KLC"/>
                                         </connections>
                                     </button>
@@ -512,6 +513,7 @@
                                         <state key="normal" backgroundImage="list.bullet" catalog="system"/>
                                         <connections>
                                             <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="8Kh-LA-eN0"/>
+                                            <action selector="getUserDashboard:" destination="DPl-Mz-zQY" eventType="touchUpInside" id="p9A-H1-0yi"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello [username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ex-oI-KeA">
@@ -611,6 +613,7 @@
                                         <state key="normal" backgroundImage="list.bullet" catalog="system"/>
                                         <connections>
                                             <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="ACT-MN-djk"/>
+                                            <action selector="getUserDashboard:" destination="S7T-EX-dIx" eventType="touchUpInside" id="lEQ-4y-hWb"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello [username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="afR-us-OCO">
@@ -791,6 +794,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="list.bullet" catalog="system"/>
                                         <connections>
+                                            <action selector="getUserDashboard:" destination="Bmb-Vo-dRB" eventType="touchUpInside" id="JlA-i7-IYb"/>
                                             <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="RUO-vB-uhA"/>
                                         </connections>
                                     </button>
@@ -1905,6 +1909,7 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="list.bullet" catalog="system"/>
                                         <connections>
+                                            <action selector="getUserDashboard:" destination="oIc-CU-Hyn" eventType="touchUpInside" id="2n5-fG-WcE"/>
                                             <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="wjX-cl-rYX"/>
                                         </connections>
                                     </button>
