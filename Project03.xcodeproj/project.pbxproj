@@ -43,7 +43,7 @@
 		BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA09CF266041E900F40284 /* AsyncCSV.swift */; };
 		BCAA27BD266AD41100162A95 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA27BC266AD41100162A95 /* CartViewController.swift */; };
 		BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A52668103200D01EC0 /* ProductListView.swift */; };
-		BCB248A82668173E00D01EC0 /* CategoryScrollHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */; };
+		BCB248A82668173E00D01EC0 /* CategoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryHostingController.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataHandler.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
 		BCD8349E266A75FE00411243 /* StoreTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD8349D266A75FE00411243 /* StoreTabViewController.swift */; };
@@ -139,7 +139,7 @@
 		BCAA09CF266041E900F40284 /* AsyncCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCSV.swift; sourceTree = "<group>"; };
 		BCAA27BC266AD41100162A95 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		BCB248A52668103200D01EC0 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
-		BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScrollHostingController.swift; sourceTree = "<group>"; };
+		BCB248A72668173E00D01EC0 /* CategoryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHostingController.swift; sourceTree = "<group>"; };
 		BCCCA366265C485200CCBEF9 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BCD8349D266A75FE00411243 /* StoreTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTabViewController.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 				DE3B6512265C700D00005EBD /* ProductDetailRowTableViewCell.swift */,
 				DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */,
 				DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */,
-				BCB248A72668173E00D01EC0 /* CategoryScrollHostingController.swift */,
+				BCB248A72668173E00D01EC0 /* CategoryHostingController.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -715,7 +715,7 @@
 				BC3E723C266133A700775C8F /* ACH+CoreDataClass.swift in Sources */,
 				BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */,
 				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
-				BCB248A82668173E00D01EC0 /* CategoryScrollHostingController.swift in Sources */,
+				BCB248A82668173E00D01EC0 /* CategoryHostingController.swift in Sources */,
 				DE385EAE265F6F0200F7EE96 /* SignUpViewController.swift in Sources */,
 				BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */,
 				BC9C00E0265D82FD0029C1EA /* ProductViewModel.swift in Sources */,

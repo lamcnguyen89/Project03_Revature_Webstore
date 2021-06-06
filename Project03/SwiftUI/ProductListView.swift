@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 struct ProductListView: View {
+    //toggle for displaying detail view
     @State private var showProduct = false
     private var csvLoaded : Bool
     private let products : [Product]

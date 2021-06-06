@@ -76,6 +76,25 @@ class DataHandler {
             NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
         }
     }
+    func generateInitialProducts(){
+        var prodArray = [Product]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
+
+
+        for item in csv!.namedRows{
+            let prod = Product(context: context!)
+            prod.update(dictionary: item, store: getStore())
+            prodArray.append(prod)
+            print(item)
+            //            let ms = 1000
+            //            usleep(useconds_t(25 * ms))
+        }
+        print(prodArray)
+        try! context!.save()
+    }
 
     func importUsers(){
         let userFetchReq = NSFetchRequest<User>.init(entityName: "User")
@@ -105,7 +124,7 @@ class DataHandler {
             NotificationCenter.default.post(name: .didCompleteUserImport, object: nil)
         }
     }
-    //MARK: - Product Related
+    //MARK: - Fetch Products Related
     func fetchAllProducts() -> [Product]{
         var products = [Product]()
         let categories = fetchAllCategories()
@@ -115,24 +134,17 @@ class DataHandler {
         return products
     }
 
-    func generateInitialProducts(){
-        var prodArray = [Product]()
-        var csv : CSV?
-        let url =  Bundle.main.url(forResource: "ProductDataCSV", withExtension: "csv")!
-        let resource = try! CSV(url: url)
-        csv = resource
-
-
-        for item in csv!.namedRows{
-            let prod = Product(context: context!)
-            prod.update(dictionary: item, store: getStore())
-            prodArray.append(prod)
-            print(item)
-            //            let ms = 1000
-            //            usleep(useconds_t(25 * ms))
+    func fetchFeaturedProducts() -> [Product]{
+        var products = [Product]()
+        let categories = fetchAllCategories()
+        for category in categories{
+            for item in category.products?.array as! [Product]{
+                if item.isFeatured{
+                    products.append(item)
+                }
+            }
         }
-        print(prodArray)
-        try! context!.save()
+        return products
     }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
@@ -251,7 +263,7 @@ class DataHandler {
 
     }
     func getGuestUser() -> User{
-        let name = "guest"
+        let name = "Guest"
         let fetchReq = NSFetchRequest<User>(entityName: "User")
         fetchReq.predicate = NSPredicate(format: "name == %@", name)
         return try! (context?.fetch(fetchReq).first)!

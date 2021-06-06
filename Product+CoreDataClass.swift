@@ -21,7 +21,7 @@ public class Product: NSManagedObject {
 
         let bran = Brand(context: self.managedObjectContext!)
         let rat = ProductRating(context: self.managedObjectContext!)
-        featured = { () -> Bool in
+        isFeatured = { () -> Bool in
             if dictionary["Featured"] == "TRUE"{
                 return true
             }

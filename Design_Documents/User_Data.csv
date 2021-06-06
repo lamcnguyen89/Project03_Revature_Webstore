@@ -1,5 +1,5 @@
 email,ID,firstName,lastName,name,password
-guest,0,guest,guest,guest,guest12
+guest,0,guest,guest,Guest,guest12
 Lea.Leonard@revature.net,1,Lea,Leonard,lealeonard1,lealeonard12
 Kirtland.Ross@revature.net,2,Kirtland,Ross,kirtlandross1,kirtlandross12
 Lam.Nguyen@revature.net,3,Lam,Nguyen,lamnguyen1,lamnguyen12

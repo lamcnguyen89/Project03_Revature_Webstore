@@ -57,9 +57,9 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="category">
-        <attribute name="featured" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isFeatured" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="productDescription" attributeType="String"/>
@@ -127,7 +127,7 @@
         <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
         <element name="PaymentOptions" positionX="-606.124267578125" positionY="202.1980590820313" width="128" height="59"/>
         <element name="PaymentType" positionX="-615.53271484375" positionY="345.6470642089843" width="128" height="73"/>
-        <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="14"/>
+        <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="164"/>
         <element name="ProductRating" positionX="-111.66357421875" positionY="-12.59024047851562" width="128" height="88"/>
         <element name="Review" positionX="-28.071533203125" positionY="107.9990539550782" width="128" height="118"/>
         <element name="Search" positionX="203.54833984375" positionY="75.115478515625" width="128" height="29"/>

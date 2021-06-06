@@ -7,7 +7,7 @@
 
 import UIKit
 import SwiftUI
-class CategoryScrollHostingController: UIHostingController<ProductListView> {
+class CategoryHostingController: UIHostingController<ProductListView> {
     var user : UserViewModel?
 
     required init?(coder aDecoder: NSCoder){
@@ -25,7 +25,7 @@ class CategoryScrollHostingController: UIHostingController<ProductListView> {
         //resync on main thread, otherwise it will crash
         DispatchQueue.main.sync {
             user = (parent as! CategoryViewController).user
-            rootView = ProductListView(products: DataHandler().fetchAllProducts(), user: user!, csvLoaded: true)
+            rootView = ProductListView(products: DataHandler().fetchFeaturedProducts(), user: user!, csvLoaded: true)
         }
     }
  

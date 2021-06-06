@@ -1235,19 +1235,19 @@
             </objects>
             <point key="canvasLocation" x="396" y="2135"/>
         </scene>
-        <!--Category Scroll Hosting Controller-->
+        <!--Category Hosting Controller-->
         <scene sceneID="oOL-i9-dVp">
             <objects>
-                <hostingController id="yRW-Vx-XsR" customClass="CategoryScrollHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
+                <hostingController id="yRW-Vx-XsR" customClass="CategoryHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egj-l5-h15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="-638"/>
+            <point key="canvasLocation" x="720" y="-637"/>
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">
             <objects>
                 <viewController storyboardIdentifier="ProductDetail" title="ProductDetail" id="75z-n6-Tp5" customClass="ProductDetailViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8X8-MK-BIl">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8X8-MK-BIl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1370,8 +1370,8 @@
                                     <constraint firstAttribute="height" constant="62" id="paj-ix-Hdt"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-fb-qHP">
-                                <rect key="frame" x="0.0" y="663" width="414" height="169"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-fb-qHP">
+                                <rect key="frame" x="0.0" y="566" width="414" height="266"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="266" id="2Jc-ju-WWK"/>

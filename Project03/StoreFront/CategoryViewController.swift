@@ -14,8 +14,7 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
-    
-    var answer: Int!
+
     var user : UserViewModel?
 
     @IBOutlet weak var userLabel: UILabel!
