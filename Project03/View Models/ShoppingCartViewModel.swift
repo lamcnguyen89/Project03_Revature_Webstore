@@ -41,14 +41,14 @@ class ShoppingCartViewModel{
         }) as? ShoppingCartItem{
             item.number = Int64(itemNumTracker)
         }
-
-        let sci = ShoppingCartItem(context: shoppingCart.managedObjectContext!)
-        sci.product = product
-        sci.number = Int64(itemNumTracker)
-        shoppingCart.addToItems(sci)
+        else{
+            let sci = ShoppingCartItem(context: shoppingCart.managedObjectContext!)
+            sci.product = product
+            sci.number = Int64(itemNumTracker)
+            shoppingCart.addToItems(sci)
+        }
         try! shoppingCart.managedObjectContext?.save()
         print(shoppingCart.items?.lastObject)
-
     }
 
 }

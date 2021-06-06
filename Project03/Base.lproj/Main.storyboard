@@ -793,10 +793,10 @@
             </objects>
             <point key="canvasLocation" x="2319" y="1197"/>
         </scene>
-        <!--Shopping Cart Hosting Controller-->
+        <!--Cart Hosting Controller-->
         <scene sceneID="4Oy-W2-T5e">
             <objects>
-                <hostingController id="zkb-J3-76l" customClass="ShoppingCartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
+                <hostingController id="zkb-J3-76l" customClass="CartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWm-gI-iF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-392" y="738"/>
@@ -1247,7 +1247,7 @@
         <scene sceneID="9Ff-ep-lIW">
             <objects>
                 <viewController storyboardIdentifier="ProductDetail" title="ProductDetail" id="75z-n6-Tp5" customClass="ProductDetailViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8X8-MK-BIl">
+                    <view key="view" contentMode="scaleToFill" id="8X8-MK-BIl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1370,8 +1370,8 @@
                                     <constraint firstAttribute="height" constant="62" id="paj-ix-Hdt"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-fb-qHP">
-                                <rect key="frame" x="0.0" y="566" width="414" height="266"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppf-fb-qHP">
+                                <rect key="frame" x="0.0" y="663" width="414" height="169"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="266" id="2Jc-ju-WWK"/>

@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ShoppingCartScrollView: View {
+struct CartScrollView: View {
     @State private var showProduct = false
     private var dataReady = false
     var user : UserViewModel?

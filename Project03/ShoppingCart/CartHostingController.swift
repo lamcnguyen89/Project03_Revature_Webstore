@@ -7,11 +7,11 @@
 
 import UIKit
 import SwiftUI
-class ShoppingCartHostingController:  UIHostingController<ShoppingCartScrollView>{
+class CartHostingController:  UIHostingController<CartScrollView>{
     var user : UserViewModel?
 
     required init?(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder, rootView: ShoppingCartScrollView(user: user))
+        super.init(coder: aDecoder, rootView: CartScrollView(user: user))
         NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteUserImport, object: nil)
     }
     override func viewDidLoad() {
@@ -19,14 +19,14 @@ class ShoppingCartHostingController:  UIHostingController<ShoppingCartScrollView
     }
     func reloadScrollView(){
         user = (parent as! CartViewController).user
-        rootView = ShoppingCartScrollView(user: user)
+        rootView = CartScrollView(user: user)
     }
     @objc func onDidCompleteCSV(_ notification: Notification)
     {
         //resync on main thread, otherwise it will crash
         DispatchQueue.main.sync {
             user = (parent as! CartViewController).user
-            rootView = ShoppingCartScrollView(user: user)
+            rootView = CartScrollView(user: user)
         }
     }
 }

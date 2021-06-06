@@ -11,7 +11,7 @@ class StoreTabViewController: UITabBarController {
     var user : User?
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder)
-       NotificationCenter.default.addObserver(self, selector: #selector(didCompleteUserImport(_:)), name: .didCompleteUserImport, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didCompleteUserImport(_:)), name: .didCompleteUserImport, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(shoppingCartDidUpdate(_:)), name: .shoppingCartDidUpdate, object: nil)
     }
     override func viewDidLoad() {
@@ -31,15 +31,22 @@ class StoreTabViewController: UITabBarController {
                 return viewController is CategoryViewController
             } as! CategoryViewController
 
-            //set user and refresh categoryView controller
-            categoryView.user = UserViewModel(user: user!)
-            categoryView.viewDidLoad()
+            //check if view has loaded
+            if categoryView.isViewLoaded{
+                //set user and refresh categoryView controller
+                categoryView.user = UserViewModel(user: user!)
+                categoryView.viewDidLoad()
+            }
         }
     }
     @objc func shoppingCartDidUpdate(_ notification: Notification){
+
         let cartViewController = children.first { viewController in
             return viewController is CartViewController
         } as! CartViewController
-        cartViewController.viewDidLoad()
+        //if view is loaded, reload
+        if cartViewController.isViewLoaded{
+            cartViewController.viewDidLoad()
+        }
     }
 }

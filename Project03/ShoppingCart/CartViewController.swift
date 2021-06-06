@@ -23,8 +23,8 @@ class CartViewController: UIViewController {
         }
 
         let hostingController = children.first { viewController in
-            viewController is ShoppingCartHostingController
-        } as! ShoppingCartHostingController
+            viewController is CartHostingController
+        } as! CartHostingController
         hostingController.reloadScrollView()
     }
 
