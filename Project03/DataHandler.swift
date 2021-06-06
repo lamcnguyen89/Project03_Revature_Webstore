@@ -33,7 +33,7 @@ class DataHandler {
     //MARK: - Store Related
     func fetchStore() -> Store{
         let fetchReq = NSFetchRequest<Store>(entityName: "Store")
-        return try! (context?.fetch(fetchReq).first!)!
+        return try! (context!.fetch(fetchReq).first!)
     }
     //MARK: - Category Related
     func fetchAllCategories() -> [Category]{
@@ -41,12 +41,45 @@ class DataHandler {
         return store.categories?.array as! [Category]
     }
     //MARK: - CSV Parse
-    func importCSV(){
+    func importProducts(){
         let queue = OperationQueue()
         let prodCSVGroup = DispatchGroup()
-        let userCSVGroup = DispatchGroup()
         let prodFetchReq = NSFetchRequest<Product>.init(entityName: "Product")
+
+        prodCSVGroup.enter()
+        DispatchQueue.global().async{ [self] in
+
+            //create a new background MOC based on main MOC for async thread
+            let prodBackgroundMOC: NSManagedObjectContext = {
+                let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+                moc.parent = context
+                return moc
+            }()
+            let fetch = try! prodBackgroundMOC.fetch(prodFetchReq)
+            if fetch.count < 42 {
+                //remove all artifacts before regenerating products
+                for item in fetch{
+                    self.context?.delete(item)
+                }
+                //using operations and operation queue allows for KVO compliant threads
+                //in this current build KVO compliance isn't necessary, but does allow for expandibility in the future
+                let getCSV = AsyncCSV(context: prodBackgroundMOC)
+                print("starting Product import")
+                queue.addOperations([getCSV], waitUntilFinished: true)
+            }
+            prodCSVGroup.leave()
+        }
+
+        prodCSVGroup.notify(queue: .global()) {
+            //                sleep(1)
+            print("product loading complete")
+            NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
+        }
+    }
+
+    func importUsers(){
         let userFetchReq = NSFetchRequest<User>.init(entityName: "User")
+        let userCSVGroup = DispatchGroup()
 
         userCSVGroup.enter()
         DispatchQueue.global().async{ [self] in
@@ -67,40 +100,11 @@ class DataHandler {
             userCSVGroup.leave()
         }
 
-        prodCSVGroup.enter()
-        DispatchQueue.global().async{ [self] in
-            //create a new background MOC based on main MOC for async thread
-            let prodBackgroundMOC: NSManagedObjectContext = {
-                let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-                moc.parent = context
-                return moc
-            }()
-            let fetch = try! prodBackgroundMOC.fetch(prodFetchReq)
-            if fetch.count < 42 {
-                //remove all artifacts before regenerating products
-                for item in fetch{
-                    self.context?.delete(item)
-                }
-                //using operations and operation queue allows for KVO compliant threads
-                //in this current build KVO compliance isn't necessary, but does allow for expandibility in the future
-                let getCSV = AsyncCSV(context: prodBackgroundMOC)
-                print("starting CSV import")
-                queue.addOperations([getCSV], waitUntilFinished: true)
-            }
-            prodCSVGroup.leave()
-        }
-        prodCSVGroup.notify(queue: .global()) {
-            //                sleep(1)
-            print("CSV loading complete")
-            NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
-        }
         userCSVGroup.notify(queue: .global()) {
             print("user loading complete")
-            NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
+            NotificationCenter.default.post(name: .didCompleteUserImport, object: nil)
         }
-
     }
-
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
         var products = [Product]()
@@ -118,6 +122,7 @@ class DataHandler {
         let resource = try! CSV(url: url)
         csv = resource
 
+
         for item in csv!.namedRows{
             let prod = Product(context: context!)
             prod.update(dictionary: item, store: getStore())
@@ -127,7 +132,7 @@ class DataHandler {
             //            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
-        try! context?.save()
+        try! context!.save()
     }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
@@ -211,7 +216,6 @@ class DataHandler {
         let url =  Bundle.main.url(forResource: "User_Data", withExtension: "csv")!
         let resource = try! CSV(url: url)
         csv = resource
-
         for item in csv!.namedRows{
             let user = User(context: context!)
             user.update(dictionary: item)
@@ -243,7 +247,6 @@ class DataHandler {
         catch{
             print("No users found")
         }
-        
         return user
 
     }
@@ -291,4 +294,12 @@ class DataHandler {
 
 enum FetchError : Error{
     case BadFetchRequest 
+}
+
+extension Notification.Name {
+
+    static let didCompleteProductImport = Notification.Name("didCompleteProductImport")
+    static let didCompleteUserImport = Notification.Name("didCompleteUserImport")
+    static let didCompleteLoadingUI = Notification.Name("didCompleteLoadingUI")
+    static let shoppingCartDidUpdate = Notification.Name("shoppingCartDidUpdate")
 }

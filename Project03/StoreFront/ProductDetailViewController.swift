@@ -35,7 +35,7 @@ class ProductDetailViewController: UIViewController {
     }
     @IBAction func addToCart(_ sender: Any) {
         cartViewModel?.addItemsToCart(product: prodViewModel!.getObj())
-
+        NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)
     }
 
 }

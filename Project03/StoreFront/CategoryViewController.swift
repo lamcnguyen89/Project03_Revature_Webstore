@@ -29,14 +29,7 @@ class CategoryViewController: UIViewController {
         else{
             userLabel.text = user?.greeting()
         }
-    }
-    
-    func subtractor(input1: Int, input2: Int)-> Int {
-        let val1 = input1 ?? 0
-        let val2 = input2 ?? 0
-        
-        let answer = val1 - val2
-        return answer
+        NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
     }
 
 //    @IBAction func getUserDashboard(_ sender: UIButton) {

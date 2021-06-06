@@ -14,6 +14,7 @@ public class Product: NSManagedObject {
 
     func update(dictionary: [String:String], store: Store){
         let fetchReq = NSFetchRequest<Category>.init(entityName: "Category")
+        // if categories exist
         if let categories = try? self.managedObjectContext?.fetch(fetchReq){
             setCategory(categories, name: dictionary["Category"]!, store: store)
         }

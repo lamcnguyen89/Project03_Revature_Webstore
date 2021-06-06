@@ -32,7 +32,7 @@ struct ShoppingCartScrollView: View {
                             Text(String(i.number))
                             Image(i.product!.image!)
                                 .resizable()
-                                .frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .frame(width: 50, height: 50, alignment: .center)
                             Text(i.product!.name!)
                         }
                     }
@@ -43,12 +43,11 @@ struct ShoppingCartScrollView: View {
                 Button(action: {checkout()}) {
                     HStack{
                         Spacer()
-                        Text("Checkout").frame( height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        Text("Checkout").frame( height: 100, alignment: .center)
                         Spacer()
                     }
                 }
             }
-
         }
         else {
             if #available(iOS 14.0, *) {

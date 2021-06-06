@@ -35,12 +35,20 @@ class ShoppingCartViewModel{
         return String(itemNumTracker)
     }
     public func addItemsToCart(product : Product){
+        //if shopping cart already contains item
+        if let item = shoppingCart.items?.first(where: { ShoppingCartItem in
+            (ShoppingCartItem as! ShoppingCartItem).product!.name == product.name
+        }) as? ShoppingCartItem{
+            item.number = Int64(itemNumTracker)
+        }
+
         let sci = ShoppingCartItem(context: shoppingCart.managedObjectContext!)
         sci.product = product
         sci.number = Int64(itemNumTracker)
         shoppingCart.addToItems(sci)
         try! shoppingCart.managedObjectContext?.save()
         print(shoppingCart.items?.lastObject)
+
     }
 
 }
