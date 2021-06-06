@@ -44,6 +44,7 @@
 		BCAA27BD266AD41100162A95 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA27BC266AD41100162A95 /* CartViewController.swift */; };
 		BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A52668103200D01EC0 /* ProductListView.swift */; };
 		BCB248A82668173E00D01EC0 /* CategoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryHostingController.swift */; };
+		BCC2B226266D3A2D00F09B5C /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2B225266D3A2D00F09B5C /* StoreViewModel.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataHandler.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
 		BCD8349E266A75FE00411243 /* StoreTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD8349D266A75FE00411243 /* StoreTabViewController.swift */; };
@@ -140,6 +141,7 @@
 		BCAA27BC266AD41100162A95 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		BCB248A52668103200D01EC0 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		BCB248A72668173E00D01EC0 /* CategoryHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHostingController.swift; sourceTree = "<group>"; };
+		BCC2B225266D3A2D00F09B5C /* StoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModel.swift; sourceTree = "<group>"; };
 		BCCCA366265C485200CCBEF9 /* DataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHandler.swift; sourceTree = "<group>"; };
 		BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		BCD8349D266A75FE00411243 /* StoreTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTabViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 				BCAA09CF266041E900F40284 /* AsyncCSV.swift */,
 				BC3FBB1F2666805300F21C06 /* PaymentTypeViewModel.swift */,
 				BC3FBB2926669D7200F21C06 /* AddressViewModel.swift */,
+				BCC2B225266D3A2D00F09B5C /* StoreViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
 				CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */,
 				BC3E723C266133A700775C8F /* ACH+CoreDataClass.swift in Sources */,
+				BCC2B226266D3A2D00F09B5C /* StoreViewModel.swift in Sources */,
 				BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */,
 				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
 				BCB248A82668173E00D01EC0 /* CategoryHostingController.swift in Sources */,

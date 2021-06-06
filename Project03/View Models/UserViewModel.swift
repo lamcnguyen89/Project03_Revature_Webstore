@@ -73,4 +73,5 @@ class UserViewModel{
         else {throw FetchError.BadFetchRequest}
     }
 
+
 }

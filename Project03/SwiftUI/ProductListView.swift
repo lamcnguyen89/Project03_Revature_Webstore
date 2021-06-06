@@ -10,23 +10,31 @@ import UIKit
 struct ProductListView: View {
     //toggle for displaying detail view
     @State private var showProduct = false
+
     private var csvLoaded : Bool
-    private let products : [Product]
     private let user : UserViewModel?
-    init (products: [Product], user : UserViewModel ,csvLoaded: Bool){
-        self.products = products
+    private let store: StoreViewModel?
+    private let category : String
+    //setup view model (maybe a store) that gets read in on init that holds the current category filter
+    
+    init (store: StoreViewModel, user : UserViewModel, category: String, csvLoaded: Bool){
+
         self.csvLoaded = csvLoaded
         self.user = user
+        self.store = store
+        self.category = category
     }
     init (csvLoaded: Bool){
-        products = [Product]()
+
         self.csvLoaded = csvLoaded
         self.user = nil
+        self.category = "Featured"
+        self.store = nil
     }
     var body: some View {
-        if (csvLoaded){
+        if (store != nil){
             Form{
-                ForEach(products){ item in
+                ForEach(store!.filterProducts(category)){ item in
                     Button(action: {showProduct.toggle()}) {
                         HStack{
                             Image(item.image!)

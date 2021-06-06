@@ -13,15 +13,21 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    private var pickerData = [String]()
+    private var selection = 0
     var user : UserViewModel?
 
     @IBOutlet weak var userLabel: UILabel!
-
+    @IBOutlet weak var categoryPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        categoryPicker.delegate = self
+        categoryPicker.dataSource = self
+
+        pickerData = ["Featured","Cleaning","Precious Metals","Graphics Cards","Exercise Equipment","Car"]
         if user == nil{
             userLabel.text = "Welcome!"
         }
@@ -31,12 +37,26 @@ class CategoryViewController: UIViewController {
         NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
     }
 
-//    @IBAction func getUserDashboard(_ sender: UIButton) {
-//
-//        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
-//        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
-//        self.present(show,animated: true, completion: nil)
-//    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selection = row
+        let hostingController = children.first { viewController in
+            viewController is CategoryHostingController
+        } as! CategoryHostingController
+
+        hostingController.category = pickerData[selection]
+        hostingController.reloadView()
+
+    }
     
 }
 

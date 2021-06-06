@@ -125,13 +125,24 @@ class DataHandler {
         }
     }
     //MARK: - Fetch Products Related
-    func fetchAllProducts() -> [Product]{
-        var products = [Product]()
+    func fetchAllProducts() -> [String: [Product]]{
+
+        var featuredProducts = [Product]()
+        var dictionary = [String: [Product]]()
         let categories = fetchAllCategories()
-        for item in categories{
-            products.append(contentsOf: item.products?.array as! [Product])
+        for category in categories{
+            var products = [Product]()
+            for item in category.products?.array as! [Product]{
+                products.append(item)
+                if item.isFeatured{
+                    featuredProducts.append(item)
+                }
+            }
+            dictionary[category.name!] = products
         }
-        return products
+        dictionary["Featured"] = featuredProducts
+        print(dictionary)
+        return dictionary
     }
 
     func fetchFeaturedProducts() -> [Product]{
