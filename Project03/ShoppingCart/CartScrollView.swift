@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import UIKit
 
 struct CartScrollView: View {
     @State private var showProduct = false
@@ -63,12 +64,8 @@ struct CartScrollView: View {
         }
     }
     func checkout(){
-        
+
     }
 }
 
-//struct ShoppingCartScrollView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ShoppingCartScrollView()
-//    }
-//}
+

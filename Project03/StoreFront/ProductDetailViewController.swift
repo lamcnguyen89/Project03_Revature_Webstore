@@ -26,8 +26,10 @@ class ProductDetailViewController: UIViewController {
             productName.text = prodViewModel!.name
             img.image = UIImage(named: prodViewModel!.image)
             priceLabel.text = prodViewModel!.price
+
         }
     }
+
 
     @IBAction func subItem(_ sender: Any) {
         numOfItems.text = cartViewModel?.preSubItem()
@@ -40,4 +42,18 @@ class ProductDetailViewController: UIViewController {
         NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)
     }
 
+
+    @IBAction func getUserDashboard(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+    }
+    
+    @IBAction func showStoreMenu(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "StoreMenu", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "storeMenu")
+        self.present(show, animated: true, completion: nil)
+        
+    }
 }

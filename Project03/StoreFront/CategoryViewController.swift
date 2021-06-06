@@ -19,6 +19,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private var selection = 0
     var user : UserViewModel?
 
+
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var categoryPicker: UIPickerView!
     
@@ -40,6 +41,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
@@ -57,6 +59,21 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         hostingController.reloadView()
 
     }
+        
+    @IBAction func showStoreMenu(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "StoreMenu", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "storeMenu")
+        self.present(show, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func goToShoppingCart(_ sender: Any) {
+        
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "shoppingCart")
+        self.present(show, animated: true, completion: nil)
+    }
+    
     
 }
 

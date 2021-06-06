@@ -27,10 +27,16 @@ class ChoosePaymentViewController: UIViewController {
     
     @IBAction func chooseCreditCard(_ sender: Any) {
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let wel = sb.instantiateViewController(withIdentifier: "CreditCard") as! CreditCardViewController
+        let wel = sb.instantiateViewController(withIdentifier: "CreditCardFrame") as! CreditCardFrameViewController
         self.present(wel, animated: true, completion: nil)
     }
     
+    @IBAction func getUserDashboard(_ sender: UIButton) {
+        
+        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+    }
     
 
 }

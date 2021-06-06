@@ -32,7 +32,7 @@ class InnerViewReviewOrderViewController: UIViewController {
         
         let total = calculateOrder(orders: orderData)
         let priceString : String = String(format: "%.2f", total)
-        calculatedTotal.text = priceString
+        calculatedTotal.text = "Grand Total: \(priceString)"
     }
     
     @IBAction func submitOrder(_ sender: Any) {
