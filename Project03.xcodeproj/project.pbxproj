@@ -44,6 +44,7 @@
 		BCAA27BD266AD41100162A95 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAA27BC266AD41100162A95 /* CartViewController.swift */; };
 		BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A52668103200D01EC0 /* ProductListView.swift */; };
 		BCB248A82668173E00D01EC0 /* CategoryHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB248A72668173E00D01EC0 /* CategoryHostingController.swift */; };
+		BCBF1BA3266D83BE000A2FD4 /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */; };
 		BCC2B226266D3A2D00F09B5C /* StoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC2B225266D3A2D00F09B5C /* StoreViewModel.swift */; };
 		BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA366265C485200CCBEF9 /* DataHandler.swift */; };
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
@@ -58,7 +59,6 @@
 		CABB286E266AC61F000FA979 /* UserOneOrderReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB286D266AC61E000FA979 /* UserOneOrderReview.swift */; };
 		CAE7755026697E6400A19D4D /* UserOrdersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */; };
 		CAE7755526697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */; };
-		CAE7756E266981BF00A19D4D /* UserDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */; };
 		CAE7756F266981BF00A19D4D /* UserDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE7756D266981BF00A19D4D /* UserDashboardViewController.xib */; };
 		CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
@@ -313,7 +313,6 @@
 		BC9C00E3265D9DC90029C1EA /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BC9C00E6265DA0290029C1EA /* UIViewControllerExtension.swift */,
 				BC66C8CA265EDC16008C9C08 /* ViewControllerAsUIView.swift */,
 				CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */,
 				CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */,
@@ -720,6 +719,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCBF1BA3266D83BE000A2FD4 /* UserDashboardViewController.swift in Sources */,
 				DE39BD5D266150AF00B06800 /* CreditCardViewController.swift in Sources */,
 				DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */,
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
@@ -756,7 +756,6 @@
 				BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */,
 				BC415867265BFC640051F99B /* PaymentOptions+CoreDataClass.swift in Sources */,
 				BC415859265BFC640051F99B /* Review+CoreDataClass.swift in Sources */,
-				BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */,
 				CABB286E266AC61F000FA979 /* UserOneOrderReview.swift in Sources */,
 				DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */,
 				DE4E1569266D0CC60002F151 /* SavedItemsHostingController.swift in Sources */,

@@ -34,7 +34,7 @@ class StoreTabViewController: UITabBarController {
             //check if view has loaded
             if categoryView.isViewLoaded{
                 //set user and refresh categoryView controller
-                categoryView.user = UserViewModel(user: user!)
+                categoryView.userVM = UserViewModel(user: user!)
                 categoryView.viewDidLoad()
             }
         }

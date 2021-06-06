@@ -17,7 +17,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
 
     private var pickerData = [String]()
     private var selection = 0
-    var user : UserViewModel?
+    var userVM : UserViewModel?
 
 
     @IBOutlet weak var userLabel: UILabel!
@@ -29,11 +29,12 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         categoryPicker.dataSource = self
 
         pickerData = ["Featured","Cleaning","Precious Metals","Graphics Cards","Exercise Equipment","Car"]
-        if user == nil{
-            userLabel.text = "Welcome!"
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
         }
         else{
-            userLabel.text = user?.greeting()
+            userLabel.text = "Welcome!"
         }
         NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
     }

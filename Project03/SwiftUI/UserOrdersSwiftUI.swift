@@ -49,7 +49,7 @@ struct UserOrdersSwiftUI: View {
                      }.foregroundColor(.white)
                       .padding()
                      .sheet(isPresented: $isMenu) {
-                        ViewControllerAsUIView(storyboard: "UserDashboard", VC:"userDash" , prodData: nil)
+                        ViewControllerAsUIView(storyboard: "UserDashboard", VC:"userDash" , prodData: nil, userVM: nil)
                      }
                      Spacer()
                      Text("My Recent Orders").font(.system(size: 20))

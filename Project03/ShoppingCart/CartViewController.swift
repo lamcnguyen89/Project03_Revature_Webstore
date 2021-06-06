@@ -8,6 +8,7 @@
 import UIKit
 
 class CartViewController: UIViewController {
+
     @IBOutlet weak var userLabel: UILabel!
     
     var user : UserViewModel?
