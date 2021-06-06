@@ -34,6 +34,10 @@ struct CartScrollView: View {
                                 .resizable()
                                 .frame(width: 50, height: 50, alignment: .center)
                             Text(i.product!.name!)
+                            Spacer()
+                            Divider()
+                            Text("$" + String(i.product!.price * Double(i.number)))
+
                         }
                     }
                     .sheet(isPresented: $showProduct, content: {

@@ -14,6 +14,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var numOfItems: UILabel!
+    @IBOutlet weak var priceLabel: UITextField!
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
 
@@ -24,6 +25,7 @@ class ProductDetailViewController: UIViewController {
             desc.text = prodViewModel!.description
             productName.text = prodViewModel!.name
             img.image = UIImage(named: prodViewModel!.image)
+            priceLabel.text = prodViewModel!.price
         }
     }
 

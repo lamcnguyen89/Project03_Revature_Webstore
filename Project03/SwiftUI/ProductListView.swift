@@ -41,7 +41,17 @@ struct ProductListView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 100, height: 100, alignment: .center)
-                            Text(String(item.name!))
+                            Spacer()
+                            VStack{
+                                Spacer()
+                                Text(String(item.name!))
+                                    .multilineTextAlignment(.center)
+                                Spacer()
+                                Text("$"+String(item.price))
+                                    .multilineTextAlignment(.center)
+                                Spacer()
+                            }
+                            Spacer()
                         }
                     }.sheet(isPresented: $showProduct) {
                         ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item, userVM: user)

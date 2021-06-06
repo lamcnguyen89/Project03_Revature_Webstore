@@ -25,8 +25,8 @@ class ProductViewModel{
         return product.name!
     }
 
-    public var price : Double{
-        return product.price
+    public var price : String{
+        return String("$" + String(product.price))
     }
     public var description : String{
         return product.productDescription!
@@ -41,7 +41,6 @@ class ProductViewModel{
         }
         else {throw ProductErr.nilErr}
     }
-
     public func getRating() throws -> ProductRating {
         if let rating = product.rating{
             return rating
