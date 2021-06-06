@@ -21,7 +21,7 @@ struct UserWishlistSwiftUI: View {
             }.foregroundColor(.white)
              .padding()
             .sheet(isPresented: $isMenu) {
-                
+                ViewControllerAsUIView(storyboard: "UserDashboard", VC:"userDash" , prodData: nil)
             }
             Spacer()
             Text("My Wishlist").font(.system(size: 20))
