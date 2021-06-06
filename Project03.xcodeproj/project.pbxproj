@@ -86,6 +86,10 @@
 		DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */; };
 		DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */; };
 		DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */; };
+		DE4E1569266D0CC60002F151 /* SavedItemsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */; };
+		DE4E156E266D0D010002F151 /* WishListHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E156D266D0D010002F151 /* WishListHostingController.swift */; };
+		DE4E1573266D0D2E0002F151 /* MyOrdersHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1572266D0D2E0002F151 /* MyOrdersHostingController.swift */; };
+		DE4E1578266D0D600002F151 /* AccountSettingsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1577266D0D600002F151 /* AccountSettingsHostingController.swift */; };
 		DEE466E02666EDEF006537B1 /* NetBankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */; };
 		DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -197,6 +201,10 @@
 		DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderHostingController.swift; sourceTree = "<group>"; };
 		DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFrameViewController.swift; sourceTree = "<group>"; };
 		DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterShoppingCartViewController.swift; sourceTree = "<group>"; };
+		DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsHostingController.swift; sourceTree = "<group>"; };
+		DE4E156D266D0D010002F151 /* WishListHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListHostingController.swift; sourceTree = "<group>"; };
+		DE4E1572266D0D2E0002F151 /* MyOrdersHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOrdersHostingController.swift; sourceTree = "<group>"; };
+		DE4E1577266D0D600002F151 /* AccountSettingsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsHostingController.swift; sourceTree = "<group>"; };
 		DEE466DF2666EDEF006537B1 /* NetBankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingViewController.swift; sourceTree = "<group>"; };
 		DEEA3C7F265C8FAB00CCFB6D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		F8CABE5F59310AEAFA2D866F /* Pods_Project03_Project03UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project03_Project03UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +361,10 @@
 				CA38571726669777008FE583 /* UserDashTabBarController.swift */,
 				CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */,
 				CAE7756D266981BF00A19D4D /* UserDashboardViewController.xib */,
+				DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */,
+				DE4E156D266D0D010002F151 /* WishListHostingController.swift */,
+				DE4E1572266D0D2E0002F151 /* MyOrdersHostingController.swift */,
+				DE4E1577266D0D600002F151 /* AccountSettingsHostingController.swift */,
 			);
 			path = UserDashboard;
 			sourceTree = "<group>";
@@ -714,6 +726,7 @@
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC7E34E0265E9788006CE75A /* ShoppingCart+CoreDataClass.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,
+				DE4E156E266D0D010002F151 /* WishListHostingController.swift in Sources */,
 				CAE7755026697E6400A19D4D /* UserOrdersSwiftUI.swift in Sources */,
 				DE39BD2A2660A26D00B06800 /* OrderConfirmationViewController.swift in Sources */,
 				BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */,
@@ -722,6 +735,7 @@
 				BC9C00E7265DA0290029C1EA /* UIViewControllerExtension.swift in Sources */,
 				CABB286E266AC61F000FA979 /* UserOneOrderReview.swift in Sources */,
 				DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */,
+				DE4E1569266D0CC60002F151 /* SavedItemsHostingController.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
 				BC3FBB2A26669D7200F21C06 /* AddressViewModel.swift in Sources */,
 				CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */,
@@ -732,6 +746,7 @@
 				BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */,
 				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
 				BCB248A82668173E00D01EC0 /* CategoryScrollHostingController.swift in Sources */,
+				DE4E1578266D0D600002F151 /* AccountSettingsHostingController.swift in Sources */,
 				DE385EAE265F6F0200F7EE96 /* SignUpViewController.swift in Sources */,
 				BC41586B265BFC640051F99B /* Category+CoreDataClass.swift in Sources */,
 				BC9C00E0265D82FD0029C1EA /* ProductViewModel.swift in Sources */,
@@ -748,6 +763,7 @@
 				BC415869265BFC640051F99B /* Brand+CoreDataClass.swift in Sources */,
 				BC41585B265BFC640051F99B /* User+CoreDataClass.swift in Sources */,
 				DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */,
+				DE4E1573266D0D2E0002F151 /* MyOrdersHostingController.swift in Sources */,
 				BC7E34E7265E99BC006CE75A /* ShoppingCartViewModel.swift in Sources */,
 				BC3FBB202666805300F21C06 /* PaymentTypeViewModel.swift in Sources */,
 				BC9C00E5265D9DE60029C1EA /* ShoppingCartScrollView.swift in Sources */,
