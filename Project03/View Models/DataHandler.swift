@@ -44,7 +44,15 @@ class DataHandler {
         }
         return products
     }
-
+    
+    func getProductName() -> [String]{
+        let prods: [Product] = fetchAllProducts()
+        var prodsName = [String]()
+        for p in prods {
+            prodsName.append(p.name!)
+        }
+        return prodsName
+    }
 
     func importCSV(){
         let queue = OperationQueue()
