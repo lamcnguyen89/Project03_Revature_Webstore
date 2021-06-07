@@ -61,7 +61,6 @@ class DataHandler {
         return prodsName
     }
 
-
     //MARK: - CSV Parse
     func importProducts(){
 

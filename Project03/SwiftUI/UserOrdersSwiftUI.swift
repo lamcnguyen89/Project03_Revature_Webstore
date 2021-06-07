@@ -37,9 +37,12 @@ struct UserOrdersSwiftUI: View {
     
     //var history: FetchRequest<OrderHistory>
     @State var isMenu:Bool = false
-    @State private var isProductsInOrderPresented = false
     @State var testDB:[String] = DataHandler.inst.getProductName()
     
+
+   // @State private var isProductsInOrderPresented = false
+        
+
     @State var orderNum = ["OR-1234", "OR-1111", "OR-9888", "OR-5555"]
     @State var currentOrderNum:String = ""
     

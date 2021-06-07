@@ -12,14 +12,21 @@ struct UserReturnsSwiftUIView: View {
     var returnList = [String]()
     
     var body: some View {
+
+        if returnList.isEmpty{
+            Text("You have not chosen any items to return. Please return to previous screen.")
+        }
+
         List(returnList, id:\.self){ prd in
             Text("\(prd)")
         }
         Spacer()
         NavigationLink(destination: UserOrdersSwiftUI()){
 
-                Text("Confirm Return Items").foregroundColor(.white)
+            Text("Confirm Return Items").foregroundColor(.white)
+
                 .frame(maxWidth: .infinity).padding().background(Color.blue)
+
         }
         
     }// end body
