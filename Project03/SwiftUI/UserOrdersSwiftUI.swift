@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct OrderRowView: View {
-    var orderNum: String = "OR1234"
+    
     var body: some View {
         VStack{
                HStack{
-               Text("Order Date \(orderNum)")
+               Text("Order Date")
                Spacer()
                Text("Total Price")
                }.padding(3)
@@ -37,7 +37,14 @@ struct UserOrdersSwiftUI: View {
     
     //var history: FetchRequest<OrderHistory>
     @State var isMenu:Bool = false
-    @State private var isProductsInOrderPresented = false
+    @State var testDB:[String] = DataHandler.inst.getProductName()
+    
+
+   // @State private var isProductsInOrderPresented = false
+        
+
+    @State var orderNum = ["OR-1234", "OR-1111", "OR-9888", "OR-5555"]
+    @State var currentOrderNum:String = ""
     
     var body: some View {
         VStack{
@@ -57,41 +64,65 @@ struct UserOrdersSwiftUI: View {
                      }// header hStack
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
+
                 Spacer()
-            }
+                NavigationLink(destination:UserSaveItemsSwiftUIswift()){
+                        Text("Account Menu")
+                            .foregroundColor(.white)
+                    }.padding()
+                //Spacer()
+                }// header hStack
+                .frame(maxWidth: .infinity)
+           //     .background(Color.white)
             HStack{
              Image(systemName: "shippingbox.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 50, height: 50)
                 .foregroundColor(.white)
-                Text("Orders").font(.largeTitle)
+                Text("My Orders").font(.largeTitle)
                     .foregroundColor(.white)
             }
-            .frame(maxWidth: .infinity, maxHeight: 200)
-                .padding()
+            .frame(maxWidth: .infinity, maxHeight: 100)
+            //    .padding()
+            NavigationView{
             List{
-             ForEach(0..<10){ order in
-               // NavigationLink(destination: OrderProductList()) {
-               //     OrderRowView()
-              //  }// navigation link
-                OrderRowView().onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
-                    print("made a tap on \(order)")
-                    isProductsInOrderPresented = true
-                }).sheet(isPresented: $isProductsInOrderPresented){
-                    UserOneOrderReview()
+                 Section(header: Text("Order by most recent")){
+                    ForEach(orderNum, id:\.self){ num in
+                    
+                        NavigationLink(destination: OrderProductList(currentNum: num)){
+                            VStack{
+                                   HStack{
+                                   Text("Order Number: \(num)")
+                                   Spacer()
+                                   Text("Total Price")
+                                   }.padding(3)
+                                   HStack{
+                                       Text("[Delivered |On its Way]")
+                                           .foregroundColor(Color.orange)
+                                       Spacer()
+                                   }.padding()
+                               }
+                               .background(Color.white)
+                               .padding(5)
+                        }
+                    }
                 }
-             }
-            }
+            }// end list
+            .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)
+            }.navigationBarHidden(true)
+        }
+            /*
             Spacer()
             Button(action:{})
                 {
                 Text("Continue Shopping").foregroundColor(.white)
             }.frame(maxWidth: .infinity).padding().background(Color.blue)
-            }
-           .frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.blue)
-           .edgesIgnoringSafeArea(.bottom)
+ */
+        .frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.blue)
+        Spacer()
     }// end body:view
+    
 }
 
 struct UserOrdersSwiftUI_Previews: PreviewProvider {
@@ -101,7 +132,67 @@ struct UserOrdersSwiftUI_Previews: PreviewProvider {
 }
 
 struct OrderProductList: View{
+    @State var isMenu:Bool = false
+    
+    @State var isReturn:Bool = false
+    @State var row = 0
+    @State var lstReturnProduct = [String]()//add product.name if row btn checked
+    @State var product: [Product] = [
+        .init(name: "Name 1", image: "6700XT", totalPrice: "56.00", isAReturn: false),
+        .init(name: "Name 2", image: "6700XT", totalPrice: "235.00", isAReturn: false),
+        .init(name: "Name 3", image: "6700XT", totalPrice: "9000.00", isAReturn: false),
+        .init(name: "Name 4", image: "6700XT", totalPrice: "299.00", isAReturn: false)
+    ]
+    @State var select = Set<UUID>()
+    var currentNum:String = "Goes Here"
+    
     var body: some View {
-        Text("View list of products in orders")
+        Text("Order Number: \(currentNum)")
+        NavigationView{
+            List(selection: $select){
+                ForEach(product) { p in
+                     HStack{
+                        
+                        Text("Product Name \(p.name)")
+                            Image("\(p.image)").resizable().aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                .padding()
+                        //Text("Total: \(p.totalPrice)")
+                     }.onTapGesture{
+                        isReturn.toggle()
+                        self.updateReturnLst(prd: p.name, isBool: isReturn)
+                    }
+                }
+            }// end List
+            .navigationBarItems(trailing: EditButton())
+        }
+        Spacer()
+        NavigationLink(destination: UserReturnsSwiftUIView(returnList: lstReturnProduct)){
+
+                Text("Return Items").foregroundColor(.white)
+                .frame(maxWidth: .infinity).padding().background(Color.blue)
+        }
+        
+    }// end productlist.body
+    
+    private func updateReturnLst(prd:String, isBool: Bool){
+        switch isBool{
+        case true:
+            lstReturnProduct.append(prd)
+        case false:
+            for (i,v) in lstReturnProduct.enumerated(){
+                if v == prd {
+                    lstReturnProduct.remove(at: i)
+                }
+            }
+        }
+        
     }
+    struct Product : Identifiable {
+        let id = UUID()
+        var name:String
+        var image: String
+        var totalPrice: String
+        var isAReturn:Bool
+        }
 }

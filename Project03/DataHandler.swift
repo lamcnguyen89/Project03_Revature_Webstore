@@ -40,8 +40,30 @@ class DataHandler {
         let store = fetchStore()
         return store.categories?.array as! [Category]
     }
+
+
+    //MARK: - Product Related
+    func fetchAllProducts() -> [Product]{
+        var products = [Product]()
+        let categories = fetchAllCategories()
+        for item in categories{
+            products.append(contentsOf: item.products?.array as! [Product])
+        }
+        return products
+    }
+    
+    func getProductName() -> [String]{
+        let prods: [Product] = fetchAllProducts()
+        var prodsName = [String]()
+        for p in prods {
+            prodsName.append(p.name!)
+        }
+        return prodsName
+    }
+
     //MARK: - CSV Parse
     func importProducts(){
+
         let queue = OperationQueue()
         let prodCSVGroup = DispatchGroup()
         let prodFetchReq = NSFetchRequest<Product>.init(entityName: "Product")

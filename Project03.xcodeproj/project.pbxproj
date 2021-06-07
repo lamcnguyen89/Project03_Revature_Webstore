@@ -50,6 +50,7 @@
 		BCCCA369265C4D7E00CCBEF9 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCCA368265C4D7E00CCBEF9 /* UserViewModel.swift */; };
 		BCD8349E266A75FE00411243 /* StoreTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD8349D266A75FE00411243 /* StoreTabViewController.swift */; };
 		CA38571826669777008FE583 /* UserDashTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA38571726669777008FE583 /* UserDashTabBarController.swift */; };
+		CA3DFF16266D208A008B57A8 /* UserReturnsSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3DFF15266D208A008B57A8 /* UserReturnsSwiftUIView.swift */; };
 		CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */; };
 		CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
@@ -160,6 +161,7 @@
 		BCD8349D266A75FE00411243 /* StoreTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTabViewController.swift; sourceTree = "<group>"; };
 		C3EDE5AAE91129B6C15A4D78 /* Pods-Project03Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03Tests.release.xcconfig"; path = "Target Support Files/Pods-Project03Tests/Pods-Project03Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CA38571726669777008FE583 /* UserDashTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashTabBarController.swift; sourceTree = "<group>"; };
+		CA3DFF15266D208A008B57A8 /* UserReturnsSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReturnsSwiftUIView.swift; sourceTree = "<group>"; };
 		CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWishlistSwiftUI.swift; sourceTree = "<group>"; };
 		CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveItemsSwiftUIswift.swift; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */,
 				CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */,
 				CABB286D266AC61E000FA979 /* UserOneOrderReview.swift */,
+				CA3DFF15266D208A008B57A8 /* UserReturnsSwiftUIView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -742,6 +745,7 @@
 				CA38571826669777008FE583 /* UserDashTabBarController.swift in Sources */,
 				BC7E34DD265E92EC006CE75A /* CartHostingController.swift in Sources */,
 				DE39BD582661444B00B06800 /* InnerViewReviewOrderViewController.swift in Sources */,
+				CA3DFF16266D208A008B57A8 /* UserReturnsSwiftUIView.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */,
