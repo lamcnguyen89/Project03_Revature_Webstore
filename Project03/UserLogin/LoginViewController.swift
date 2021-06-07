@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var displayOutput: UILabel!
     
     var answer: Int!
-    
+    var dataHandler = DataHandler()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +26,9 @@ class LoginViewController: UIViewController {
     @IBAction func submitLogin(_ sender: Any) {
 
 
-        if( username.text! != "" && password.text! != "" ) {
+        if username.text! != "" && password.text! != ""  {
             do{
-                let data = try DataHandler.inst.getOneUser(name: username.text!)
+                let data = try dataHandler.getOneUser(name: username.text!)
                 if data.password == password.text! {
                     displayOutput.text = "Login was successful"
 
@@ -63,12 +63,10 @@ class LoginViewController: UIViewController {
                 password.text = ""
                 displayOutput.text = "Wrong password or Username"
             }
-
         } else {
             displayOutput.text = "Fill in all text fields"
             
         }
-
     }
     
     
@@ -76,20 +74,18 @@ class LoginViewController: UIViewController {
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let wel = sb.instantiateViewController(withIdentifier: "CreateAccount") as! SignUpViewController
         self.present(wel, animated: true, completion: nil)
-        
     }
     
     @IBAction func resetPassword(_ sender: Any) {
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let wel = sb.instantiateViewController(withIdentifier: "ResetPassword") as! ResetPasswordViewController
         self.present(wel, animated: true, completion: nil)
-        
     }
-    
-    
-    @IBAction func storeFront(_ sender: Any) {
-        let sb = UIStoryboard(name: "Main", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier:  "categoryList")
-        self.present(show, animated: true, completion: nil)    }
-    
+
+    @IBAction func logout(_ sender: Any) {
+        let data = try! dataHandler.getOneUser(name: "Guest")
+        (parent as! StoreTabViewController).user = data
+        (parent as! StoreTabViewController).userDidUpdate()
+    }
 }
+
