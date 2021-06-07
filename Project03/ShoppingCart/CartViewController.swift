@@ -14,8 +14,8 @@ class CartViewController: UIViewController {
     var user : UserViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        user = UserViewModel(user: (parent as! StoreTabViewController).user!)
+        let parentUser = (parent as! StoreTabViewController).user!
+        user = UserViewModel(user: parentUser)
         if user == nil{
             userLabel.text = "Welcome!"
         }

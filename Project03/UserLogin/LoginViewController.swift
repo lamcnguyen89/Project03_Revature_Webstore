@@ -19,43 +19,58 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-       
+
+
     }
     
     @IBAction func submitLogin(_ sender: Any) {
 
 
         if( username.text! != "" && password.text! != "" ) {
-            
-            let data = DataHandler.inst.getOneUser(name: username.text!)
-            
-            if data.password == password.text! {
-                displayOutput.text = "Login was successful"
-                
-                print("Username: \(data.name!) \nPassword: \(data.password!)")
-                
-                username.text = ""
-                password.text = ""
-               // let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                // This instantiates or shows the storyboard object/view controller that you want to show once you log in.
-               // let wel = sb.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController
-                
-                // Function which belongs to UIviewController. If this isn't called, the next screen will not show up.
-                // This shows the screen once you log on.
-              //  self.present(wel, animated: true, completion: nil)
-            } else {
+            do{
+                let data = try DataHandler.inst.getOneUser(name: username.text!)
+                if data.password == password.text! {
+                    displayOutput.text = "Login was successful"
+
+                    print("Username: \(data.name!) \nPassword: \(data.password!)")
+                    var appUser = (parent as! StoreTabViewController).user
+
+
+                    if appUser?.name == "Guest" && appUser?.shoppingCart != nil{
+                        //store shopping cart data in incoming user
+                        data.shoppingCart = appUser?.shoppingCart
+                        data.shoppingCart?.user = data
+                        print(appUser?.shoppingCart)
+                        //reset guest account
+                        appUser?.reset()
+                    }
+
+                    //set app user to incoming user
+
+                    (parent as! StoreTabViewController).user = data
+
+                    //update views
+                    (parent as! StoreTabViewController).userDidUpdate()
+
+                    username.text = ""
+                    password.text = ""
+                    // let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+
+                    //  self.present(wel, animated: true, completion: nil)}
+                }
+            }
+            catch{
                 print("Wrong password or Username. Try again.")
                 password.text = ""
                 displayOutput.text = "Wrong password or Username"
             }
+
         } else {
             displayOutput.text = "Fill in all text fields"
             
         }
- 
-     }
+
+    }
     
     
     @IBAction func createAccount(_ sender: Any) {

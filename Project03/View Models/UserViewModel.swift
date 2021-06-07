@@ -35,7 +35,7 @@ class UserViewModel{
     }
     
     public func greeting() -> String{
-        return "Hello " + name
+        return "Hello " + firstName
     }
 
     public func getReviews() throws -> [Review] {

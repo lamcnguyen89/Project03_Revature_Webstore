@@ -41,7 +41,7 @@ class ResetPasswordViewController: UIViewController {
             
             if password.text == confirmPassword.text {
                 
-                let data = DataHandler.inst.getOneUser(name: username.text!)
+                let data = try! DataHandler.inst.getOneUser(name: username.text!)
                 print(data.name!)
                 
                 if data.name != nil &&

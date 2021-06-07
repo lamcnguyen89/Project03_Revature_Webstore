@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3rj-J5-UDA" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-723.1884057971015" y="-745.3125"/>
+            <point key="canvasLocation" x="-883" y="-759"/>
         </scene>
         <!--Product List View Controller-->
         <scene sceneID="ft1-5f-XYQ">
@@ -290,7 +290,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vJg-MD-j5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-723.1884057971015" y="0.6696428571428571"/>
+            <point key="canvasLocation" x="-884" y="-67"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kab-sy-AC2">
@@ -311,7 +311,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjJ-oA-yOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200" y="1281"/>
+            <point key="canvasLocation" x="893" y="1074"/>
         </scene>
         <!--Payment-->
         <scene sceneID="pjU-sc-w7q">
@@ -423,7 +423,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-kG-9vr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="i0a-dH-4MY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="222" y="473"/>
+            <point key="canvasLocation" x="162" y="286"/>
         </scene>
         <!--Credit Card Frame View Controller-->
         <scene sceneID="BcV-j9-dME">
@@ -491,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-OY-RYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="473"/>
+            <point key="canvasLocation" x="894" y="286"/>
         </scene>
         <!--Net Banking View Controller-->
         <scene sceneID="xge-Cl-LFp">
@@ -784,7 +784,7 @@
                 <hostingController id="zkb-J3-76l" customClass="CartHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWm-gI-iF1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-722" y="739"/>
+            <point key="canvasLocation" x="-883" y="562"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="YJg-WJ-xva">
@@ -871,6 +871,7 @@
                                     <action selector="chooseCashOnDelivery:" destination="i0a-dH-4MY" eventType="touchUpInside" id="4Bt-4o-r6X"/>
                                     <action selector="chooseCashOnDelivery:" destination="IXw-OH-uT6" eventType="touchUpInside" id="4my-ZC-TrD"/>
                                     <action selector="createAccount:" destination="ov7-EM-JZC" eventType="touchUpInside" id="Kn2-aZ-V5d"/>
+                                    <segue destination="x00-pK-1Bz" kind="show" id="2yw-w7-krQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-65-e8H">
@@ -888,6 +889,7 @@
                                     <action selector="chooseCashOnDelivery:" destination="IXw-OH-uT6" eventType="touchUpInside" id="J1Y-Wj-UAX"/>
                                     <action selector="chooseCashOnDelivery:" destination="i0a-dH-4MY" eventType="touchUpInside" id="fKF-IT-ro1"/>
                                     <action selector="resetPassword:" destination="ov7-EM-JZC" eventType="touchUpInside" id="H7l-YM-Hoz"/>
+                                    <segue destination="Q8E-YZ-glc" kind="show" id="zyj-Z3-KiU"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Output Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdx-0H-xMQ">
@@ -926,6 +928,7 @@
                         <viewLayoutGuide key="safeArea" id="Min-rv-SmS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="eEo-oN-qVW"/>
                     <navigationItem key="navigationItem" id="OvV-d7-nvJ"/>
                     <connections>
                         <outlet property="displayOutput" destination="Hdx-0H-xMQ" id="l2E-mS-zP6"/>
@@ -935,14 +938,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipd-xt-1Tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-883" y="1432"/>
+            <point key="canvasLocation" x="-2546" y="561"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qSr-VU-kB4">
             <objects>
                 <viewController storyboardIdentifier="CreateAccount" id="x00-pK-1Bz" customClass="SignUpViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJ4-lG-KuZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beB-Iu-adM">
@@ -1127,14 +1130,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3SJ-03-ltC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-209" y="1433"/>
+            <point key="canvasLocation" x="-3593" y="560"/>
         </scene>
         <!--Reset Password View Controller-->
         <scene sceneID="H3u-cU-tld">
             <objects>
                 <viewController storyboardIdentifier="ResetPassword" id="Q8E-YZ-glc" customClass="ResetPasswordViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sj5-kU-26c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mX8-4t-fh6">
@@ -1308,6 +1311,7 @@
                         <viewLayoutGuide key="safeArea" id="oLn-vu-zmN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zya-dO-lXh"/>
                     <connections>
                         <outlet property="confirmPassword" destination="2f4-L7-Fzs" id="bA0-1E-cZp"/>
                         <outlet property="email" destination="Enj-V3-L2d" id="hYB-PL-ziS"/>
@@ -1320,7 +1324,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zx3-wy-aZf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="2135"/>
+            <point key="canvasLocation" x="-1770" y="561"/>
         </scene>
         <!--Category Hosting Controller-->
         <scene sceneID="oOL-i9-dVp">
@@ -1903,6 +1907,7 @@
                     <connections>
                         <segue destination="j28-CW-FWz" kind="relationship" relationship="viewControllers" id="rmC-yK-yUN"/>
                         <segue destination="inA-Gv-GzG" kind="relationship" relationship="viewControllers" id="0Bh-We-HjB"/>
+                        <segue destination="ov7-EM-JZC" kind="relationship" relationship="viewControllers" id="bRX-Hg-qNL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjb-zI-Jb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2122,6 +2127,7 @@
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <image name="shippingbox" catalog="system" width="128" height="124"/>
