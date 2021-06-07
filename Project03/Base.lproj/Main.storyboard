@@ -839,10 +839,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-nB-cKj">
-                                <rect key="frame" x="44" y="491" width="300" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-nB-cKj">
+                                <rect key="frame" x="57" y="492" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="w8B-Gz-7GV"/>
+                                    <constraint firstAttribute="height" constant="55" id="zDD-fU-IxE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Login">
@@ -856,15 +859,17 @@
                                     <action selector="submitLogin:" destination="ov7-EM-JZC" eventType="touchUpInside" id="aOL-6V-s7q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-xI-BMm">
-                                <rect key="frame" x="44" y="565" width="300" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-xI-BMm">
+                                <rect key="frame" x="57" y="566" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="mbZ-GH-NjD"/>
+                                    <constraint firstAttribute="height" constant="55" id="wQy-EQ-DZC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
                                 <connections>
@@ -874,15 +879,17 @@
                                     <segue destination="x00-pK-1Bz" kind="show" id="2yw-w7-krQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-65-e8H">
-                                <rect key="frame" x="44" y="639" width="300" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-65-e8H">
+                                <rect key="frame" x="57" y="640" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="4j8-jc-EYh"/>
+                                    <constraint firstAttribute="width" constant="300" id="Hr5-An-mhm"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <imageReference key="image" image="checkmark.seal" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
                                 <connections>
@@ -903,16 +910,6 @@
                                 <rect key="frame" x="0.0" y="102" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXK-Ic-Cf0">
-                                        <rect key="frame" x="334" y="13" width="51" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" backgroundImage="list.bullet" catalog="system"/>
-                                        <connections>
-                                            <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="f7b-KG-gsk"/>
-                                            <action selector="storeFront:" destination="ov7-EM-JZC" eventType="touchUpInside" id="MI2-cJ-j3E"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOY-Mj-Gp8">
                                         <rect key="frame" x="18" y="-2" width="300" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -924,9 +921,37 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration" label="header user section"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Led-CZ-cW3">
+                                <rect key="frame" x="57" y="714" width="300" height="55"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="RQt-z9-bKh"/>
+                                    <constraint firstAttribute="width" constant="300" id="Rc0-Fs-PXf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="xmark.seal" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="ov7-EM-JZC" eventType="touchUpInside" id="z2t-7V-qRf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Min-rv-SmS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fzw-65-e8H" firstAttribute="centerX" secondItem="ePI-y8-r0Z" secondAttribute="centerX" id="0Na-iw-bYQ"/>
+                            <constraint firstItem="HYM-xI-BMm" firstAttribute="centerX" secondItem="ePI-y8-r0Z" secondAttribute="centerX" id="50g-0x-LoR"/>
+                            <constraint firstItem="Led-CZ-cW3" firstAttribute="centerX" secondItem="ePI-y8-r0Z" secondAttribute="centerX" id="5Xg-j9-d6r"/>
+                            <constraint firstItem="Led-CZ-cW3" firstAttribute="top" secondItem="fzw-65-e8H" secondAttribute="bottom" constant="19" id="6Ci-Jt-lvf"/>
+                            <constraint firstItem="Min-rv-SmS" firstAttribute="bottom" secondItem="Led-CZ-cW3" secondAttribute="bottom" constant="44" id="76R-cF-wyc"/>
+                            <constraint firstItem="fzw-65-e8H" firstAttribute="top" secondItem="HYM-xI-BMm" secondAttribute="bottom" constant="19" id="E9K-6x-QJ3"/>
+                            <constraint firstItem="Bhf-nB-cKj" firstAttribute="centerX" secondItem="ePI-y8-r0Z" secondAttribute="centerX" id="FrE-w1-nQB"/>
+                            <constraint firstItem="HYM-xI-BMm" firstAttribute="top" secondItem="Bhf-nB-cKj" secondAttribute="bottom" constant="19" id="Gfa-nF-whY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="eEo-oN-qVW"/>
                     <navigationItem key="navigationItem" id="OvV-d7-nvJ"/>
@@ -1046,7 +1071,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0q8-Hu-vgN">
-                                <rect key="frame" x="43" y="679" width="300" height="55"/>
+                                <rect key="frame" x="43" y="661" width="300" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
@@ -1070,8 +1095,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOS-Ec-YDo">
+                                <rect key="frame" x="0.0" y="102" width="414" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh6-iO-sez">
+                                        <rect key="frame" x="26" y="-2" width="300" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <accessibility key="accessibilityConfiguration" label="header user section"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iG-sT-jdt">
-                                <rect key="frame" x="43" y="773" width="300" height="55"/>
+                                <rect key="frame" x="43" y="724" width="300" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
@@ -1088,31 +1128,6 @@
                                     <action selector="submitLogin:" destination="ov7-EM-JZC" eventType="touchUpInside" id="ncT-Dg-M9M"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JOS-Ec-YDo">
-                                <rect key="frame" x="0.0" y="102" width="414" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU4-Ao-0eF">
-                                        <rect key="frame" x="334" y="13" width="51" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" backgroundImage="list.bullet" catalog="system"/>
-                                        <connections>
-                                            <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="1Tq-WI-mgb"/>
-                                            <action selector="storeFront:" destination="x00-pK-1Bz" eventType="touchUpInside" id="Ekc-3c-bDH"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh6-iO-sez">
-                                        <rect key="frame" x="26" y="-2" width="300" height="59"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <accessibility key="accessibilityConfiguration" label="header user section"/>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xlL-VM-wUu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1286,16 +1301,6 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHE-77-Eti">
-                                        <rect key="frame" x="334" y="13" width="51" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" backgroundImage="list.bullet" catalog="system"/>
-                                        <connections>
-                                            <action selector="getUserDashboard:" destination="j28-CW-FWz" eventType="touchUpInside" id="PBv-Dx-325"/>
-                                            <action selector="storeFront:" destination="Q8E-YZ-glc" eventType="touchUpInside" id="bi5-5w-rlh"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZx-Sg-UeW">
                                         <rect key="frame" x="26" y="-2" width="300" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2132,6 +2137,7 @@
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <image name="shippingbox" catalog="system" width="128" height="124"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="xmark.seal" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
