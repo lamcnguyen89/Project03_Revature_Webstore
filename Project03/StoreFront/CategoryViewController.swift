@@ -18,7 +18,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private var pickerData = [String]()
     private var selection = 0
     var userVM : UserViewModel?
-
+    private var pickerLabels = [String]()
 
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -27,7 +27,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
-
+        pickerLabels = ["Featured","Cleaning", "Metals", "GPUs","Exercise","Vehicles"]
         pickerData = ["Featured","Cleaning","Precious Metals","Graphics Cards","Exercise Equipment","Car"]
         if let user = (parent as? StoreTabViewController)?.user {
             userVM = UserViewModel(user: user)
@@ -48,7 +48,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return pickerData.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerData[row]
+        return pickerLabels[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selection = row

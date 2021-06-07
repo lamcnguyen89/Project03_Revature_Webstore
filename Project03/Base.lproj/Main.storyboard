@@ -423,7 +423,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-kG-9vr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="i0a-dH-4MY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="142" y="473"/>
+            <point key="canvasLocation" x="222" y="473"/>
         </scene>
         <!--Credit Card Frame View Controller-->
         <scene sceneID="BcV-j9-dME">
@@ -491,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-OY-RYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="472.76785714285711"/>
+            <point key="canvasLocation" x="899" y="473"/>
         </scene>
         <!--Net Banking View Controller-->
         <scene sceneID="xge-Cl-LFp">
@@ -613,7 +613,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCE-4v-aKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2109" y="473"/>
+            <point key="canvasLocation" x="2267" y="473"/>
         </scene>
         <!--Shipment-->
         <scene sceneID="lxk-PB-4gI">
@@ -1328,7 +1328,7 @@
                 <hostingController id="yRW-Vx-XsR" customClass="CategoryHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Egj-l5-h15" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720" y="-637"/>
+            <point key="canvasLocation" x="506" y="-745"/>
         </scene>
         <!--ProductDetail-->
         <scene sceneID="9Ff-ep-lIW">
@@ -1421,10 +1421,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Price]" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuK-C3-kBj">
-                                <rect key="frame" x="20" y="341" width="60" height="34"/>
+                                <rect key="frame" x="20" y="341" width="90" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="g7t-fc-U8k"/>
-                                    <constraint firstAttribute="width" constant="60" id="xOO-ZI-rZq"/>
+                                    <constraint firstAttribute="width" constant="90" id="xOO-ZI-rZq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2107,7 +2107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3C-gV-T7m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.521739130435" y="490.84821428571428"/>
+            <point key="canvasLocation" x="1594" y="500"/>
         </scene>
     </scenes>
     <resources>
