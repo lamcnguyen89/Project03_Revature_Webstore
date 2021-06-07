@@ -45,7 +45,23 @@ struct UserOrdersSwiftUI: View {
     
     var body: some View {
         VStack{
-            HStack{
+            ZStack{
+                HStack{
+                     Button(action:{isMenu = true})
+                     {
+                         Image(systemName: "chevron.backward")
+                     }.foregroundColor(.white)
+                      .padding()
+                     .sheet(isPresented: $isMenu) {
+                        ViewControllerAsUIView(storyboard: "UserDashboard", VC:"userDash" , prodData: nil, userVM: nil)
+                     }
+                     Spacer()
+                     Text("My Recent Orders").font(.system(size: 20))
+                         .foregroundColor(Color.white).padding()
+                     }// header hStack
+                .frame(maxWidth: .infinity)
+                .background(Color.blue)
+
                 Spacer()
                 NavigationLink(destination:UserSaveItemsSwiftUIswift()){
                         Text("Account Menu")

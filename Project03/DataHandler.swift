@@ -20,6 +20,12 @@ class DataHandler {
     init(){
         context = ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext)!
     }
+
+    //MARK: - Shopping Cart Related
+    func getShoppingCart(){
+
+    }
+
     //MARK: - PaymentOption Related
     func addACHOption(){
 
@@ -27,13 +33,14 @@ class DataHandler {
     //MARK: - Store Related
     func fetchStore() -> Store{
         let fetchReq = NSFetchRequest<Store>(entityName: "Store")
-        return try! (context?.fetch(fetchReq).first!)!
+        return try! (context!.fetch(fetchReq).first!)
     }
     //MARK: - Category Related
     func fetchAllCategories() -> [Category]{
         let store = fetchStore()
         return store.categories?.array as! [Category]
     }
+
 
     //MARK: - Product Related
     func fetchAllProducts() -> [Product]{
@@ -54,38 +61,44 @@ class DataHandler {
         return prodsName
     }
 
-    func importCSV(){
-        let queue = OperationQueue()
-        let csvGroup = DispatchGroup()
-        let fetchReq = NSFetchRequest<NSManagedObject>.init(entityName: "Product")
 
-            csvGroup.enter()
-            DispatchQueue.global().async{ [self] in
-                //create a new background MOC based on main MOC for async thread
-                let backgroundMOC: NSManagedObjectContext = {
+    //MARK: - CSV Parse
+    func importProducts(){
+
+        let queue = OperationQueue()
+        let prodCSVGroup = DispatchGroup()
+        let prodFetchReq = NSFetchRequest<Product>.init(entityName: "Product")
+
+        prodCSVGroup.enter()
+        DispatchQueue.global().async{ [self] in
+
+            //create a new background MOC based on main MOC for async thread
+            let prodBackgroundMOC: NSManagedObjectContext = {
                 let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
                 moc.parent = context
                 return moc
-                }()
-                let fetch = try! backgroundMOC.fetch(fetchReq)
-                if fetch.count < 42 {
-                    //remove all artifacts before regenerating products
-                    for item in fetch{
-                        self.context?.delete(item)
-                    }
-                    let getCSV = AsyncCSV(context: backgroundMOC)
-                    print("starting CSV import")
-                    queue.addOperations([getCSV], waitUntilFinished: true)
+            }()
+            let fetch = try! prodBackgroundMOC.fetch(prodFetchReq)
+            if fetch.count < 42 {
+                //remove all artifacts before regenerating products
+                for item in fetch{
+                    self.context?.delete(item)
                 }
-                csvGroup.leave()
+                //using operations and operation queue allows for KVO compliant threads
+                //in this current build KVO compliance isn't necessary, but does allow for expandibility in the future
+                let getCSV = AsyncCSV(context: prodBackgroundMOC)
+                print("starting Product import")
+                queue.addOperations([getCSV], waitUntilFinished: true)
             }
-            csvGroup.notify(queue: .global()) {
-//                sleep(1)
-                print("CSV loading complete")
-                NotificationCenter.default.post(name: .didCompleteCSV, object: nil)
-            }
+            prodCSVGroup.leave()
         }
 
+        prodCSVGroup.notify(queue: .global()) {
+            //                sleep(1)
+            print("product loading complete")
+            NotificationCenter.default.post(name: .didCompleteProductImport, object: nil)
+        }
+    }
     func generateInitialProducts(){
         var prodArray = [Product]()
         var csv : CSV?
@@ -93,16 +106,79 @@ class DataHandler {
         let resource = try! CSV(url: url)
         csv = resource
 
+
         for item in csv!.namedRows{
             let prod = Product(context: context!)
             prod.update(dictionary: item, store: getStore())
             prodArray.append(prod)
             print(item)
-//            let ms = 1000
-//            usleep(useconds_t(25 * ms))
+            //            let ms = 1000
+            //            usleep(useconds_t(25 * ms))
         }
         print(prodArray)
-        try! context?.save()
+        try! context!.save()
+    }
+
+    func importUsers(){
+        let userFetchReq = NSFetchRequest<User>.init(entityName: "User")
+        let userCSVGroup = DispatchGroup()
+
+        userCSVGroup.enter()
+        DispatchQueue.global().async{ [self] in
+            let userBackgroundMOC: NSManagedObjectContext = {
+                let moc = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+                moc.parent = context
+                return moc
+            }()
+            let fetch = try! userBackgroundMOC.fetch(userFetchReq)
+            if fetch.count < 5 {
+                //remove all artifacts before regenerating products
+                for item in fetch{
+                    self.context?.delete(item)
+                }
+                print("starting user import")
+                generateInitialUsers()
+            }
+            userCSVGroup.leave()
+        }
+
+        userCSVGroup.notify(queue: .global()) {
+            print("user loading complete")
+            NotificationCenter.default.post(name: .didCompleteUserImport, object: nil)
+        }
+    }
+    //MARK: - Fetch Products Related
+    func fetchAllProducts() -> [String: [Product]]{
+
+        var featuredProducts = [Product]()
+        var dictionary = [String: [Product]]()
+        let categories = fetchAllCategories()
+        for category in categories{
+            var products = [Product]()
+            for item in category.products?.array as! [Product]{
+                products.append(item)
+                if item.isFeatured{
+                    featuredProducts.append(item)
+                }
+            }
+            dictionary[category.name!] = products
+        }
+        dictionary["Featured"] = featuredProducts
+        print(dictionary)
+        return dictionary
+    }
+
+    func fetchFeaturedProducts() -> [Product]{
+        var products = [Product]()
+        let categories = fetchAllCategories()
+        for category in categories{
+            for item in category.products?.array as! [Product]{
+                if item.isFeatured{
+                    products.append(item)
+                }
+            }
+        }
+        return products
     }
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
@@ -180,6 +256,21 @@ class DataHandler {
             print("data not saved")
         }
     }
+    func generateInitialUsers(){
+        var userArray = [User]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "User_Data", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
+        for item in csv!.namedRows{
+            let user = User(context: context!)
+            user.update(dictionary: item)
+            userArray.append(user)
+            print(item)
+        }
+        print(userArray)
+        try! context?.save()
+    }
 
     func updateUserName(_ name: String){
         //TODO
@@ -202,9 +293,14 @@ class DataHandler {
         catch{
             print("No users found")
         }
-        
         return user
 
+    }
+    func getGuestUser() -> User{
+        let name = "Guest"
+        let fetchReq = NSFetchRequest<User>(entityName: "User")
+        fetchReq.predicate = NSPredicate(format: "name == %@", name)
+        return try! (context?.fetch(fetchReq).first)!
     }
 
     func updatePassword(_ object: [String: String]){
@@ -244,4 +340,12 @@ class DataHandler {
 
 enum FetchError : Error{
     case BadFetchRequest 
+}
+
+extension Notification.Name {
+
+    static let didCompleteProductImport = Notification.Name("didCompleteProductImport")
+    static let didCompleteUserImport = Notification.Name("didCompleteUserImport")
+    static let didCompleteLoadingUI = Notification.Name("didCompleteLoadingUI")
+    static let shoppingCartDidUpdate = Notification.Name("shoppingCartDidUpdate")
 }

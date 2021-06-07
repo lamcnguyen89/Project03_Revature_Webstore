@@ -8,40 +8,56 @@
 import SwiftUI
 import UIKit
 struct ProductListView: View {
+    //toggle for displaying detail view
     @State private var showProduct = false
+
     private var csvLoaded : Bool
-    private let products : [Product]
-    init (products: [Product], csvLoaded: Bool){
-        self.products = products
+    private let user : UserViewModel?
+    private let store: StoreViewModel?
+    private let category : String
+    //setup view model (maybe a store) that gets read in on init that holds the current category filter
+    
+    init (store: StoreViewModel, user : UserViewModel, category: String, csvLoaded: Bool){
+
         self.csvLoaded = csvLoaded
+        self.user = user
+        self.store = store
+        self.category = category
     }
     init (csvLoaded: Bool){
-        products = [Product]()
+
         self.csvLoaded = csvLoaded
+        self.user = nil
+        self.category = "Featured"
+        self.store = nil
     }
     var body: some View {
-        if (csvLoaded){
-        Form{
-            ForEach(products){ item in
-                Button(action: {showProduct=true}) {
-                    HStack{
-                        Image(item.image!)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 100, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        VStack(alignment: .leading){
-                            Text(String(item.name!))
-                            Divider()
-                            Text("Price: $\(String(format: "%.2f", item.price))")
+        if (store != nil){
+            Form{
+                ForEach(store!.filterProducts(category)){ item in
+                    Button(action: {showProduct.toggle()}) {
+                        HStack{
+                            Image(item.image!)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 100, alignment: .center)
+                            Spacer()
+                            VStack{
+                                Spacer()
+                                Text(String(item.name!))
+                                    .multilineTextAlignment(.center)
+                                Spacer()
+                                Text("$"+String(item.price))
+                                    .multilineTextAlignment(.center)
+                                Spacer()
+                            }
+                            Spacer()
                         }
-                     
+                    }.sheet(isPresented: $showProduct) {
+                        ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item, userVM: user)
                     }
-                }.sheet(isPresented: $showProduct, content: {
-                    ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item)
-                })
+                }
             }
-        }
-
         }
         else {
             if #available(iOS 14.0, *) {
@@ -51,10 +67,6 @@ struct ProductListView: View {
                 Text("Loading")
             }
         }
-    }
-
-    func checkout(){
-
     }
 }
 
@@ -66,8 +78,3 @@ struct ProductListView: View {
 //}
 
 
-struct ProductListView_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
-    }
-}

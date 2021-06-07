@@ -34,7 +34,9 @@ class UserViewModel{
         return user.email!
     }
     
-
+    public func greeting() -> String{
+        return "Hello " + name
+    }
 
     public func getReviews() throws -> [Review] {
         if let reviews = user.reviews?.array as? [Review]{
@@ -42,7 +44,14 @@ class UserViewModel{
         }
         else {throw FetchError.BadFetchRequest}
     }
-
+    public func getShoppingCart() -> ShoppingCart{
+        if user.shoppingCart == nil{
+            let sc = ShoppingCart(context: user.managedObjectContext!)
+            sc.user = user
+            return sc
+        }
+        return user.shoppingCart!
+    }
     public func getOrderHistory() throws -> OrderHistory {
         if let orderHistory = user.orderHistory{
             return orderHistory
@@ -63,5 +72,6 @@ class UserViewModel{
         }
         else {throw FetchError.BadFetchRequest}
     }
+
 
 }

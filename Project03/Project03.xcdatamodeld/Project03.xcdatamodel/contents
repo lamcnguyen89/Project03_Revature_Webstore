@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G5023d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G5033c" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ACH" representedClassName="ACH" parentEntity="PaymentType" syncable="YES" codeGenerationType="category">
         <attribute name="acctNumber" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="nameOnAccount" optional="YES" attributeType="String"/>
@@ -59,6 +59,7 @@
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="category">
         <attribute name="id" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="isFeatured" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="price" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="productDescription" attributeType="String"/>
@@ -97,6 +98,7 @@
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="category">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
@@ -123,17 +125,17 @@
         <element name="HistoryItem" positionX="150.49462890625" positionY="191.0951538085938" width="128" height="88"/>
         <element name="Order" positionX="326.90478515625" positionY="256.2314453125" width="128" height="28"/>
         <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
-        <element name="PaymentOptions" positionX="-511.203857421875" positionY="209.2968444824219" width="128" height="59"/>
+        <element name="PaymentOptions" positionX="-606.124267578125" positionY="202.1980590820313" width="128" height="59"/>
         <element name="PaymentType" positionX="-615.53271484375" positionY="345.6470642089843" width="128" height="73"/>
-        <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="149"/>
+        <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="164"/>
         <element name="ProductRating" positionX="-111.66357421875" positionY="-12.59024047851562" width="128" height="88"/>
         <element name="Review" positionX="-28.071533203125" positionY="107.9990539550782" width="128" height="118"/>
         <element name="Search" positionX="203.54833984375" positionY="75.115478515625" width="128" height="29"/>
         <element name="SearchHistory" positionX="-217.7998046875" positionY="469.4144287109375" width="128" height="58"/>
         <element name="ShoppingCart" positionX="-706.47021484375" positionY="-351.7955169677734" width="128" height="73"/>
-        <element name="ShoppingCartItem" positionX="-495" positionY="-324" width="128" height="74"/>
+        <element name="ShoppingCartItem" positionX="-426.32763671875" positionY="-320.5056457519531" width="128" height="74"/>
         <element name="Store" positionX="-438.289306640625" positionY="-159.861343383789" width="128" height="58"/>
-        <element name="User" positionX="-340.360595703125" positionY="43.18682861328126" width="128" height="223"/>
+        <element name="User" positionX="-346.852294921875" positionY="3.880981445312507" width="128" height="238"/>
         <element name="Wishlist" positionX="-279.685302734375" positionY="-471.5655822753906" width="128" height="59"/>
     </elements>
 </model>

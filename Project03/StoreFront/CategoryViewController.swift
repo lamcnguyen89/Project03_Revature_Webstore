@@ -13,40 +13,52 @@
 
 import UIKit
 
-class CategoryViewController: UIViewController {
-    
-    var answer: Int!
-    var category: String?
+class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    @IBOutlet weak var galleryView: UIView!
-    @IBOutlet weak var productDetailView: UIView!
-    
+    private var pickerData = [String]()
+    private var selection = 0
+    var userVM : UserViewModel?
+
+
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var categoryPicker: UIPickerView!
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-//        galleryView.isHidden = false
-//        productDetailView.isHidden = true
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
-    
-    func subtractor(input1: Int, input2: Int)-> Int {
-        let val1 = input1 ?? 0
-        let val2 = input2 ?? 0
-        
-        let answer = val1 - val2
-        return answer
+        categoryPicker.delegate = self
+        categoryPicker.dataSource = self
+
+        pickerData = ["Featured","Cleaning","Precious Metals","Graphics Cards","Exercise Equipment","Car"]
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
+        NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
     }
 
-    @IBAction func getUserDashboard(_ sender: UIButton) {
-        
-        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
-        self.present(show,animated: true, completion: nil)
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selection = row
+        let hostingController = children.first { viewController in
+            viewController is CategoryHostingController
+        } as! CategoryHostingController
+
+        hostingController.category = pickerData[selection]
+        hostingController.reloadView()
+
     }
         
     @IBAction func showStoreMenu(_ sender: UIButton) {
@@ -55,6 +67,14 @@ class CategoryViewController: UIViewController {
         self.present(show, animated: true, completion: nil)
         
     }
+    
+    @IBAction func goToShoppingCart(_ sender: Any) {
+        
+        let sb = UIStoryboard(name: "Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier:  "shoppingCart")
+        self.present(show, animated: true, completion: nil)
+    }
+    
     
 }
 

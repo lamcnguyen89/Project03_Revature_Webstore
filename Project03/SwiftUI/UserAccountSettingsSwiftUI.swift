@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct UserAccountSettingsSwiftUI: View {
   //  @Environment(\.managedObjectContext) var context;
   //  @FetchRequest(entity:User.entity(), sortDescriptors:[])
@@ -33,7 +31,7 @@ struct UserAccountSettingsSwiftUI: View {
             }.foregroundColor(.white)
              .padding()
             .sheet(isPresented: $isMenu) {
-                showMenu()
+                ViewControllerAsUIView(storyboard: "UserDashboard", VC:"userDash" , prodData: nil, userVM: nil)
             }
             Spacer()
             Text("My Account Services").font(.system(size: 20))
