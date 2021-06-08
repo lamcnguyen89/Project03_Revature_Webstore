@@ -19,4 +19,12 @@ public class User: NSManagedObject {
         email = dictionary["email"]
         id = Int64(dictionary["ID"]!)!
     }
+    func reset(){
+        addresses = nil
+        paymentOptions = nil
+        reviews = nil
+        searchHistory = nil
+        wishlist = nil
+        try! managedObjectContext?.save()
+    }
 }

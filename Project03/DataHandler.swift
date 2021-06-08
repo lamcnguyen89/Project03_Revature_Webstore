@@ -275,7 +275,7 @@ class DataHandler {
         //TODO
     }
 
-    func getOneUser (name : String)-> User{
+    func getOneUser (name : String)throws -> User{
         var user = User()
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         fetchReq.predicate = NSPredicate(format: "name == %@", name)
@@ -287,10 +287,12 @@ class DataHandler {
             }
             else{
                 print("No users found")
+                throw FetchError.NoUsersFound
             }
         }
         catch{
-            print("No users found")
+            print("Bad Fetch")
+            throw FetchError.BadFetchRequest
         }
         return user
 
@@ -338,7 +340,8 @@ class DataHandler {
 }
 
 enum FetchError : Error{
-    case BadFetchRequest 
+    case BadFetchRequest
+    case NoUsersFound
 }
 
 extension Notification.Name {
@@ -347,4 +350,5 @@ extension Notification.Name {
     static let didCompleteUserImport = Notification.Name("didCompleteUserImport")
     static let didCompleteLoadingUI = Notification.Name("didCompleteLoadingUI")
     static let shoppingCartDidUpdate = Notification.Name("shoppingCartDidUpdate")
+ 
 }

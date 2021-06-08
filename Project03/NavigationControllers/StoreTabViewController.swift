@@ -49,4 +49,12 @@ class StoreTabViewController: UITabBarController {
             cartViewController.viewDidLoad()
         }
     }
+    func userDidUpdate(){
+        print(user)
+        for item in children{
+            if item.isViewLoaded{
+            item.viewDidLoad()
+            }
+        }
+    }
 }

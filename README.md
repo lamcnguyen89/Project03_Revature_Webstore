@@ -1,8 +1,8 @@
-# Project 03- Pick and Pay- A Webstore Application
+# Project 03- Rare Goods Repository- A Webstore Application
 
 ## Project Description
 
-Pick and Pay is a webstore application
+Rare Goods Repository is a webstore application built for the iOS operating system. Users can log in and choose items that they want to purchase, then checkout by entering their payment information and shipping address.
 
 ## Technologies Used
 
@@ -12,16 +12,17 @@ Pick and Pay is a webstore application
 
 ## Features
 
-List of features ready and TODOs for future development
+List of features 
 
-* 
-* 
-* 
-* 
+* Log in and choose items to purchase 
+* Checkout and enter payment information
+* User Dashboard to manage orders, future purchases, etc...
+* Add new items to the store by updating the CSV file.
 
 To-do list:
-* 
-* 
+* Implement Keychain or some other encryption method for login data
+* Connect to cloudkit or some external server to store data
+* implement webstore on other Apple operating systems.
 
 ## Getting Started
 
@@ -44,9 +45,9 @@ git clone https://github.com/lamcnguyen89/Project03_Revature_Webstore.git
 
 ## Contributors
 
->  <br />
->  <br />
->  <br />
+>  Kirtland Ross <br />
+>  Lea Leonard <br />
+>  Lam Nguyen <br />
 
 ## License
 
