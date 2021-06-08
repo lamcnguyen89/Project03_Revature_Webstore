@@ -12,7 +12,8 @@ class CartHostingController:  UIHostingController<CartScrollView>{
 
     required init?(coder aDecoder: NSCoder){
         super.init(coder: aDecoder, rootView: CartScrollView(user: user))
-        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteCSV(_:)), name: .didCompleteUserImport, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onDidCompleteUserImport(_:)), name: .didCompleteUserImport, object: nil)
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class CartHostingController:  UIHostingController<CartScrollView>{
         user = (parent as! CartViewController).user
         rootView = CartScrollView(user: user)
     }
-    @objc func onDidCompleteCSV(_ notification: Notification)
+    @objc func onDidCompleteUserImport(_ notification: Notification)
     {
         //resync on main thread, otherwise it will crash
         DispatchQueue.main.sync {

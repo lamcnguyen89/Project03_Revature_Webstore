@@ -64,7 +64,7 @@ struct CartScrollView: View {
         }
     }
     func checkout(){
-
+        NotificationCenter.default.post(name: .checkout, object: nil)
     }
 }
 

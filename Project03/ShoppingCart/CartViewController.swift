@@ -27,6 +27,10 @@ class CartViewController: UIViewController {
             viewController is CartHostingController
         } as! CartHostingController
         hostingController.reloadScrollView()
-    }
 
+        NotificationCenter.default.addObserver(self, selector: #selector(checkout(_:)), name: .checkout, object: nil)
+    }
+    @objc func checkout(_ notification: Notification){
+        performSegue(withIdentifier: "checkout", sender: user)
+    }
 }
