@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UserWishlistSwiftUI: View {
     
+    @State var currentUser = DataHandler.inst.getGuestUser()
     @State var testDB:[String] = DataHandler.inst.getProductName()
     @State var select = Set<UUID>()
     @State var isMenu:Bool = false

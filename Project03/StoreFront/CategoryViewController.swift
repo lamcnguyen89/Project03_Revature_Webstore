@@ -18,6 +18,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private var pickerData = [String]()
     private var selection = 0
     var userVM : UserViewModel?
+    var currentCategory: String!
 
 
     @IBOutlet weak var userLabel: UILabel!
@@ -25,6 +26,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("***Current category is \(currentCategory)")
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
 
@@ -75,6 +77,11 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.present(show, animated: true, completion: nil)
     }
     
+    @IBAction func btnShowStoreMenu(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "StoreMenu", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier:  "storeMenu") as! StoreMenuViewController
+        self.present(vc, animated: true, completion: nil)
+    }
     
 }
 
