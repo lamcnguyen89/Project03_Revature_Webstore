@@ -16,6 +16,7 @@ class StoreTabViewController: UITabBarController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
     }
     
 

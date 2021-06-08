@@ -275,6 +275,7 @@ class DataHandler {
         //TODO
     }
 
+
     func getOneUser (name : String)throws -> User{
         var user = User()
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")

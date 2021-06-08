@@ -1084,6 +1084,7 @@
                                 <connections>
                                     <action selector="chooseCashOnDelivery:" destination="i0a-dH-4MY" eventType="touchUpInside" id="CUZ-PV-Esa"/>
                                     <action selector="chooseCashOnDelivery:" destination="IXw-OH-uT6" eventType="touchUpInside" id="zJS-Rn-8W7"/>
+                                    <action selector="createAccount:" destination="x00-pK-1Bz" eventType="touchUpInside" id="IZO-v7-QjA"/>
                                     <action selector="submit:" destination="x00-pK-1Bz" eventType="touchUpInside" id="Qgp-Fx-TeM"/>
                                     <action selector="submitLogin:" destination="ov7-EM-JZC" eventType="touchUpInside" id="Dip-uZ-2DN"/>
                                 </connections>

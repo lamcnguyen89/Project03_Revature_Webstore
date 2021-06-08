@@ -27,6 +27,7 @@ class CategoryHostingController: UIHostingController<ProductListView> {
         DispatchQueue.main.sync {
             user = (parent as! CategoryViewController).userVM
             storeVM = StoreViewModel(store: DataHandler().fetchStore())
+            sleep(1)
             reloadView()
         }
     }

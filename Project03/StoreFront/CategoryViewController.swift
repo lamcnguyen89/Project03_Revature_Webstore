@@ -36,7 +36,7 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         else{
             userLabel.text = "Welcome!"
         }
-        NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
+//        NotificationCenter.default.post(name: .didCompleteLoadingUI, object: nil)
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
