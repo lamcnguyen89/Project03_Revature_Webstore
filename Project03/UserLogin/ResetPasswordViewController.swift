@@ -24,9 +24,7 @@ class ResetPasswordViewController: UIViewController {
     }
     
     @IBAction func back(_ sender: Any) {
-        let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let wel = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        self.present(wel, animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     

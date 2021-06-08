@@ -39,8 +39,6 @@ class StoreViewModel{
                 }
             }
         }
-        print("filtered items: ")
-        print(prodArray)
         return prodArray
     }
 }
