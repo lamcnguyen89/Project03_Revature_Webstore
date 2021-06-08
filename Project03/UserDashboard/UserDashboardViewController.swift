@@ -8,12 +8,24 @@
 import UIKit
 import SwiftUI
 
+
 class UserDashboardViewController: UIViewController {
     
-    var category:String?
+    //var category:String = "Feature"
+    private var getCurrentUser:User?
+    @IBOutlet weak var lblWelcome: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        lblWelcome.text = "Hello  \(getCurrentUser)!"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(didCompleteUserImport(_:)), name: .didCompleteUserImport, object: nil)
+    }
+    
+    @objc func didCompleteUserImport(_ notif: Notification){
+        self.getCurrentUser = DataHandler.inst.getGuestUser()
     }
     
     @IBAction func btnStoreMenu(_ sender: UIButton) {
@@ -28,7 +40,7 @@ class UserDashboardViewController: UIViewController {
         let sb = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "categoryList")
         
-        self.present(vc, animated: true, completion: {self.category})
+        self.present(vc, animated: true, completion: nil)
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {

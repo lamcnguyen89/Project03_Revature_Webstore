@@ -8,10 +8,8 @@
 import SwiftUI
 
 struct UserAccountSettingsSwiftUI: View {
-  //  @Environment(\.managedObjectContext) var context;
-  //  @FetchRequest(entity:User.entity(), sortDescriptors:[])
-  //  var user: FetchedResults<User>
-    
+   
+    //var currentUser:User
     @State var user00 = Data(fname: "Jane", lname: "Doe", mailing: "123 Elms St", shipAdd: "123 Elms St", pwd: "jane123")
     @State var isMenu:Bool = false
     @State var newFName:String = "" // create function to check if valid
@@ -20,7 +18,7 @@ struct UserAccountSettingsSwiftUI: View {
     @State var newPwd:String = ""
     @State var newMailingAdd:[String] = []
     @State var newShippingAdd:[String] = ["Street Address", "City", "State", "Zip"]
-   
+     
 
     var body: some View {
        VStack{
@@ -126,6 +124,7 @@ struct UserAccountSettingsSwiftUI: View {
        .frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.blue)
        .edgesIgnoringSafeArea(.bottom)
     }// end body:view
+    
 }
 
 struct UserAccountSettingsSwiftUI_Previews: PreviewProvider {
