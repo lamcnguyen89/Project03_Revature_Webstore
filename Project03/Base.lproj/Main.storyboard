@@ -296,6 +296,7 @@
         <scene sceneID="kab-sy-AC2">
             <objects>
                 <tabBarController storyboardIdentifier="Checkout" automaticallyAdjustsScrollViewInsets="NO" id="cHQ-gs-GU4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="dollarsign.circle.fill" catalog="system" id="s1c-jz-bgy"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Frv-Lo-tPR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b9P-hB-YlU">
@@ -624,7 +625,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSm-Uf-FqQ">
-                                <rect key="frame" x="0.0" y="158" width="414" height="655"/>
+                                <rect key="frame" x="0.0" y="158" width="414" height="606"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="jI8-xn-Fq2" kind="embed" id="k4Y-0p-0pk"/>
@@ -715,7 +716,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOM-Tl-e9i">
-                                <rect key="frame" x="0.0" y="159" width="414" height="654"/>
+                                <rect key="frame" x="0.0" y="159" width="414" height="605"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="zq8-Ha-a4R" kind="embed" id="oqu-3O-Woe"/>
@@ -776,7 +777,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekl-Z6-RmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2318.840579710145" y="1196.6517857142856"/>
+            <point key="canvasLocation" x="2318.840579710145" y="1195.9821428571429"/>
         </scene>
         <!--Cart Hosting Controller-->
         <scene sceneID="4Oy-W2-T5e">
@@ -1914,6 +1915,7 @@
                         <segue destination="j28-CW-FWz" kind="relationship" relationship="viewControllers" id="rmC-yK-yUN"/>
                         <segue destination="inA-Gv-GzG" kind="relationship" relationship="viewControllers" id="0Bh-We-HjB"/>
                         <segue destination="ov7-EM-JZC" kind="relationship" relationship="viewControllers" id="bRX-Hg-qNL"/>
+                        <segue destination="cHQ-gs-GU4" kind="relationship" relationship="viewControllers" id="ZcX-jf-Veo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjb-zI-Jb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2128,6 +2130,7 @@
         <image name="checkmark.seal" catalog="system" width="128" height="128"/>
         <image name="desktopcomputer" catalog="system" width="128" height="101"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
