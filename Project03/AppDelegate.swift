@@ -81,11 +81,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     @objc func didCompleteLoadingUI(_ notification: Notification){
-        DataHandler().importUsers()
+        DispatchQueue.main.async {
+            DataHandler().importUsers()
+        }
+
 
     }
     @objc func didCompleteUserImport(_ notification: Notification){
-        DataHandler().importProducts()
+        DispatchQueue.main.async {
+            DataHandler().importProducts()
+        }
+
     }
 }
 
