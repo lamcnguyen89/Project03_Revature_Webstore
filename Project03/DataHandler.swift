@@ -241,11 +241,11 @@ class DataHandler {
 
     //MARK: - User Related
     func createUser(_ object: [String:String]){
-        let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
+        let user = User(context: context!)
         user.email = object["email"]
-        user.password = object["pass"]
-        user.firstName = object["fname"]
-        user.lastName = object["lname"]
+        user.password = object["password"]
+        user.firstName = object["firstName"]
+        user.lastName = object["lastName"]
         user.name = object["name"]
         do{
             try context?.save()
@@ -275,8 +275,9 @@ class DataHandler {
         //TODO
     }
 
+
     func getOneUser (name : String)throws -> User{
-        var user = User()
+        var user : User
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         fetchReq.predicate = NSPredicate(format: "name == %@", name)
         fetchReq.fetchLimit = 1
@@ -294,6 +295,8 @@ class DataHandler {
             print("Bad Fetch")
             throw FetchError.BadFetchRequest
         }
+        print(user)
+        print(user.password!)
         return user
 
     }

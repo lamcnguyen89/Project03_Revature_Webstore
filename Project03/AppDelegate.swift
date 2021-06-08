@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         NotificationCenter.default.addObserver(self, selector: #selector(didCompleteLoadingUI(_:)), name: .didCompleteLoadingUI, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didCompleteUserImport(_:)), name: .didCompleteUserImport, object: nil)
 
-        DataHandler().importUsers()
 
         return true
     }
@@ -81,7 +81,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     @objc func didCompleteLoadingUI(_ notification: Notification){
-        DataHandler().importProducts()
+        DispatchQueue.main.async {
+            DataHandler().importUsers()
+        }
+
+
+    }
+    @objc func didCompleteUserImport(_ notification: Notification){
+        DispatchQueue.main.async {
+            DataHandler().importProducts()
+        }
+
     }
 }
 

@@ -77,7 +77,13 @@ class SignUpViewController: UIViewController {
         self.present(wel, animated: true, completion: nil)
         
     }
-    
+    @IBAction func createAccount(_ sender: Any) {
+        let userData = ["name": username.text!, "email": email.text!, "password": password.text!, "firstName" : firstName.text!, "lastName" : lastName.text!]
+        DataHandler().createUser(userData)
+        self.dismiss(animated: true, completion: nil)
+    }
+
+
     @IBAction func storeFront(_ sender: Any) {
         let sb = UIStoryboard(name: "Main", bundle:nil)
         let show = sb.instantiateViewController(withIdentifier:  "categoryList")
