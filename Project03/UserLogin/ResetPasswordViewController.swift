@@ -19,7 +19,8 @@ class ResetPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        outputLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -94,7 +95,7 @@ class ResetPasswordViewController: UIViewController {
     
     @IBAction func goToUserDashboard(_ sender: Any) {
         let sb = UIStoryboard(name:"Main", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "Main") as! UserDashboardViewController
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
     }
     

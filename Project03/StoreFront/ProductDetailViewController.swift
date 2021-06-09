@@ -26,12 +26,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     //SUGGESTED ITEMS SECTION
     @IBOutlet weak var suggestedItemsCollection: UICollectionView!
     var lstSuggItems = [ProductViewModel]()
-    var suggestItemsError:String?
-        
-
-    @IBOutlet weak var userLabel: UILabel!
-    var prodViewModel : ProductViewModel?
-    var cartViewModel : ShoppingCartViewModel?
+    var suggestItemsError:String?       
 
 
     override func viewDidLoad() {
