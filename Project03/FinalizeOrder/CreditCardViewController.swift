@@ -51,6 +51,11 @@ class CreditCardViewController: UIViewController {
             zip.text != nil &&
             phone.text != nil
         ) {
+
+
+
+            DataHandler.inst.submitPayment(self)
+
            print("Card information submitted")
            // Update Database information to show Credit Card was selected out of the 3 choices: NetBanking, COD, Credit Card
             

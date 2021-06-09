@@ -19,9 +19,9 @@ class NetBankingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let user = LoginViewController.currentUser ?? "Guest"
+        let user = LoginViewController.currentUser
         
-        if user == "Guest" {
+        if user.name == "Guest" {
             userLabel.text = "Welcome!"
         } else {
             userLabel.text = "Hello \(user)"
@@ -32,13 +32,13 @@ class NetBankingViewController: UIViewController {
         
         if accountName.text != "" && accountNumber.text != "" && routingNumber.text != "" {
             
-            let dic = ["acctNumber" : accountNumber.text,
-                       "nameOnAccount" : accountName.text,
-                       "routingNumber" : routingNumber.text
+            let dic = ["acctNumber" : accountNumber.text!,
+                       "nameOnAccount" : accountName.text!,
+                       "routingNumber" : routingNumber.text!
             ]
             
             // Push Net banking info to database:
-            
+            DataHandler.inst.submitPayment(dic)
             
             
             // Redirect to shipment page:
