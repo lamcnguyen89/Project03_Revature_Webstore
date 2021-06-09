@@ -49,6 +49,7 @@ struct ProductListView: View {
                                 Text(String(item.name!)).frame(maxWidth: .infinity, alignment: .leading)
                                     .font(.headline)
                                     .foregroundColor(.black)
+                               
                                 Spacer()
                                 Text("Price: $\(String(format:"%.2f", item.price))")
                             }.padding().background(Color.orange)

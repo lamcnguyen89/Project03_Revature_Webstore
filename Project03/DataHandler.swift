@@ -179,6 +179,15 @@ class DataHandler {
         }
         return products
     }
+    
+    //MARK: - Product Rating Related
+    func getProductRating() {
+        
+        
+        
+    }
+
+
     //MARK: - Order Related
     func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
         var products = [Product]()
@@ -296,7 +305,7 @@ class DataHandler {
                 print("no items in wishlist")
                 let newList = fetchFeaturedProducts().shuffled()
                
-                for i in 0..<8{
+                for i in 0..<5{
                     list.append(ProductViewModel(product: newList[i]))
                 }
                 suggestList["Suggested Items"] = list
@@ -319,7 +328,29 @@ class DataHandler {
         }
         return userWishList
     }
+    
 
+    
+    /*
+    func addData(object : [String:String]){
+        let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
+        user.username = object["username"]
+        user.password = object["password"]
+        user.score = 0.0
+        user.qtaken = 0
+        user.taken = false
+        do{
+            try context?.save()
+            print("Data Save")
+            print("", user.username)
+            print("",user.password)
+        }
+        catch{
+            print("data not saved")
+        }
+    }
+ */
+    
     func getOneUser (name : String)throws -> User{
         var user : User
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
