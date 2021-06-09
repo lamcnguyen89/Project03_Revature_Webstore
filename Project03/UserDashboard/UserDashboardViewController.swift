@@ -12,9 +12,9 @@ import SwiftUI
 class UserDashboardViewController: UIViewController {
     
     private var currentUser:User!
-    private var getCurrentUser:UserViewModel!
+   // private var getCurrentUser:UserViewModel!
     //UserViewModel(user:DataHandler.inst.getGuestUser())
-    
+  
     @IBOutlet weak var lblWelcome: UILabel!
     @IBOutlet weak var btnOrders: UIButton!
     @IBOutlet weak var viewOrders: UIView!
@@ -24,7 +24,17 @@ class UserDashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        let user = LoginViewController.currentUser ?? "Guest"
+        
+        if user == "Guest" {
+            lblWelcome.text = "Welcome!"
+        } else {
+            lblWelcome.text = "Hello \(user)"
+        }
+        
+        
+        /*
         if let appUser = (parent as? StoreTabViewController)?.user {
             print(appUser.name)
             currentUser = appUser
@@ -49,6 +59,8 @@ class UserDashboardViewController: UIViewController {
             viewOrders.backgroundColor = .blue
             btnOrders.isEnabled = false
        }
+ */
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

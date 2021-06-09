@@ -14,14 +14,15 @@ class ReviewOrderViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let user = (parent as? StoreTabViewController)?.user {
-            userVM = UserViewModel(user: user)
-            userLabel.text = userVM?.greeting()
-        }
-        else{
+
+        let user = LoginViewController.currentUser ?? "Guest"
+        
+        if user == "Guest" {
             userLabel.text = "Welcome!"
+        } else {
+            userLabel.text = "Hello \(user)"
         }
-       
+        
     }
     
     @IBAction func getUserDashboard(_ sender: UIButton) {
