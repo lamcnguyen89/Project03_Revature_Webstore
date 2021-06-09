@@ -11,21 +11,47 @@ import SwiftUI
 
 class UserDashboardViewController: UIViewController {
     
-    //var category:String = "Feature"
-    private var getCurrentUser:User?
+    private var currentUser:User!
+    private var getCurrentUser:UserViewModel!
+    //UserViewModel(user:DataHandler.inst.getGuestUser())
+    
     @IBOutlet weak var lblWelcome: UILabel!
+    @IBOutlet weak var btnOrders: UIButton!
+    @IBOutlet weak var viewOrders: UIView!
+    @IBOutlet weak var btnAccountSet: UIButton!
+    @IBOutlet weak var viewAccount: UIView!
+    @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblWelcome.text = "Hello  \(getCurrentUser)!"
+       
+        if let appUser = (parent as? StoreTabViewController)?.user {
+            print(appUser.name)
+            currentUser = appUser
+            getCurrentUser = UserViewModel(user: currentUser)
+            if currentUser.name == "Guest"{
+                btnLogin.isHidden = false
+                btnAccountSet.isHidden = true
+                btnOrders.isHidden = true
+            } else {
+                btnLogin.isHidden = true
+                btnAccountSet.isHidden = false
+                btnOrders.isHidden = false
+            }
+            lblWelcome.text = "Welcome \(appUser.name)"
+        } else {
+            getCurrentUser = UserViewModel(user:DataHandler.inst.getGuestUser())
+            lblWelcome.text = "Welcome \(getCurrentUser.name)"
+            btnLogin.isHidden = false
+            viewAccount.backgroundColor = .blue
+            btnAccountSet.isEnabled = false
+            viewOrders.backgroundColor = .blue
+            btnOrders.isEnabled = false
+       }
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        NotificationCenter.default.addObserver(self, selector: #selector(didCompleteUserImport(_:)), name: .didCompleteUserImport, object: nil)
-    }
-    
-    @objc func didCompleteUserImport(_ notif: Notification){
-        self.getCurrentUser = DataHandler.inst.getGuestUser()
+       
     }
     
     @IBAction func btnStoreMenu(_ sender: UIButton) {
@@ -38,7 +64,7 @@ class UserDashboardViewController: UIViewController {
     @IBAction func btnContinueShopping(_ sender: UIButton) {
         
         let sb = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "categoryList")
+        let vc = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
         
         self.present(vc, animated: true, completion: nil)
     }
