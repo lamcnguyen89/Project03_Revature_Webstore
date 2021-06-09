@@ -20,7 +20,7 @@ class UserDashboardViewController: UIViewController {
     @IBOutlet weak var viewOrders: UIView!
     @IBOutlet weak var btnAccountSet: UIButton!
     @IBOutlet weak var viewAccount: UIView!
-    @IBOutlet weak var btnLogin: UIButton!
+  //  @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,11 @@ class UserDashboardViewController: UIViewController {
             currentUser = appUser
             getCurrentUser = UserViewModel(user: currentUser)
             if currentUser.name == "Guest"{
-                btnLogin.isHidden = false
+                //btnLogin.isHidden = false
                 btnAccountSet.isHidden = true
                 btnOrders.isHidden = true
             } else {
-                btnLogin.isHidden = true
+              //  btnLogin.isHidden = true
                 btnAccountSet.isHidden = false
                 btnOrders.isHidden = false
             }
@@ -42,7 +42,7 @@ class UserDashboardViewController: UIViewController {
         } else {
             getCurrentUser = UserViewModel(user:DataHandler.inst.getGuestUser())
             lblWelcome.text = "Welcome \(getCurrentUser.name)"
-            btnLogin.isHidden = false
+           // btnLogin.isHidden = false
             viewAccount.backgroundColor = .blue
             btnAccountSet.isEnabled = false
             viewOrders.backgroundColor = .blue
@@ -67,12 +67,12 @@ class UserDashboardViewController: UIViewController {
 
     }
     
-    @IBAction func btnLogin(_ sender: UIButton) {
+    // @IBAction func btnLogin(_ sender: UIButton) {
         
-        let sb = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        self.present(vc, animated: true, completion: nil)
-    }
+       // let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        //let vc = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        //self.present(vc, animated: true, completion: nil)
+   // }
 
 
     

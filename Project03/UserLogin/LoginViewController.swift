@@ -95,5 +95,11 @@ class LoginViewController: UIViewController {
         tabBarController?.selectedIndex = 0
     }
     
+    @IBAction func goToDashboard(_ sender: Any) {
+        let sb = UIStoryboard(name:"Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+    }
+    
 }
 
