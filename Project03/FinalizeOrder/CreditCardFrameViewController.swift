@@ -9,10 +9,20 @@ import UIKit
 
 class CreditCardFrameViewController: UIViewController {
 
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
+        
     }
    
     @IBAction func getUserDashboard(_ sender: UIButton) {

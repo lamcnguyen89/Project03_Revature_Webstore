@@ -62,11 +62,9 @@ class UserDashboardViewController: UIViewController {
     }
     
     @IBAction func btnContinueShopping(_ sender: UIButton) {
-        
-        let sb = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
-        
-        self.present(vc, animated: true, completion: nil)
+
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
@@ -76,10 +74,15 @@ class UserDashboardViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
 
+
+    
+    
+    
+    /*
     @IBSegueAction func showUserSaveItemsSwiftUI(_ coder: NSCoder) -> UIViewController? {
         let rootView = UserSaveItemsSwiftUIswift()
-        
         return UIHostingController(coder: coder, rootView: rootView)
+        
     }
            
      
@@ -101,6 +104,8 @@ class UserDashboardViewController: UIViewController {
         
         return UIHostingController(coder: coder, rootView: rootView)
     }
-
+*/
         
 }
+
+

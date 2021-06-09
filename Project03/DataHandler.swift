@@ -389,5 +389,7 @@ extension Notification.Name {
     static let didCompleteLoadingUI = Notification.Name("didCompleteLoadingUI")
     static let shoppingCartDidUpdate = Notification.Name("shoppingCartDidUpdate")
     static let didGetUser = Notification.Name("didGetUser")
+    static let checkout = Notification.Name("checkout")
+
  
 }

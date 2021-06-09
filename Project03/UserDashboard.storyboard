@@ -21,6 +21,8 @@
                                 <rect key="frame" x="0.0" y="61" width="414" height="154"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
+
+                                  <!--
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8I-E2-wHx">
                                         <rect key="frame" x="256" y="-17" width="161" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -31,11 +33,43 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo1" translatesAutoresizingMaskIntoConstraints="NO" id="W9H-lG-9Un">
                                         <rect key="frame" x="336" y="21" width="60" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                      <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+  -->
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DashboardLogo" translatesAutoresizingMaskIntoConstraints="NO" id="AL2-vq-aQG">
+                                        <rect key="frame" x="26" y="-39" width="363" height="233"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+
                                     </imageView>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="appName"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6e7-ed-wXL">
+                                <rect key="frame" x="28" y="260" width="359" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJT-qC-vd9">
+                                        <rect key="frame" x="8" y="14" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <state key="normal" title="My Save Items">
+                                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="NMd-wy-Wq8" kind="show" id="SxH-H5-pfZ"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="O3T-7N-uaO">
+                                        <rect key="frame" x="8" y="10" width="85" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemOrangeColor"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES"/>
+                                </accessibility>
+                            </view>
+
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JmD-gU-Y03">
                                 <rect key="frame" x="26" y="275" width="359" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -48,7 +82,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="baT-3V-plC" kind="showDetail" destinationCreationSelector="showUserWishlistSwiftUI:" id="cyS-p9-2nw"/>
+                                            <segue destination="baT-3V-plC" kind="show" id="luc-Bk-wqk"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wand.and.stars" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tEI-nf-24Z">
@@ -71,7 +105,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ysU-4q-gFU" kind="show" destinationCreationSelector="showUserOrdersSwiftUI:" id="H2n-Z4-xgR"/>
+                                            <segue destination="ysU-4q-gFU" kind="show" id="vSF-EG-DPn"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shippingbox.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vjL-HH-qzu">
@@ -94,7 +128,7 @@
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="4Sc-7P-OZh" kind="show" destinationCreationSelector="showUserAccountSettings:" id="OhT-9c-3Ly"/>
+                                            <segue destination="4Sc-7P-OZh" kind="show" id="m6v-qF-Q5E"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2hv-Hb-gL0">
@@ -164,39 +198,42 @@
             </objects>
             <point key="canvasLocation" x="2418.840579710145" y="152.67857142857142"/>
         </scene>
-        <!--Hosting Controller-->
+        <!--Saved Items Hosting Controller-->
         <scene sceneID="LM0-ba-gA8">
             <objects>
-                <hostingController id="NMd-wy-Wq8" sceneMemberID="viewController"/>
+                <hostingController storyboardIdentifier="SaveItems" id="NMd-wy-Wq8" customClass="SavedItemsHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="AM8-s4-iNl"/>
+                </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkY-W3-KDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1054" y="933"/>
         </scene>
-        <!--Hosting Controller-->
+        <!--Wish List Hosting Controller-->
         <scene sceneID="o60-Un-Fe1">
             <objects>
-                <hostingController id="baT-3V-plC" sceneMemberID="viewController">
+                <hostingController storyboardIdentifier="WishList" id="baT-3V-plC" customClass="WishListHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="8Sz-8L-La9"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hw-Kn-v36" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1883" y="930"/>
         </scene>
-        <!--Hosting Controller-->
+        <!--My Orders Hosting Controller-->
         <scene sceneID="1Ce-Zv-bKv">
             <objects>
-                <hostingController id="ysU-4q-gFU" sceneMemberID="viewController">
+                <hostingController storyboardIdentifier="MyOrders" id="ysU-4q-gFU" customClass="MyOrdersHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Rrc-RS-m84"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3js-W2-QMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2722" y="933"/>
         </scene>
-        <!--Hosting Controller-->
+        <!--Account Settings Hosting Controller-->
         <scene sceneID="RuQ-22-p5f">
             <objects>
-                <hostingController id="4Sc-7P-OZh" sceneMemberID="viewController">
+                <hostingController storyboardIdentifier="AccountSettings" id="4Sc-7P-OZh" customClass="AccountSettingsHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="zfb-Ts-8KK"/>
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgI-2c-Bfa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -205,7 +242,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo1" width="1741" height="2139"/>
+        <image name="DashboardLogo" width="1000" height="1000"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
         <image name="wand.and.stars" catalog="system" width="128" height="113"/>
