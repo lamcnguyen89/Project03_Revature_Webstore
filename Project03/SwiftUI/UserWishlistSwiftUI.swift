@@ -16,7 +16,7 @@ struct UserWishlistSwiftUI: View {
     
     @State var currentUser = DataHandler.inst.getGuestUser()
     @State var wishList = []
-    @State var isWishList:String = ""
+    @State var isWishList:String = "Suggested Items"
     @State var select = Set<UUID>()
     @State var isMenu:Bool = false
     var body: some View {
@@ -47,35 +47,33 @@ struct UserWishlistSwiftUI: View {
         .frame(maxWidth: .infinity, maxHeight: 100)
             .padding()
             NavigationView{
+                
                 List(selection: $select){
                     ForEach(getList(), id: \.name){ prd in
                         VStack{
-                           
-                                Image("\(prd.image)")
+                            
+                            Text("\(prd.name)").frame(maxWidth: .infinity, alignment: .leading)
+                                .font(.headline)
+                                .foregroundColor(.blue)
+                            Image("\(prd.image)")
                                     .resizable()
                                     .frame(width: 300, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                     .aspectRatio(contentMode: .fit)
-                                   // .padding()
-                                    .border(Color.blue, width: 3)
-                                    .cornerRadius(5.0)
-                          
-                            VStack{
-                                
-                                Text("\(prd.name)").frame(maxWidth: .infinity, alignment: .leading)
-                                    .font(.headline)
-                                    .foregroundColor(.white)
+           
+                            HStack{
                                 Spacer()
                                 Text("Price: \(prd.price)")
-                            }.padding().background(Color.blue)
+                            }.padding()
                             .border(Color.orange, width: 3)
                             .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                        
                         }
                     }.onDelete(perform:removeFromWishlist)
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity).edgesIgnoringSafeArea(.bottom)
-                .navigationBarTitle("Add Item to Cart", displayMode: .inline)
-                .navigationBarItems(trailing:
-                                        EditButton())
+                    .frame(maxWidth:.infinity, maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(.all)
+            }.navigationBarTitle(isWishList, displayMode:.inline)
+            .navigationBarItems(trailing:EditButton())
+                
             }
             Text("Number of items in Wishlist: \(getList().count)")
                 .padding()
@@ -90,7 +88,7 @@ struct UserWishlistSwiftUI: View {
     
     private func removeFromWishlist(at indexSet: IndexSet){
         
-        //self.list.remove(atOffsets: indexSet)
+        self.wishList.remove(atOffsets: indexSet)
         // save data to context
     }
     
@@ -100,10 +98,16 @@ struct UserWishlistSwiftUI: View {
     
     private func getList() -> [ProductViewModel]{
         var list = [ProductViewModel]()
+        var listType:String = ""
         for (k,v) in DataHandler.inst.getWishlist(user: currentUser){
             list.append(contentsOf: v)
             wishList.append(contentsOf: v)
-            isWishList = k
+            listType = k
+        }
+        if listType == "Suggested Items" {
+            isWishList = "No items in Wishlist!\n Suggested Items"
+        } else {
+            isWishList = "Your Wishlist"
         }
         return list
     }

@@ -31,7 +31,7 @@ class UserDashboardViewController: UIViewController {
             getCurrentUser = UserViewModel(user: currentUser)
             if currentUser.name == "Guest"{
                 //btnLogin.isHidden = false
-                btnAccountSet.isHidden = true
+                viewAccount.isHidden = true
                 btnOrders.isHidden = true
             } else {
               //  btnLogin.isHidden = true
@@ -44,6 +44,7 @@ class UserDashboardViewController: UIViewController {
             lblWelcome.text = "Welcome \(getCurrentUser.name)"
            // btnLogin.isHidden = false
             viewAccount.backgroundColor = .blue
+            viewAccount.isHidden  = true
             btnAccountSet.isEnabled = false
             viewOrders.backgroundColor = .blue
             btnOrders.isEnabled = false
