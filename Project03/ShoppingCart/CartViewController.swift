@@ -33,4 +33,12 @@ class CartViewController: UIViewController {
     @objc func checkout(_ notification: Notification){
         performSegue(withIdentifier: "checkout", sender: user)
     }
+    
+    @IBAction func userDashboard(_ sender: Any) {
+        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+        
+    }
+    
 }
