@@ -29,9 +29,9 @@ class ProductDetailViewController: UIViewController {
 
         }
         
-        let user = LoginViewController.currentUser ?? "Guest"
+        let user = LoginViewController.currentUser
         
-        if user == "Guest" {
+        if user.name == "Guest" {
             userLabel.text = "Welcome!"
         } else {
             userLabel.text = "Hello \(user)"

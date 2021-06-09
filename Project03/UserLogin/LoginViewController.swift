@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     var answer: Int!
     var dataHandler = DataHandler()
-    static var currentUser: String?
+    static var currentUser = User()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
                     print("Username: \(data.name!) \nPassword: \(data.password!)")
                     let appUser = (parent as! StoreTabViewController).user
                     
-                    LoginViewController.currentUser = data.firstName!
+                    LoginViewController.currentUser = data
 
 
                     if appUser?.name == "Guest" && appUser?.shoppingCart != nil{
@@ -89,7 +89,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func logout(_ sender: Any) {
         let data = try! dataHandler.getOneUser(name: "Guest")
-        LoginViewController.currentUser = "Guest"
+        LoginViewController.currentUser = data
         (parent as! StoreTabViewController).user = data
         (parent as! StoreTabViewController).userDidUpdate()
     }

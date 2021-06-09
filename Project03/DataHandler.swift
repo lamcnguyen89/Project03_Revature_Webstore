@@ -11,6 +11,7 @@ import UIKit
 import SwiftCSV
 
 class DataHandler {
+
     let context : NSManagedObjectContext?
     static var inst = DataHandler()
 
@@ -27,7 +28,27 @@ class DataHandler {
     }
 
     //MARK: - PaymentOption Related
-    func addACHOption(){
+    func submitPayment(_ ccVC: CreditCardViewController){
+        let user = LoginViewController.currentUser
+        let cc = CreditCard(context: context!)
+
+        cc.nameOnCard = ccVC.name.text!
+        cc.billingAddress = String(ccVC.address.text! + "," + ccVC.address2.text! + "," + ccVC.city.text! + "," + ccVC.state.text! + "," + ccVC.zip.text!)
+        cc.number = Int64(ccVC.creditNumber.text!)!
+        cc.expDate = String(ccVC.expMonth.text! + "," + ccVC.expYear.text!)
+
+        user.paymentOptions?.addToPaymentOptions(cc)
+        try! context?.save()
+    }
+
+    func submitPayment(_ dictionary : [String: String]){
+        let user = LoginViewController.currentUser
+        let ach = ACH(context: context!)
+        ach.acctNumber = Int64(dictionary["acctNumber"]!)!
+        ach.nameOnAccount = dictionary["nameOnAccount"]
+        ach.routingNumber = Int64(dictionary["routingNumber"]!)!
+
+        user.paymentOptions?.addToPaymentOptions(ach)
 
     }
     //MARK: - Store Related
