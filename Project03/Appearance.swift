@@ -39,6 +39,25 @@ class MyMainView : UIView {
     
 }
 
+// Class to standardize Main View Objects
+class MySubView : UIView {
+    
+    required init?(coder: NSCoder) {
+        super.init(coder : coder)
+        // MyMainView.appearance().backgroundColor = UIColor(red: 85/255 , green: 150/255 ,blue: 100/255 , alpha: 1.0)
+      //  self.backgroundColor = .white
+       // self.layer.borderColor = UIColor.black.cgColor
+        //self.layer.borderWidth = 2.0
+        self.layer.shadowColor = UIColor.black.withAlphaComponent(0.70).cgColor
+        self.layer.shadowOffset = CGSize(width: 4.0, height: 4.0)
+        self.layer.shadowOpacity = 1
+        self.layer.shadowRadius = 2
+        self.layer.cornerRadius = 10
+        
+    }
+    
+}
+
 // Class to standardize Primary Button Objects
 class MyButtons : UIButton {
     

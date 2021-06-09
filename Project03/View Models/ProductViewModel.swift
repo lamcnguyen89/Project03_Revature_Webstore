@@ -26,7 +26,7 @@ class ProductViewModel{
     }
 
     public var price : String{
-        return String("$" + String(product.price))
+        return String("$" + String(format: "%.2f", product.price))
     }
     public var description : String{
         return product.productDescription!

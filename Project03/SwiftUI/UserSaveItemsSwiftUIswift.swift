@@ -24,7 +24,7 @@ struct UserSaveItemsSwiftUIswift: View {
                ViewControllerAsUIView(storyboard: "Main", VC:"userDash" , prodData: nil, userVM: nil)
             }
             Spacer()
-            Text("My Save Items").font(.system(size: 20))
+            Text("My Saved Items").font(.system(size: 20))
                 .foregroundColor(Color.white).padding()
             }// en hstack
            .frame(maxWidth: .infinity).background(Color.blue)
@@ -42,15 +42,26 @@ struct UserSaveItemsSwiftUIswift: View {
         List{
             ForEach(prodName, id:\.self){ product in
                 VStack{
-                   HStack{
-                        Text("Product Price")
-                        Image("6700XT").resizable().aspectRatio(contentMode: .fit).padding()
-                   }
                   
+                    Image("6700XT")
+                        .resizable()
+                        .frame(width: 300, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        .aspectRatio(contentMode: .fit)
+                       // .padding()
+                        .border(Color.blue, width: 3)
+                        .cornerRadius(5.0)
+                    
                     VStack{
                         
-                        Text("Product Name /(product)").frame(maxWidth: .infinity, alignment: .trailing).padding()
-                    }
+                        Text("Product Name").frame(maxWidth: .infinity, alignment: .leading)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                        Spacer()
+                        Text("Price: Product Price")
+                    }.padding().background(Color.blue)
+                    .border(Color.orange, width: 3)
+                    .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
+                    
                 }
             }.onDelete(perform:removeFromWishlist)
         }// end List

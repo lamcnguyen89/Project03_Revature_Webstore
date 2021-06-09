@@ -50,15 +50,19 @@ struct UserWishlistSwiftUI: View {
                 List(selection: $select){
                     ForEach(getList(), id: \.name){ prd in
                         VStack{
-                           HStack{
-                                Image("\(prd.image)").resizable()
-                                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .aspectRatio(contentMode: .fill).padding().border(Color.blue, width: 3).cornerRadius(5.0)
-                           }
+                           
+                                Image("\(prd.image)")
+                                    .resizable()
+                                    .frame(width: 300, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .aspectRatio(contentMode: .fit)
+                                   // .padding()
+                                    .border(Color.blue, width: 3)
+                                    .cornerRadius(5.0)
+                          
                             VStack{
                                 
                                 Text("\(prd.name)").frame(maxWidth: .infinity, alignment: .leading)
-                                    .font(.caption)
+                                    .font(.headline)
                                     .foregroundColor(.white)
                                 Spacer()
                                 Text("Price: \(prd.price)")
