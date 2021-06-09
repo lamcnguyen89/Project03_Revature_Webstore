@@ -56,7 +56,7 @@ class ProductDetailViewController: UIViewController {
 
     @IBAction func getUserDashboard(_ sender: UIButton) {
         
-        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+        let sb = UIStoryboard(name:"Main", bundle:nil)
         let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
     }

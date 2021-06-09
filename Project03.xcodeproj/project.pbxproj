@@ -61,7 +61,6 @@
 		CAE7755026697E6400A19D4D /* UserOrdersSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7754F26697E6400A19D4D /* UserOrdersSwiftUI.swift */; };
 		CAE7755526697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */; };
 		CAE7756F266981BF00A19D4D /* UserDashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAE7756D266981BF00A19D4D /* UserDashboardViewController.xib */; };
-		CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */; };
 		DE363E36265803D70096D950 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E35265803D70096D950 /* AppDelegate.swift */; };
 		DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE363E37265803D70096D950 /* SceneDelegate.swift */; };
 		DE363E3D265803D70096D950 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE363E3B265803D70096D950 /* Main.storyboard */; };
@@ -87,6 +86,7 @@
 		DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */; };
 		DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */; };
 		DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */; };
+		DE3F06AE2670B7C200838C5D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F06AD2670B7C200838C5D /* Appearance.swift */; };
 		DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */; };
 		DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */; };
 		DE4E1569266D0CC60002F151 /* SavedItemsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */; };
@@ -173,7 +173,6 @@
 		CAE7755426697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountSettingsSwiftUI.swift; sourceTree = "<group>"; };
 		CAE7756C266981BF00A19D4D /* UserDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDashboardViewController.swift; sourceTree = "<group>"; };
 		CAE7756D266981BF00A19D4D /* UserDashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDashboardViewController.xib; sourceTree = "<group>"; };
-		CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserDashboard.storyboard; sourceTree = "<group>"; };
 		DC44CB081B75B02F10C83C31 /* Pods-Project03-Project03UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project03-Project03UITests.debug.xcconfig"; path = "Target Support Files/Pods-Project03-Project03UITests/Pods-Project03-Project03UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE363E32265803D70096D950 /* Project03.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project03.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE363E35265803D70096D950 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +204,7 @@
 		DE3B6517265C70B000005EBD /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderScrollView.swift; sourceTree = "<group>"; };
 		DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderHostingController.swift; sourceTree = "<group>"; };
+		DE3F06AD2670B7C200838C5D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFrameViewController.swift; sourceTree = "<group>"; };
 		DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterShoppingCartViewController.swift; sourceTree = "<group>"; };
 		DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsHostingController.swift; sourceTree = "<group>"; };
@@ -430,12 +430,12 @@
 				DE363E35265803D70096D950 /* AppDelegate.swift */,
 				DE363E3B265803D70096D950 /* Main.storyboard */,
 				CABB2856266A7897000FA979 /* StoreMenu.storyboard */,
-				CAF6C7E0265ED70A0040CC18 /* UserDashboard.storyboard */,
 				CA4246DC2659942400B92A81 /* StoreMenu.swift */,
 				DE363E41265803D80096D950 /* Assets.xcassets */,
 				DE363E43265803D80096D950 /* LaunchScreen.storyboard */,
 				DE363E46265803D80096D950 /* Info.plist */,
 				DE363E3E265803D70096D950 /* Project03.xcdatamodeld */,
+				DE3F06AD2670B7C200838C5D /* Appearance.swift */,
 			);
 			path = Project03;
 			sourceTree = "<group>";
@@ -588,7 +588,6 @@
 				DE363E45265803D80096D950 /* LaunchScreen.storyboard in Resources */,
 				CABB2857266A7897000FA979 /* StoreMenu.storyboard in Resources */,
 				DE363E42265803D80096D950 /* Assets.xcassets in Resources */,
-				CAF6C7E1265ED70A0040CC18 /* UserDashboard.storyboard in Resources */,
 				CAE7756F266981BF00A19D4D /* UserDashboardViewController.xib in Resources */,
 				DE363E3D265803D70096D950 /* Main.storyboard in Resources */,
 				BC2A99A626601BC200870173 /* ProductDataCSV.csv in Resources */,
@@ -751,6 +750,7 @@
 				DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */,
 				BC3E723E266133A700775C8F /* COD+CoreDataClass.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
+				DE3F06AE2670B7C200838C5D /* Appearance.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
 				BC7E34E0265E9788006CE75A /* ShoppingCart+CoreDataClass.swift in Sources */,
 				BC415855265BFC640051F99B /* Store+CoreDataClass.swift in Sources */,

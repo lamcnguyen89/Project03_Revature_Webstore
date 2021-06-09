@@ -87,5 +87,11 @@ class SignUpViewController: UIViewController {
         
     }
     
+    @IBAction func goToUserDashboard(_ sender: Any) {
+        let sb = UIStoryboard(name:"Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+    }
+    
 
 }

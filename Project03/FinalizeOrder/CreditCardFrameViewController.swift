@@ -27,9 +27,14 @@ class CreditCardFrameViewController: UIViewController {
    
     @IBAction func getUserDashboard(_ sender: UIButton) {
         
-        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+        let sb = UIStoryboard(name:"Main", bundle:nil)
         let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
     }
 
+    @IBAction func goToStoreFront(_ sender: Any) {
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        
+    }
+    
 }

@@ -92,5 +92,12 @@ class ResetPasswordViewController: UIViewController {
         
     }
     
+    @IBAction func goToUserDashboard(_ sender: Any) {
+        let sb = UIStoryboard(name:"Main", bundle:nil)
+        let show = sb.instantiateViewController(withIdentifier: "Main") as! UserDashboardViewController
+        self.present(show,animated: true, completion: nil)
+    }
+    
+    
     
 }
