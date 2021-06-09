@@ -41,11 +41,19 @@ struct ProductListView: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 300, height: 300, alignment: .center)
-                            Spacer()
-                            Text(String(item.name!))
-                                .multilineTextAlignment(.center)
-                            Text("$"+String(format: "%.2f",item.price))
-                                .multilineTextAlignment(.center)
+                                .border(Color.orange, width: 3)
+                                .cornerRadius(5.0)
+                            
+                            VStack{
+                                
+                                Text(String(item.name!)).frame(maxWidth: .infinity, alignment: .leading)
+                                    .font(.headline)
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Text("Price: $\(String(format:"%.2f", item.price))")
+                            }.padding().background(Color.orange)
+                            .border(Color.blue, width: 3)
+                            .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
                         }
                     }.sheet(isPresented: $showProduct) {
                         ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item, userVM: user)
