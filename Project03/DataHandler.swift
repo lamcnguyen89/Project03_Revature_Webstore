@@ -317,7 +317,7 @@ class DataHandler {
                 print("no items in wishlist")
                 let newList = fetchFeaturedProducts().shuffled()
                
-                for i in 0..<8{
+                for i in 0..<5{
                     list.append(ProductViewModel(product: newList[i]))
                 }
                 suggestList["Suggested Items"] = list
