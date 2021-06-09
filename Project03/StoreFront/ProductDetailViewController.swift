@@ -16,7 +16,6 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var numOfItems: UILabel!
     @IBOutlet weak var priceLabel: UITextField!
     @IBOutlet weak var btnFavorites: UIButton!
-    @IBOutlet weak var userLabel: UILabel!
     var isWishlist:Bool = false  
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
@@ -30,8 +29,6 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
         
 
     @IBOutlet weak var userLabel: UILabel!
-    var prodViewModel : ProductViewModel?
-    var cartViewModel : ShoppingCartViewModel?
 
 
     override func viewDidLoad() {
