@@ -9,7 +9,7 @@ import Foundation
 
 class ShoppingCartViewModel{
 
-    private let shoppingCart : ShoppingCart
+    let shoppingCart : ShoppingCart
     var itemNumTracker = 1
 
     public init (_ object : ShoppingCart){

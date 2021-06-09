@@ -27,6 +27,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     var lstSuggItems = [ProductViewModel]()
     var suggestItemsError:String?
     @IBOutlet weak var userLabel: UILabel!
+    var user : User?
 
 
     override func viewDidLoad() {
@@ -40,12 +41,13 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
             
         }
         
-        let user = LoginViewController.currentUser
+        user = LoginViewController.currentUser
+
         
-        if user.name == "Guest" {
+        if user!.name == "Guest" {
             userLabel.text = "Welcome!"
         } else {
-            userLabel.text = "Hello \(user.name)"
+            userLabel.text = "Hello \(user!.name)"
         }
         // Suggested List Scroll Collection
         getSuggItemsLst()
@@ -60,8 +62,11 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
         numOfItems.text = cartViewModel?.preAddItem()
     }
     @IBAction func addToCart(_ sender: Any) {
-        cartViewModel?.addItemsToCart(product: prodViewModel!.getObj())
+        cartViewModel = ShoppingCartViewModel((user?.shoppingCart!)!)
+        cartViewModel?.addItemsToCart(product: (prodViewModel?.getObj())!)
+        print(cartViewModel?.shoppingCart)
         NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)
+
     }
 
     

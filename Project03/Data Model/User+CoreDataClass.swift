@@ -25,6 +25,7 @@ public class User: NSManagedObject {
         reviews = nil
         searchHistory = nil
         wishlist = nil
+        shoppingCart = nil
         try! managedObjectContext?.save()
     }
 }

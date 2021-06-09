@@ -35,17 +35,21 @@ class LoginViewController: UIViewController {
                     displayOutput.text = "Login was successful"
 
                     print("Username: \(data.name!) \nPassword: \(data.password!)")
-                    let appUser = (parent as! StoreTabViewController).user
+                    let appUser = LoginViewController.currentUser
                     
-                    LoginViewController.currentUser = data
 
 
-                    if appUser?.name == "Guest" && appUser?.shoppingCart != nil{
+
+                    if appUser.name == "Guest" && appUser.shoppingCart != nil{
                         //store shopping cart data in incoming user
-                        data.shoppingCart = appUser?.shoppingCart
-                        data.shoppingCart?.user = data
+                        print(appUser)
+                        data.shoppingCart = appUser.shoppingCart
+
+                        LoginViewController.currentUser = data
+                        LoginViewController.currentUser.shoppingCart?.user = LoginViewController.currentUser
+
                         //reset guest account
-                        appUser?.reset()
+                        appUser.reset()
                     }
 
                     //set app user to incoming user
