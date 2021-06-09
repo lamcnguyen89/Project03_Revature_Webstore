@@ -33,7 +33,10 @@ class DataHandler {
         let cc = CreditCard(context: context!)
 
         cc.nameOnCard = ccVC.name.text!
-        cc.billingAddress = String(ccVC.address.text! + "," + ccVC.address2.text! + "," + ccVC.city.text! + "," + ccVC.state.text! + "," + ccVC.zip.text!)
+        cc.street = ccVC.address.text!
+        cc.city = ccVC.city.text!
+        cc.state = ccVC.state.text!
+        cc.zip = Int64(ccVC.zip.text!)!
         cc.number = Int64(ccVC.creditNumber.text!)!
         cc.expDate = String(ccVC.expMonth.text! + "," + ccVC.expYear.text!)
 
