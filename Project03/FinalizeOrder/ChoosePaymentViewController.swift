@@ -17,6 +17,7 @@ class ChoosePaymentViewController: UIViewController {
     
     @IBAction func chooseCashOnDelivery(_ sender: Any) {
         // Update the database to show Cash on Delivery Method
+        
     }
     
     @IBAction func chooseNetBanking(_ sender: Any) {

@@ -10,6 +10,7 @@ import UIKit
 class InnerViewReviewOrderViewController: UIViewController {
 
  
+    @IBOutlet weak var paymentType: UILabel!
     @IBOutlet weak var taxesLabel: UILabel!
     @IBOutlet weak var shippingLabel: UILabel!
     @IBOutlet weak var calculatedTotal: UILabel!
@@ -67,6 +68,10 @@ class InnerViewReviewOrderViewController: UIViewController {
         
         return totalPrice
         
+    }
+    
+    func showPayment(){
+       
     }
     
 
