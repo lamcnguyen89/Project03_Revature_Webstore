@@ -24,7 +24,7 @@ class NetBankingViewController: UIViewController {
         if user.name == "Guest" {
             userLabel.text = "Welcome!"
         } else {
-            userLabel.text = "Hello \(user)"
+            userLabel.text = "Hello \(user.name)"
         }
     }
     

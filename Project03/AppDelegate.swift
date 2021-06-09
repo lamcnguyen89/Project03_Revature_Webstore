@@ -89,6 +89,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     @objc func didCompleteUserImport(_ notification: Notification){
         DispatchQueue.main.async {
+            DataHandler().importAddresses()
+            DataHandler().importPaymentOptions()
             LoginViewController.currentUser = DataHandler().getGuestUser()
             DataHandler().importProducts()
 

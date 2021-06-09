@@ -11,5 +11,12 @@ import CoreData
 
 @objc(ACH)
 public class ACH: PaymentType {
-
+    func update(dict: [String: String], user : User){
+        acctNumber = Int64(Int(dict["acctNumber"]!)!)
+        nameOnAccount = dict["nameOnAccount"]
+        routingNumber = Int64(dict["routingNumber"]!)!
+        self.user = user
+        user.addToPaymentOptions(self)
+        try! managedObjectContext?.save()
+    }
 }

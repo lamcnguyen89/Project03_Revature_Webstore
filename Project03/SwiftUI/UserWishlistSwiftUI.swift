@@ -41,11 +41,9 @@ struct CustomListRow{
 
 struct UserWishlistSwiftUI: View {
     
-    @State var currentUser: User //= DataHandler.inst.getGuestUser()
-    @State var userName:String = "Guest"
-    @State var wishList = [ProductViewModel]()
-    @State var suggestList = [ProductViewModel]()
-    @State var isWishList:String = ""
+    @State var currentUser = DataHandler.inst.getGuestUser()
+    @State var wishList = []
+    @State var isWishList:String = "Suggested Items"
     @State var select = Set<UUID>()
     @State var isMenu:Bool = false
     var body: some View {

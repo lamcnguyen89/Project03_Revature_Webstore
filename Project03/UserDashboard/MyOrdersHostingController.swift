@@ -16,7 +16,7 @@ class MyOrdersHostingController: UIHostingController<UserOrdersSwiftUI> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        NotificationCenter.default.addObserver(self, selector: #selector(ordersDidUpdate), name: .ordersDidUpdate, object: nil)
         // Do any additional setup after loading the view.
     }
     
@@ -30,5 +30,7 @@ class MyOrdersHostingController: UIHostingController<UserOrdersSwiftUI> {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func ordersDidUpdate(){
+        rootView = UserOrdersSwiftUI()
+    }
 }

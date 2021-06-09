@@ -52,8 +52,8 @@ class UserViewModel{
         }
         return user.shoppingCart!
     }
-    public func getOrderHistory() throws -> OrderHistory {
-        if let orderHistory = user.orderHistory{
+    public func getOrderHistory() throws -> [Order] {
+        if let orderHistory = user.orders?.array as? [Order]{
             return orderHistory
         }
         else {throw FetchError.BadFetchRequest}
@@ -66,8 +66,8 @@ class UserViewModel{
         else {throw FetchError.BadFetchRequest}
     }
 
-    public func getPaymentOptions() throws -> PaymentOptions{
-        if let payOptions = user.paymentOptions{
+    public func getPaymentOptions() throws -> [PaymentType]{
+        if let payOptions = user.paymentOptions?.array as? [PaymentType]{
             return payOptions
         }
         else {throw FetchError.BadFetchRequest}

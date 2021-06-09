@@ -20,36 +20,38 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        displayOutput.isHidden = true
+
 
     }
     
     @IBAction func submitLogin(_ sender: Any) {
 
 
-        if username.text! != "" && password.text! != ""  {
+        if username.text! != "" || password.text! != ""  {
             do{
-                let data = try dataHandler.getOneUser(name: username.text!)
-                print(data.password)
-                if data.password == password.text! {
+                weak var data = try dataHandler.getOneUser(name: username.text!)
+                print(data!.password)
+                if data!.password == password.text! {
                     displayOutput.text = "Login was successful"
 
-                    print("Username: \(data.name!) \nPassword: \(data.password!)")
-                    let appUser = LoginViewController.currentUser
+                    print("Username: \(data!.name!) \nPassword: \(data!.password!)")
+                    weak var appUser = LoginViewController.currentUser
                     
 
 
 
-                    if appUser.name == "Guest" && appUser.shoppingCart != nil{
+                    if appUser!.name == "Guest" && appUser!.shoppingCart != nil{
                         //store shopping cart data in incoming user
                         print(appUser)
-                        data.shoppingCart = appUser.shoppingCart
+                        data!.shoppingCart = appUser!.shoppingCart
 
-                        LoginViewController.currentUser = data
+                        LoginViewController.currentUser = data!
                         LoginViewController.currentUser.shoppingCart?.user = LoginViewController.currentUser
+                        print(LoginViewController.currentUser.shoppingCart)
 
                         //reset guest account
-                        appUser.reset()
+                        appUser!.reset()
+                        data = nil
                     }
 
                     //set app user to incoming user
@@ -58,20 +60,24 @@ class LoginViewController: UIViewController {
 
                     //update views
                     (parent as! StoreTabViewController).userDidUpdate()
-
+                    
+                    displayOutput.text = "Login was successful"
                     username.text = ""
                     password.text = ""
-                    // let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
-                    //  self.present(wel, animated: true, completion: nil)}
+                    
+                    // Go back to storefront
+                    tabBarController?.selectedIndex = 0
+                    
                 }
             }
             catch{
                 print("Wrong password or Username. Try again.")
                 password.text = ""
+
                 displayOutput.text = "Wrong password or Username"
             }
         } else {
+
             displayOutput.text = "Fill in all text fields"
             
         }
@@ -96,6 +102,7 @@ class LoginViewController: UIViewController {
         LoginViewController.currentUser = data
         (parent as! StoreTabViewController).user = data
         (parent as! StoreTabViewController).userDidUpdate()
+        displayOutput.text = "Logged out"
     }
     
     
