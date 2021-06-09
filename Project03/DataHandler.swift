@@ -295,6 +295,15 @@ class DataHandler {
     func updateUserName(_ name: String){
         //TODO
     }
+    
+    func getSuggestedItemsList()->[ProductViewModel]{
+        var suggProdList = [ProductViewModel] ()
+        let productList:[Product] = fetchAllProducts().shuffled()
+        for i in 0..<10{
+            suggProdList.append(ProductViewModel(product: productList[i]))
+        }
+        return suggProdList
+    }
 
     func getWishlist(user: User) -> [String: [ProductViewModel]] {
         let fetchList = NSFetchRequest<NSFetchRequestResult>(entityName: "Wishlist")
@@ -308,7 +317,7 @@ class DataHandler {
                 print("no items in wishlist")
                 let newList = fetchFeaturedProducts().shuffled()
                
-                for i in 0..<5{
+                for i in 0..<8{
                     list.append(ProductViewModel(product: newList[i]))
                 }
                 suggestList["Suggested Items"] = list
