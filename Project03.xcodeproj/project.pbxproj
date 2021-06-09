@@ -54,6 +54,7 @@
 		CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */; };
 		CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */; };
 		CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4246DC2659942400B92A81 /* StoreMenu.swift */; };
+		CA7694A12670CAAD0073185C /* SuggItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7694A02670CAAD0073185C /* SuggItemsCollectionViewCell.swift */; };
 		CABB2857266A7897000FA979 /* StoreMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABB2856266A7897000FA979 /* StoreMenu.storyboard */; };
 		CABB285D266A9198000FA979 /* StoreMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CABB285B266A9198000FA979 /* StoreMenuViewController.swift */; };
 		CABB285E266A9198000FA979 /* StoreMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABB285C266A9198000FA979 /* StoreMenuViewController.xib */; };
@@ -165,6 +166,7 @@
 		CA3E9278266624FD00E5CB99 /* UserWishlistSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWishlistSwiftUI.swift; sourceTree = "<group>"; };
 		CA3E927D266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSaveItemsSwiftUIswift.swift; sourceTree = "<group>"; };
 		CA4246DC2659942400B92A81 /* StoreMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenu.swift; sourceTree = "<group>"; };
+		CA7694A02670CAAD0073185C /* SuggItemsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggItemsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CABB2856266A7897000FA979 /* StoreMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoreMenu.storyboard; sourceTree = "<group>"; };
 		CABB285B266A9198000FA979 /* StoreMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMenuViewController.swift; sourceTree = "<group>"; };
 		CABB285C266A9198000FA979 /* StoreMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreMenuViewController.xib; sourceTree = "<group>"; };
@@ -373,6 +375,7 @@
 				CABB285B266A9198000FA979 /* StoreMenuViewController.swift */,
 				CABB285C266A9198000FA979 /* StoreMenuViewController.xib */,
 				DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */,
+				CA7694A02670CAAD0073185C /* SuggItemsCollectionViewCell.swift */,
 			);
 			path = StoreFront;
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				CABB285D266A9198000FA979 /* StoreMenuViewController.swift in Sources */,
+				CA7694A12670CAAD0073185C /* SuggItemsCollectionViewCell.swift in Sources */,
 				DE39BD202660A21C00B06800 /* ChooseShippingViewController.swift in Sources */,
 				DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */,
 				BCD8349E266A75FE00411243 /* StoreTabViewController.swift in Sources */,
