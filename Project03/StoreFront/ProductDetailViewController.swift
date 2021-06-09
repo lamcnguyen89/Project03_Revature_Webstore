@@ -15,11 +15,9 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var numOfItems: UILabel!
     @IBOutlet weak var priceLabel: UITextField!
+    @IBOutlet weak var userLabel: UILabel!
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
-    @IBOutlet weak var userLabel: UILabel!
-    var userVM : UserViewModel?
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +29,15 @@ class ProductDetailViewController: UIViewController {
 
         }
         
-        if let user = (parent as? StoreTabViewController)?.user {
-            userVM = UserViewModel(user: user)
-            userLabel.text = userVM?.greeting()
-        }
-        else{
+        let user = LoginViewController.currentUser ?? "Guest"
+        
+        if user == "Guest" {
             userLabel.text = "Welcome!"
+        } else {
+            userLabel.text = "Hello \(user)"
         }
+        
+
         
     }
 
