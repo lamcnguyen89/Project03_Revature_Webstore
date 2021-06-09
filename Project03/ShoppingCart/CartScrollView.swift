@@ -15,7 +15,18 @@ struct CartScrollView: View {
     var user : UserViewModel?
     var cart : ShoppingCartViewModel?
     var cartItems: [ShoppingCartItem]?
+    var checkoutDelegate : CheckoutDelegate?
     init(user: UserViewModel?){
+        self.user = user
+        if user != nil{
+            cart = ShoppingCartViewModel(user!.getShoppingCart())
+            cartItems = try! (cart?.getItems())!
+            dataReady = true
+        }
+
+    }
+    init(user: UserViewModel?, delegate: CheckoutDelegate){
+        checkoutDelegate = delegate
         self.user = user
         if user != nil{
             cart = ShoppingCartViewModel(user!.getShoppingCart())
@@ -64,8 +75,10 @@ struct CartScrollView: View {
         }
     }
     func checkout(){
-        NotificationCenter.default.post(name: .checkout, object: nil)
+        checkoutDelegate!.onDidCheckout()
+//        NotificationCenter.default.post(name: .checkout, object: nil)
     }
+    
 }
 
 

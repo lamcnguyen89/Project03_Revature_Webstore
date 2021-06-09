@@ -1,5 +1,5 @@
 //
-//  DataDelegate.swift
+//  DataHandler.swift
 //  Project03
 //
 //  Created by Kirtland Ross on 5/24/21.
@@ -371,7 +371,7 @@ class DataHandler {
             }
         }
         catch{
-            print("DataDelegate.createStore fetch error")
+            print("DataHandler.createStore fetch error")
         }
         return store!
     }

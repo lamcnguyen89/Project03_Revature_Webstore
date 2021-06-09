@@ -8,7 +8,6 @@
 import UIKit
 
 class CartViewController: UIViewController {
-
     var userVM : UserViewModel?
     @IBOutlet weak var userLabel: UILabel!
     
@@ -38,11 +37,8 @@ class CartViewController: UIViewController {
         } as! CartHostingController
         hostingController.reloadScrollView()
 
-        NotificationCenter.default.addObserver(self, selector: #selector(checkout(_:)), name: .checkout, object: nil)
     }
-    @objc func checkout(_ notification: Notification){
-        performSegue(withIdentifier: "checkout", sender: user)
-    }
+
     
     @IBAction func userDashboard(_ sender: UIButton) {
         

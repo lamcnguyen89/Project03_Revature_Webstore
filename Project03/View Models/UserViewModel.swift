@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class UserViewModel{
-    private let user : User
+    let user : User
     private let context : NSManagedObjectContext
 
 
@@ -37,7 +37,10 @@ class UserViewModel{
     public func greeting() -> String{
         return "Hello " + firstName
     }
-
+    public func getUser() -> User{
+        return user
+    }
+    
     public func getReviews() throws -> [Review] {
         if let reviews = user.reviews?.array as? [Review]{
             return reviews

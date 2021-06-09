@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uVC-ec-Vav">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uVC-ec-Vav">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -126,7 +126,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="product" rowHeight="367" id="2hT-xi-mLP" customClass="ProductDetailRowTableViewCell" customModule="Project03" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="367"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="367"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2hT-xi-mLP" id="vKh-in-hfb">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="367"/>
@@ -323,10 +323,10 @@
             </objects>
             <point key="canvasLocation" x="-884.05797101449286" y="-106.47321428571428"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Finalize Order View Controller-->
         <scene sceneID="kab-sy-AC2">
             <objects>
-                <tabBarController storyboardIdentifier="Checkout" automaticallyAdjustsScrollViewInsets="NO" id="cHQ-gs-GU4" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Checkout" automaticallyAdjustsScrollViewInsets="NO" id="cHQ-gs-GU4" customClass="FinalizeOrderViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="dollarsign.circle.fill" catalog="system" id="s1c-jz-bgy"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Frv-Lo-tPR"/>
@@ -2224,7 +2224,6 @@
         <!--User Dashboard View Controller-->
         <scene sceneID="w4a-I1-sMj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RYP-Yj-OPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="userDash" id="srY-u4-Dsi" customClass="UserDashboardViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tb8-dv-6he">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -2399,48 +2398,49 @@
                         <outlet property="viewOrders" destination="3mk-83-h1t" id="PgC-NE-8kH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYP-Yj-OPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3938" y="-1013"/>
         </scene>
         <!--Saved Items Hosting Controller-->
         <scene sceneID="oaF-3j-TLx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="08T-E2-l8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="SaveItems" id="fXS-qM-ocb" customClass="SavedItemsHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="f9V-g9-DjJ"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08T-E2-l8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2572" y="-232"/>
         </scene>
         <!--Wish List Hosting Controller-->
         <scene sceneID="WYR-Cd-vBo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJJ-VA-RcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="WishList" id="6pv-BP-O96" customClass="WishListHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6ND-gG-wSY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJJ-VA-RcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3401" y="-236"/>
         </scene>
         <!--My Orders Hosting Controller-->
         <scene sceneID="L78-jd-xF2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oOm-Hv-GS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="MyOrders" id="ioU-hN-OXt" customClass="MyOrdersHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Pey-Ez-L60"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOm-Hv-GS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4241" y="-232"/>
         </scene>
         <!--Account Settings Hosting Controller-->
         <scene sceneID="Yhx-Td-oma">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2F2-Bs-WfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="AccountSettings" id="fIR-AK-9AB" customClass="AccountSettingsHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="e5j-sn-vUN"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2F2-Bs-WfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5199" y="-236"/>
         </scene>
