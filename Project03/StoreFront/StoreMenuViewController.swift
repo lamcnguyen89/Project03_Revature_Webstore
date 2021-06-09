@@ -8,6 +8,8 @@
 import UIKit
 
 class StoreMenuViewController: UIViewController {
+    
+    let store = CategoryViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,29 +20,29 @@ class StoreMenuViewController: UIViewController {
     func showCategoryView(category:String){
         
         let sb = UIStoryboard(name:"Main", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
-        self.present(show,animated: true, completion: {category})
+        let vc = sb.instantiateViewController(withIdentifier: "categoryList") as! CategoryViewController
+        self.present(vc, animated: false, completion: {vc.currentCategory = category})
     }
     
     @IBAction func btnGym(_ sender: UIButton) {
-        showCategoryView(category: "Gym")
+        showCategoryView(category: "Exercise Equipment")
     }
     
     @IBAction func btnGPU(_ sender: UIButton) {
-        showCategoryView(category: "GPU")
+        showCategoryView(category: "Graphics Card")
     }
         
     @IBAction func btnCars(_ sender: UIButton) {
-        showCategoryView(category: "Cars")
+        showCategoryView(category: "Car")
     }
     
     
     @IBAction func btnMetals(_ sender: UIButton) {
-        showCategoryView(category: "Metals")
+        showCategoryView(category: "Precious Metals")
     }
     
     @IBAction func btnCleanSupplies(_ sender: UIButton) {
-        showCategoryView(category: "Cleaning Supplies")
+        showCategoryView(category: "Cleaning")
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {

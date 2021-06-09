@@ -19,6 +19,8 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private var selection = 0
     var userVM : UserViewModel?
     private var pickerLabels = [String]()
+    var currentCategory: String!
+
 
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var categoryPicker: UIPickerView!
@@ -75,6 +77,11 @@ class CategoryViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.present(show, animated: true, completion: nil)
     }
     
+    @IBAction func btnShowStoreMenu(_ sender: UIButton) {
+        let sb = UIStoryboard(name: "StoreMenu", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier:  "storeMenu") as! StoreMenuViewController
+        self.present(vc, animated: true, completion: nil)
+    }
     
 }
 

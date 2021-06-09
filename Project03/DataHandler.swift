@@ -275,6 +275,41 @@ class DataHandler {
         //TODO
     }
 
+    func getWishlist(user: User) -> [String: [ProductViewModel]] {
+        let fetchList = NSFetchRequest<NSFetchRequestResult>(entityName: "Wishlist")
+        var wishList: NSOrderedSet
+        var list = [ProductViewModel]()
+        var userWishList = [String: [ProductViewModel]] ()
+        var suggestList = [String: [ProductViewModel]] ()
+        do{
+            let results = try self.context?.fetch(fetchList) as! [Wishlist]
+            if results.isEmpty == true{
+                print("no items in wishlist")
+                let newList = fetchFeaturedProducts().shuffled()
+               
+                for i in 0..<5{
+                    list.append(ProductViewModel(product: newList[i]))
+                }
+                suggestList["Suggested Items"] = list
+                return suggestList
+            }
+            for i in results{
+                if i.user?.name == user.name{
+                    wishList = NSOrderedSet(orderedSet: i.products!)
+                    for p in wishList.objectEnumerator(){
+                        list.append(ProductViewModel(product: p as! Product))
+                    }
+                    break
+                }
+            }
+            // and to dic: userWishList -> return dic
+            userWishList[user.name ?? "Guest"] = list
+            return userWishList
+        }catch{
+            print("Wishlist is empty")
+        }
+        return userWishList
+    }
 
     func getOneUser (name : String)throws -> User{
         var user : User
@@ -353,6 +388,8 @@ extension Notification.Name {
     static let didCompleteUserImport = Notification.Name("didCompleteUserImport")
     static let didCompleteLoadingUI = Notification.Name("didCompleteLoadingUI")
     static let shoppingCartDidUpdate = Notification.Name("shoppingCartDidUpdate")
+    static let didGetUser = Notification.Name("didGetUser")
     static let checkout = Notification.Name("checkout")
+
  
 }

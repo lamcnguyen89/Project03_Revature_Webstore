@@ -892,20 +892,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GKX-F1-kIN">
-                                <rect key="frame" x="57" y="433" width="300" height="34"/>
+                                <rect key="frame" x="57" y="395" width="300" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPz-la-HGJ">
-                                <rect key="frame" x="57" y="404" width="166" height="30"/>
+                                <rect key="frame" x="57" y="366" width="166" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-nB-cKj">
-                                <rect key="frame" x="57" y="492" width="300" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bhf-nB-cKj">
+                                <rect key="frame" x="57" y="454" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="w8B-Gz-7GV"/>
@@ -924,8 +924,8 @@
                                     <action selector="submitLogin:" destination="ov7-EM-JZC" eventType="touchUpInside" id="aOL-6V-s7q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-xI-BMm">
-                                <rect key="frame" x="57" y="566" width="300" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HYM-xI-BMm">
+                                <rect key="frame" x="57" y="528" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="mbZ-GH-NjD"/>
@@ -944,8 +944,8 @@
                                     <segue destination="x00-pK-1Bz" kind="show" id="2yw-w7-krQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-65-e8H">
-                                <rect key="frame" x="57" y="640" width="300" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzw-65-e8H">
+                                <rect key="frame" x="57" y="602" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="4j8-jc-EYh"/>
@@ -986,8 +986,8 @@
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <accessibility key="accessibilityConfiguration" label="header user section"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Led-CZ-cW3">
-                                <rect key="frame" x="57" y="714" width="300" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Led-CZ-cW3">
+                                <rect key="frame" x="57" y="736" width="300" height="55"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="RQt-z9-bKh"/>
@@ -1002,6 +1002,18 @@
                                 </state>
                                 <connections>
                                     <action selector="logout:" destination="ov7-EM-JZC" eventType="touchUpInside" id="z2t-7V-qRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzN-Gh-XAo">
+                                <rect key="frame" x="57" y="667" width="300" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <state key="normal" title="User Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showUserDash:" destination="ov7-EM-JZC" eventType="touchUpInside" id="0Xk-kN-D0k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1021,6 +1033,7 @@
                     <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="eEo-oN-qVW"/>
                     <navigationItem key="navigationItem" id="OvV-d7-nvJ"/>
                     <connections>
+                        <outlet property="btnLogin" destination="wzN-Gh-XAo" id="9Lh-qM-i67"/>
                         <outlet property="displayOutput" destination="Hdx-0H-xMQ" id="l2E-mS-zP6"/>
                         <outlet property="password" destination="GKX-F1-kIN" id="XGj-lh-Vxf"/>
                         <outlet property="username" destination="2NX-Ks-cA0" id="bnG-P7-ssX"/>
@@ -1028,7 +1041,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipd-xt-1Tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2546" y="561"/>
+            <point key="canvasLocation" x="-2546.376811594203" y="560.49107142857144"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="qSr-VU-kB4">

@@ -8,12 +8,50 @@
 import UIKit
 import SwiftUI
 
+
 class UserDashboardViewController: UIViewController {
     
-    var category:String?
+    private var currentUser:User!
+    private var getCurrentUser:UserViewModel!
+    //UserViewModel(user:DataHandler.inst.getGuestUser())
+    
+    @IBOutlet weak var lblWelcome: UILabel!
+    @IBOutlet weak var btnOrders: UIButton!
+    @IBOutlet weak var viewOrders: UIView!
+    @IBOutlet weak var btnAccountSet: UIButton!
+    @IBOutlet weak var viewAccount: UIView!
+    @IBOutlet weak var btnLogin: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        if let appUser = (parent as? StoreTabViewController)?.user {
+            print(appUser.name)
+            currentUser = appUser
+            getCurrentUser = UserViewModel(user: currentUser)
+            if currentUser.name == "Guest"{
+                btnLogin.isHidden = false
+                btnAccountSet.isHidden = true
+                btnOrders.isHidden = true
+            } else {
+                btnLogin.isHidden = true
+                btnAccountSet.isHidden = false
+                btnOrders.isHidden = false
+            }
+            lblWelcome.text = "Welcome \(appUser.name)"
+        } else {
+            getCurrentUser = UserViewModel(user:DataHandler.inst.getGuestUser())
+            lblWelcome.text = "Welcome \(getCurrentUser.name)"
+            btnLogin.isHidden = false
+            viewAccount.backgroundColor = .blue
+            btnAccountSet.isEnabled = false
+            viewOrders.backgroundColor = .blue
+            btnOrders.isEnabled = false
+       }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
     }
     
     @IBAction func btnStoreMenu(_ sender: UIButton) {
@@ -24,8 +62,9 @@ class UserDashboardViewController: UIViewController {
     }
     
     @IBAction func btnContinueShopping(_ sender: UIButton) {
-        
+
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {
