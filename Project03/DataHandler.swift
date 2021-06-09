@@ -308,6 +308,31 @@ class DataHandler {
         //TODO
     }
     
+    //:User Orders
+    func demoGetUserOrders(user: User) ->[String: [Order]]{
+       // let fetchHistory = NSFetchRequest<NSFetchRequestResult>(entityName: "OrderHistory")
+        let fetchOrders = NSFetchRequest<NSFetchRequestResult>(entityName: "Order")
+        var lstOrders = [String: [Order]]()
+
+       // let userOrders = try? (self.context?.fetch(fetchHistory) as! [OrderHistory])
+        let userOrders = try? (self.context?.fetch(fetchOrders) as! [Order])
+            if userOrders?.isEmpty == true{
+                print("no orders")
+                return lstOrders
+            } else {
+                for o in userOrders!{
+                    if o.user!.name == user.name {
+                            lstOrders.updateValue(String(o.date), forKey: user)
+                            lstOrders.updateValue(String(o.payment), forKey: user)
+                            lstOrders.updateValue(String(o.address), forKey: user)
+                            lstOrders.updateValue(String(o.price), forKey: user)
+                   
+                    }
+                }
+            }
+        return lstOrders
+    }
+    
     func getSuggestedItemsList()->[ProductViewModel]{
         var suggProdList = [ProductViewModel] ()
         let productList:[Product] = fetchAllProducts().shuffled()
@@ -318,43 +343,42 @@ class DataHandler {
     }
 
     func getWishlist(user: User) -> [String: [ProductViewModel]] {
-        let fetchList = NSFetchRequest<NSFetchRequestResult>(entityName: "Wishlist")
-        var wishList: NSOrderedSet
-        var list = [ProductViewModel]()
-        var userWishList = [String: [ProductViewModel]] ()
-        var suggestList = [String: [ProductViewModel]] ()
-        do{
-            let results = try self.context?.fetch(fetchList) as! [Wishlist]
-            if results.isEmpty == true{
-                print("no items in wishlist")
-                let newList = fetchFeaturedProducts().shuffled()
-               
-                for i in 0..<5{
-                    list.append(ProductViewModel(product: newList[i]))
-                }
-                suggestList["Suggested Items"] = list
-                return suggestList
-            }
-            for i in results{
-                if i.user?.name == user.name{
-                    wishList = NSOrderedSet(orderedSet: i.products!)
-                    for p in wishList.objectEnumerator(){
-                        list.append(ProductViewModel(product: p as! Product))
+            let fetchList = NSFetchRequest<NSFetchRequestResult>(entityName: "Wishlist")
+            var wishList: NSOrderedSet
+            var list = [ProductViewModel]()
+            var userWishList = [String: [ProductViewModel]] ()
+            var suggestList = [String: [ProductViewModel]] ()
+            do{
+                let results = try self.context?.fetch(fetchList) as! [Wishlist]
+                if results.isEmpty == true{
+                    print("no items in wishlist")
+                    let newList = fetchFeaturedProducts().shuffled()
+                   
+                    for i in 0..<5{
+                        list.append(ProductViewModel(product: newList[i]))
                     }
-                    break
+                    suggestList["Suggested Items"] = list
+                    return suggestList
                 }
+                for i in results{
+                    if i.user?.name == user.name{
+                        wishList = NSOrderedSet(orderedSet: i.products!)
+                        for p in wishList.objectEnumerator(){
+                            list.append(ProductViewModel(product: p as! Product))
+                        }
+                        break
+                    }
+                }
+                // and to dic: userWishList -> return dic
+                userWishList[user.name ?? "Guest"] = list
+                return userWishList
+            }catch{
+                print("Wishlist is empty")
             }
-            // and to dic: userWishList -> return dic
-            userWishList[user.name ?? "Guest"] = list
             return userWishList
-        }catch{
-            print("Wishlist is empty")
         }
-        return userWishList
-    }
     
-
-    
+        
     /*
     func addData(object : [String:String]){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/*
 struct OrderRowView: View {
     
     var body: some View {
@@ -26,25 +27,18 @@ struct OrderRowView: View {
            .padding(5)
     }
 }
-
+*/
 struct UserOrdersSwiftUI: View {
-    @Environment(\.managedObjectContext)
-    var context
-    //@FetchRequest(entity: Product.entity(), sortDescriptors:[])
-    
-   // var prod: FetchedResults<Product>
-   // @FetchRequest(entity:User.entity(), sortDescriptors: keyPath,: \User.HistoryItems.date, ascending:true)
-    
-    //var history: FetchRequest<OrderHistory>
     @State var isMenu:Bool = false
     @State var testDB:[String] = DataHandler.inst.getProductName()
-    
+    @State var currentUser:User
 
    // @State private var isProductsInOrderPresented = false
         
 
-    @State var orderNum = ["OR-1234", "OR-1111", "OR-9888", "OR-5555"]
+    @State var userOrders : [String:String] = DataHandler.inst.demoGetUserOrders(user: "lea.leonard1")
     @State var currentOrderNum:String = ""
+    @State var demoOrder:[String]
     
     var body: some View {
         VStack{
@@ -90,7 +84,7 @@ struct UserOrdersSwiftUI: View {
             NavigationView{
             List{
                  Section(header: Text("Order by most recent")){
-                    ForEach(orderNum, id:\.self){ num in
+                    ForEach(demoOrder, id:\.self){ num in
                     
                         NavigationLink(destination: OrderProductList(currentNum: num)){
                             VStack{
@@ -129,8 +123,7 @@ struct UserOrdersSwiftUI: View {
 
 struct UserOrdersSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        UserOrdersSwiftUI()
-    }
+        UserOrdersSwiftUI(currentUser:LoginViewController.currentUser}
 }
 
 struct OrderProductList: View{

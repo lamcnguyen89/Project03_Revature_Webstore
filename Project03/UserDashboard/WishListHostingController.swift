@@ -10,13 +10,15 @@ import SwiftUI
 
 class WishListHostingController: UIHostingController<UserWishlistSwiftUI> {
     
+    var appUser:User?
+    
     required init?(coder aDecoder: NSCoder){
-        super.init(coder: aDecoder, rootView: UserWishlistSwiftUI())
+        super.init(coder: aDecoder, rootView: UserWishlistSwiftUI(currentUser: appUser ?? DataHandler.inst.getGuestUser()))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        appUser = LoginViewController.currentUser
         // Do any additional setup after loading the view.
     }
     
