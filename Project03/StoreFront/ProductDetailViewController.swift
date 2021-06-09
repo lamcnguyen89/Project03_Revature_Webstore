@@ -10,7 +10,7 @@ import UIKit
 class ProductDetailViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var productName: UILabel!
-    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var itemRating: CosmosView!
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var numOfItems: UILabel!
@@ -26,9 +26,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var suggestedItemsCollection: UICollectionView!
     var lstSuggItems = [ProductViewModel]()
     var suggestItemsError:String?
-   
     @IBOutlet weak var userLabel: UILabel!
-
 
 
     override func viewDidLoad() {
@@ -38,7 +36,8 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
             productName.text = prodViewModel!.name
             img.image = UIImage(named: prodViewModel!.image)
             priceLabel.text = prodViewModel!.price
-
+            itemRating.rating = 3.00
+            
         }
         
         let user = LoginViewController.currentUser
@@ -115,7 +114,12 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
         aCell.imgProduct.image = UIImage(named: lstSuggItems[indexPath.row].image)
         aCell.lblDesc.text = lstSuggItems[indexPath.row].name
         return aCell
-    }    
+    }
+    
+    func getItemRating() {
+        
+        itemRating.rating = 5
+    }
     
 }
 

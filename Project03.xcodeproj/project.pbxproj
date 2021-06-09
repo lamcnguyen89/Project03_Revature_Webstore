@@ -88,6 +88,21 @@
 		DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */; };
 		DE3DE1A0266289170029B945 /* ReviewOrderHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */; };
 		DE3F06AE2670B7C200838C5D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F06AD2670B7C200838C5D /* Appearance.swift */; };
+		DE3F072A267148F200838C5D /* CosmosText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F071A267148F200838C5D /* CosmosText.swift */; };
+		DE3F072B267148F200838C5D /* CosmosLocalizedRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F071B267148F200838C5D /* CosmosLocalizedRating.swift */; };
+		DE3F072C267148F200838C5D /* CosmosTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F071C267148F200838C5D /* CosmosTouch.swift */; };
+		DE3F072D267148F200838C5D /* CosmosLayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F071D267148F200838C5D /* CosmosLayers.swift */; };
+		DE3F072E267148F200838C5D /* StarFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F071E267148F200838C5D /* StarFillMode.swift */; };
+		DE3F072F267148F200838C5D /* CosmosRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0720267148F200838C5D /* CosmosRating.swift */; };
+		DE3F0730267148F200838C5D /* CosmosSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0721267148F200838C5D /* CosmosSettings.swift */; };
+		DE3F0731267148F200838C5D /* CosmosSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0722267148F200838C5D /* CosmosSize.swift */; };
+		DE3F0732267148F200838C5D /* CosmosDefaultSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0723267148F200838C5D /* CosmosDefaultSettings.swift */; };
+		DE3F0733267148F200838C5D /* StarLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0724267148F200838C5D /* StarLayer.swift */; };
+		DE3F0734267148F200838C5D /* CosmosLayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0725267148F200838C5D /* CosmosLayerHelper.swift */; };
+		DE3F0735267148F200838C5D /* CosmosTouchTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0726267148F200838C5D /* CosmosTouchTarget.swift */; };
+		DE3F0736267148F200838C5D /* CosmosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0727267148F200838C5D /* CosmosView.swift */; };
+		DE3F0737267148F200838C5D /* RightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0728267148F200838C5D /* RightToLeft.swift */; };
+		DE3F0738267148F200838C5D /* CosmosAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3F0729267148F200838C5D /* CosmosAccessibility.swift */; };
 		DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */; };
 		DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */; };
 		DE4E1569266D0CC60002F151 /* SavedItemsHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */; };
@@ -207,6 +222,22 @@
 		DE3DE19A266288720029B945 /* ReviewOrderScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderScrollView.swift; sourceTree = "<group>"; };
 		DE3DE19F266289170029B945 /* ReviewOrderHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewOrderHostingController.swift; sourceTree = "<group>"; };
 		DE3F06AD2670B7C200838C5D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		DE3F071A267148F200838C5D /* CosmosText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
+		DE3F071B267148F200838C5D /* CosmosLocalizedRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosLocalizedRating.swift; path = Cosmos/CosmosLocalizedRating.swift; sourceTree = "<group>"; };
+		DE3F071C267148F200838C5D /* CosmosTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosTouch.swift; path = Cosmos/CosmosTouch.swift; sourceTree = "<group>"; };
+		DE3F071D267148F200838C5D /* CosmosLayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosLayers.swift; path = Cosmos/CosmosLayers.swift; sourceTree = "<group>"; };
+		DE3F071E267148F200838C5D /* StarFillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarFillMode.swift; path = Cosmos/StarFillMode.swift; sourceTree = "<group>"; };
+		DE3F071F267148F200838C5D /* Cosmos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Cosmos.h; path = Cosmos/Cosmos.h; sourceTree = "<group>"; };
+		DE3F0720267148F200838C5D /* CosmosRating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosRating.swift; path = Cosmos/CosmosRating.swift; sourceTree = "<group>"; };
+		DE3F0721267148F200838C5D /* CosmosSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosSettings.swift; path = Cosmos/CosmosSettings.swift; sourceTree = "<group>"; };
+		DE3F0722267148F200838C5D /* CosmosSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosSize.swift; path = Cosmos/CosmosSize.swift; sourceTree = "<group>"; };
+		DE3F0723267148F200838C5D /* CosmosDefaultSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosDefaultSettings.swift; path = Cosmos/CosmosDefaultSettings.swift; sourceTree = "<group>"; };
+		DE3F0724267148F200838C5D /* StarLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StarLayer.swift; path = Cosmos/StarLayer.swift; sourceTree = "<group>"; };
+		DE3F0725267148F200838C5D /* CosmosLayerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosLayerHelper.swift; path = Cosmos/CosmosLayerHelper.swift; sourceTree = "<group>"; };
+		DE3F0726267148F200838C5D /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/CosmosTouchTarget.swift; sourceTree = "<group>"; };
+		DE3F0727267148F200838C5D /* CosmosView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosView.swift; path = Cosmos/CosmosView.swift; sourceTree = "<group>"; };
+		DE3F0728267148F200838C5D /* RightToLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RightToLeft.swift; path = Cosmos/RightToLeft.swift; sourceTree = "<group>"; };
+		DE3F0729267148F200838C5D /* CosmosAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
 		DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardFrameViewController.swift; sourceTree = "<group>"; };
 		DE4E1529266BD37A0002F151 /* OuterShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterShoppingCartViewController.swift; sourceTree = "<group>"; };
 		DE4E1568266D0CC60002F151 /* SavedItemsHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedItemsHostingController.swift; sourceTree = "<group>"; };
@@ -419,6 +450,7 @@
 		DE363E34265803D70096D950 /* Project03 */ = {
 			isa = PBXGroup;
 			children = (
+				DE3F0719267148D400838C5D /* Cosmos */,
 				BCAA27BB266AD3DC00162A95 /* ShoppingCart */,
 				BCAA27BA266AD16E00162A95 /* NavigationControllers */,
 				DE39BD162660A18600B06800 /* FinalizeOrder */,
@@ -478,6 +510,29 @@
 				DE4CEAA2266A939000556A68 /* CreditCardFrameViewController.swift */,
 			);
 			path = FinalizeOrder;
+			sourceTree = "<group>";
+		};
+		DE3F0719267148D400838C5D /* Cosmos */ = {
+			isa = PBXGroup;
+			children = (
+				DE3F071F267148F200838C5D /* Cosmos.h */,
+				DE3F0729267148F200838C5D /* CosmosAccessibility.swift */,
+				DE3F0723267148F200838C5D /* CosmosDefaultSettings.swift */,
+				DE3F0725267148F200838C5D /* CosmosLayerHelper.swift */,
+				DE3F071D267148F200838C5D /* CosmosLayers.swift */,
+				DE3F071B267148F200838C5D /* CosmosLocalizedRating.swift */,
+				DE3F0720267148F200838C5D /* CosmosRating.swift */,
+				DE3F0721267148F200838C5D /* CosmosSettings.swift */,
+				DE3F0722267148F200838C5D /* CosmosSize.swift */,
+				DE3F071A267148F200838C5D /* CosmosText.swift */,
+				DE3F071C267148F200838C5D /* CosmosTouch.swift */,
+				DE3F0726267148F200838C5D /* CosmosTouchTarget.swift */,
+				DE3F0727267148F200838C5D /* CosmosView.swift */,
+				DE3F0728267148F200838C5D /* RightToLeft.swift */,
+				DE3F071E267148F200838C5D /* StarFillMode.swift */,
+				DE3F0724267148F200838C5D /* StarLayer.swift */,
+			);
+			name = Cosmos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -727,12 +782,14 @@
 				BCBF1BA3266D83BE000A2FD4 /* UserDashboardViewController.swift in Sources */,
 				DE39BD5D266150AF00B06800 /* CreditCardViewController.swift in Sources */,
 				DE3B6506265C6F7300005EBD /* StoreViewController.swift in Sources */,
+				DE3F072E267148F200838C5D /* StarFillMode.swift in Sources */,
 				CA4246DD2659942400B92A81 /* StoreMenu.swift in Sources */,
 				BC2D9FB4266194960097FCFB /* Wishlist+CoreDataClass.swift in Sources */,
 				BC3FBB23266697AA00F21C06 /* Address+CoreDataClass.swift in Sources */,
 				BC3FBB272666982500F21C06 /* Order+CoreDataClass.swift in Sources */,
 				CAE7755526697F0C00A19D4D /* UserAccountSettingsSwiftUI.swift in Sources */,
 				BC66C8CB265EDC16008C9C08 /* ViewControllerAsUIView.swift in Sources */,
+				DE3F0730267148F200838C5D /* CosmosSettings.swift in Sources */,
 				BCB248A62668103200D01EC0 /* ProductListView.swift in Sources */,
 				DE3B6513265C700D00005EBD /* ProductDetailRowTableViewCell.swift in Sources */,
 				CABB285D266A9198000FA979 /* StoreMenuViewController.swift in Sources */,
@@ -749,10 +806,14 @@
 				BC7E34DD265E92EC006CE75A /* CartHostingController.swift in Sources */,
 				DE39BD582661444B00B06800 /* InnerViewReviewOrderViewController.swift in Sources */,
 				CA3DFF16266D208A008B57A8 /* UserReturnsSwiftUIView.swift in Sources */,
+				DE3F072C267148F200838C5D /* CosmosTouch.swift in Sources */,
 				BC41585D265BFC640051F99B /* OrderHistory+CoreDataClass.swift in Sources */,
+				DE3F0735267148F200838C5D /* CosmosTouchTarget.swift in Sources */,
+				DE3F0733267148F200838C5D /* StarLayer.swift in Sources */,
 				BC9C00E2265D932D0029C1EA /* BrandViewModel.swift in Sources */,
 				DE4E152A266BD37A0002F151 /* OuterShoppingCartViewController.swift in Sources */,
 				BC3E723E266133A700775C8F /* COD+CoreDataClass.swift in Sources */,
+				DE3F0736267148F200838C5D /* CosmosView.swift in Sources */,
 				DE3B6518265C70B000005EBD /* ProductDetailViewController.swift in Sources */,
 				DE3F06AE2670B7C200838C5D /* Appearance.swift in Sources */,
 				DEEA3C80265C8FAB00CCFB6D /* CategoryViewController.swift in Sources */,
@@ -767,14 +828,18 @@
 				CABB286E266AC61F000FA979 /* UserOneOrderReview.swift in Sources */,
 				DE3DE19B266288720029B945 /* ReviewOrderScrollView.swift in Sources */,
 				DE4E1569266D0CC60002F151 /* SavedItemsHostingController.swift in Sources */,
+				DE3F072D267148F200838C5D /* CosmosLayers.swift in Sources */,
 				DE363E40265803D70096D950 /* Project03.xcdatamodeld in Sources */,
+				DE3F0737267148F200838C5D /* RightToLeft.swift in Sources */,
 				BC3FBB2A26669D7200F21C06 /* AddressViewModel.swift in Sources */,
 				CA3E927E266626FA00E5CB99 /* UserSaveItemsSwiftUIswift.swift in Sources */,
 				BC41585F265BFC640051F99B /* History+CoreDataClass.swift in Sources */,
 				CA3E9279266624FD00E5CB99 /* UserWishlistSwiftUI.swift in Sources */,
+				DE3F0731267148F200838C5D /* CosmosSize.swift in Sources */,
 				BC3E723C266133A700775C8F /* ACH+CoreDataClass.swift in Sources */,
 				BCC2B226266D3A2D00F09B5C /* StoreViewModel.swift in Sources */,
 				BCAA09D0266041E900F40284 /* AsyncCSV.swift in Sources */,
+				DE3F0738267148F200838C5D /* CosmosAccessibility.swift in Sources */,
 				DE3B6501265C6F3B00005EBD /* ProductListViewController.swift in Sources */,
 				BCB248A82668173E00D01EC0 /* CategoryHostingController.swift in Sources */,
 				DE4E1578266D0D600002F151 /* AccountSettingsHostingController.swift in Sources */,
@@ -785,9 +850,12 @@
 				DE39BD1B2660A20000B06800 /* ChoosePaymentViewController.swift in Sources */,
 				BC415863265BFC640051F99B /* SearchHistory+CoreDataClass.swift in Sources */,
 				BCAA09CD266037EF00F40284 /* ProductRating+CoreDataClass.swift in Sources */,
+				DE3F072B267148F200838C5D /* CosmosLocalizedRating.swift in Sources */,
 				BCCCA367265C485200CCBEF9 /* DataHandler.swift in Sources */,
+				DE3F0734267148F200838C5D /* CosmosLayerHelper.swift in Sources */,
 				DE385EB6265F6F2500F7EE96 /* ResetPasswordViewController.swift in Sources */,
 				DE385EBE265F768200F7EE96 /* LoginViewController.swift in Sources */,
+				DE3F072A267148F200838C5D /* CosmosText.swift in Sources */,
 				DE363E36265803D70096D950 /* AppDelegate.swift in Sources */,
 				DE363E38265803D70096D950 /* SceneDelegate.swift in Sources */,
 				BC2A999D265FFB4C00870173 /* Product+CoreDataClass.swift in Sources */,
@@ -797,7 +865,9 @@
 				DE4CEAA3266A939000556A68 /* CreditCardFrameViewController.swift in Sources */,
 				DE4E1573266D0D2E0002F151 /* MyOrdersHostingController.swift in Sources */,
 				BC7E34E7265E99BC006CE75A /* ShoppingCartViewModel.swift in Sources */,
+				DE3F0732267148F200838C5D /* CosmosDefaultSettings.swift in Sources */,
 				BC3FBB202666805300F21C06 /* PaymentTypeViewModel.swift in Sources */,
+				DE3F072F267148F200838C5D /* CosmosRating.swift in Sources */,
 				BC9C00E5265D9DE60029C1EA /* CartScrollView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
