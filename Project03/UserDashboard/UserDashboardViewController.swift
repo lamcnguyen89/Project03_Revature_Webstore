@@ -25,9 +25,9 @@ class UserDashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let user = LoginViewController.currentUser ?? "Guest"
+        let user = LoginViewController.currentUser
         
-        if user == "Guest" {
+        if user.name == "Guest" {
             lblWelcome.text = "Welcome!"
         } else {
             lblWelcome.text = "Hello \(user)"

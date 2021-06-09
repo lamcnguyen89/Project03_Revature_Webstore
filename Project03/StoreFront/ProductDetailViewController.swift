@@ -16,7 +16,6 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var numOfItems: UILabel!
     @IBOutlet weak var priceLabel: UITextField!
     @IBOutlet weak var btnFavorites: UIButton!
-    @IBOutlet weak var userLabel: UILabel!
     var isWishlist:Bool = false  
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
@@ -27,7 +26,9 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var suggestedItemsCollection: UICollectionView!
     var lstSuggItems = [ProductViewModel]()
     var suggestItemsError:String?
-        
+    @IBOutlet weak var userLabel: UILabel!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if prodViewModel != nil{
@@ -39,9 +40,9 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
             
         }
         
-        let user = LoginViewController.currentUser ?? "Guest"
+        let user = LoginViewController.currentUser
         
-        if user == "Guest" {
+        if user.name == "Guest" {
             userLabel.text = "Welcome!"
         } else {
             userLabel.text = "Hello \(user)"

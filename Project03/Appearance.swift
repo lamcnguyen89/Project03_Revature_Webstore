@@ -81,8 +81,15 @@ class MyButtons : UIButton {
         
     
     }
+}
+
+class LoginButtons:MyButtons{
     
-    
+    required init?(coder: NSCoder){
+        super.init(coder: coder)
+        super.backgroundColor = UIColor(red: 30/255, green: 144/255, blue: 255/255, alpha: 1)
+        
+    }
 }
 
 // Class to standardize heading labels
