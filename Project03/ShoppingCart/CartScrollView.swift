@@ -37,7 +37,7 @@ struct CartScrollView: View {
                             Text(i.product!.name!)
                             Spacer()
                             Divider()
-                            Text("$" + String(i.product!.price * Double(i.number)))
+                            Text("$" + String(format: "%.2f",i.product!.price * Double(i.number)))
 
                         }
                     }

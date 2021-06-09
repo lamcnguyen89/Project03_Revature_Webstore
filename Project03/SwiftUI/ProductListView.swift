@@ -36,22 +36,16 @@ struct ProductListView: View {
             Form{
                 ForEach(store!.filterProducts(category)){ item in
                     Button(action: {showProduct.toggle()}) {
-                        HStack{
+                        VStack{
                             Image(item.image!)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(width: 100, height: 100, alignment: .center)
+                                .frame(width: 300, height: 300, alignment: .center)
                             Spacer()
-                            VStack{
-                                Spacer()
-                                Text(String(item.name!))
-                                    .multilineTextAlignment(.center)
-                                Spacer()
-                                Text("$"+String(item.price))
-                                    .multilineTextAlignment(.center)
-                                Spacer()
-                            }
-                            Spacer()
+                            Text(String(item.name!))
+                                .multilineTextAlignment(.center)
+                            Text("$"+String(format: "%.2f",item.price))
+                                .multilineTextAlignment(.center)
                         }
                     }.sheet(isPresented: $showProduct) {
                         ViewControllerAsUIView(storyboard: "Main", VC: "ProductDetail", prodData: item, userVM: user)

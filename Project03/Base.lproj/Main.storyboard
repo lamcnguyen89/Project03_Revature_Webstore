@@ -22,18 +22,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Storefront" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-jJ-43r">
-                                        <rect key="frame" x="28" y="52" width="264" height="45"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Rare Goods Repo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zds-jJ-43r">
+                                        <rect key="frame" x="8" y="32" width="264" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls0-dy-Zzh">
-                                        <rect key="frame" x="337" y="47" width="50" height="50"/>
+                                        <rect key="frame" x="347" y="43" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello [username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H11-gl-oav">
+                                        <rect key="frame" x="8" y="55" width="300" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -44,27 +51,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.65000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0QB-U0-Gky">
-                                <rect key="frame" x="0.0" y="104" width="414" height="58"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMF-Zy-S73">
+                                <rect key="frame" x="0.0" y="107" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-7q-odf">
-                                        <rect key="frame" x="256" y="0.0" width="158" height="59"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello [username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H11-gl-oav">
-                                        <rect key="frame" x="27" y="-1" width="300" height="59"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Item Category:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6i-Yp-faa">
+                                        <rect key="frame" x="16" y="-1" width="300" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekr-7q-odf">
+                                        <rect key="frame" x="248" y="8" width="158" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pickerView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <accessibility key="accessibilityConfiguration" label="header user section"/>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bpd-PD-tSf">
-                                <rect key="frame" x="0.0" y="162" width="414" height="651"/>
+                                <rect key="frame" x="0.0" y="165" width="414" height="648"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="yRW-Vx-XsR" kind="embed" id="gh6-xk-NSe"/>
@@ -237,7 +245,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shopping Cart" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDc-gc-aZ8">
-                                        <rect key="frame" x="28" y="52" width="264" height="45"/>
+                                        <rect key="frame" x="17" y="73" width="264" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -247,7 +255,17 @@
                                         <rect key="frame" x="338" y="47" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="goToStorefront:" destination="inA-Gv-GzG" eventType="touchUpInside" id="cCp-o9-H1Q"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTx-pn-8oA">
+                                        <rect key="frame" x="17" y="32" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -379,7 +397,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout- Payment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bka-TX-OZx">
-                                        <rect key="frame" x="28" y="52" width="264" height="45"/>
+                                        <rect key="frame" x="16" y="63" width="264" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -389,7 +407,17 @@
                                         <rect key="frame" x="344" y="47" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="goToStorefront:" destination="IXw-OH-uT6" eventType="touchUpInside" id="Xji-rZ-v2k"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="382-Ra-gcX">
+                                        <rect key="frame" x="16" y="32" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -426,6 +454,9 @@
                         <imageReference key="image" image="dollarsign.circle" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="Nv8-vI-2Vq"/>
+                    <connections>
+                        <outlet property="userLabel" destination="eeU-96-wGG" id="Kor-xm-rRP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-kG-9vr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="i0a-dH-4MY" userLabel="Exit" sceneMemberID="exit"/>
@@ -477,7 +508,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout- Credit Card" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z8m-a4-nyL">
-                                        <rect key="frame" x="28" y="52" width="264" height="45"/>
+                                        <rect key="frame" x="8" y="63" width="264" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -488,6 +519,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXL-lL-lWD">
+                                        <rect key="frame" x="8" y="32" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -495,6 +533,9 @@
                         <viewLayoutGuide key="safeArea" id="76A-Sd-Drd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="userLabel" destination="9ex-oI-KeA" id="Gd2-3H-vWd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-OY-RYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -552,17 +593,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout- Net Banking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHh-Nk-chM">
-                                        <rect key="frame" x="28" y="52" width="264" height="45"/>
+                                        <rect key="frame" x="16" y="63" width="264" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap6-oj-PbM">
-                                        <rect key="frame" x="340" y="49" width="50" height="50"/>
+                                        <rect key="frame" x="342" y="50" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="back:" destination="S7T-EX-dIx" eventType="touchUpInside" id="5lZ-gU-Nkt"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03e-qb-yKg">
+                                        <rect key="frame" x="16" y="32" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -616,6 +667,7 @@
                         <outlet property="accountName" destination="WqC-yy-Rkk" id="Pzr-hg-Fyh"/>
                         <outlet property="accountNumber" destination="4is-Oh-icz" id="AMM-FA-3RV"/>
                         <outlet property="routingNumber" destination="JkU-Ce-rf8" id="W0j-Xn-dew"/>
+                        <outlet property="userLabel" destination="afR-us-OCO" id="5kP-iW-8yr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nCE-4v-aKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -642,7 +694,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout- Shipping" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2g-yT-oQf">
-                                        <rect key="frame" x="30" y="50" width="306" height="48"/>
+                                        <rect key="frame" x="16" y="60" width="306" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -652,7 +704,17 @@
                                         <rect key="frame" x="337" y="48" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="backtoStoreFront:" destination="ueu-bg-6Tc" eventType="touchUpInside" id="NCo-0M-0lo"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OO-6W-Px9">
+                                        <rect key="frame" x="16" y="32" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -686,6 +748,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Shipment" image="shippingbox" catalog="system" id="1Tc-eq-scu"/>
+                    <connections>
+                        <outlet property="userLabel" destination="A57-Ys-50Y" id="8Ux-dW-9nZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymt-Qh-xZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -711,7 +776,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Checkout- Review" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-1R-Tt8">
-                                        <rect key="frame" x="30" y="52" width="295" height="48"/>
+                                        <rect key="frame" x="15" y="60" width="295" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -721,7 +786,17 @@
                                         <rect key="frame" x="342" y="51" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="backToStoreFront:" destination="Bmb-Vo-dRB" eventType="touchUpInside" id="zcv-9j-Hli"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sff-vw-fgo">
+                                        <rect key="frame" x="15" y="32" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -757,6 +832,9 @@
                     <tabBarItem key="tabBarItem" title="Review" id="dNp-OO-eTl">
                         <imageReference key="image" image="rectangle.and.pencil.and.ellipsis" catalog="system" symbolScale="large"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="userLabel" destination="CJ1-Of-sU8" id="EdE-Mr-G09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekl-Z6-RmD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -782,7 +860,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BO-PD-AyR">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BO-PD-AyR">
                                         <rect key="frame" x="26" y="52" width="283" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
@@ -793,6 +871,9 @@
                                         <rect key="frame" x="336" y="46" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="goToStorefront:" destination="ov7-EM-JZC" eventType="touchUpInside" id="uXF-cM-AGj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -961,7 +1042,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTV-Mw-8zj">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTV-Mw-8zj">
                                         <rect key="frame" x="26" y="52" width="283" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
@@ -972,6 +1053,9 @@
                                         <rect key="frame" x="332" y="46" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="storeFront:" destination="x00-pK-1Bz" eventType="touchUpInside" id="FZG-DY-Fp2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -1144,7 +1228,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AppName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGN-FU-p4I">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGN-FU-p4I">
                                         <rect key="frame" x="26" y="52" width="283" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
@@ -1155,6 +1239,9 @@
                                         <rect key="frame" x="341" y="46" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="storeFront:" destination="Q8E-YZ-glc" eventType="touchUpInside" id="M9z-hh-jcH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
@@ -1332,32 +1419,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Product Name]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-gI-OKJ">
-                                <rect key="frame" x="18" y="298" width="315" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="NGs-Vg-HD0"/>
-                                    <constraint firstAttribute="width" constant="315" id="wTA-5u-YzA"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BJN-dY-ikF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Rare Goods Repo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kir-lQ-0GP">
+                                        <rect key="frame" x="8" y="32" width="264" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello [username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGk-Fw-yPR">
+                                        <rect key="frame" x="8" y="55" width="300" height="59"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Npc-8H-3Xa">
+                                        <rect key="frame" x="347" y="27" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="showStoreMenu:" destination="75z-n6-Tp5" eventType="touchUpInside" id="d4H-Db-Fu0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Product Name]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO0-gI-OKJ">
+                                <rect key="frame" x="18" y="349.5" width="315" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3ld-tI-YXd">
-                                <rect key="frame" x="0.0" y="56" width="414" height="234"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3ld-tI-YXd">
+                                <rect key="frame" x="0.0" y="107.5" width="414" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="235" id="5j9-QG-paD"/>
-                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Star Rating]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-nr-xzx">
-                                <rect key="frame" x="152" y="500" width="110.5" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Star Rating]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-nr-xzx">
+                                <rect key="frame" x="152" y="551.5" width="110.5" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-vJ-GxR">
-                                <rect key="frame" x="0.0" y="532" width="414" height="62"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-vJ-GxR">
+                                <rect key="frame" x="0.0" y="583.5" width="414" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24m-pU-Wmm">
                                         <rect key="frame" x="21" y="14" width="38" height="35"/>
@@ -1400,76 +1513,40 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="o5W-JY-eBY"/>
-                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inspired Related Items" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBS-5a-JnZ">
-                                <rect key="frame" x="54.5" y="608" width="305" height="47"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="rvX-S1-dxc"/>
-                                    <constraint firstAttribute="width" constant="305" id="wQ5-lr-Gws"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Inspired Related Items" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBS-5a-JnZ">
+                                <rect key="frame" x="54" y="659.5" width="305" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Price]" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuK-C3-kBj">
-                                <rect key="frame" x="20" y="341" width="90" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="g7t-fc-U8k"/>
-                                    <constraint firstAttribute="width" constant="90" id="xOO-ZI-rZq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="[Price]" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GuK-C3-kBj">
+                                <rect key="frame" x="20" y="392.5" width="90" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="[Description Goes Here] x 3 lines" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-Z7-ICt">
-                                <rect key="frame" x="20" y="383" width="361" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Description Goes Here] x 3 lines" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0K2-Z7-ICt">
+                                <rect key="frame" x="20" y="434.5" width="361" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
                                 </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="Kdx-mo-WsA"/>
-                                    <constraint firstAttribute="width" constant="361" id="a18-Y7-LFT"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-DM-87c">
-                                <rect key="frame" x="355" y="299.5" width="39" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33.5" id="FYU-fk-dxx"/>
-                                    <constraint firstAttribute="width" constant="39" id="rv8-ik-5B8"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-DM-87c">
+                                <rect key="frame" x="355" y="351.5" width="39" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <state key="normal" backgroundImage="heart" catalog="system"/>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ms1-Dg-jXv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="EO3-vJ-GxR" firstAttribute="trailing" secondItem="ms1-Dg-jXv" secondAttribute="trailing" id="8PA-FI-4ah"/>
-                            <constraint firstItem="GuK-C3-kBj" firstAttribute="leading" secondItem="ms1-Dg-jXv" secondAttribute="leading" constant="20" id="8kX-C0-OPQ"/>
-                            <constraint firstItem="0K2-Z7-ICt" firstAttribute="centerX" secondItem="8X8-MK-BIl" secondAttribute="centerX" id="Dug-pU-cuD"/>
-                            <constraint firstItem="EO3-vJ-GxR" firstAttribute="leading" secondItem="ms1-Dg-jXv" secondAttribute="leading" id="FSC-ai-5h8"/>
-                            <constraint firstItem="3ld-tI-YXd" firstAttribute="top" secondItem="ms1-Dg-jXv" secondAttribute="top" constant="11.5" id="J2C-0T-mRb"/>
-                            <constraint firstItem="cO0-gI-OKJ" firstAttribute="top" secondItem="3ld-tI-YXd" secondAttribute="bottom" constant="7.5" id="MRM-Ou-zdf"/>
-                            <constraint firstItem="EO3-vJ-GxR" firstAttribute="top" secondItem="Lj8-nr-xzx" secondAttribute="bottom" constant="8" symbolic="YES" id="TPH-5r-eRU"/>
-                            <constraint firstItem="3ld-tI-YXd" firstAttribute="centerX" secondItem="8X8-MK-BIl" secondAttribute="centerX" id="TXk-lk-AcN"/>
-                            <constraint firstItem="EO3-vJ-GxR" firstAttribute="centerX" secondItem="8X8-MK-BIl" secondAttribute="centerX" id="VO9-gf-oQk"/>
-                            <constraint firstItem="cO0-gI-OKJ" firstAttribute="leading" secondItem="ms1-Dg-jXv" secondAttribute="leading" constant="18" id="ZmB-c8-Wos"/>
-                            <constraint firstItem="0K2-Z7-ICt" firstAttribute="top" secondItem="GuK-C3-kBj" secondAttribute="bottom" constant="8" symbolic="YES" id="b9h-uE-gfn"/>
-                            <constraint firstItem="oBS-5a-JnZ" firstAttribute="centerX" secondItem="8X8-MK-BIl" secondAttribute="centerX" id="gY6-nf-yny"/>
-                            <constraint firstItem="qd9-DM-87c" firstAttribute="top" secondItem="3ld-tI-YXd" secondAttribute="bottom" constant="7.5" id="lP7-3h-hVx"/>
-                            <constraint firstItem="3ld-tI-YXd" firstAttribute="leading" secondItem="ms1-Dg-jXv" secondAttribute="leading" id="qoI-z6-Jfz"/>
-                            <constraint firstItem="oBS-5a-JnZ" firstAttribute="top" secondItem="EO3-vJ-GxR" secondAttribute="bottom" constant="14" id="sXX-nt-g0K"/>
-                            <constraint firstItem="ms1-Dg-jXv" firstAttribute="trailing" secondItem="qd9-DM-87c" secondAttribute="trailing" constant="20" id="vfb-tA-REL"/>
-                            <constraint firstItem="Lj8-nr-xzx" firstAttribute="top" secondItem="0K2-Z7-ICt" secondAttribute="bottom" constant="17" id="wTo-J7-GN0"/>
-                            <constraint firstItem="GuK-C3-kBj" firstAttribute="top" secondItem="cO0-gI-OKJ" secondAttribute="bottom" constant="8" symbolic="YES" id="y3Z-Dw-rAO"/>
-                            <constraint firstItem="Lj8-nr-xzx" firstAttribute="centerX" secondItem="8X8-MK-BIl" secondAttribute="centerX" id="zWT-U3-Nla"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="desc" destination="0K2-Z7-ICt" id="UP3-9M-lVt"/>
@@ -1478,6 +1555,7 @@
                         <outlet property="priceLabel" destination="GuK-C3-kBj" id="3mW-UK-gDi"/>
                         <outlet property="productName" destination="cO0-gI-OKJ" id="ARZ-rz-RrJ"/>
                         <outlet property="rating" destination="Lj8-nr-xzx" id="8Yi-9l-6mx"/>
+                        <outlet property="userLabel" destination="rGk-Fw-yPR" id="bLu-9X-AsC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGg-LN-fw8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1739,8 +1817,8 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-P1-N3H">
-                                                        <rect key="frame" x="169" y="58" width="42" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Payment Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-P1-N3H">
+                                                        <rect key="frame" x="106" y="58" width="168" height="21"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -1754,10 +1832,17 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shipping Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfl-JT-nio">
-                                                        <rect key="frame" x="16" y="37" width="364" height="30"/>
+                                                        <rect key="frame" x="8" y="8" width="364" height="30"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display Shipping Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjE-YA-VCS">
+                                                        <rect key="frame" x="93" y="59" width="194" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -1836,7 +1921,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order Confirmation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVU-jX-dmd">
-                                        <rect key="frame" x="30" y="52" width="295" height="48"/>
+                                        <rect key="frame" x="20" y="80" width="295" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1846,7 +1931,17 @@
                                         <rect key="frame" x="330" y="54" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="Home"/>
+                                        <connections>
+                                            <action selector="backToStoreFront:" destination="oIc-CU-Hyn" eventType="touchUpInside" id="uR9-qt-Q9W"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rare Goods Repo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGo-XR-THT">
+                                        <rect key="frame" x="20" y="42" width="283" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </view>
@@ -1886,6 +1981,9 @@
                         <viewLayoutGuide key="safeArea" id="djX-l7-vg2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="userLabel" destination="Xsa-gK-Gns" id="jPr-6N-3Af"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R45-Fi-ctb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1894,7 +1992,7 @@
         <!--Store Tab View Controller-->
         <scene sceneID="mWR-cR-sYk">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uVC-ec-Vav" customClass="StoreTabViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="StoreTab" automaticallyAdjustsScrollViewInsets="NO" id="uVC-ec-Vav" customClass="StoreTabViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uu4-pJ-CKs">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

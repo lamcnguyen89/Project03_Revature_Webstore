@@ -18,12 +18,14 @@ class ShippingAddressViewController: UIViewController {
     @IBOutlet weak var state: UITextField!
     @IBOutlet weak var zipCode: UITextField!
     @IBOutlet weak var phone: UITextField!
+
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
     }
     
     @IBAction func addAddress(_ sender: Any) {

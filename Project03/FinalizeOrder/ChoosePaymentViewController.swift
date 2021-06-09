@@ -9,10 +9,18 @@ import UIKit
 
 class ChoosePaymentViewController: UIViewController {
 
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
     }
     
     @IBAction func chooseCashOnDelivery(_ sender: Any) {
@@ -38,6 +46,12 @@ class ChoosePaymentViewController: UIViewController {
         let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
     }
+    
+    @IBAction func goToStorefront(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 
 }

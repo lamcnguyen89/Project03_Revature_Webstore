@@ -72,9 +72,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func back(_ sender: Any) {
-        let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let wel = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-        self.present(wel, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         
     }
     @IBAction func createAccount(_ sender: Any) {
@@ -85,9 +83,8 @@ class SignUpViewController: UIViewController {
 
 
     @IBAction func storeFront(_ sender: Any) {
-        let sb = UIStoryboard(name: "Main", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier:  "categoryList")
-        self.present(show, animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        
     }
     
 

@@ -17,7 +17,9 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var priceLabel: UITextField!
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
-
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,15 @@ class ProductDetailViewController: UIViewController {
             priceLabel.text = prodViewModel!.price
 
         }
+        
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
+        
     }
 
 
@@ -51,9 +62,7 @@ class ProductDetailViewController: UIViewController {
     }
     
     @IBAction func showStoreMenu(_ sender: UIButton) {
-        let sb = UIStoryboard(name: "StoreMenu", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier:  "storeMenu")
-        self.present(show, animated: true, completion: nil)
         
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

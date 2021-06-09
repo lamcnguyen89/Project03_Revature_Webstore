@@ -8,11 +8,22 @@
 import UIKit
 
 class ChooseShippingViewController: UIViewController {
-
+    
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
+        
     }
     
 
@@ -23,5 +34,8 @@ class ChooseShippingViewController: UIViewController {
     }
     
     
-
+    @IBAction func backtoStoreFront(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
