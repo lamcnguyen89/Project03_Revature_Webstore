@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uVC-ec-Vav">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -2224,7 +2223,6 @@
         <!--User Dashboard View Controller-->
         <scene sceneID="w4a-I1-sMj">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RYP-Yj-OPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="userDash" id="srY-u4-Dsi" customClass="UserDashboardViewController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tb8-dv-6he">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -2255,34 +2253,33 @@
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="appName"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qO7-tg-F2s" customClass="MySubView" customModule="Project03" customModuleProvider="target">
-                                <rect key="frame" x="26" y="302" width="359" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMg-hV-Dee">
+                                <rect key="frame" x="34" y="261" width="351" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba2-x4-shN">
-                                        <rect key="frame" x="8" y="14" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
-                                        <state key="normal" title="My Save Items">
-                                            <color key="titleColor" systemColor="systemOrangeColor"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="fXS-qM-ocb" kind="show" id="srs-Ag-31G"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="square.and.arrow.up.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AcF-sS-cFh">
-                                        <rect key="frame" x="8" y="10" width="85" height="45"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="tintColor" systemColor="systemOrangeColor"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES"/>
-                                </accessibility>
-                            </view>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn2-BY-LaA">
+                                <rect key="frame" x="253" y="187" width="96" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-tu-pJC">
+                                <rect key="frame" x="20" y="741" width="357" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                <state key="normal" title="Store Menu">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnStoreMenu:" destination="srY-u4-Dsi" eventType="touchUpInside" id="ey9-qg-XBk"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWE-tv-VHd" customClass="MySubView" customModule="Project03" customModuleProvider="target">
-                                <rect key="frame" x="26" y="401" width="359" height="74"/>
+                                <rect key="frame" x="30" y="302" width="359" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vXe-VU-Zwz">
@@ -2305,7 +2302,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pxk-1g-mS5">
-                                <rect key="frame" x="32" y="687" width="353" height="46"/>
+                                <rect key="frame" x="36" y="588" width="353" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
                                 <state key="normal" title="Continue Shopping">
@@ -2315,33 +2312,8 @@
                                     <action selector="btnContinueShopping:" destination="srY-u4-Dsi" eventType="touchUpInside" id="57O-bH-kuv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMg-hV-Dee">
-                                <rect key="frame" x="34" y="261" width="351" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn2-BY-LaA">
-                                <rect key="frame" x="253" y="187" width="96" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bcr-tu-pJC">
-                                <rect key="frame" x="20" y="741" width="357" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
-                                <state key="normal" title="Store Menu">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnStoreMenu:" destination="srY-u4-Dsi" eventType="touchUpInside" id="ey9-qg-XBk"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3mk-83-h1t" customClass="MySubView" customModule="Project03" customModuleProvider="target">
-                                <rect key="frame" x="26" y="504" width="359" height="74"/>
+                                <rect key="frame" x="30" y="405" width="359" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1B-HE-BuG">
@@ -2364,7 +2336,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAh-lQ-0GJ" customClass="MySubView" customModule="Project03" customModuleProvider="target">
-                                <rect key="frame" x="26" y="605" width="359" height="74"/>
+                                <rect key="frame" x="30" y="506" width="359" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWt-vi-R0H">
@@ -2399,48 +2371,49 @@
                         <outlet property="viewOrders" destination="3mk-83-h1t" id="PgC-NE-8kH"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RYP-Yj-OPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3938" y="-1013"/>
         </scene>
         <!--Saved Items Hosting Controller-->
         <scene sceneID="oaF-3j-TLx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="08T-E2-l8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="SaveItems" id="fXS-qM-ocb" customClass="SavedItemsHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="f9V-g9-DjJ"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="08T-E2-l8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2572" y="-232"/>
         </scene>
         <!--Wish List Hosting Controller-->
         <scene sceneID="WYR-Cd-vBo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJJ-VA-RcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="WishList" id="6pv-BP-O96" customClass="WishListHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6ND-gG-wSY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJJ-VA-RcA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3401" y="-236"/>
         </scene>
         <!--My Orders Hosting Controller-->
         <scene sceneID="L78-jd-xF2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oOm-Hv-GS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="MyOrders" id="ioU-hN-OXt" customClass="MyOrdersHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Pey-Ez-L60"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOm-Hv-GS9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4241" y="-232"/>
         </scene>
         <!--Account Settings Hosting Controller-->
         <scene sceneID="Yhx-Td-oma">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2F2-Bs-WfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <hostingController storyboardIdentifier="AccountSettings" id="fIR-AK-9AB" customClass="AccountSettingsHostingController" customModule="Project03" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="e5j-sn-vUN"/>
                 </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2F2-Bs-WfH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5199" y="-236"/>
         </scene>
@@ -2465,7 +2438,6 @@
         <image name="shippingbox" catalog="system" width="128" height="124"/>
         <image name="shippingbox.fill" catalog="system" width="128" height="124"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="wand.and.stars" catalog="system" width="128" height="113"/>
         <image name="xmark.seal" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
