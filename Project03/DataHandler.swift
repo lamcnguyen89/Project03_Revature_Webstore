@@ -307,7 +307,7 @@ class DataHandler {
     func updateUserName(_ name: String){
         //TODO
     }
-    
+  /*
     //:User Orders
     func demoGetUserOrders(user: User) ->[String: [Order]]{
        // let fetchHistory = NSFetchRequest<NSFetchRequestResult>(entityName: "OrderHistory")
@@ -320,6 +320,7 @@ class DataHandler {
                 print("no orders")
                 return lstOrders
             } else {
+                /*
                 for o in userOrders!{
                     if o.user!.name == user.name {
                             lstOrders.updateValue(String(o.date), forKey: user)
@@ -327,11 +328,12 @@ class DataHandler {
                             lstOrders.updateValue(String(o.address), forKey: user)
                             lstOrders.updateValue(String(o.price), forKey: user)
                    
-                    }
+                    }*/
                 }
             }
         return lstOrders
     }
+ */
     
     func getSuggestedItemsList()->[ProductViewModel]{
         var suggProdList = [ProductViewModel] ()

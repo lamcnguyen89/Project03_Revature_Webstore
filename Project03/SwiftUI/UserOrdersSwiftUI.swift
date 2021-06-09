@@ -32,11 +32,11 @@ struct UserOrdersSwiftUI: View {
     @State var isMenu:Bool = false
     @State var testDB:[String] = DataHandler.inst.getProductName()
     @State var currentUser:User
-
+    @State var currentNum:String = ""
    // @State private var isProductsInOrderPresented = false
         
 
-    @State var userOrders : [String:String] = DataHandler.inst.demoGetUserOrders(user: "lea.leonard1")
+ //   @State var userOrders : [String:String] = DataHandler.inst.demoGetUserOrders(user: "lea.leonard1")
     @State var currentOrderNum:String = ""
     @State var demoOrder:[String]
     
@@ -86,7 +86,7 @@ struct UserOrdersSwiftUI: View {
                  Section(header: Text("Order by most recent")){
                     ForEach(demoOrder, id:\.self){ num in
                     
-                        NavigationLink(destination: OrderProductList(currentNum: num)){
+                        NavigationLink(destination: OrderProductList(currentNum: "or123")){
                             VStack{
                                    HStack{
                                    Text("Order Number: \(num)")
@@ -118,12 +118,13 @@ struct UserOrdersSwiftUI: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity).background(Color.blue)
         Spacer()
     }// end body:view
-    
+
 }
 
 struct UserOrdersSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-        UserOrdersSwiftUI(currentUser:LoginViewController.currentUser}
+        UserOrdersSwiftUI(currentUser:LoginViewController.currentUser)
+    }
 }
 
 struct OrderProductList: View{
