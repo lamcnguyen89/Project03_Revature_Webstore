@@ -16,11 +16,11 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var numOfItems: UILabel!
     @IBOutlet weak var priceLabel: UITextField!
     @IBOutlet weak var btnFavorites: UIButton!
-    var isWishlist:Bool = false
-    
+    @IBOutlet weak var userLabel: UILabel!
+    var isWishlist:Bool = false  
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
-    @IBOutlet weak var userLabel: UILabel!
+   
     var userVM : UserViewModel?
     
     //SUGGESTED ITEMS SECTION
@@ -28,6 +28,12 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     var lstSuggItems = [ProductViewModel]()
     var suggestItemsError:String?
         
+
+    @IBOutlet weak var userLabel: UILabel!
+    var prodViewModel : ProductViewModel?
+    var cartViewModel : ShoppingCartViewModel?
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         if prodViewModel != nil{
@@ -38,15 +44,16 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
 
         }
         
-        if let user = (parent as? StoreTabViewController)?.user {
-            userVM = UserViewModel(user: user)
-            userLabel.text = userVM?.greeting()
-        }
-        else{
+        let user = LoginViewController.currentUser ?? "Guest"
+        
+        if user == "Guest" {
             userLabel.text = "Welcome!"
+        } else {
+            userLabel.text = "Hello \(user)"
         }
         // Suggested List Scroll Collection
         getSuggItemsLst()
+
     }
 
 

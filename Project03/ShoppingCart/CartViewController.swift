@@ -16,13 +16,16 @@ class CartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let user = (parent as? StoreTabViewController)?.user {
-            userVM = UserViewModel(user: user)
-            userLabel.text = userVM?.greeting()
-        }
-        else{
+        /*
+        let user = LoginViewController.currentUser ?? "guest"
+        
+        if user == "guest" {
             userLabel.text = "Welcome!"
+        } else {
+            userLabel.text = "Hello \(user)!"
         }
+ */
+         
         
         let parentUser = (parent as! StoreTabViewController).user!
         user = UserViewModel(user: parentUser)
@@ -32,6 +35,7 @@ class CartViewController: UIViewController {
         else{
             userLabel.text = user?.greeting()
         }
+        
 
         let hostingController = children.first { viewController in
             viewController is CartHostingController
