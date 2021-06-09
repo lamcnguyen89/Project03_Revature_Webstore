@@ -9,11 +9,21 @@ import UIKit
 
 class CartViewController: UIViewController {
 
+    var userVM : UserViewModel?
     @IBOutlet weak var userLabel: UILabel!
     
     var user : UserViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
+        
         let parentUser = (parent as! StoreTabViewController).user!
         user = UserViewModel(user: parentUser)
         if user == nil{
@@ -34,10 +44,15 @@ class CartViewController: UIViewController {
         performSegue(withIdentifier: "checkout", sender: user)
     }
     
-    @IBAction func userDashboard(_ sender: Any) {
-        let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
-        let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
-        self.present(show,animated: true, completion: nil)
+    @IBAction func userDashboard(_ sender: UIButton) {
+        
+                    let sb = UIStoryboard(name:"UserDashboard", bundle:nil)
+                    let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
+                    self.present(show,animated: true, completion: nil)
+    }
+            
+    @IBAction func goToStorefront(_ sender: Any) {
+        tabBarController?.selectedIndex = 0
         
     }
     

@@ -70,6 +70,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+   
     
     @IBAction func createAccount(_ sender: Any) {
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -88,5 +89,11 @@ class LoginViewController: UIViewController {
         (parent as! StoreTabViewController).user = data
         (parent as! StoreTabViewController).userDidUpdate()
     }
+    
+    
+    @IBAction func goToStorefront(_ sender: Any) {
+        tabBarController?.selectedIndex = 0
+    }
+    
 }
 

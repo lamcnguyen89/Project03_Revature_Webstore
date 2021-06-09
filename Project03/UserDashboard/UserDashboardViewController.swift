@@ -25,10 +25,7 @@ class UserDashboardViewController: UIViewController {
     
     @IBAction func btnContinueShopping(_ sender: UIButton) {
         
-        let sb = UIStoryboard.init(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "categoryList")
-        
-        self.present(vc, animated: true, completion: {self.category})
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnLogin(_ sender: UIButton) {

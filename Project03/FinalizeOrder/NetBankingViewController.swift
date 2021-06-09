@@ -12,13 +12,21 @@ class NetBankingViewController: UIViewController {
     @IBOutlet weak var accountName: UITextField!
     @IBOutlet weak var accountNumber: UITextField!
     @IBOutlet weak var routingNumber: UITextField!
-    
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
     }
     
     @IBAction func submitInfo(_ sender: Any) {
@@ -48,5 +56,10 @@ class NetBankingViewController: UIViewController {
         let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
     }
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }

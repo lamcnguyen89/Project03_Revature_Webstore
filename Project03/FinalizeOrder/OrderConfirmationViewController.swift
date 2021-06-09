@@ -9,9 +9,19 @@ import UIKit
 
 class OrderConfirmationViewController: UIViewController {
 
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -21,4 +31,7 @@ class OrderConfirmationViewController: UIViewController {
         let show = sb.instantiateViewController(withIdentifier: "userDash") as! UserDashboardViewController
         self.present(show,animated: true, completion: nil)
     }
-}
+    
+    @IBAction func backToStoreFront(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }}

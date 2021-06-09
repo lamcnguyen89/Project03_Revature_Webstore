@@ -9,9 +9,18 @@ import UIKit
 
 class ReviewOrderViewController: UIViewController {
 
+    @IBOutlet weak var userLabel: UILabel!
+    var userVM : UserViewModel?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let user = (parent as? StoreTabViewController)?.user {
+            userVM = UserViewModel(user: user)
+            userLabel.text = userVM?.greeting()
+        }
+        else{
+            userLabel.text = "Welcome!"
+        }
        
     }
     
@@ -22,4 +31,7 @@ class ReviewOrderViewController: UIViewController {
         self.present(show,animated: true, completion: nil)
     }
 
+    @IBAction func backToStoreFront(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
