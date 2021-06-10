@@ -19,6 +19,10 @@ struct UserWishlistSwiftUI: View {
     @State var isWishList:String = "Suggested Items"
     @State var select = Set<UUID>()
     @State var isMenu:Bool = false
+    @State var user : User
+    init(){
+        user = LoginViewController.currentUser
+    }
     var body: some View {
        VStack{
        HStack{
@@ -49,20 +53,20 @@ struct UserWishlistSwiftUI: View {
             NavigationView{
                 
                 List(selection: $select){
-                    ForEach(getList(), id: \.name){ prd in
+                    ForEach(user.wishlist?.products?.array as! [Product], id: \.name){ prd in
                         VStack{
                             
-                            Text("\(prd.name)").frame(maxWidth: .infinity, alignment: .leading)
+                            Text(prd.name!).frame(maxWidth: .infinity, alignment: .leading)
                                 .font(.headline)
                                 .foregroundColor(.blue)
-                            Image("\(prd.image)")
+                            Image(prd.image!)
                                     .resizable()
                                     .frame(width: 300, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                     .aspectRatio(contentMode: .fit)
            
                             HStack{
                                 Spacer()
-                                Text("Price: \(prd.price)")
+                                Text("Price: " + String(format: "%.2f", prd.price))
                             }.padding()
                             .border(Color.orange, width: 3)
                             .cornerRadius(/*@START_MENU_TOKEN@*/3.0/*@END_MENU_TOKEN@*/)
