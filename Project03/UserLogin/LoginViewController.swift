@@ -20,14 +20,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        displayOutput.isHidden = true
+
 
     }
     
     @IBAction func submitLogin(_ sender: Any) {
 
 
-        if username.text! != "" && password.text! != ""  {
+        if username.text! != "" || password.text! != ""  {
             do{
                 let data = try dataHandler.getOneUser(name: username.text!)
                 print(data.password)
@@ -58,19 +58,24 @@ class LoginViewController: UIViewController {
 
                     //update views
                     (parent as! StoreTabViewController).userDidUpdate()
-
+                    
+                    displayOutput.text = "Login was successful"
                     username.text = ""
                     password.text = ""
                     
                     // Go back to storefront
-                    tabBarController?.selectedIndex = 0                }
+                    tabBarController?.selectedIndex = 0
+                    
+                }
             }
             catch{
                 print("Wrong password or Username. Try again.")
                 password.text = ""
+
                 displayOutput.text = "Wrong password or Username"
             }
         } else {
+
             displayOutput.text = "Fill in all text fields"
             
         }
@@ -95,6 +100,7 @@ class LoginViewController: UIViewController {
         LoginViewController.currentUser = data
         (parent as! StoreTabViewController).user = data
         (parent as! StoreTabViewController).userDidUpdate()
+        displayOutput.text = "Logged out"
     }
     
     
