@@ -65,7 +65,31 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
         cartViewModel?.addItemsToCart(product: (prodViewModel?.getObj())!)
         print(cartViewModel?.shoppingCart)
         NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)
-
+        
+        // Alert to ask the user what he/she wants to do
+        let alert = UIAlertController(title: "Yeah!", message: "Items added to cart", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Keep Shopping", style: .default, handler: {action in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Check Out", style: .default, handler: {action in
+            NotificationCenter.default.post(name: .checkout, object: nil)
+            let sb = UIStoryboard(name:"Main", bundle:nil)
+            let show = sb.instantiateViewController(withIdentifier: "Checkout")
+            
+            weak var pvc = self.presentingViewController
+            
+            self.dismiss(animated: true, completion: {
+                
+                let sb = UIStoryboard(name:"Main", bundle:nil)
+                let show = sb.instantiateViewController(withIdentifier: "Checkout")
+                pvc?.present(show, animated: true, completion: nil)
+            })
+            
+        }))
+        
+        self.present(alert, animated: true)
     }
 
     
