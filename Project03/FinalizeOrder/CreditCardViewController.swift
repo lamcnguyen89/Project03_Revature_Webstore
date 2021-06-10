@@ -44,7 +44,7 @@ class CreditCardViewController: UIViewController {
             creditNumber.text != nil &&
             expMonth.text != nil &&
             expYear.text != nil &&
-            expYear.text != nil &&
+          
             address.text != nil &&
             city.text != nil &&
             state.text != nil &&
@@ -59,9 +59,24 @@ class CreditCardViewController: UIViewController {
            print("Card information submitted")
            // Update Database information to show Credit Card was selected out of the 3 choices: NetBanking, COD, Credit Card
             
-            let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let wel = sb.instantiateViewController(withIdentifier: "ChooseShipping") as! ChooseShippingViewController
-            self.present(wel, animated: true, completion: nil)
+            let alert = UIAlertController(title: "Success", message: "Credit Info Ad", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: {action in
+                self.name.text = ""
+                self.creditNumber.text = ""
+                self.expMonth.text = ""
+                self.expYear.text = ""
+                self.address.text = ""
+                self.city.text = ""
+                self.state.text = ""
+                self.zip.text = ""
+                self.phone.text = ""
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            }))
+            
+            self.present(alert, animated: true)
             
         } else {
             print("Fill out all Information")

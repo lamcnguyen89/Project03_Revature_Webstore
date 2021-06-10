@@ -11,18 +11,17 @@ class ChooseShippingViewController: UIViewController {
     
     @IBOutlet weak var userLabel: UILabel!
     var userVM : UserViewModel?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let user = LoginViewController.currentUser
         
         if user.name == "Guest" {
-            userLabel.text = "Welcome!"
+            userLabel.text = "Welcom!"
         } else {
             userLabel.text = "Hello \(user.name)"
         }
-        
     }
     
 

@@ -13,16 +13,17 @@ struct Item {
 }
 
 struct UserWishlistSwiftUI: View {
-    
+    //init(){
+    //   user = LoginViewController.currentUser
+   // }
     @State var currentUser = DataHandler.inst.getGuestUser()
     @State var wishList = []
     @State var isWishList:String = "Suggested Items"
     @State var select = Set<UUID>()
     @State var isMenu:Bool = false
-    @State var user : User
-    init(){
-        user = LoginViewController.currentUser
-    }
+   // @State var user : User
+    @State var user = LoginViewController.currentUser
+
     var body: some View {
        VStack{
        HStack{
