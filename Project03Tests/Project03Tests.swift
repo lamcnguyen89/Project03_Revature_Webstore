@@ -44,7 +44,6 @@ class Project03Tests: XCTestCase {
 
         // when
         
-
         // then
         XCTAssertEqual(sut.calculateOrder(orders: orderData), 9732.00, "Calculate Order function works correctly")
         

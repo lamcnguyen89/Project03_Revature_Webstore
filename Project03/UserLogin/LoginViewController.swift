@@ -61,10 +61,9 @@ class LoginViewController: UIViewController {
 
                     username.text = ""
                     password.text = ""
-                    // let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-
-                    //  self.present(wel, animated: true, completion: nil)}
-                }
+                    
+                    // Go back to storefront
+                    tabBarController?.selectedIndex = 0                }
             }
             catch{
                 print("Wrong password or Username. Try again.")

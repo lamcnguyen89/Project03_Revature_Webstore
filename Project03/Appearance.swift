@@ -83,6 +83,32 @@ class MyButtons : UIButton {
     }
 }
 
+// Back Button Styling
+class MyButtons2 : UIButton {
+    
+    required init?(coder: NSCoder) {
+        super.init(coder : coder)
+        // MyButtons.appearance().backgroundColor = UIColor(red: 85/255 , green: 150/255 ,blue: 100/255 , alpha: 1.0)
+       // self.backgroundColor = UIColor.systemOrange
+        MyButtons.appearance().contentEdgeInsets = UIEdgeInsets(top: 2, left: 10, bottom: 2, right: 10)
+        // MyButtons.appearance().tintColor = UIColor(red: 85/255 , green: 150/255 ,blue: 100/255 , alpha: 1.0)
+        MyButtons.appearance().tintColor = .white
+       //self.layer.borderWidth = 3.0
+        //self.layer.borderColor = UIColor.black.cgColor
+       self.layer.cornerRadius = 8
+       // self.layer.masksToBounds = false
+       // self.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        self.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.center
+       // self.layer.shadowColor = UIColor.black.withAlphaComponent(0.70).cgColor
+        //self.layer.shadowOffset = CGSize(width: 4.0, height: 4.0)
+        //self.layer.shadowOpacity = 1
+        //self.layer.shadowRadius = 2
+        
+    
+    }
+}
+
+
 class LoginButtons:MyButtons{
     
     required init?(coder: NSCoder){

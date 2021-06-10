@@ -30,7 +30,7 @@ class UserDashboardViewController: UIViewController {
         if user.name == "Guest" {
             lblWelcome.text = "Welcome!"
         } else {
-            lblWelcome.text = "Hello \(user)"
+            lblWelcome.text = "Hello \(user.name)"
         }
         
         
