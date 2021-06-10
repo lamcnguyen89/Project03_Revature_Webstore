@@ -16,6 +16,8 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     @IBOutlet weak var numOfItems: UILabel!
     @IBOutlet weak var priceLabel: UITextField!
     @IBOutlet weak var btnFavorites: UIButton!
+    let isFav:UIImage! = UIImage(systemName: "heart.fill")
+    let notFav:UIImage! = UIImage(systemName: "heart")
     var isWishlist:Bool = false  
     var prodViewModel : ProductViewModel?
     var cartViewModel : ShoppingCartViewModel?
@@ -27,7 +29,7 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     var lstSuggItems = [ProductViewModel]()
     var suggestItemsError:String?
     @IBOutlet weak var userLabel: UILabel!
-    var user : User?
+    var user = LoginViewController.currentUser
 
 
     override func viewDidLoad() {
@@ -38,16 +40,23 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
             img.image = UIImage(named: prodViewModel!.image)
             priceLabel.text = prodViewModel!.price
             itemRating.rating = 3.00
-            
+
         }
         
-        user = LoginViewController.currentUser
+
 
         
-        if user!.name == "Guest" {
+        if user.name == "Guest" {
             userLabel.text = "Welcome!"
         } else {
-            userLabel.text = "Hello \(user!.name)"
+            userLabel.text = "Hello \(user.name)"
+        }
+        if ((user.wishlist!.products!.contains(prodViewModel!.getObj())) ){
+            isWishlist = true
+            btnFavorites.setBackgroundImage(isFav, for: UIControl.State.normal)
+        }
+        else{
+            btnFavorites.setBackgroundImage(notFav, for: UIControl.State.normal)
         }
         // Suggested List Scroll Collection
         getSuggItemsLst()
@@ -99,16 +108,19 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     @IBAction func btnAddToWishlist(_ sender: Any) {
-        let isFav:UIImage! = UIImage(systemName: "heart.fill")
-        let notFav:UIImage! = UIImage(systemName: "heart")
         
         isWishlist.toggle()
         switch isWishlist{
         case true:
             btnFavorites.setBackgroundImage(isFav, for: UIControl.State.normal)
             // add to User.Wishlist CoreData
+            LoginViewController.currentUser.wishlist?.addToProducts((prodViewModel?.getObj())!)
+            print(LoginViewController.currentUser.wishlist?.products)
+
         case false:
             btnFavorites.setBackgroundImage(notFav, for: UIControl.State.normal)
+            LoginViewController.currentUser.wishlist?.removeFromProducts((prodViewModel?.getObj())!)
+
             // remove to User.Wishlist CoreData
         }
     }

@@ -69,6 +69,7 @@ class InnerViewReviewOrderViewController: UIViewController {
         }
         user.addToOrders(order)
         print(user.orders)
+        NotificationCenter.default.post(name: .ordersDidUpdate, object: nil)
 
         
         

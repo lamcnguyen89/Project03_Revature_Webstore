@@ -18,6 +18,11 @@ public class User: NSManagedObject {
         password = dictionary["password"]
         email = dictionary["email"]
         id = Int64(dictionary["ID"]!)!
+        let ws = Wishlist(context: managedObjectContext!)
+        ws.user = self
+        self.wishlist = ws
+        try! managedObjectContext?.save()
+
     }
     func reset(){
         addresses = nil
