@@ -27,7 +27,7 @@ class CartViewController: UIViewController {
  */
          
         
-        let parentUser = (parent as! StoreTabViewController).user!
+        let parentUser = LoginViewController.currentUser
         user = UserViewModel(user: parentUser)
         if user == nil{
             userLabel.text = "Welcome!"
