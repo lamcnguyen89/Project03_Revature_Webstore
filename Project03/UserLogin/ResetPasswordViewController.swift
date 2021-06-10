@@ -20,7 +20,6 @@ class ResetPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        outputLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -60,11 +59,8 @@ class ResetPasswordViewController: UIViewController {
                     password.text = ""
                     confirmPassword.text = ""
                     
-                    /*
-                    let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let wel = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-                    self.present(wel, animated: true, completion: nil)
-                    */
+                    // Go back to Login Page
+                    tabBarController?.selectedIndex = 2
                     
                 } else {
                     print(" The user information you have entered is not found in the database")
