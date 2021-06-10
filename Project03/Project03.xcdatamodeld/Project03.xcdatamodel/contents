@@ -99,9 +99,9 @@
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
-        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Address" inverseName="user" inverseEntity="Address"/>
+        <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Address" inverseName="user" inverseEntity="Address"/>
         <relationship name="orderHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrderHistory" inverseName="user" inverseEntity="OrderHistory"/>
-        <relationship name="paymentOptions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PaymentType" inverseName="user" inverseEntity="PaymentType"/>
+        <relationship name="paymentOptions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PaymentType" inverseName="user" inverseEntity="PaymentType"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
         <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHistory" inverseName="user" inverseEntity="SearchHistory"/>
         <relationship name="shoppingCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingCart" inverseName="user" inverseEntity="ShoppingCart"/>

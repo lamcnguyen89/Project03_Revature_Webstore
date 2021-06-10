@@ -67,7 +67,7 @@ class UserViewModel{
     }
 
     public func getPaymentOptions() throws -> [PaymentType]{
-        if let payOptions = user.paymentOptions?.allObjects as? [PaymentType]{
+        if let payOptions = user.paymentOptions?.array as? [PaymentType]{
             return payOptions
         }
         else {throw FetchError.BadFetchRequest}

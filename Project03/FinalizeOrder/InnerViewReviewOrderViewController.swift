@@ -14,16 +14,19 @@ class InnerViewReviewOrderViewController: UIViewController {
     @IBOutlet weak var taxesLabel: UILabel!
     @IBOutlet weak var shippingLabel: UILabel!
     @IBOutlet weak var calculatedTotal: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     let tax: Double = 0
     let ship: Double = 20
-    
-    let orderData = [
-        0 : ["price" : 25.25, "quantity" : 2],
-        1 : ["price" : 100.36, "quantity" : 5],
-        2 : ["price" : 300.44, "quantity" : 13],
-        3 : ["price" : 200.2345, "quantity" : 8]
-    ]
-        
+    var payOption : PaymentType?
+    var address : Address?
+    var user = LoginViewController.currentUser
+//    let orderData = [
+//        0 : ["price" : 25.25, "quantity" : 2],
+//        1 : ["price" : 100.36, "quantity" : 5],
+//        2 : ["price" : 300.44, "quantity" : 13],
+//        3 : ["price" : 200.2345, "quantity" : 8]
+//    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -36,11 +39,26 @@ class InnerViewReviewOrderViewController: UIViewController {
         calculatedTotal.text = "Grand Total: $\(priceString)"
 
         NotificationCenter.default.addObserver(self, selector: #selector(reviewOrderDidUpdate), name: .shoppingCartDidUpdate, object: nil)
+
+        payOption = user.paymentOptions?.array.first as? PaymentType
+        address =  user.addresses!.array.first as? Address
+        addressLabel.text = (address?.street)! + ", " + (address?.city!)!
+        if payOption is ACH{
+            let st = String((payOption as! ACH).routingNumber)
+            paymentType.text = String("ACH to Bank with routing#: " + st)
+        }
+        else if payOption is CreditCard{
+            //gets last 4 digits
+            let st = String(((payOption as! CreditCard).number/1000000000000))
+            paymentType.text = String("Credit Card with last 4 digits: " + st)
+        }
     }
     
     @IBAction func submitOrder(_ sender: Any) {
         
         // Add a marker to the database showing that an order has been submitted, what was placed in the order and so on and so on.
+        
+
         
         // Redirect to Confirmation page
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
