@@ -20,7 +20,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        outputLabel.isHidden = true
+    
         // Do any additional setup after loading the view.
     }
     
@@ -37,22 +37,16 @@ class SignUpViewController: UIViewController {
                 
                 DataHandler.inst.createUser(dic as! [String:String])
                 
-                let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                
-                // This instantiates or shows the storyboard object/view controller that you want to show once you log in.
-                let log = sb.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-                
-                // Function which belongs to UIviewController. If this isn't called, the next screen will not show up.
-                // This shows the screen once you log on.
-                self.present(log, animated: true, completion: nil)
-                
                 email.text = ""
                 username.text = ""
                 firstName.text = ""
                 lastName.text = ""
                 password.text = ""
                 confirmPassword.text = ""
-                outputLabel.text = ""
+                outputLabel.text = "New user created"
+                
+                // Go back to Login Page
+                tabBarController?.selectedIndex = 2
                 
             } else {
                 print("Password fields do not match")
