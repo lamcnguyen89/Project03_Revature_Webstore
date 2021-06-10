@@ -26,6 +26,7 @@ class UserDashboardViewController: UIViewController {
         super.viewDidLoad()
         
         let user = LoginViewController.currentUser
+        viewAccount.isHidden = true
         
         if user.name == "Guest" {
             lblWelcome.text = "Welcome!"

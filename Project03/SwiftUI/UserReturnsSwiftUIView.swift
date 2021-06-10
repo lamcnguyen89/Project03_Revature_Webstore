@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserReturnsSwiftUIView: View {
     
-    var returnList = [String]()
+    @State var returnList = [String]()
     
     var body: some View {
 
@@ -21,7 +21,7 @@ struct UserReturnsSwiftUIView: View {
             Text("\(prd)")
         }
         Spacer()
-        NavigationLink(destination: UserOrdersSwiftUI()){
+        NavigationLink(destination: ReturnConfirmationSwiftUIView(returns: returnList)){
 
             Text("Confirm Return Items").foregroundColor(.white)
 
@@ -37,3 +37,29 @@ struct UserReturnsSwiftUIView_Previews: PreviewProvider {
         UserReturnsSwiftUIView()
     }
 }
+
+struct ReturnConfirmationSwiftUIView: View {
+    
+    @State var returns = [String]()
+    
+    var body: some View {
+
+        if returns.isEmpty{
+            Text("You have not chosen any items to return. Please return to previous screen.")
+        } else {
+            Text("The following items will be return!").font(.subheadline).foregroundColor(.orange)
+            List(returns, id:\.self){ prd in
+                Text("\(prd)")
+            }
+            Spacer()
+        
+
+        }
+        
+
+        
+        
+    }// end body
+}
+
+
