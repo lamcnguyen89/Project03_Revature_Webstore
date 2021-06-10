@@ -35,7 +35,7 @@ class InnerViewReviewOrderViewController: UIViewController {
         let priceString : String = String(format: "%.2f", total)
         calculatedTotal.text = "Grand Total: $\(priceString)"
 
-        NotificationCenter.default.addObserver(self, selector: #selector(reviewOrderDidUpdate), name: .reviewOrderDidUpdate, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(reviewOrderDidUpdate), name: .shoppingCartDidUpdate, object: nil)
     }
     
     @IBAction func submitOrder(_ sender: Any) {

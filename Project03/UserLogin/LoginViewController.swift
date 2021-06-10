@@ -29,27 +29,29 @@ class LoginViewController: UIViewController {
 
         if username.text! != "" || password.text! != ""  {
             do{
-                let data = try dataHandler.getOneUser(name: username.text!)
-                print(data.password)
-                if data.password == password.text! {
+                weak var data = try dataHandler.getOneUser(name: username.text!)
+                print(data!.password)
+                if data!.password == password.text! {
                     displayOutput.text = "Login was successful"
 
-                    print("Username: \(data.name!) \nPassword: \(data.password!)")
-                    let appUser = LoginViewController.currentUser
+                    print("Username: \(data!.name!) \nPassword: \(data!.password!)")
+                    weak var appUser = LoginViewController.currentUser
                     
 
 
 
-                    if appUser.name == "Guest" && appUser.shoppingCart != nil{
+                    if appUser!.name == "Guest" && appUser!.shoppingCart != nil{
                         //store shopping cart data in incoming user
                         print(appUser)
-                        data.shoppingCart = appUser.shoppingCart
+                        data!.shoppingCart = appUser!.shoppingCart
 
-                        LoginViewController.currentUser = data
+                        LoginViewController.currentUser = data!
                         LoginViewController.currentUser.shoppingCart?.user = LoginViewController.currentUser
+                        print(LoginViewController.currentUser.shoppingCart)
 
                         //reset guest account
-                        appUser.reset()
+                        appUser!.reset()
+                        data = nil
                     }
 
                     //set app user to incoming user

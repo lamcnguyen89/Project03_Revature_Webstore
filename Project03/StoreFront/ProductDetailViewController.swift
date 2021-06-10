@@ -62,7 +62,6 @@ class ProductDetailViewController: UIViewController, UICollectionViewDelegate, U
         numOfItems.text = cartViewModel?.preAddItem()
     }
     @IBAction func addToCart(_ sender: Any) {
-        cartViewModel = ShoppingCartViewModel((user?.shoppingCart!)!)
         cartViewModel?.addItemsToCart(product: (prodViewModel?.getObj())!)
         print(cartViewModel?.shoppingCart)
         NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)

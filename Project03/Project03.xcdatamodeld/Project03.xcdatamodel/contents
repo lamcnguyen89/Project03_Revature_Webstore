@@ -138,7 +138,7 @@
         <element name="ShoppingCart" positionX="-706.47021484375" positionY="-351.7955169677734" width="128" height="73"/>
         <element name="ShoppingCartItem" positionX="-426.32763671875" positionY="-320.5056457519531" width="128" height="74"/>
         <element name="Store" positionX="-438.289306640625" positionY="-159.861343383789" width="128" height="58"/>
-        <element name="User" positionX="-346.852294921875" positionY="3.880981445312507" width="128" height="238"/>
+        <element name="User" positionX="-346.852294921875" positionY="3.880981445312507" width="128" height="224"/>
         <element name="Wishlist" positionX="-279.685302734375" positionY="-471.5655822753906" width="128" height="59"/>
     </elements>
 </model>

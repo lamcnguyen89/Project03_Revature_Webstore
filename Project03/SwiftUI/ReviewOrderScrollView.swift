@@ -46,16 +46,18 @@ struct ReviewOrderScrollView: View {
                                     Button("Quantity +", action: {
                                         i.number += 1
                                         print(i)
-                                        NotificationCenter.default.post(name: .reviewOrderDidUpdate, object: nil)
-
+                                        NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)
+                                        
+                                        try! LoginViewController.currentUser.managedObjectContext?.save()
                                         // I need to add a function to update the data in the CoreData
                                     })
                                     .buttonStyle(BorderlessButtonStyle())
                                     Button("Quantity -", action: {
                                         if i.number > 0 {
                                             i.number -= 1
-                                            NotificationCenter.default.post(name: .reviewOrderDidUpdate, object: nil)
-                                            
+                                            try! LoginViewController.currentUser.managedObjectContext?.save()
+
+                                            NotificationCenter.default.post(name: .shoppingCartDidUpdate, object: nil)
                                             
                                         }
                                         // I need to add a function to update the data in the CoreData
