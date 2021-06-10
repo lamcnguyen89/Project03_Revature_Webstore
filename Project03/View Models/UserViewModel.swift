@@ -52,8 +52,8 @@ class UserViewModel{
         }
         return user.shoppingCart!
     }
-    public func getOrderHistory() throws -> OrderHistory {
-        if let orderHistory = user.orderHistory{
+    public func getOrderHistory() throws -> [Order] {
+        if let orderHistory = user.orders?.array as? [Order]{
             return orderHistory
         }
         else {throw FetchError.BadFetchRequest}

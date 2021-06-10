@@ -39,16 +39,14 @@
     <entity name="HistoryItem" representedClassName="HistoryItem" isAbstract="YES" syncable="YES" codeGenerationType="category">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <relationship name="history" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="History" inverseName="historyItems" inverseEntity="History"/>
-        <relationship name="product" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Product"/>
     </entity>
     <entity name="Order" representedClassName="Order" parentEntity="HistoryItem" syncable="YES" codeGenerationType="category">
-        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="address" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Address"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShoppingCartItem"/>
         <relationship name="payment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PaymentType"/>
-    </entity>
-    <entity name="OrderHistory" representedClassName="OrderHistory" parentEntity="History" syncable="YES" codeGenerationType="category">
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="orderHistory" inverseEntity="User"/>
+        <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="orders" inverseEntity="User"/>
     </entity>
     <entity name="PaymentType" representedClassName="PaymentType" isAbstract="YES" syncable="YES" codeGenerationType="class">
         <relationship name="user" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="paymentOptions" inverseEntity="User"/>
@@ -100,7 +98,7 @@
         <attribute name="name" attributeType="String"/>
         <attribute name="password" optional="YES" attributeType="String"/>
         <relationship name="addresses" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Address" inverseName="user" inverseEntity="Address"/>
-        <relationship name="orderHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="OrderHistory" inverseName="user" inverseEntity="OrderHistory"/>
+        <relationship name="orders" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Order" inverseName="user" inverseEntity="Order"/>
         <relationship name="paymentOptions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="PaymentType" inverseName="user" inverseEntity="PaymentType"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Review" inverseName="user" inverseEntity="Review"/>
         <relationship name="searchHistory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SearchHistory" inverseName="user" inverseEntity="SearchHistory"/>
@@ -118,10 +116,9 @@
         <element name="Category" positionX="-245.382568359375" positionY="-122.4273681640625" width="128" height="88"/>
         <element name="COD" positionX="-653.13427734375" positionY="569.2061920166016" width="128" height="58"/>
         <element name="CreditCard" positionX="-398.436279296875" positionY="529.1370849609375" width="128" height="134"/>
-        <element name="History" positionX="79.102783203125" positionY="477.2980346679688" width="128" height="58"/>
-        <element name="HistoryItem" positionX="150.49462890625" positionY="191.0951538085938" width="128" height="88"/>
-        <element name="Order" positionX="326.90478515625" positionY="256.2314453125" width="128" height="28"/>
-        <element name="OrderHistory" positionX="-101.513916015625" positionY="337.1736450195312" width="128" height="58"/>
+        <element name="History" positionX="79.102783203125" positionY="477.2980346679688" width="128" height="44"/>
+        <element name="HistoryItem" positionX="150.49462890625" positionY="191.0951538085938" width="128" height="74"/>
+        <element name="Order" positionX="326.90478515625" positionY="256.2314453125" width="128" height="104"/>
         <element name="PaymentType" positionX="-615.53271484375" positionY="345.6470642089843" width="128" height="44"/>
         <element name="Product" positionX="51.30859375" positionY="-208.8279724121094" width="128" height="164"/>
         <element name="ProductRating" positionX="-111.66357421875" positionY="-12.59024047851562" width="128" height="88"/>

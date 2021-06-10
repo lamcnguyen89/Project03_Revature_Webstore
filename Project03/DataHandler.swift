@@ -269,17 +269,17 @@ class DataHandler {
 
 
     //MARK: - Order Related
-    func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
-        var products = [Product]()
-        for item in items{
-            products.append(item.getObj())
-        }
-        let user = address.user
-        let order = Order(context: user!.managedObjectContext!)
-        order.addToProduct(NSOrderedSet(array: products))
-        order.address = address
-        order.payment = paymentOption
-    }
+//    func placeOrder(items: [ProductViewModel], to address : Address, withPayOption paymentOption: PaymentType){
+//        var products = [Product]()
+//        for item in items{
+//            products.append(item.getObj())
+//        }
+//        let user = address.user
+//        let order = Order(context: user!.managedObjectContext!)
+//        order.addToProduct(NSOrderedSet(array: products))
+//        order.address = address
+//        order.payment = paymentOption
+//    }
 
     //MARK: - Payment Related
     func getCreditCards(user : User) throws -> PaymentTypeViewModel{
@@ -517,6 +517,7 @@ extension Notification.Name {
     static let didGetUser = Notification.Name("didGetUser")
     static let checkout = Notification.Name("checkout")
     static let reviewOrderDidUpdate = Notification.Name("reviewOrderDidUpdate")
+    static let ordersDidUpdate = Notification.Name("ordersDidUpdate")
 
 
 }

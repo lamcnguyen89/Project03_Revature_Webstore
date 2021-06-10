@@ -15,7 +15,7 @@ class InnerViewReviewOrderViewController: UIViewController {
     @IBOutlet weak var shippingLabel: UILabel!
     @IBOutlet weak var calculatedTotal: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
-    let tax: Double = 0
+    var tax: Double = 0
     let ship: Double = 20
     var payOption : PaymentType?
     var address : Address?
@@ -31,10 +31,11 @@ class InnerViewReviewOrderViewController: UIViewController {
         super.viewDidLoad()
       
         // Do any additional setup after loading the view.
+        let total = calculateOrder()
         taxesLabel.text = "Taxes: $\(String(format: "%.2f", tax))"
         shippingLabel.text = "Flate Rate Shipping: $\(String(format: "%.2f", ship))"
         
-        let total = calculateOrder()
+
         let priceString : String = String(format: "%.2f", total)
         calculatedTotal.text = "Grand Total: $\(priceString)"
 
@@ -57,8 +58,19 @@ class InnerViewReviewOrderViewController: UIViewController {
     @IBAction func submitOrder(_ sender: Any) {
         
         // Add a marker to the database showing that an order has been submitted, what was placed in the order and so on and so on.
-        
+        let order = Order(context: user.managedObjectContext!)
+        order.user = user
+        order.date = Date()
+        order.payment = payOption
+        order.address = address
+        order.price = calculateOrder()
+        for item in user.shoppingCart?.items?.array as! [ShoppingCartItem]{
+            order.addToItems(item)
+        }
+        user.addToOrders(order)
+        print(user.orders)
 
+        
         
         // Redirect to Confirmation page
         let sb : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -67,8 +79,8 @@ class InnerViewReviewOrderViewController: UIViewController {
     }
     
     // Function to calculate the order total
-    func calculateOrder( )-> Double  {
-        
+    func calculateOrder()-> Double  {
+        let taxRate = 0.05
         let orderData = LoginViewController.currentUser.shoppingCart?.items?.array as! [ShoppingCartItem]
         var totalPrice: Double = 0
 
@@ -86,8 +98,8 @@ class InnerViewReviewOrderViewController: UIViewController {
 //            i += 1
 //
 //        }
-//
-        totalPrice += tax + ship
+        tax = taxRate*totalPrice
+        totalPrice += (taxRate*totalPrice) + ship
         
         return totalPrice
         
