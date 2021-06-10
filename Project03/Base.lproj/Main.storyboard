@@ -545,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf4-OY-RYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="286"/>
+            <point key="canvasLocation" x="872" y="286"/>
         </scene>
         <!--Net Banking View Controller-->
         <scene sceneID="xge-Cl-LFp">

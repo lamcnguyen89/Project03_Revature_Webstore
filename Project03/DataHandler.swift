@@ -454,6 +454,7 @@ extension Notification.Name {
     static let shoppingCartDidUpdate = Notification.Name("shoppingCartDidUpdate")
     static let didGetUser = Notification.Name("didGetUser")
     static let checkout = Notification.Name("checkout")
+    static let reviewOrderDidUpdate = Notification.Name("reviewOrderDidUpdate")
 
  
 }

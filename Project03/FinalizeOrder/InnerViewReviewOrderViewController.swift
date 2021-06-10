@@ -26,7 +26,7 @@ class InnerViewReviewOrderViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         // Do any additional setup after loading the view.
         taxesLabel.text = "Taxes: $\(String(format: "%.2f", tax))"
         shippingLabel.text = "Flate Rate Shipping: $\(String(format: "%.2f", ship))"
@@ -74,6 +74,5 @@ class InnerViewReviewOrderViewController: UIViewController {
        
     }
     
-
-
+ 
 }
