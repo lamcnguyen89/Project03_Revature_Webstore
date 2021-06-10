@@ -14,9 +14,11 @@ struct ReviewOrderScrollView: View {
     var shoppingCartItems = LoginViewController.currentUser.shoppingCart?.items?.array as! [ShoppingCartItem]
     var cartVM : ShoppingCartViewModel
     var items : [ShoppingCartItem]
+
     init(){
         cartVM = ShoppingCartViewModel(LoginViewController.currentUser.shoppingCart!)
         items = try! cartVM.getItems()
+        
     }
     var body: some View {
         ZStack {
@@ -68,7 +70,8 @@ struct ReviewOrderScrollView: View {
             }
         }
     }
-    
+
+
 }
 
 //struct OrderText: View {

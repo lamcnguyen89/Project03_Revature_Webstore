@@ -31,9 +31,11 @@ class InnerViewReviewOrderViewController: UIViewController {
         taxesLabel.text = "Taxes: $\(String(format: "%.2f", tax))"
         shippingLabel.text = "Flate Rate Shipping: $\(String(format: "%.2f", ship))"
         
-        let total = calculateOrder(orders: orderData)
+        let total = calculateOrder()
         let priceString : String = String(format: "%.2f", total)
         calculatedTotal.text = "Grand Total: $\(priceString)"
+
+        NotificationCenter.default.addObserver(self, selector: #selector(reviewOrderDidUpdate), name: .reviewOrderDidUpdate, object: nil)
     }
     
     @IBAction func submitOrder(_ sender: Any) {
@@ -47,24 +49,27 @@ class InnerViewReviewOrderViewController: UIViewController {
     }
     
     // Function to calculate the order total
-    func calculateOrder(orders: [Int : [String : Double]] )-> Double  {
+    func calculateOrder( )-> Double  {
         
-        let orderData = orders
+        let orderData = LoginViewController.currentUser.shoppingCart?.items?.array as! [ShoppingCartItem]
         var totalPrice: Double = 0
 
-        // Call the object that shows the user's orders. Right now I'm just using a placeholder object to write and test this loop.
-        var perItemPriceArray = [Double]()
-        var i:Int = 0
-        
-        while i < orderData.count {
-            
-            let itemSubtotal = orderData[i]!["price"]! * orderData[i]!["quantity"]!
-            perItemPriceArray.append(itemSubtotal)
-            i += 1
-            
+        for item in orderData{
+            totalPrice += (Double(item.number) * Double(item.product!.price))
         }
-        
-        totalPrice = perItemPriceArray.reduce(0, +) + tax + ship
+        // Call the object that shows the user's orders. Right now I'm just using a placeholder object to write and test this loop.
+//        var perItemPriceArray = [Double]()
+//        var i:Int = 0
+//
+//        while i < orderData.count {
+//
+//            let itemSubtotal = orderData[i]!["price"]! * orderData[i]!["quantity"]!
+//            perItemPriceArray.append(itemSubtotal)
+//            i += 1
+//
+//        }
+//
+        totalPrice += tax + ship
         
         return totalPrice
         
@@ -72,6 +77,9 @@ class InnerViewReviewOrderViewController: UIViewController {
     
     func showPayment(){
        
+    }
+    @objc func reviewOrderDidUpdate(){
+        self.viewDidLoad()
     }
     
  
