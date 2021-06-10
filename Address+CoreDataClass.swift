@@ -11,5 +11,13 @@ import CoreData
 
 @objc(Address)
 public class Address: NSManagedObject {
+    func update(dict: [String: String], user : User){
+        zip = Int64(Int(dict["zip"]!)!)
+        city = dict["city"]
+        state = dict["state"]
+        street = dict["street"]
+        self.user = user
+        try! managedObjectContext?.save()
+    }
 
 }

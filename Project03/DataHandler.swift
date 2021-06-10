@@ -40,7 +40,7 @@ class DataHandler {
         cc.number = Int64(ccVC.creditNumber.text!)!
         cc.expDate = String(ccVC.expMonth.text! + "," + ccVC.expYear.text!)
 
-        user.paymentOptions?.addToPaymentOptions(cc)
+        user.addToPaymentOptions(cc)
         try! context?.save()
     }
 
@@ -51,7 +51,7 @@ class DataHandler {
         ach.nameOnAccount = dictionary["nameOnAccount"]
         ach.routingNumber = Int64(dictionary["routingNumber"]!)!
 
-        user.paymentOptions?.addToPaymentOptions(ach)
+        user.addToPaymentOptions(ach)
 
     }
     //MARK: - Store Related
@@ -170,6 +170,62 @@ class DataHandler {
             NotificationCenter.default.post(name: .didCompleteUserImport, object: nil)
         }
     }
+    func importAddresses(){
+        var addArray = [Address]()
+        var csv : CSV?
+        let url =  Bundle.main.url(forResource: "AddressData", withExtension: "csv")!
+        let resource = try! CSV(url: url)
+        csv = resource
+        let users = fetchAllUsers()
+        for user in users{
+            for item in csv!.namedRows{
+
+                let add = Address(context: context!)
+                add.update(dict: item, user: user)
+                addArray.append(add)
+                print(item)
+            }
+            //            let ms = 1000
+            //            usleep(useconds_t(25 * ms))
+        }
+        print(addArray)
+        try! context!.save()
+    }
+
+
+    func importPaymentOptions(){
+        var payArr = [PaymentType]()
+
+        var url =  Bundle.main.url(forResource: "CreditCardTestData", withExtension: "csv")!
+        let ccCSV = try! CSV(url: url)
+
+        url = Bundle.main.url(forResource: "ACHTestData", withExtension: "csv")!
+        let achCSV = try! CSV(url: url)
+
+        let users = fetchAllUsers()
+        for user in users{
+        
+            for item in ccCSV.namedRows{
+
+                let pay = CreditCard(context: context!)
+                pay.update(dict: item, user: user)
+                payArr.append(pay)
+                print(item)
+            }
+            for item in achCSV.namedRows{
+
+                let pay = ACH(context: context!)
+                pay.update(dict: item, user: user)
+                payArr.append(pay)
+                print(item)
+            }
+            //            let ms = 1000
+            //            usleep(useconds_t(25 * ms))
+        }
+        print(payArr)
+        try! context!.save()
+    }
+    
     //MARK: - Fetch Products Related
     func fetchAllProducts() -> [String: [Product]]{
 
@@ -303,6 +359,12 @@ class DataHandler {
         print(userArray)
         try! context?.save()
     }
+    func fetchAllUsers() -> [User]{
+        let fetchReq = NSFetchRequest<User>(entityName: "User")
+        let results = try! context?.fetch(fetchReq)
+        return results!
+
+    }
 
     func updateUserName(_ name: String){
         //TODO
@@ -328,7 +390,7 @@ class DataHandler {
             if results.isEmpty == true{
                 print("no items in wishlist")
                 let newList = fetchFeaturedProducts().shuffled()
-               
+
                 for i in 0..<5{
                     list.append(ProductViewModel(product: newList[i]))
                 }
@@ -374,7 +436,7 @@ class DataHandler {
         }
     }
  */
-    
+
     func getOneUser (name : String)throws -> User{
         var user : User
         let fetchReq = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -456,5 +518,5 @@ extension Notification.Name {
     static let checkout = Notification.Name("checkout")
     static let reviewOrderDidUpdate = Notification.Name("reviewOrderDidUpdate")
 
- 
+
 }
